@@ -1,0 +1,1259 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D07347ED-8217-44A2-ACF3-D76B27EAF060}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SimulatorApplication</RootNamespace>
+    <AssemblyName>SimulatorApplication</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Microsoft.VisualBasic.PowerPacks, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ActionArm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ActionArm.Designer.cs">
+      <DependentUpon>ActionArm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="APM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="APM.Designer.cs">
+      <DependentUpon>APM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="cassette.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="cassette.Designer.cs">
+      <DependentUpon>cassette.cs</DependentUpon>
+    </Compile>
+    <Compile Include="cassettemap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="cassettemap.Designer.cs">
+      <DependentUpon>cassettemap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CassetteWafer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CassetteWafer.Designer.cs">
+      <DependentUpon>CassetteWafer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Centralize.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Centralize.Designer.cs">
+      <DependentUpon>Centralize.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Chamber.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Chamber.Designer.cs">
+      <DependentUpon>Chamber.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Chamber1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Chamber1.Designer.cs">
+      <DependentUpon>Chamber1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChamberA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChamberA.Designer.cs">
+      <DependentUpon>ChamberA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Class1.cs" />
+    <Compile Include="CustomMessageBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomMessageBox.Designer.cs">
+      <DependentUpon>CustomMessageBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataChart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DataChart.Designer.cs">
+      <DependentUpon>DataChart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="endeffector.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="endeffector.Designer.cs">
+      <DependentUpon>endeffector.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EventLog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EventLog.Designer.cs">
+      <DependentUpon>EventLog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FullMVs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FullMVs.Designer.cs">
+      <DependentUpon>FullMVs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataLogger.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DataLogger.Designer.cs">
+      <DependentUpon>DataLogger.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form2.Designer.cs">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GoSlot.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GoSlot.Designer.cs">
+      <DependentUpon>GoSlot.cs</DependentUpon>
+    </Compile>
+    <Compile Include="i2L019.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="i2L019.Designer.cs">
+      <DependentUpon>i2L019.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ICP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ICP.Designer.cs">
+      <DependentUpon>ICP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LogIn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LogIn.Designer.cs">
+      <DependentUpon>LogIn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LogOut.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LogOut.Designer.cs">
+      <DependentUpon>LogOut.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LotInformation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LotInformation.Designer.cs">
+      <DependentUpon>LotInformation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NewChamber.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewChamber.Designer.cs">
+      <DependentUpon>NewChamber.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NewConditioning.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewConditioning.Designer.cs">
+      <DependentUpon>NewConditioning.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NewRecipe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewRecipe.Designer.cs">
+      <DependentUpon>NewRecipe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OpenCassetteWafer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OpenCassetteWafer.Designer.cs">
+      <DependentUpon>OpenCassetteWafer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OpenConditionRecipe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OpenConditionRecipe.Designer.cs">
+      <DependentUpon>OpenConditionRecipe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Openrecipe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Openrecipe.Designer.cs">
+      <DependentUpon>Openrecipe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Openrecipe2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Openrecipe2.Designer.cs">
+      <DependentUpon>Openrecipe2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Point.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Point.Designer.cs">
+      <DependentUpon>Point.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PointOpen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PointOpen.Designer.cs">
+      <DependentUpon>PointOpen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RecipeType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RecipeType.Designer.cs">
+      <DependentUpon>RecipeType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RecipeTypeDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RecipeTypeDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Resource1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resource1.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Rotate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Rotate.Designer.cs">
+      <DependentUpon>Rotate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Slotno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Slotno.Designer.cs">
+      <DependentUpon>Slotno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SlotValve.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SlotValve.Designer.cs">
+      <DependentUpon>SlotValve.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StateControlOfICP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StateControlOfICP.Designer.cs">
+      <DependentUpon>StateControlOfICP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StateControlOfVCH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StateControlOfVCH.Designer.cs">
+      <DependentUpon>StateControlOfVCH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TM.Designer.cs">
+      <DependentUpon>TM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WaferTransferAndFlagOperation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WaferTransferAndFlagOperation.Designer.cs">
+      <DependentUpon>WaferTransferAndFlagOperation.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="ActionArm.resx">
+      <DependentUpon>ActionArm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="APM.resx">
+      <DependentUpon>APM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cassette.resx">
+      <DependentUpon>cassette.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cassettemap.resx">
+      <DependentUpon>cassettemap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CassetteWafer.resx">
+      <DependentUpon>CassetteWafer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Centralize.resx">
+      <DependentUpon>Centralize.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Chamber.resx">
+      <DependentUpon>Chamber.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Chamber1.resx">
+      <DependentUpon>Chamber1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChamberA.resx">
+      <DependentUpon>ChamberA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomMessageBox.resx">
+      <DependentUpon>CustomMessageBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DataChart.resx">
+      <DependentUpon>DataChart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="endeffector.resx">
+      <DependentUpon>endeffector.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EventLog.resx">
+      <DependentUpon>EventLog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FullMVs.resx">
+      <DependentUpon>FullMVs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DataLogger.resx">
+      <DependentUpon>DataLogger.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form2.resx">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GoSlot.resx">
+      <DependentUpon>GoSlot.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="i2L019.resx">
+      <DependentUpon>i2L019.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ICP.resx">
+      <DependentUpon>ICP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LogIn.resx">
+      <DependentUpon>LogIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LogOut.resx">
+      <DependentUpon>LogOut.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LotInformation.resx">
+      <DependentUpon>LotInformation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewChamber.resx">
+      <DependentUpon>NewChamber.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewConditioning.resx">
+      <DependentUpon>NewConditioning.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewRecipe.resx">
+      <DependentUpon>NewRecipe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OpenCassetteWafer.resx">
+      <DependentUpon>OpenCassetteWafer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OpenConditionRecipe.resx">
+      <DependentUpon>OpenConditionRecipe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Openrecipe.resx">
+      <DependentUpon>Openrecipe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Openrecipe2.resx">
+      <DependentUpon>Openrecipe2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Point.resx">
+      <DependentUpon>Point.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PointOpen.resx">
+      <DependentUpon>PointOpen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="RecipeType.resx">
+      <DependentUpon>RecipeType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Resource1.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resource1.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rotate.resx">
+      <DependentUpon>Rotate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Slotno.resx">
+      <DependentUpon>Slotno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SlotValve.resx">
+      <DependentUpon>SlotValve.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StateControlOfICP.resx">
+      <DependentUpon>StateControlOfICP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StateControlOfVCH.resx">
+      <DependentUpon>StateControlOfVCH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TM.resx">
+      <DependentUpon>TM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WaferTransferAndFlagOperation.resx">
+      <DependentUpon>WaferTransferAndFlagOperation.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="RecipeTypeDataSet.xsc">
+      <DependentUpon>RecipeTypeDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="RecipeTypeDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>RecipeTypeDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="RecipeTypeDataSet.xss">
+      <DependentUpon>RecipeTypeDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Resources\cassette.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\centralize.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chamber.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\newrobot.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\robot into cassette.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\robot into cassette2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\robot into chamber.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\robotleft.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cassetteA1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\robot into cassette1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wafer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\waferA1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\waferfull.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\newrobot GetA1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\robotleft A1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\robot into centralizeA1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\robotRight A1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\robot into chamberA1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\robotRight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chamberA1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\robot analysis.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\robotbotton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\centralize1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\robotanalysis.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cassette1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\centralize2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\robotanalysis1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\robot into centralizeA1-1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chamber 1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chamberA11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\robot into chamberA11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\robotbotton alysis.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cassette2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\open.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\centralize12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Chamber001.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\new-robot.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\new-chamber.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\new-robotbotton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\new-robotbottonalysis.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cassette3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\new-robot1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\new-chamber1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chamberA2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cassetteA2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\robotleft A2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\robotRight A2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\waferA2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\newrobot GetA2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\robot into centralizeA11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\robot into chamberA111.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\robot into chamberA112.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chamberA21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chamberA211.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chamberA212.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chamberA2121.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chamberA21211.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\newrobot GetA11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\newrobot GetA111.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\newrobot GetA1111.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\newrobot GetA11111.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\newrobot GetA111111.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\robotleft A21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\waferfull1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\robotRight A21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\robot into chamberA1111.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\robot into centralizeA111.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\robotRight A211.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\robotleft A211.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\robot into chamberA11111.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\robot into centralizeA1111.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\robotRight A2111.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\robotRight A21111.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\robotRight A211111.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\robotRight A2111111.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\robotRight A2111112.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\robotRight A2111113.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\robotRight A2111114.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\robot into centralizeA11111.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\robot into centralizeA111111.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\robot into centralizeA111112.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\robot into centralizeA111113.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\robot into centralizeA111114.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\robot into centralizeA111115.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\robot into centralizeA111116.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\robot into centralizeA111117.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\robot into centralizeA111118.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\newrobot GetA1111111.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\newrobot GetA1111112.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\newrobot GetA1111113.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\robotleft A2111.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\robotleft A2112.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\robotleft A2113.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\robotleft A2114.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\robotleft A2115.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\robotleft A21151.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\robot into chamberA111111.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chamberA212111.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chamberA212112.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chamberA212113.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\robot into chamberA111112.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\robot into chamberA111113.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\robot into chamberA111114.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\robot into chamberA111115.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\robot into chamberA1111151.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\robot into chamberA1111152.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\waferfull2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\waferfull3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\waferfull4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\waferfull5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\waferfull6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\waferfull7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\waferfull8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\waferfull9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\waferfull10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\robot into chamberA113.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\robot into chamberA1131.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\robot into chamberA11311.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\robot into chamberA11312.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\robot into chamberA11313.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\robot into chamberA1132.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\robot into chamberA11314.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LatestRobot.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\waferfull11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\waferfull12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\waferfull13.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\waferfull14.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\waferfull15.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\waferfull16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\waferfull17.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\waferfull18.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\waferfull19.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\waferfull20.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\waferfull21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\waferfull22.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\waferfull23.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\waferfull24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\waferfull25.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\robot into chamberA11112.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\robot into chamberA1111121.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\robot into chamberA1111131.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\robot into chamberA1111141.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\robot into chamberA1111153.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\robot into chamberA11111511.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\robot into chamberA11111521.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\new-robot11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\new-chamber11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\robot into chamberA11321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\robot into chamberA113211.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\robot into chamberA113212.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\robot into chamberA1132121.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="NewFolder1\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mainpic.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\robotbotton %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\robotbottonalysis%282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mainpic1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\robotintocassette.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\robotleftA1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\robotgetwaferA1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\robotgetwaferA11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\robotleftA11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\robotintocentralizeA1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\robotleftA12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\robotleftA121.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\robotintochamber.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\robotintochamber1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\robotintochamber11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\robotleftA13.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\robotgetwaferA12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\robotgetwaferA111.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\robotleftA111.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\robotintocentralizeA11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\robotleftA122.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\robotleftA1211.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\robotintochamber2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\robotintochamber12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\robotintochamber111.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\robotgetwaferA121.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\robotgetwaferA1111.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\robotleftA14.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\robotintochamber1111.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mainpicture.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\picrobotbotton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\picrobotanalysis.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\picrobotintocassette.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\picrobotleft.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\picrobotcentralized.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\picrobotintocentralized.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\picSv.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\picrobotintochamber.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user_login.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\picmap.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\picmap1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wafermapA1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wafermapA2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wafer1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wafer2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wafer3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wafer4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mainpicture1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\picrobotbotton1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\picrobotintochamber1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\picrobotbotton2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\picrobotbotton21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\picrobotbotton3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mainpicture2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\picrobotcentralized1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\picrobotintocentralized1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\picrobotcentralized2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\picrobotcentralized21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wafer41.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wafer42.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wafer43.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wafer44.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wafer45.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wafer5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wafer6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mainpicture21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\picrobotcentralized211.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wafer7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wafer8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wafer9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wafer10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wafer11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wafer12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wafer13.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wafer14.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wafer121.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wafer141.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wafer15.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wafer16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wafer17.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wafer18.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wafer19.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wafer20.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wafer21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wafer211.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wafer212.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wafer2121.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wafermapA11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wafermapA111.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wafermapA1111.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wafermapA11111.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wafermapA11112.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wafermapA11113.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wafermapA11114.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wafermapA111111.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wafermapA111121.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wafermapA11115.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wafermapA111112.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wafermapA111122.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wafermapA111113.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wafermapA111123.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wafermapA111124.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wafermapA111125.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wafermapA1111251.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wafermapA11112511.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wafermapA111125111.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wafermapA1111251111.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\picSv1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\picSv11.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

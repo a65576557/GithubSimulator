@@ -1,0 +1,850 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="cassette" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cassette.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cassetteA1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cassetteA1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="centralize" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\centralize.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="chamber" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\chamber.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="newrobot" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\newrobot.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="robotleft" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\robotleft.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="robot_into_cassette" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\robot into cassette.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="robot_into_cassetteA1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\robot into cassette1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="robot_into_cassette2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\robot into cassette2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="robot_into_chamber" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\robot into chamber.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="wafer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\wafer.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="waferA1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\waferA1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="waferfull" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\waferfull.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="chamberA1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\chamberA1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="newrobot_GetA1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\newrobot GetA1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="robotleft_A1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\robotleft A1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="robotRight" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\robotRight.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="robotRight_A1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\robotRight A1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="robot_into_centralizeA1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\robot into centralizeA1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="robot_into_chamberA1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\robot into chamberA1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cassette1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cassette1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="centralize1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\centralize1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="centralize2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\centralize2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="robotanalysis" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\robotanalysis.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="robotbotton" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\robotbotton.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="robot_analysis" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\robot analysis.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="chamberA11" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\chamberA11.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="chamber_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\chamber 1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="robotanalysis1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\robotanalysis1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="robot_into_centralizeA1_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\robot into centralizeA1-1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="robot_into_chamberA1111111" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\robot into chamberA11.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="robotbotton_alysis" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\robotbotton alysis.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cassette2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cassette2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="open" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\open.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="close" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\close.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="centralize12" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\centralize12.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Chamber001" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Chamber001.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cassette3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cassette3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="new_chamber" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\new-chamber.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="new_chamber1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\new-chamber1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="new_robot" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\new-robot.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="new_robotbotton" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\new-robotbotton.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="new_robotbottonalysis" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\new-robotbottonalysis.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="new_robotgetA1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\new-robot1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cassetteA2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cassetteA2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="chamberA2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\chamberA2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="newrobot_GetA2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\newrobot GetA2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="robotleft_A2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\robotleft A2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="robotRight_A2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\robotRight A2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="waferA2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\waferA2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="robot_into_centralizeA2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\robot into centralizeA11.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="robot_into_chamberA2222" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\robot into chamberA111.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="chamberA3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\chamberA21.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="chamberA4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\chamberA211.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="chamberA5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\chamberA212.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="chamberA6" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\chamberA2121.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="chamberA7" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\chamberA21211.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="newrobot_GetA3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\newrobot GetA11.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="newrobot_GetA4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\newrobot GetA111.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="newrobot_GetA5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\newrobot GetA1111.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="newrobot_GetA6" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\newrobot GetA11111.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="newrobot_GetA7" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\newrobot GetA111111.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="robotleft_A3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\robotleft A21.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="robotRight_A3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\robotRight A21.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="waferA3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\waferfull1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="chamberA10" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\chamberA212113.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="chamberA8" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\chamberA212111.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="chamberA9" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\chamberA212112.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="newrobot_GetA10" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\newrobot GetA1111113.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="newrobot_GetA8" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\newrobot GetA1111111.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="newrobot_GetA9" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\newrobot GetA1111112.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="robotleft_A10" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\robotleft A21151.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="robotleft_A4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\robotleft A211.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="robotleft_A5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\robotleft A2111.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="robotleft_A6" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\robotleft A2112.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="robotleft_A7" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\robotleft A2113.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="robotleft_A8" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\robotleft A2114.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="robotleft_A9" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\robotleft A2115.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="robotRight_A10" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\robotRight A2111113.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="robotRight_A4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\robotRight A211.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="robotRight_A5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\robotRight A2111.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="robotRight_A6" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\robotRight A21111.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="robotRight_A7" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\robotRight A211111.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="robotRight_A8" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\robotRight A2111112.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="robotRight_A9" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\robotRight A2111111.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="robot_into_centralizeA10" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\robot into centralizeA111115.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="robot_into_centralizeA3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\robot into centralizeA111.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="robot_into_centralizeA4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\robot into centralizeA1111.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="robot_into_centralizeA5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\robot into centralizeA11111.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="robot_into_centralizeA6" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\robot into centralizeA111111.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="robot_into_centralizeA7" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\robot into centralizeA111112.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="robot_into_centralizeA8" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\robot into centralizeA111113.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="robot_into_centralizeA9" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\robot into centralizeA111114.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="robot_into_chamberA10" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\robot into chamberA1111152.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="robot_into_chamberA3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\robot into chamberA1111.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="robot_into_chamberA4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\robot into chamberA11111.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="robot_into_chamberA4_close" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\robot into chamberA111111.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="robot_into_chamberA5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\robot into chamberA111112.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="robot_into_chamberA6" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\robot into chamberA111113.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="robot_into_chamberA7" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\robot into chamberA111114.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="robot_into_chamberA8" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\robot into chamberA111115.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="robot_into_chamberA9" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\robot into chamberA1111151.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="waferA10" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\waferfull8.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="waferA4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\waferfull2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="waferA5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\waferfull3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="waferA6" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\waferfull4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="waferA7" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\waferfull5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="waferA8" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\waferfull6.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="waferA9" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\waferfull7.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="No1_2_3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\waferfull10.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="robot_into_chamberA11" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\robot into chamberA1132.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="robot_into_chamberA11_close" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\robot into chamberA113.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="robot_into_chamberA2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\robot into chamberA11314.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="robot_into_chamberA21" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\robot into chamberA11311.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="robot_into_chamberA22" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\robot into chamberA11312.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="robot_into_chamberA23" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\robot into chamberA11313.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="robot_into_chamberA2_close" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\robot into chamberA1131.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LatestRobot" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LatestRobot.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="waferA11" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\waferfull11.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="waferfull12" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\waferfull12.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="waferfull13" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\waferfull13.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="waferfull14" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\waferfull14.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="waferfull15" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\waferfull15.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="waferfull16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\waferfull16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="waferfull17" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\waferfull17.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="waferfull18" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\waferfull18.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="waferfull19" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\waferfull19.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="waferfull20" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\waferfull20.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="waferfull21" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\waferfull21.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="waferfull22" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\waferfull22.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="waferfull23" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\waferfull23.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="waferfull24" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\waferfull24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="waferfull25" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\waferfull25.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="robot_into_chamberA101" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\robot into chamberA11111521.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="robot_into_chamberA3_close" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\robot into chamberA11112.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="robot_into_chamberA5_close" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\robot into chamberA1111121.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="robot_into_chamberA6_close" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\robot into chamberA1111131.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="robot_into_chamberA7_close" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\robot into chamberA1111141.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="robot_into_chamberA8_close" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\robot into chamberA1111153.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="robot_into_chamberA9_close" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\robot into chamberA11111511.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="new_robotgetA2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\new-robot11.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ChamberWithA1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\robot into chamberA11321.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ChamberWithA1Close" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\robot into chamberA113211.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ChamberWithA2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\robot into chamberA113212.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ChamberWithA2Close" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\robot into chamberA1132121.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="mainpic" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\mainpic.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="mainpicCassetteopen" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\mainpic1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="robotbottonalysis_2_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\robotbottonalysis(2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="robotbotton__2_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\robotbotton (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="robotgetwaferA1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\robotgetwaferA1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="robotgetwaferA1cassetteclose" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\robotgetwaferA11.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="robotintocassette" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\robotintocassette.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="robotintocentralizeA1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\robotintocentralizeA1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="robotintochamber" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\robotintochamber.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="robotintochamberwithA1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\robotintochamber1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="robotintochamberwithA1close" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\robotintochamber11.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="robotleftA1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\robotleftA1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="robotleftA1opencentralize" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\robotleftA11.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="robotleftA2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\robotleftA13.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="robotrightA1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\robotleftA12.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="robotrightA1openchamber" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\robotleftA121.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="robotgetwaferA2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\robotgetwaferA12.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="robotgetwaferA2cassetteclose" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\robotgetwaferA111.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="robotgetwaferA3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\robotgetwaferA121.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="robotgetwaferA3cassetteclose" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\robotgetwaferA1111.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="robotintocentralizeA2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\robotintocentralizeA11.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="robotintochamberA2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\robotintochamber2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="robotintochamberwithA2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\robotintochamber12.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="robotintochamberwithA2close" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\robotintochamber111.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="robotleftA2opencentralize" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\robotleftA111.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="robotrightA2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\robotleftA122.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="robotrightA2openchamber" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\robotleftA1211.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RotateCentralize" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\robotleftA14.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RotateChamber" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\robotintochamber1111.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="mainpicture" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\mainpicture.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="picrobotanalysis" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\picrobotanalysis.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="picrobotbotton" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\picrobotbotton.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="picrobotcentralized" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\picrobotcentralized.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="picrobotintocassette" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\picrobotintocassette.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="picrobotleft" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\picrobotleft.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="picrobotintocentralized" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\picrobotintocentralized.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="picrobotintochamber" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\picrobotintochamber.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="picSv" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\picSv.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="user_login" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\user_login.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="picmap" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\picmap.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="picmap1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\picmap1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="wafermapA1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\wafermapA1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="wafermapA2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\wafermapA2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="wafermapA3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\wafer1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="wafermapA4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\wafer2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="wafermapA5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\wafer3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="wafermapA6" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\wafer4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="picrobotAlignerWafer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\picrobotcentralized1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="picrobotAPMWafer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\picrobotbotton1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="picrobotArmWafer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\mainpicture1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="picrobotintoAlignerWafer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\picrobotintocentralized1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="picrobotintoAPMWafer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\picrobotintochamber1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="picrobotwaferinAligner" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\picrobotcentralized2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="picwaferinAPM" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\picrobotbotton3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="picwaferinAPMHome" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\mainpicture2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="picrobotwaferinAlignerHome" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\picrobotcentralized21.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="picrobotwaferinAlignerHomeup" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\picrobotcentralized211.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="picwaferinAPMHomeRight" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\mainpicture21.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="wafermapA7" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\wafer5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="wafermapA10" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\wafer9.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="wafermapA11" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\wafer10.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="wafermapA12" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\wafer121.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="wafermapA13" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\wafer12.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="wafermapA14" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\wafer13.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="wafermapA15" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\wafer14.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="wafermapA16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\wafer15.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="wafermapA17" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\wafer16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="wafermapA18" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\wafer17.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="wafermapA19" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\wafer18.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="wafermapA20" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\wafer19.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="wafermapA21" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\wafer20.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="wafermapA22" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\wafer21.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="wafermapA23" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\wafer211.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="wafermapA24" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\wafer212.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="wafermapA25" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\wafer2121.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="wafermapA8" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\wafer7.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="wafermapA9" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\wafer8.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="waferA1full" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\wafermapA11.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="waferA2full" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\wafermapA111.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="waferA3full" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\wafermapA1111.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="waferA3fullA1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\wafermapA11114.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="waferA3fullA2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\wafermapA11115.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="waferA4full" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\wafermapA11111.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="waferA4fullA1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\wafermapA111111.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="waferA4fullA2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\wafermapA111112.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="waferA4fullA3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\wafermapA111113.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="waferA5full" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\wafermapA11112.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="waferA5fullA1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\wafermapA111121.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="waferA5fullA2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\wafermapA111122.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="waferA5fullA3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\wafermapA111123.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="waferA5fullA4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\wafermapA111124.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="waferA10full" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\wafermapA1111251111.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="waferA6full" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\wafermapA111125.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="waferA7full" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\wafermapA1111251.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="waferA8full" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\wafermapA11112511.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="waferA9full" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\wafermapA111125111.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="picWafer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\picSv1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="picWaferGreen" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\picSv11.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+</root>
