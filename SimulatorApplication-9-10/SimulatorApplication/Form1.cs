@@ -142,6 +142,17 @@ namespace SimulatorApplication
 
         private  void Form1_Load(object sender, EventArgs e)
         {
+
+            MessageBox.Show("simulator");
+
+
+
+
+
+
+
+
+
             //   picendeffector.Width += 2;
 
             Control.CheckForIllegalCrossThreadCalls = false;
