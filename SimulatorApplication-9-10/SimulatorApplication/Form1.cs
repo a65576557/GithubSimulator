@@ -143,7 +143,7 @@ namespace SimulatorApplication
         private  void Form1_Load(object sender, EventArgs e)
         {
 
-            MessageBox.Show("simulator");
+         
 
 
 
@@ -6984,12 +6984,12 @@ namespace SimulatorApplication
             //  MessageBox.Show("123");
             //  Monitor.Wait();
 
-            /*    while (true)
-                {
-                    MTestTdEvent.WaitOne();
+               
+                 //   MTestTdEvent.WaitOne();
+                MTestTdEvent.Reset();
+          //  MTestTdEvent.Set();
 
-
-                }*/
+                
             //  delayTask.Wait();
             if (taskwait == true)
             {
