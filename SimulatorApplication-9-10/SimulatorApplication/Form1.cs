@@ -16,13 +16,16 @@ namespace SimulatorApplication
     public partial class Form1 : Form
     {
 
+        public static string datasource = @"HP-PC\SQLEXPRESS";
+
+
         bool taskwait = true;
 
         public List<string> NoOfwafer = new List<string>();
 
 
         Thread t = new Thread(threadwait);
-        
+
         Task taskTimer;                     // timer任務實體
         delegate void showTimeHandler();    // 顯示時間委派函式
         ManualResetEvent pauseSignal;       // 控制任務 暫停或繼續
@@ -84,19 +87,19 @@ namespace SimulatorApplication
         int y;
         //  ManualResetEvent manu = new ManualResetEvent(true);
 
-       // private readonly CancellationTokenSource _cts = new CancellationTokenSource();
+        // private readonly CancellationTokenSource _cts = new CancellationTokenSource();
 
-       // private readonly PauseTokenSource _mPauseTokeSource = new PauseTokenSource();
+        // private readonly PauseTokenSource _mPauseTokeSource = new PauseTokenSource();
 
 
 
         public Microsoft.VisualBasic.PowerPacks.ShapeContainer newcontainer;
 
-     //   public Microsoft.VisualBasic.PowerPacks.ShapeContainer APMcontainer;
+        //   public Microsoft.VisualBasic.PowerPacks.ShapeContainer APMcontainer;
 
-    //    public Microsoft.VisualBasic.PowerPacks.ShapeContainer robotupcontainer;
+        //    public Microsoft.VisualBasic.PowerPacks.ShapeContainer robotupcontainer;
 
-     //   public Microsoft.VisualBasic.PowerPacks.ShapeContainer robotintoAPMcontainer;
+        //   public Microsoft.VisualBasic.PowerPacks.ShapeContainer robotintoAPMcontainer;
 
 
 
@@ -110,35 +113,35 @@ namespace SimulatorApplication
         string Nitrogen;
         string Argon;
         public string strEvent = "insert into EventLog(Date,Event,Info) values(@1,@2,@3)";
-         public delegate void LoadChamber1(object sender, EventArgs e);
-          public LoadChamber1 loadchamber1;
+        public delegate void LoadChamber1(object sender, EventArgs e);
+        public LoadChamber1 loadchamber1;
         public delegate void LoadData();
         public LoadData loaddata;
 
         List<string> picname = new List<string>();
-      //   ManualResetEvent pauseSignal;
+        //   ManualResetEvent pauseSignal;
         SqlConnectionStringBuilder scsb;
         List<string> strStepname1 = new List<string>();
-       // LogIn login = new LogIn();
-         
-            
+        // LogIn login = new LogIn();
 
-    public void analysis() {
+
+
+        public void analysis() {
 
         }
 
 
-
+        
 
         public Form1()
         {
             InitializeComponent();
             //this.FormBorderStyle = FormBorderStyle.None;
             //this.WindowState = FormWindowState.Maximized;
-          
-
+       
 
         }
+    
 
         private  void Form1_Load(object sender, EventArgs e)
         {
@@ -299,7 +302,7 @@ namespace SimulatorApplication
                     LotInformation lot = new LotInformation();
                     DialogResult dr = lot.ShowDialog();
                     scsb = new SqlConnectionStringBuilder();
-                    scsb.DataSource = @"HP-PC\SQLEXPRESS";
+                    scsb.DataSource = datasource;
                     scsb.InitialCatalog = "RecipeType";
                     scsb.IntegratedSecurity = true;
                     SqlConnection con = new SqlConnection(scsb.ToString());
@@ -6985,8 +6988,8 @@ namespace SimulatorApplication
             //  Monitor.Wait();
 
                
-                 //   MTestTdEvent.WaitOne();
-                MTestTdEvent.Reset();
+                    MTestTdEvent.WaitOne();
+               // MTestTdEvent.Reset();
           //  MTestTdEvent.Set();
 
                 
