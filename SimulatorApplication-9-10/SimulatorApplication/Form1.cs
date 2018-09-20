@@ -272,7 +272,7 @@ namespace SimulatorApplication
         
             //picCassette.Image = imageList1.Images[0];
             // picCassette.Image = Image.FromFile(@"C: \Users\hp\Documents\Visual Studio 2015\Projects\SimulatorApplication\SimulatorApplication\image\cassette.png");
-            picCassette.Image = Properties.Resources.cassette;
+            picCassette.Image = Properties.Resources.cassette; 
             picwafer.Image = Properties.Resources.wafer;
             picCassette.Image.Tag = "cassette";
           
@@ -867,11 +867,35 @@ namespace SimulatorApplication
                                     // picwafer.Image = Properties.Resources.waferA5fullA1;
                                     picWafer1.Visible = false;
                                 }
-
-
-
+                                else if (NoOfwafer[i] == "6")
+                                {
+                                    // picwafer.Image = Properties.Resources.waferA5fullA1;
+                                    picWafer1.Visible = false;
+                                }
+                                else if (NoOfwafer[i] == "7")
+                                {
+                                    // picwafer.Image = Properties.Resources.waferA5fullA1;
+                                    picWafer1.Visible = false;
+                                }
+                                else if (NoOfwafer[i] == "8")
+                                {
+                                    // picwafer.Image = Properties.Resources.waferA5fullA1;
+                                    picWafer1.Visible = false;
+                                }
+                                else if (NoOfwafer[i] == "9")
+                                {
+                                    // picwafer.Image = Properties.Resources.waferA5fullA1;
+                                    picWafer1.Visible = false;
+                                }
+                                else if (NoOfwafer[i] == "10")
+                                {
+                                    // picwafer.Image = Properties.Resources.waferA5fullA1;
+                                    picWafer1.Visible = false;
+                                }
+                                
+                                
                                 StartTime = DateTime.Now;
-
+                                
 
                                 con.Open();
 
@@ -992,7 +1016,7 @@ namespace SimulatorApplication
                                 lblwafer.Top -= 76;
 
 
-
+                                
 
 
                                 await Task.Delay(1000);
@@ -1285,10 +1309,6 @@ namespace SimulatorApplication
                                 ListStepEndTime.Clear();
 
                                 // }
-
-
-
-
 
 
 
@@ -2790,7 +2810,7 @@ namespace SimulatorApplication
 
                                     con.Open();
 
-                                    string strModuleRecipe = "insert into ModuleRecipe(RecipeName,StepName,StartTime,EndTime,noofrecipe) values(@recipename,@stepname,@starttime,@endtime,@noofrecipe)";
+                                    string strModuleRecipe = "insert into ModuleRecipe(RecipeName,StepName,StartTime,EndTime,noofrecipe,logname) values(@recipename,@stepname,@starttime,@endtime,@noofrecipe,@Logname)";
 
                                     SqlCommand cmdmodulerecipe = new SqlCommand(strModuleRecipe, con);
 
@@ -2799,6 +2819,7 @@ namespace SimulatorApplication
                                     cmdmodulerecipe.Parameters.AddWithValue("@starttime", ListStepStartTime[j]);
                                     cmdmodulerecipe.Parameters.AddWithValue("@endtime", ListStepEndTime[j]);
                                     cmdmodulerecipe.Parameters.AddWithValue("@noofrecipe", "3");
+                                    cmdmodulerecipe.Parameters.AddWithValue("@Logname", lbl123.Text);
 
                                     cmdmodulerecipe.ExecuteNonQuery();
 
@@ -3465,7 +3486,7 @@ namespace SimulatorApplication
 
                                     con.Open();
 
-                                    string strModuleRecipe = "insert into ModuleRecipe(RecipeName,StepName,StartTime,EndTime,noofrecipe) values(@recipename,@stepname,@starttime,@endtime,@noofrecipe)";
+                                    string strModuleRecipe = "insert into ModuleRecipe(RecipeName,StepName,StartTime,EndTime,noofrecipe,logname) values(@recipename,@stepname,@starttime,@endtime,@noofrecipe,@Logname)";
 
                                     SqlCommand cmdmodulerecipe = new SqlCommand(strModuleRecipe, con);
 
@@ -3474,6 +3495,7 @@ namespace SimulatorApplication
                                     cmdmodulerecipe.Parameters.AddWithValue("@starttime", ListStepStartTime[j]);
                                     cmdmodulerecipe.Parameters.AddWithValue("@endtime", ListStepEndTime[j]);
                                     cmdmodulerecipe.Parameters.AddWithValue("@noofrecipe", "4");
+                                    cmdmodulerecipe.Parameters.AddWithValue("@Logname",lbl123.Text);
 
                                     cmdmodulerecipe.ExecuteNonQuery();
 
@@ -4128,7 +4150,7 @@ namespace SimulatorApplication
 
                                     con.Open();
 
-                                    string strModuleRecipe = "insert into ModuleRecipe(RecipeName,StepName,StartTime,EndTime,noofrecipe) values(@recipename,@stepname,@starttime,@endtime,@noofrecipe)";
+                                    string strModuleRecipe = "insert into ModuleRecipe(RecipeName,StepName,StartTime,EndTime,noofrecipe,logname) values(@recipename,@stepname,@starttime,@endtime,@noofrecipe,@Logname)";
 
                                     SqlCommand cmdmodulerecipe = new SqlCommand(strModuleRecipe, con);
 
@@ -4137,6 +4159,7 @@ namespace SimulatorApplication
                                     cmdmodulerecipe.Parameters.AddWithValue("@starttime", ListStepStartTime[j]);
                                     cmdmodulerecipe.Parameters.AddWithValue("@endtime", ListStepEndTime[j]);
                                     cmdmodulerecipe.Parameters.AddWithValue("@noofrecipe", "5");
+                                    cmdmodulerecipe.Parameters.AddWithValue("@Logname", lbl123.Text);
 
                                     cmdmodulerecipe.ExecuteNonQuery();
 
@@ -4775,7 +4798,7 @@ namespace SimulatorApplication
 
                                     con.Open();
 
-                                    string strModuleRecipe = "insert into ModuleRecipe(RecipeName,StepName,StartTime,EndTime,noofrecipe) values(@recipename,@stepname,@starttime,@endtime,@noofrecipe)";
+                                    string strModuleRecipe = "insert into ModuleRecipe(RecipeName,StepName,StartTime,EndTime,noofrecipe,logname) values(@recipename,@stepname,@starttime,@endtime,@noofrecipe,@Logname)";
 
                                     SqlCommand cmdmodulerecipe = new SqlCommand(strModuleRecipe, con);
 
@@ -4784,6 +4807,7 @@ namespace SimulatorApplication
                                     cmdmodulerecipe.Parameters.AddWithValue("@starttime", ListStepStartTime[j]);
                                     cmdmodulerecipe.Parameters.AddWithValue("@endtime", ListStepEndTime[j]);
                                     cmdmodulerecipe.Parameters.AddWithValue("@noofrecipe", "6");
+                                    cmdmodulerecipe.Parameters.AddWithValue("@Logname",lbl123.Text);
 
                                     cmdmodulerecipe.ExecuteNonQuery();
 

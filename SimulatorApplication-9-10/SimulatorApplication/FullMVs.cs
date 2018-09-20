@@ -147,11 +147,12 @@ namespace SimulatorApplication
             SqlConnection con = new SqlConnection(scsb.ToString());
             con.Open();
 
-            string strSQL = "select * from modulerecipe inner join waferselection on modulerecipe.noofrecipe = waferselection.noofwafers where modulerecipe.noofrecipe = @1 ";
+            string strSQL = "select * from modulerecipe inner join waferselection on modulerecipe.noofrecipe = waferselection.noofwafers where modulerecipe.noofrecipe = @1 and modulerecipe.Logname = @Logname ";
             //MessageBox.Show(noofwafer);
 
             SqlCommand cmd = new SqlCommand(strSQL, con);
             cmd.Parameters.AddWithValue("@1", noofwafer);
+            cmd.Parameters.AddWithValue("@Logname", DataLogger.strLogname);
          //   cmd.Parameters.AddWithValue("@2", DataLogger.strLogname);
             SqlDataReader reader = cmd.ExecuteReader();
             if (ModuleSelection.Items.Count == 0)
