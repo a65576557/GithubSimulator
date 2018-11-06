@@ -147,7 +147,7 @@ namespace SimulatorApplication
             SqlConnection con = new SqlConnection(scsb.ToString());
             con.Open();
 
-            string strSQL = "select * from modulerecipe inner join waferselection on modulerecipe.noofrecipe = waferselection.noofwafers where modulerecipe.noofrecipe = @1 and modulerecipe.Logname = @Logname ";
+            string strSQL = "select * from modulerecipe  where noofrecipe = @1 and Logname = @Logname ";
             //MessageBox.Show(noofwafer);
 
             SqlCommand cmd = new SqlCommand(strSQL, con);
@@ -155,10 +155,18 @@ namespace SimulatorApplication
             cmd.Parameters.AddWithValue("@Logname", DataLogger.strLogname);
          //   cmd.Parameters.AddWithValue("@2", DataLogger.strLogname);
             SqlDataReader reader = cmd.ExecuteReader();
-            if (ModuleSelection.Items.Count == 0)
+       //    if (ModuleSelection.Items.Count == 0)
             {
+                ModuleSelection.Items.Clear();
+                listrecipename.Clear();
+                listStepName.Clear();
+                listStarted.Clear();
+                listEnded.Clear();
+
+
                 while (reader.Read())
                 {
+
                     listrecipename.Add(reader["RecipeName"].ToString());
                     listStepName.Add(reader["StepName"].ToString());
                     listStarted.Add(string.Format("{0:yyyy/MM/dd hh:mm:ss}", reader["StartTime"]));
@@ -178,7 +186,7 @@ namespace SimulatorApplication
                 listStarted.Clear();
                 listEnded.Clear();
             }
-            else
+         /*  else
             {
                 ModuleSelection.Items.Clear();
                 listrecipename.Clear();
@@ -207,7 +215,7 @@ namespace SimulatorApplication
                 listEnded.Clear();
 
 
-            }
+            }*/
         }
 
         private void ModuleSelection_SelectedIndexChanged(object sender, EventArgs e)
@@ -226,10 +234,11 @@ namespace SimulatorApplication
             SqlConnection con = new SqlConnection(scsb.ToString());
             con.Open();
 
-            string Strsearchvalue = "select * from valueselection where stepname like @1 and recipename like @2";
+            string Strsearchvalue = "select * from valueselection where stepname like @1 and recipename like @2 and noofrecipe like @3";
             SqlCommand cmd = new SqlCommand(Strsearchvalue, con);
             cmd.Parameters.AddWithValue("@1", stepnamevalue);
             cmd.Parameters.AddWithValue("@2", modulerecipevalue);
+            cmd.Parameters.AddWithValue("@3", noofwafer);
             SqlDataReader reader = cmd.ExecuteReader();
             if (ValueSelection.Items.Count == 0)
             {
@@ -268,6 +277,8 @@ namespace SimulatorApplication
                 while (reader.Read())
 
                 {
+
+
                     listparameter.Add(reader["parameter"].ToString());
                     listminimum.Add(reader["Minimum"].ToString());
                     listmaxmum.Add(reader["Maximum"].ToString());
@@ -279,6 +290,7 @@ namespace SimulatorApplication
                 }
                 for (int i = 0; i < listparameter.Count; i++)
                 {
+
                     itm2 = new ListViewItem(listparameter[i]);
                     itm2.SubItems.Add(listminimum[i]);
                     itm2.SubItems.Add(listmaxmum[i]);

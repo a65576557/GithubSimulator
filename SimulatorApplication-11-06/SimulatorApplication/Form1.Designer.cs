@@ -207,11 +207,11 @@
             // btnLogIn
             // 
             this.btnLogIn.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.btnLogIn.Location = new System.Drawing.Point(209, 275);
+            this.btnLogIn.Image = ((System.Drawing.Image)(resources.GetObject("btnLogIn.Image")));
+            this.btnLogIn.Location = new System.Drawing.Point(218, 277);
             this.btnLogIn.Name = "btnLogIn";
-            this.btnLogIn.Size = new System.Drawing.Size(63, 40);
+            this.btnLogIn.Size = new System.Drawing.Size(43, 40);
             this.btnLogIn.TabIndex = 47;
-            this.btnLogIn.Text = "Log In";
             this.btnLogIn.UseVisualStyleBackColor = true;
             this.btnLogIn.Click += new System.EventHandler(this.btnLogIn_Click);
             // 
@@ -302,6 +302,7 @@
             // 
             // button4
             // 
+            this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
             this.button4.Location = new System.Drawing.Point(218, 336);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(43, 40);
@@ -324,7 +325,7 @@
             // 
             this.button2.Enabled = false;
             this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.Location = new System.Drawing.Point(123, 276);
+            this.button2.Location = new System.Drawing.Point(123, 277);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(43, 40);
             this.button2.TabIndex = 2;
@@ -336,7 +337,7 @@
             this.button1.Enabled = false;
             this.button1.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.Location = new System.Drawing.Point(29, 275);
+            this.button1.Location = new System.Drawing.Point(29, 277);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(43, 40);
             this.button1.TabIndex = 1;
@@ -1259,8 +1260,6 @@
         #endregion
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.PictureBox picChamber;
         private System.Windows.Forms.PictureBox picCassette;
@@ -1348,6 +1347,8 @@
         public System.Windows.Forms.PictureBox picWafer18;
         public System.Windows.Forms.PictureBox picWafer17;
         public System.Windows.Forms.PictureBox picWafer23;
+        public System.Windows.Forms.Button button5;
+        public System.Windows.Forms.Button button4;
     }
 }
 

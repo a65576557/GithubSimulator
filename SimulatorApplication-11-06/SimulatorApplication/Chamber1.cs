@@ -209,8 +209,8 @@ namespace SimulatorApplication
         {
             if (Form1.chamberload == "LimeGreen")
             {
-                lblWafer.BackColor = Color.Red;
-                lblWafer.Text = "A1";
+              //  lblWafer.BackColor = Color.Red;
+             //   lblWafer.Text = "A1";
                 lblData.Text = "";
                 lblProcess.Text = "Processing";
                 lblProcessStep.Text = "Process Step";
@@ -399,8 +399,8 @@ namespace SimulatorApplication
 
                     con.Close();
 
-                    lblWafer.BackColor = Color.White;
-                    lblWafer.Text = "";
+                   // lblWafer.BackColor = Color.White;
+                  //  lblWafer.Text = "";
 
 
 
@@ -422,6 +422,8 @@ namespace SimulatorApplication
 
 
                     //  await Task.Delay(3000);
+
+                  
 
                 }
 
@@ -446,6 +448,8 @@ namespace SimulatorApplication
                       lblCI2.Text = string.Format("{0}", reader2["CI2"])+""+"sccm";
 
                   }*/
+
+                this.Close();
 
             }
 

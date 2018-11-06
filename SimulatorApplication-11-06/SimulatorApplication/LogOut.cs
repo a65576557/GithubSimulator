@@ -32,11 +32,18 @@ namespace SimulatorApplication
             form1.btnLogger.Enabled = false;
             form1.btnconfig.Enabled = false;
 
-            form1.button3.Enabled = false;
+          //  form1.button3.Enabled = false;
+          //  form1.button4.Enabled = false;
+          //  form1.button5.Enabled = false;
 
 
-            form1.btnLogIn.Text = "Log In";
+            form1.btnLogIn.Tag = "LogIn";
             form1.lbllog.Text = "System: Monitor";
+        }
+
+        private void LogOut_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

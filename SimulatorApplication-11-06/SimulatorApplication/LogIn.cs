@@ -31,18 +31,21 @@ namespace SimulatorApplication
                 form1.btnVCH.Enabled = true;
                 form1.btnAPM.Enabled = true;
                 form1.btntm.Enabled = true;
-
+                
                 form1.button7.Enabled = true;
                 form1.btnRecipe.Enabled = true;
                 form1.btnEventLog.Enabled = true;
                 form1.btnLogger.Enabled = true;
                 form1.btnconfig.Enabled = true;
-
-                form1.button3.Enabled = true;
+               // form1.button4.Enabled = true;
+               // form1.button5.Enabled = true;
+              //  form1.button3.Enabled = true;
 
                 form1.lbllog.Text = "System: Control";
 
-                form1.btnLogIn.Text = "Log Out";
+                form1.btnLogIn.Tag = "LogOut";
+
+
 
                 scsb = new SqlConnectionStringBuilder();
              
