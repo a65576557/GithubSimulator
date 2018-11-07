@@ -14,6 +14,9 @@ namespace SimulatorApplication
     {
         public static string MsgManual;
         public static string MsgAutomatic;
+
+        
+
         public StateControlOfVCH()
         {
             InitializeComponent();
@@ -23,8 +26,14 @@ namespace SimulatorApplication
         {
 
             // btnManual.Enabled = false;
+
+            MsgManual = "false";
+            MsgAutomatic = "true";
+
             btnManual.Tag = MsgManual;
             btnAutomatic.Tag = MsgAutomatic;
+
+
 
             if (btnManual.Tag.ToString() == "false")
                 lblCurrentState.Text = "The current state of VCH is manual, aborted";

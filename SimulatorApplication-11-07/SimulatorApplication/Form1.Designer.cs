@@ -32,7 +32,6 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.lblCassetteRecipename = new System.Windows.Forms.Label();
             this.lbl123 = new System.Windows.Forms.Label();
-            this.btnLogIn = new System.Windows.Forms.Button();
             this.lblmTorr = new System.Windows.Forms.Label();
             this.lblState = new System.Windows.Forms.Label();
             this.lblCassetteRecipe = new System.Windows.Forms.Label();
@@ -40,11 +39,6 @@
             this.lblLoad = new System.Windows.Forms.Label();
             this.btnVCH = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.lblCassette = new System.Windows.Forms.Label();
             this.lblCentralize = new System.Windows.Forms.Label();
             this.lblChamber = new System.Windows.Forms.Label();
@@ -88,6 +82,30 @@
             this.lblwaferright = new System.Windows.Forms.Label();
             this.recipeTypeDataSet1 = new SimulatorApplication.RecipeTypeDataSet();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.picWafer23 = new System.Windows.Forms.PictureBox();
+            this.picWafer17 = new System.Windows.Forms.PictureBox();
+            this.picWafer18 = new System.Windows.Forms.PictureBox();
+            this.picWafer20 = new System.Windows.Forms.PictureBox();
+            this.picWafer21 = new System.Windows.Forms.PictureBox();
+            this.picWafer22 = new System.Windows.Forms.PictureBox();
+            this.picWafer15 = new System.Windows.Forms.PictureBox();
+            this.picWafer12 = new System.Windows.Forms.PictureBox();
+            this.picWafer13 = new System.Windows.Forms.PictureBox();
+            this.picWafer14 = new System.Windows.Forms.PictureBox();
+            this.picWafer10 = new System.Windows.Forms.PictureBox();
+            this.picWafer8 = new System.Windows.Forms.PictureBox();
+            this.picWafer7 = new System.Windows.Forms.PictureBox();
+            this.picWafer16 = new System.Windows.Forms.PictureBox();
+            this.picWafer11 = new System.Windows.Forms.PictureBox();
+            this.picWafer6 = new System.Windows.Forms.PictureBox();
+            this.picWafer5 = new System.Windows.Forms.PictureBox();
+            this.picWafer4 = new System.Windows.Forms.PictureBox();
+            this.picWafer9 = new System.Windows.Forms.PictureBox();
+            this.picWafer19 = new System.Windows.Forms.PictureBox();
+            this.picWafer3 = new System.Windows.Forms.PictureBox();
+            this.picWafer2 = new System.Windows.Forms.PictureBox();
+            this.picWafer24 = new System.Windows.Forms.PictureBox();
+            this.picWafer25 = new System.Windows.Forms.PictureBox();
             this.picWafer1 = new System.Windows.Forms.PictureBox();
             this.picmap1 = new System.Windows.Forms.PictureBox();
             this.picmap = new System.Windows.Forms.PictureBox();
@@ -96,34 +114,40 @@
             this.picwafer = new System.Windows.Forms.PictureBox();
             this.picCassette = new System.Windows.Forms.PictureBox();
             this.picChamber = new System.Windows.Forms.PictureBox();
-            this.picWafer25 = new System.Windows.Forms.PictureBox();
-            this.picWafer24 = new System.Windows.Forms.PictureBox();
-            this.picWafer2 = new System.Windows.Forms.PictureBox();
-            this.picWafer3 = new System.Windows.Forms.PictureBox();
-            this.picWafer19 = new System.Windows.Forms.PictureBox();
-            this.picWafer9 = new System.Windows.Forms.PictureBox();
-            this.picWafer4 = new System.Windows.Forms.PictureBox();
-            this.picWafer5 = new System.Windows.Forms.PictureBox();
-            this.picWafer6 = new System.Windows.Forms.PictureBox();
-            this.picWafer11 = new System.Windows.Forms.PictureBox();
-            this.picWafer16 = new System.Windows.Forms.PictureBox();
-            this.picWafer7 = new System.Windows.Forms.PictureBox();
-            this.picWafer8 = new System.Windows.Forms.PictureBox();
-            this.picWafer10 = new System.Windows.Forms.PictureBox();
-            this.picWafer14 = new System.Windows.Forms.PictureBox();
-            this.picWafer13 = new System.Windows.Forms.PictureBox();
-            this.picWafer12 = new System.Windows.Forms.PictureBox();
-            this.picWafer15 = new System.Windows.Forms.PictureBox();
-            this.picWafer22 = new System.Windows.Forms.PictureBox();
-            this.picWafer21 = new System.Windows.Forms.PictureBox();
-            this.picWafer20 = new System.Windows.Forms.PictureBox();
-            this.picWafer18 = new System.Windows.Forms.PictureBox();
-            this.picWafer17 = new System.Windows.Forms.PictureBox();
-            this.picWafer23 = new System.Windows.Forms.PictureBox();
+            this.button5 = new System.Windows.Forms.Button();
+            this.btnLogIn = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.label2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.recipeTypeDataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picWafer23)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picWafer17)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picWafer18)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picWafer20)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picWafer21)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picWafer22)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picWafer15)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picWafer12)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picWafer13)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picWafer14)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picWafer10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picWafer8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picWafer7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picWafer16)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picWafer11)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picWafer6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picWafer5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picWafer4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picWafer9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picWafer19)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picWafer3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picWafer2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picWafer24)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picWafer25)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picWafer1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picmap1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picmap)).BeginInit();
@@ -132,35 +156,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.picwafer)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picCassette)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picChamber)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picWafer25)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picWafer24)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picWafer2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picWafer3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picWafer19)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picWafer9)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picWafer4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picWafer5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picWafer6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picWafer11)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picWafer16)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picWafer7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picWafer8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picWafer10)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picWafer14)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picWafer13)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picWafer12)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picWafer15)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picWafer22)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picWafer21)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picWafer20)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picWafer18)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picWafer17)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picWafer23)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Silver;
+            this.groupBox1.Controls.Add(this.button5);
             this.groupBox1.Controls.Add(this.lblCassetteRecipename);
             this.groupBox1.Controls.Add(this.lbl123);
             this.groupBox1.Controls.Add(this.btnLogIn);
@@ -171,7 +172,6 @@
             this.groupBox1.Controls.Add(this.lblLoad);
             this.groupBox1.Controls.Add(this.btnVCH);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.button5);
             this.groupBox1.Controls.Add(this.button4);
             this.groupBox1.Controls.Add(this.button3);
             this.groupBox1.Controls.Add(this.button2);
@@ -203,17 +203,6 @@
             this.lbl123.Name = "lbl123";
             this.lbl123.Size = new System.Drawing.Size(0, 20);
             this.lbl123.TabIndex = 23;
-            // 
-            // btnLogIn
-            // 
-            this.btnLogIn.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.btnLogIn.Image = ((System.Drawing.Image)(resources.GetObject("btnLogIn.Image")));
-            this.btnLogIn.Location = new System.Drawing.Point(218, 277);
-            this.btnLogIn.Name = "btnLogIn";
-            this.btnLogIn.Size = new System.Drawing.Size(43, 40);
-            this.btnLogIn.TabIndex = 47;
-            this.btnLogIn.UseVisualStyleBackColor = true;
-            this.btnLogIn.Click += new System.EventHandler(this.btnLogIn_Click);
             // 
             // lblmTorr
             // 
@@ -289,60 +278,6 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(298, 205);
             this.label1.TabIndex = 0;
-            // 
-            // button5
-            // 
-            this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
-            this.button5.Location = new System.Drawing.Point(29, 336);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(45, 40);
-            this.button5.TabIndex = 5;
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
-            // 
-            // button4
-            // 
-            this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
-            this.button4.Location = new System.Drawing.Point(218, 336);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(43, 40);
-            this.button4.TabIndex = 4;
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
-            // 
-            // button3
-            // 
-            this.button3.Enabled = false;
-            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
-            this.button3.Location = new System.Drawing.Point(123, 336);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(45, 40);
-            this.button3.TabIndex = 3;
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // button2
-            // 
-            this.button2.Enabled = false;
-            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.Location = new System.Drawing.Point(123, 277);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(43, 40);
-            this.button2.TabIndex = 2;
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // button1
-            // 
-            this.button1.Enabled = false;
-            this.button1.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.Location = new System.Drawing.Point(29, 277);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(43, 40);
-            this.button1.TabIndex = 1;
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // lblCassette
             // 
@@ -818,6 +753,246 @@
             this.recipeTypeDataSet1.DataSetName = "RecipeTypeDataSet";
             this.recipeTypeDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
+            // picWafer23
+            // 
+            this.picWafer23.Enabled = false;
+            this.picWafer23.Image = global::SimulatorApplication.Properties.Resources.picWafer;
+            this.picWafer23.Location = new System.Drawing.Point(81, 504);
+            this.picWafer23.Name = "picWafer23";
+            this.picWafer23.Size = new System.Drawing.Size(72, 10);
+            this.picWafer23.TabIndex = 84;
+            this.picWafer23.TabStop = false;
+            // 
+            // picWafer17
+            // 
+            this.picWafer17.Enabled = false;
+            this.picWafer17.Image = global::SimulatorApplication.Properties.Resources.picWafer;
+            this.picWafer17.Location = new System.Drawing.Point(81, 578);
+            this.picWafer17.Name = "picWafer17";
+            this.picWafer17.Size = new System.Drawing.Size(72, 10);
+            this.picWafer17.TabIndex = 83;
+            this.picWafer17.TabStop = false;
+            // 
+            // picWafer18
+            // 
+            this.picWafer18.Enabled = false;
+            this.picWafer18.Image = global::SimulatorApplication.Properties.Resources.picWafer;
+            this.picWafer18.Location = new System.Drawing.Point(81, 567);
+            this.picWafer18.Name = "picWafer18";
+            this.picWafer18.Size = new System.Drawing.Size(72, 10);
+            this.picWafer18.TabIndex = 82;
+            this.picWafer18.TabStop = false;
+            // 
+            // picWafer20
+            // 
+            this.picWafer20.Enabled = false;
+            this.picWafer20.Image = global::SimulatorApplication.Properties.Resources.picWafer;
+            this.picWafer20.Location = new System.Drawing.Point(81, 541);
+            this.picWafer20.Name = "picWafer20";
+            this.picWafer20.Size = new System.Drawing.Size(72, 10);
+            this.picWafer20.TabIndex = 81;
+            this.picWafer20.TabStop = false;
+            // 
+            // picWafer21
+            // 
+            this.picWafer21.Enabled = false;
+            this.picWafer21.Image = global::SimulatorApplication.Properties.Resources.picWafer;
+            this.picWafer21.Location = new System.Drawing.Point(81, 527);
+            this.picWafer21.Name = "picWafer21";
+            this.picWafer21.Size = new System.Drawing.Size(72, 10);
+            this.picWafer21.TabIndex = 80;
+            this.picWafer21.TabStop = false;
+            // 
+            // picWafer22
+            // 
+            this.picWafer22.Enabled = false;
+            this.picWafer22.Image = global::SimulatorApplication.Properties.Resources.picWafer;
+            this.picWafer22.Location = new System.Drawing.Point(81, 515);
+            this.picWafer22.Name = "picWafer22";
+            this.picWafer22.Size = new System.Drawing.Size(72, 10);
+            this.picWafer22.TabIndex = 79;
+            this.picWafer22.TabStop = false;
+            // 
+            // picWafer15
+            // 
+            this.picWafer15.Enabled = false;
+            this.picWafer15.Image = global::SimulatorApplication.Properties.Resources.picWafer;
+            this.picWafer15.Location = new System.Drawing.Point(81, 604);
+            this.picWafer15.Name = "picWafer15";
+            this.picWafer15.Size = new System.Drawing.Size(72, 10);
+            this.picWafer15.TabIndex = 78;
+            this.picWafer15.TabStop = false;
+            // 
+            // picWafer12
+            // 
+            this.picWafer12.Enabled = false;
+            this.picWafer12.Image = global::SimulatorApplication.Properties.Resources.picWafer;
+            this.picWafer12.Location = new System.Drawing.Point(81, 640);
+            this.picWafer12.Name = "picWafer12";
+            this.picWafer12.Size = new System.Drawing.Size(72, 10);
+            this.picWafer12.TabIndex = 77;
+            this.picWafer12.TabStop = false;
+            // 
+            // picWafer13
+            // 
+            this.picWafer13.Enabled = false;
+            this.picWafer13.Image = global::SimulatorApplication.Properties.Resources.picWafer;
+            this.picWafer13.Location = new System.Drawing.Point(81, 629);
+            this.picWafer13.Name = "picWafer13";
+            this.picWafer13.Size = new System.Drawing.Size(72, 10);
+            this.picWafer13.TabIndex = 76;
+            this.picWafer13.TabStop = false;
+            // 
+            // picWafer14
+            // 
+            this.picWafer14.Enabled = false;
+            this.picWafer14.Image = global::SimulatorApplication.Properties.Resources.picWafer;
+            this.picWafer14.Location = new System.Drawing.Point(81, 617);
+            this.picWafer14.Name = "picWafer14";
+            this.picWafer14.Size = new System.Drawing.Size(72, 10);
+            this.picWafer14.TabIndex = 75;
+            this.picWafer14.TabStop = false;
+            // 
+            // picWafer10
+            // 
+            this.picWafer10.Enabled = false;
+            this.picWafer10.Image = global::SimulatorApplication.Properties.Resources.picWafer;
+            this.picWafer10.Location = new System.Drawing.Point(81, 663);
+            this.picWafer10.Name = "picWafer10";
+            this.picWafer10.Size = new System.Drawing.Size(72, 10);
+            this.picWafer10.TabIndex = 73;
+            this.picWafer10.TabStop = false;
+            // 
+            // picWafer8
+            // 
+            this.picWafer8.Enabled = false;
+            this.picWafer8.Image = global::SimulatorApplication.Properties.Resources.picWafer;
+            this.picWafer8.Location = new System.Drawing.Point(81, 685);
+            this.picWafer8.Name = "picWafer8";
+            this.picWafer8.Size = new System.Drawing.Size(72, 10);
+            this.picWafer8.TabIndex = 72;
+            this.picWafer8.TabStop = false;
+            // 
+            // picWafer7
+            // 
+            this.picWafer7.Enabled = false;
+            this.picWafer7.Image = global::SimulatorApplication.Properties.Resources.picWafer;
+            this.picWafer7.Location = new System.Drawing.Point(81, 696);
+            this.picWafer7.Name = "picWafer7";
+            this.picWafer7.Size = new System.Drawing.Size(72, 10);
+            this.picWafer7.TabIndex = 71;
+            this.picWafer7.TabStop = false;
+            // 
+            // picWafer16
+            // 
+            this.picWafer16.Enabled = false;
+            this.picWafer16.Image = global::SimulatorApplication.Properties.Resources.picWafer;
+            this.picWafer16.Location = new System.Drawing.Point(81, 592);
+            this.picWafer16.Name = "picWafer16";
+            this.picWafer16.Size = new System.Drawing.Size(72, 10);
+            this.picWafer16.TabIndex = 70;
+            this.picWafer16.TabStop = false;
+            // 
+            // picWafer11
+            // 
+            this.picWafer11.Enabled = false;
+            this.picWafer11.Image = global::SimulatorApplication.Properties.Resources.picWafer;
+            this.picWafer11.Location = new System.Drawing.Point(81, 651);
+            this.picWafer11.Name = "picWafer11";
+            this.picWafer11.Size = new System.Drawing.Size(72, 10);
+            this.picWafer11.TabIndex = 69;
+            this.picWafer11.TabStop = false;
+            // 
+            // picWafer6
+            // 
+            this.picWafer6.Enabled = false;
+            this.picWafer6.Image = global::SimulatorApplication.Properties.Resources.picWafer;
+            this.picWafer6.Location = new System.Drawing.Point(81, 707);
+            this.picWafer6.Name = "picWafer6";
+            this.picWafer6.Size = new System.Drawing.Size(72, 10);
+            this.picWafer6.TabIndex = 68;
+            this.picWafer6.TabStop = false;
+            // 
+            // picWafer5
+            // 
+            this.picWafer5.Enabled = false;
+            this.picWafer5.Image = global::SimulatorApplication.Properties.Resources.picWafer;
+            this.picWafer5.Location = new System.Drawing.Point(81, 720);
+            this.picWafer5.Name = "picWafer5";
+            this.picWafer5.Size = new System.Drawing.Size(72, 10);
+            this.picWafer5.TabIndex = 67;
+            this.picWafer5.TabStop = false;
+            // 
+            // picWafer4
+            // 
+            this.picWafer4.Enabled = false;
+            this.picWafer4.Image = global::SimulatorApplication.Properties.Resources.picWafer;
+            this.picWafer4.Location = new System.Drawing.Point(81, 732);
+            this.picWafer4.Name = "picWafer4";
+            this.picWafer4.Size = new System.Drawing.Size(72, 10);
+            this.picWafer4.TabIndex = 66;
+            this.picWafer4.TabStop = false;
+            // 
+            // picWafer9
+            // 
+            this.picWafer9.Enabled = false;
+            this.picWafer9.Image = global::SimulatorApplication.Properties.Resources.picWafer;
+            this.picWafer9.Location = new System.Drawing.Point(81, 674);
+            this.picWafer9.Name = "picWafer9";
+            this.picWafer9.Size = new System.Drawing.Size(72, 10);
+            this.picWafer9.TabIndex = 65;
+            this.picWafer9.TabStop = false;
+            // 
+            // picWafer19
+            // 
+            this.picWafer19.Enabled = false;
+            this.picWafer19.Image = global::SimulatorApplication.Properties.Resources.picWafer;
+            this.picWafer19.Location = new System.Drawing.Point(81, 554);
+            this.picWafer19.Name = "picWafer19";
+            this.picWafer19.Size = new System.Drawing.Size(72, 10);
+            this.picWafer19.TabIndex = 64;
+            this.picWafer19.TabStop = false;
+            // 
+            // picWafer3
+            // 
+            this.picWafer3.Enabled = false;
+            this.picWafer3.Image = global::SimulatorApplication.Properties.Resources.picWafer;
+            this.picWafer3.Location = new System.Drawing.Point(81, 743);
+            this.picWafer3.Name = "picWafer3";
+            this.picWafer3.Size = new System.Drawing.Size(72, 10);
+            this.picWafer3.TabIndex = 63;
+            this.picWafer3.TabStop = false;
+            // 
+            // picWafer2
+            // 
+            this.picWafer2.Enabled = false;
+            this.picWafer2.Image = global::SimulatorApplication.Properties.Resources.picWafer;
+            this.picWafer2.Location = new System.Drawing.Point(81, 756);
+            this.picWafer2.Name = "picWafer2";
+            this.picWafer2.Size = new System.Drawing.Size(72, 10);
+            this.picWafer2.TabIndex = 62;
+            this.picWafer2.TabStop = false;
+            // 
+            // picWafer24
+            // 
+            this.picWafer24.Enabled = false;
+            this.picWafer24.Image = global::SimulatorApplication.Properties.Resources.picWafer;
+            this.picWafer24.Location = new System.Drawing.Point(81, 492);
+            this.picWafer24.Name = "picWafer24";
+            this.picWafer24.Size = new System.Drawing.Size(72, 10);
+            this.picWafer24.TabIndex = 61;
+            this.picWafer24.TabStop = false;
+            // 
+            // picWafer25
+            // 
+            this.picWafer25.Enabled = false;
+            this.picWafer25.Image = global::SimulatorApplication.Properties.Resources.picWafer;
+            this.picWafer25.Location = new System.Drawing.Point(81, 479);
+            this.picWafer25.Name = "picWafer25";
+            this.picWafer25.Size = new System.Drawing.Size(72, 10);
+            this.picWafer25.TabIndex = 60;
+            this.picWafer25.TabStop = false;
+            // 
             // picWafer1
             // 
             this.picWafer1.Enabled = false;
@@ -908,245 +1083,70 @@
             this.picChamber.TabStop = false;
             this.picChamber.Visible = false;
             // 
-            // picWafer25
+            // button5
             // 
-            this.picWafer25.Enabled = false;
-            this.picWafer25.Image = global::SimulatorApplication.Properties.Resources.picWafer;
-            this.picWafer25.Location = new System.Drawing.Point(81, 479);
-            this.picWafer25.Name = "picWafer25";
-            this.picWafer25.Size = new System.Drawing.Size(72, 10);
-            this.picWafer25.TabIndex = 60;
-            this.picWafer25.TabStop = false;
+            this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
+            this.button5.Location = new System.Drawing.Point(122, 336);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(45, 40);
+            this.button5.TabIndex = 5;
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
-            // picWafer24
+            // btnLogIn
             // 
-            this.picWafer24.Enabled = false;
-            this.picWafer24.Image = global::SimulatorApplication.Properties.Resources.picWafer;
-            this.picWafer24.Location = new System.Drawing.Point(81, 492);
-            this.picWafer24.Name = "picWafer24";
-            this.picWafer24.Size = new System.Drawing.Size(72, 10);
-            this.picWafer24.TabIndex = 61;
-            this.picWafer24.TabStop = false;
+            this.btnLogIn.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btnLogIn.Image = global::SimulatorApplication.Properties.Resources.login;
+            this.btnLogIn.Location = new System.Drawing.Point(218, 277);
+            this.btnLogIn.Name = "btnLogIn";
+            this.btnLogIn.Size = new System.Drawing.Size(43, 40);
+            this.btnLogIn.TabIndex = 47;
+            this.btnLogIn.UseVisualStyleBackColor = true;
+            this.btnLogIn.Click += new System.EventHandler(this.btnLogIn_Click);
             // 
-            // picWafer2
+            // button4
             // 
-            this.picWafer2.Enabled = false;
-            this.picWafer2.Image = global::SimulatorApplication.Properties.Resources.picWafer;
-            this.picWafer2.Location = new System.Drawing.Point(81, 756);
-            this.picWafer2.Name = "picWafer2";
-            this.picWafer2.Size = new System.Drawing.Size(72, 10);
-            this.picWafer2.TabIndex = 62;
-            this.picWafer2.TabStop = false;
+            this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
+            this.button4.Location = new System.Drawing.Point(218, 336);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(43, 40);
+            this.button4.TabIndex = 4;
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
-            // picWafer3
+            // button3
             // 
-            this.picWafer3.Enabled = false;
-            this.picWafer3.Image = global::SimulatorApplication.Properties.Resources.picWafer;
-            this.picWafer3.Location = new System.Drawing.Point(81, 743);
-            this.picWafer3.Name = "picWafer3";
-            this.picWafer3.Size = new System.Drawing.Size(72, 10);
-            this.picWafer3.TabIndex = 63;
-            this.picWafer3.TabStop = false;
+            this.button3.Enabled = false;
+            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
+            this.button3.Location = new System.Drawing.Point(28, 336);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(45, 40);
+            this.button3.TabIndex = 3;
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
-            // picWafer19
+            // button2
             // 
-            this.picWafer19.Enabled = false;
-            this.picWafer19.Image = global::SimulatorApplication.Properties.Resources.picWafer;
-            this.picWafer19.Location = new System.Drawing.Point(81, 554);
-            this.picWafer19.Name = "picWafer19";
-            this.picWafer19.Size = new System.Drawing.Size(72, 10);
-            this.picWafer19.TabIndex = 64;
-            this.picWafer19.TabStop = false;
+            this.button2.Enabled = false;
+            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
+            this.button2.Location = new System.Drawing.Point(123, 277);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(43, 40);
+            this.button2.TabIndex = 2;
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // picWafer9
+            // button1
             // 
-            this.picWafer9.Enabled = false;
-            this.picWafer9.Image = global::SimulatorApplication.Properties.Resources.picWafer;
-            this.picWafer9.Location = new System.Drawing.Point(81, 674);
-            this.picWafer9.Name = "picWafer9";
-            this.picWafer9.Size = new System.Drawing.Size(72, 10);
-            this.picWafer9.TabIndex = 65;
-            this.picWafer9.TabStop = false;
-            // 
-            // picWafer4
-            // 
-            this.picWafer4.Enabled = false;
-            this.picWafer4.Image = global::SimulatorApplication.Properties.Resources.picWafer;
-            this.picWafer4.Location = new System.Drawing.Point(81, 732);
-            this.picWafer4.Name = "picWafer4";
-            this.picWafer4.Size = new System.Drawing.Size(72, 10);
-            this.picWafer4.TabIndex = 66;
-            this.picWafer4.TabStop = false;
-            // 
-            // picWafer5
-            // 
-            this.picWafer5.Enabled = false;
-            this.picWafer5.Image = global::SimulatorApplication.Properties.Resources.picWafer;
-            this.picWafer5.Location = new System.Drawing.Point(81, 720);
-            this.picWafer5.Name = "picWafer5";
-            this.picWafer5.Size = new System.Drawing.Size(72, 10);
-            this.picWafer5.TabIndex = 67;
-            this.picWafer5.TabStop = false;
-            // 
-            // picWafer6
-            // 
-            this.picWafer6.Enabled = false;
-            this.picWafer6.Image = global::SimulatorApplication.Properties.Resources.picWafer;
-            this.picWafer6.Location = new System.Drawing.Point(81, 707);
-            this.picWafer6.Name = "picWafer6";
-            this.picWafer6.Size = new System.Drawing.Size(72, 10);
-            this.picWafer6.TabIndex = 68;
-            this.picWafer6.TabStop = false;
-            // 
-            // picWafer11
-            // 
-            this.picWafer11.Enabled = false;
-            this.picWafer11.Image = global::SimulatorApplication.Properties.Resources.picWafer;
-            this.picWafer11.Location = new System.Drawing.Point(81, 651);
-            this.picWafer11.Name = "picWafer11";
-            this.picWafer11.Size = new System.Drawing.Size(72, 10);
-            this.picWafer11.TabIndex = 69;
-            this.picWafer11.TabStop = false;
-            // 
-            // picWafer16
-            // 
-            this.picWafer16.Enabled = false;
-            this.picWafer16.Image = global::SimulatorApplication.Properties.Resources.picWafer;
-            this.picWafer16.Location = new System.Drawing.Point(81, 592);
-            this.picWafer16.Name = "picWafer16";
-            this.picWafer16.Size = new System.Drawing.Size(72, 10);
-            this.picWafer16.TabIndex = 70;
-            this.picWafer16.TabStop = false;
-            // 
-            // picWafer7
-            // 
-            this.picWafer7.Enabled = false;
-            this.picWafer7.Image = global::SimulatorApplication.Properties.Resources.picWafer;
-            this.picWafer7.Location = new System.Drawing.Point(81, 696);
-            this.picWafer7.Name = "picWafer7";
-            this.picWafer7.Size = new System.Drawing.Size(72, 10);
-            this.picWafer7.TabIndex = 71;
-            this.picWafer7.TabStop = false;
-            // 
-            // picWafer8
-            // 
-            this.picWafer8.Enabled = false;
-            this.picWafer8.Image = global::SimulatorApplication.Properties.Resources.picWafer;
-            this.picWafer8.Location = new System.Drawing.Point(81, 685);
-            this.picWafer8.Name = "picWafer8";
-            this.picWafer8.Size = new System.Drawing.Size(72, 10);
-            this.picWafer8.TabIndex = 72;
-            this.picWafer8.TabStop = false;
-            // 
-            // picWafer10
-            // 
-            this.picWafer10.Enabled = false;
-            this.picWafer10.Image = global::SimulatorApplication.Properties.Resources.picWafer;
-            this.picWafer10.Location = new System.Drawing.Point(81, 663);
-            this.picWafer10.Name = "picWafer10";
-            this.picWafer10.Size = new System.Drawing.Size(72, 10);
-            this.picWafer10.TabIndex = 73;
-            this.picWafer10.TabStop = false;
-            // 
-            // picWafer14
-            // 
-            this.picWafer14.Enabled = false;
-            this.picWafer14.Image = global::SimulatorApplication.Properties.Resources.picWafer;
-            this.picWafer14.Location = new System.Drawing.Point(81, 617);
-            this.picWafer14.Name = "picWafer14";
-            this.picWafer14.Size = new System.Drawing.Size(72, 10);
-            this.picWafer14.TabIndex = 75;
-            this.picWafer14.TabStop = false;
-            // 
-            // picWafer13
-            // 
-            this.picWafer13.Enabled = false;
-            this.picWafer13.Image = global::SimulatorApplication.Properties.Resources.picWafer;
-            this.picWafer13.Location = new System.Drawing.Point(81, 629);
-            this.picWafer13.Name = "picWafer13";
-            this.picWafer13.Size = new System.Drawing.Size(72, 10);
-            this.picWafer13.TabIndex = 76;
-            this.picWafer13.TabStop = false;
-            // 
-            // picWafer12
-            // 
-            this.picWafer12.Enabled = false;
-            this.picWafer12.Image = global::SimulatorApplication.Properties.Resources.picWafer;
-            this.picWafer12.Location = new System.Drawing.Point(81, 640);
-            this.picWafer12.Name = "picWafer12";
-            this.picWafer12.Size = new System.Drawing.Size(72, 10);
-            this.picWafer12.TabIndex = 77;
-            this.picWafer12.TabStop = false;
-            // 
-            // picWafer15
-            // 
-            this.picWafer15.Enabled = false;
-            this.picWafer15.Image = global::SimulatorApplication.Properties.Resources.picWafer;
-            this.picWafer15.Location = new System.Drawing.Point(81, 604);
-            this.picWafer15.Name = "picWafer15";
-            this.picWafer15.Size = new System.Drawing.Size(72, 10);
-            this.picWafer15.TabIndex = 78;
-            this.picWafer15.TabStop = false;
-            // 
-            // picWafer22
-            // 
-            this.picWafer22.Enabled = false;
-            this.picWafer22.Image = global::SimulatorApplication.Properties.Resources.picWafer;
-            this.picWafer22.Location = new System.Drawing.Point(81, 515);
-            this.picWafer22.Name = "picWafer22";
-            this.picWafer22.Size = new System.Drawing.Size(72, 10);
-            this.picWafer22.TabIndex = 79;
-            this.picWafer22.TabStop = false;
-            // 
-            // picWafer21
-            // 
-            this.picWafer21.Enabled = false;
-            this.picWafer21.Image = global::SimulatorApplication.Properties.Resources.picWafer;
-            this.picWafer21.Location = new System.Drawing.Point(81, 527);
-            this.picWafer21.Name = "picWafer21";
-            this.picWafer21.Size = new System.Drawing.Size(72, 10);
-            this.picWafer21.TabIndex = 80;
-            this.picWafer21.TabStop = false;
-            // 
-            // picWafer20
-            // 
-            this.picWafer20.Enabled = false;
-            this.picWafer20.Image = global::SimulatorApplication.Properties.Resources.picWafer;
-            this.picWafer20.Location = new System.Drawing.Point(81, 541);
-            this.picWafer20.Name = "picWafer20";
-            this.picWafer20.Size = new System.Drawing.Size(72, 10);
-            this.picWafer20.TabIndex = 81;
-            this.picWafer20.TabStop = false;
-            // 
-            // picWafer18
-            // 
-            this.picWafer18.Enabled = false;
-            this.picWafer18.Image = global::SimulatorApplication.Properties.Resources.picWafer;
-            this.picWafer18.Location = new System.Drawing.Point(81, 567);
-            this.picWafer18.Name = "picWafer18";
-            this.picWafer18.Size = new System.Drawing.Size(72, 10);
-            this.picWafer18.TabIndex = 82;
-            this.picWafer18.TabStop = false;
-            // 
-            // picWafer17
-            // 
-            this.picWafer17.Enabled = false;
-            this.picWafer17.Image = global::SimulatorApplication.Properties.Resources.picWafer;
-            this.picWafer17.Location = new System.Drawing.Point(81, 578);
-            this.picWafer17.Name = "picWafer17";
-            this.picWafer17.Size = new System.Drawing.Size(72, 10);
-            this.picWafer17.TabIndex = 83;
-            this.picWafer17.TabStop = false;
-            // 
-            // picWafer23
-            // 
-            this.picWafer23.Enabled = false;
-            this.picWafer23.Image = global::SimulatorApplication.Properties.Resources.picWafer;
-            this.picWafer23.Location = new System.Drawing.Point(81, 504);
-            this.picWafer23.Name = "picWafer23";
-            this.picWafer23.Size = new System.Drawing.Size(72, 10);
-            this.picWafer23.TabIndex = 84;
-            this.picWafer23.TabStop = false;
+            this.button1.Enabled = false;
+            this.button1.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.Location = new System.Drawing.Point(29, 277);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(43, 40);
+            this.button1.TabIndex = 1;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Form1
             // 
@@ -1220,6 +1220,30 @@
             this.groupBox3.ResumeLayout(false);
             this.label2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.recipeTypeDataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picWafer23)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picWafer17)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picWafer18)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picWafer20)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picWafer21)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picWafer22)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picWafer15)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picWafer12)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picWafer13)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picWafer14)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picWafer10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picWafer8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picWafer7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picWafer16)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picWafer11)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picWafer6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picWafer5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picWafer4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picWafer9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picWafer19)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picWafer3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picWafer2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picWafer24)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picWafer25)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picWafer1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picmap1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picmap)).EndInit();
@@ -1228,30 +1252,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.picwafer)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picCassette)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picChamber)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picWafer25)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picWafer24)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picWafer2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picWafer3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picWafer19)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picWafer9)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picWafer4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picWafer5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picWafer6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picWafer11)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picWafer16)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picWafer7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picWafer8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picWafer10)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picWafer14)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picWafer13)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picWafer12)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picWafer15)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picWafer22)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picWafer21)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picWafer20)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picWafer18)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picWafer17)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picWafer23)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1267,7 +1267,6 @@
         private System.Windows.Forms.Label lblCentralize;
         private System.Windows.Forms.Button btni2L;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.Button btnChamber;
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Button button9;
         public System.Windows.Forms.Label lblChamber;
@@ -1349,6 +1348,7 @@
         public System.Windows.Forms.PictureBox picWafer23;
         public System.Windows.Forms.Button button5;
         public System.Windows.Forms.Button button4;
+        public System.Windows.Forms.Button btnChamber;
     }
 }
 

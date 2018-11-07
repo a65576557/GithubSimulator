@@ -38,6 +38,7 @@ namespace SimulatorApplication
         private void Chamber1_Load(object sender, EventArgs e)
 
         {
+            
             //Form1 form1 = new Form1();
             // form1.loaddata += new Form1.LoadData(loaddata);
            // form1.loadchamber1 += new Form1.LoadChamber1(Chamber1_Load);

@@ -25,17 +25,18 @@ namespace SimulatorApplication
             form1.btnAPM.Enabled = false;
             form1.btntm.Enabled = false;
 
-
+            form1.btnChamber.Enabled = false;
             form1.button7.Enabled = false;
             form1.btnRecipe.Enabled = false;
             form1.btnEventLog.Enabled = false;
             form1.btnLogger.Enabled = false;
             form1.btnconfig.Enabled = false;
 
-          //  form1.button3.Enabled = false;
-          //  form1.button4.Enabled = false;
-          //  form1.button5.Enabled = false;
+            //  form1.button3.Enabled = false;
+            //  form1.button4.Enabled = false;
+            //  form1.button5.Enabled = false;
 
+            form1.btnLogIn.Image = Properties.Resources.login;
 
             form1.btnLogIn.Tag = "LogIn";
             form1.lbllog.Text = "System: Monitor";

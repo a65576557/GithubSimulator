@@ -1254,10 +1254,12 @@
             // 
             // btnBack
             // 
-            this.btnBack.Location = new System.Drawing.Point(624, 55);
+            this.btnBack.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btnBack.Location = new System.Drawing.Point(843, 17);
             this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(196, 31);
+            this.btnBack.Size = new System.Drawing.Size(66, 31);
             this.btnBack.TabIndex = 154;
+            this.btnBack.Text = "Exit";
             this.btnBack.UseVisualStyleBackColor = true;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 

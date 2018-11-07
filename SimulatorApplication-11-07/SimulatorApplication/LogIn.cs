@@ -31,7 +31,7 @@ namespace SimulatorApplication
                 form1.btnVCH.Enabled = true;
                 form1.btnAPM.Enabled = true;
                 form1.btntm.Enabled = true;
-                
+                form1.btnChamber.Enabled = true;
                 form1.button7.Enabled = true;
                 form1.btnRecipe.Enabled = true;
                 form1.btnEventLog.Enabled = true;
@@ -42,6 +42,9 @@ namespace SimulatorApplication
               //  form1.button3.Enabled = true;
 
                 form1.lbllog.Text = "System: Control";
+
+
+                form1.btnLogIn.Image = Properties.Resources.unlock;
 
                 form1.btnLogIn.Tag = "LogOut";
 

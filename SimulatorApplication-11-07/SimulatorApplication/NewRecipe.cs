@@ -1314,9 +1314,59 @@ namespace SimulatorApplication
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
+            switch (strtag)
+            {
 
-           
-         
+
+                case "panel2":
+                    panel2.Visible = false;
+                    strtag = "panel1";
+                    break;
+
+                case "panel3":
+                    panel3.Visible = false;
+                    strtag = "panel2";
+                    break;
+                case "panel4":
+                    panel4.Visible = false;
+                    strtag = "panel3";
+                    break;
+
+                case "panel5":
+                    panel5.Visible = false;
+                    strtag = "panel4";
+                    break;
+
+                case "panel6":
+                    panel6.Visible = false;
+                    strtag = "panel5";
+                    break;
+
+                case "panel7":
+                    panel7.Visible = false;
+                    strtag = "panel6";
+                    break;
+
+                case "panel8":
+                    panel8.Visible = false;
+                    strtag = "panel7";
+                    break;
+
+                case "panel9":
+                    panel9.Visible = true;
+                    strtag = "pane8";
+                    break;
+
+                case "pane10":
+                    panel10.Visible = true;
+                    strtag = "panel9";
+                    break;
+
+
+
+            }
+
+
         }
 
         private void tbTimeDependentStep_MouseClick(object sender, MouseEventArgs e)
