@@ -26,7 +26,7 @@ namespace SimulatorApplication
 
 
 
-
+        public static string nooftherecipe;
 
 
         public string str123;
@@ -163,9 +163,9 @@ namespace SimulatorApplication
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            
             btnChamber.Enabled = false;
-
+           
 
             button2.Tag = "";
 
@@ -309,6 +309,9 @@ namespace SimulatorApplication
 
         private async void button2_Click(object sender, EventArgs e)
         {
+            
+
+
 
             //       pauseSignal = new ManualResetEvent(false);
 
@@ -912,6 +915,10 @@ namespace SimulatorApplication
                                     if (int.Parse(NoOfwafer[i]) >= 1)
                                     {
                                         /////////////////////////////////////////////////////////start WaferA1
+
+                                        nooftherecipe = "1";
+
+                                   
                                         if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotintocassette" && iscancelrecipe == false)
                                         {
                                             picCassette.Image = Properties.Resources.cassette;
@@ -1177,6 +1184,7 @@ namespace SimulatorApplication
 
                                             ///////////////////////////////////////////////////////////////////////////////////////////////////////WaferA1 into Chamber
                                             Chamber1 chamber1 = new Chamber1();
+                                            chamber1.form1 = this;
                                             chamber1.ShowDialog();
 
                                            lblRecipe.BackColor = Color.LimeGreen;
@@ -1293,10 +1301,10 @@ namespace SimulatorApplication
                                                 cmdmodulerecipe.Parameters.AddWithValue("@stepname", strStepname1[j]);
                                                 cmdmodulerecipe.Parameters.AddWithValue("@starttime", ListStepStartTime[j]);
                                                 cmdmodulerecipe.Parameters.AddWithValue("@endtime", ListStepEndTime[j]);
-                                                cmdmodulerecipe.Parameters.AddWithValue("@noofrecipe", "1");
+                                                cmdmodulerecipe.Parameters.AddWithValue("@noofrecipe", nooftherecipe);
                                                 cmdmodulerecipe.Parameters.AddWithValue("@Logname", lbl123.Text);
 
-                                                cmdmodulerecipe.ExecuteNonQuery();
+                                              //  cmdmodulerecipe.ExecuteNonQuery();
 
                                                 con.Close();
                                                 //////////////////////////////////////////////////////////////////////////////////////////////////////get parameter value
@@ -1406,17 +1414,17 @@ namespace SimulatorApplication
                                                 cmdparameter.Parameters.AddWithValue("@96", lbl123.Text);
                                                 cmdparameter.Parameters.AddWithValue("@97", lbl123.Text);
                                                 cmdparameter.Parameters.AddWithValue("@98", lbl123.Text);
-                                                cmdparameter.Parameters.AddWithValue("@101", "1");
-                                                cmdparameter.Parameters.AddWithValue("@102", "1");
-                                                cmdparameter.Parameters.AddWithValue("@103", "1");
-                                                cmdparameter.Parameters.AddWithValue("@104", "1");
-                                                cmdparameter.Parameters.AddWithValue("@105", "1");
-                                                cmdparameter.Parameters.AddWithValue("@106", "1");
-                                                cmdparameter.Parameters.AddWithValue("@107", "1");
-                                                cmdparameter.Parameters.AddWithValue("@108", "1");
+                                                cmdparameter.Parameters.AddWithValue("@101", nooftherecipe);
+                                                cmdparameter.Parameters.AddWithValue("@102", nooftherecipe);
+                                                cmdparameter.Parameters.AddWithValue("@103", nooftherecipe);
+                                                cmdparameter.Parameters.AddWithValue("@104", nooftherecipe);
+                                                cmdparameter.Parameters.AddWithValue("@105", nooftherecipe);
+                                                cmdparameter.Parameters.AddWithValue("@106", nooftherecipe);
+                                                cmdparameter.Parameters.AddWithValue("@107", nooftherecipe);
+                                                cmdparameter.Parameters.AddWithValue("@108", nooftherecipe);
 
 
-                                                cmdparameter.ExecuteNonQuery();
+                                             //   cmdparameter.ExecuteNonQuery();
                                                 con.Close();
 
                                             }
@@ -1808,6 +1816,7 @@ namespace SimulatorApplication
 
                                     if (int.Parse(NoOfwafer[i]) >= 2)
                                     {
+                                        nooftherecipe = "2";
                                         if (ispauserobot == false && picMain.Image.Tag.ToString() == "finishWaferA1"&&isStopRobot==false)
                                         {
                                             /////////////////////////////////////////////////////////start WaferA2
@@ -2082,8 +2091,9 @@ namespace SimulatorApplication
                                             ///////////////////////////////////////////////////////////////////////////////////////////////////////WaferA2 into Chamber
 
                                             Chamber1 chamber1 = new Chamber1();
+                                            chamber1.form1 = this;
                                             chamber1.ShowDialog();
-
+                                         
                                             lblRecipe.BackColor = Color.LimeGreen;
                                             lblStepName.BackColor = Color.LimeGreen;
 
@@ -2199,7 +2209,7 @@ namespace SimulatorApplication
                                                 cmdmodulerecipe.Parameters.AddWithValue("@endtime", ListStepEndTime[j]);
                                                 cmdmodulerecipe.Parameters.AddWithValue("@noofrecipe", "2");
                                                 cmdmodulerecipe.Parameters.AddWithValue("@Logname", lbl123.Text);
-                                                cmdmodulerecipe.ExecuteNonQuery();
+                                               // cmdmodulerecipe.ExecuteNonQuery();
 
                                                 con.Close();
                                                 //////////////////////////////////////////////////////////////////////////////////////////////////////get parameter value
@@ -2232,6 +2242,7 @@ namespace SimulatorApplication
 
                                                 ///////////////////////////////////////////////////////////////////////////////////////////////////
                                                 con.Open();
+
                                              //   Chamber1 chamber1 = new Chamber1();
 
                                                 string strParameter = "insert into valueselection(parameter,Minimum,Maximum,Average,Units,recipename,stepname,valuedate,logid,noofrecipe) values(@11,@21,@31,@41,@51,@61,@71,@81,@91,@101),(@12,@22,@32,@42,@52,@62,@72,@82,@92,@102),(@13,@23,@33,@43,@53,@63,@73,@83,@93,@103)"
@@ -2317,7 +2328,7 @@ namespace SimulatorApplication
                                                 cmdparameter.Parameters.AddWithValue("@106","2");
                                                 cmdparameter.Parameters.AddWithValue("@107","2");
                                                 cmdparameter.Parameters.AddWithValue("@108","2");
-                                                cmdparameter.ExecuteNonQuery();
+                                              //  cmdparameter.ExecuteNonQuery();
                                                 con.Close();
 
                                             }

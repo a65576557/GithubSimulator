@@ -30,8 +30,10 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.button5 = new System.Windows.Forms.Button();
             this.lblCassetteRecipename = new System.Windows.Forms.Label();
             this.lbl123 = new System.Windows.Forms.Label();
+            this.btnLogIn = new System.Windows.Forms.Button();
             this.lblmTorr = new System.Windows.Forms.Label();
             this.lblState = new System.Windows.Forms.Label();
             this.lblCassetteRecipe = new System.Windows.Forms.Label();
@@ -39,6 +41,10 @@
             this.lblLoad = new System.Windows.Forms.Label();
             this.btnVCH = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.lblCassette = new System.Windows.Forms.Label();
             this.lblCentralize = new System.Windows.Forms.Label();
             this.lblChamber = new System.Windows.Forms.Label();
@@ -114,12 +120,6 @@
             this.picwafer = new System.Windows.Forms.PictureBox();
             this.picCassette = new System.Windows.Forms.PictureBox();
             this.picChamber = new System.Windows.Forms.PictureBox();
-            this.button5 = new System.Windows.Forms.Button();
-            this.btnLogIn = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.label2.SuspendLayout();
@@ -182,6 +182,16 @@
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
             // 
+            // button5
+            // 
+            this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
+            this.button5.Location = new System.Drawing.Point(122, 336);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(45, 40);
+            this.button5.TabIndex = 5;
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
             // lblCassetteRecipename
             // 
             this.lblCassetteRecipename.AutoSize = true;
@@ -203,6 +213,17 @@
             this.lbl123.Name = "lbl123";
             this.lbl123.Size = new System.Drawing.Size(0, 20);
             this.lbl123.TabIndex = 23;
+            // 
+            // btnLogIn
+            // 
+            this.btnLogIn.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btnLogIn.Image = global::SimulatorApplication.Properties.Resources.login;
+            this.btnLogIn.Location = new System.Drawing.Point(218, 277);
+            this.btnLogIn.Name = "btnLogIn";
+            this.btnLogIn.Size = new System.Drawing.Size(43, 40);
+            this.btnLogIn.TabIndex = 47;
+            this.btnLogIn.UseVisualStyleBackColor = true;
+            this.btnLogIn.Click += new System.EventHandler(this.btnLogIn_Click);
             // 
             // lblmTorr
             // 
@@ -278,6 +299,50 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(298, 205);
             this.label1.TabIndex = 0;
+            // 
+            // button4
+            // 
+            this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
+            this.button4.Location = new System.Drawing.Point(218, 336);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(43, 40);
+            this.button4.TabIndex = 4;
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // button3
+            // 
+            this.button3.Enabled = false;
+            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
+            this.button3.Location = new System.Drawing.Point(28, 336);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(45, 40);
+            this.button3.TabIndex = 3;
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // button2
+            // 
+            this.button2.Enabled = false;
+            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
+            this.button2.Location = new System.Drawing.Point(123, 277);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(43, 40);
+            this.button2.TabIndex = 2;
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // button1
+            // 
+            this.button1.Enabled = false;
+            this.button1.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.Location = new System.Drawing.Point(29, 277);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(43, 40);
+            this.button1.TabIndex = 1;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // lblCassette
             // 
@@ -1082,71 +1147,6 @@
             this.picChamber.TabIndex = 6;
             this.picChamber.TabStop = false;
             this.picChamber.Visible = false;
-            // 
-            // button5
-            // 
-            this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
-            this.button5.Location = new System.Drawing.Point(122, 336);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(45, 40);
-            this.button5.TabIndex = 5;
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
-            // 
-            // btnLogIn
-            // 
-            this.btnLogIn.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.btnLogIn.Image = global::SimulatorApplication.Properties.Resources.login;
-            this.btnLogIn.Location = new System.Drawing.Point(218, 277);
-            this.btnLogIn.Name = "btnLogIn";
-            this.btnLogIn.Size = new System.Drawing.Size(43, 40);
-            this.btnLogIn.TabIndex = 47;
-            this.btnLogIn.UseVisualStyleBackColor = true;
-            this.btnLogIn.Click += new System.EventHandler(this.btnLogIn_Click);
-            // 
-            // button4
-            // 
-            this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
-            this.button4.Location = new System.Drawing.Point(218, 336);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(43, 40);
-            this.button4.TabIndex = 4;
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
-            // 
-            // button3
-            // 
-            this.button3.Enabled = false;
-            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
-            this.button3.Location = new System.Drawing.Point(28, 336);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(45, 40);
-            this.button3.TabIndex = 3;
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // button2
-            // 
-            this.button2.Enabled = false;
-            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.Location = new System.Drawing.Point(123, 277);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(43, 40);
-            this.button2.TabIndex = 2;
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // button1
-            // 
-            this.button1.Enabled = false;
-            this.button1.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.Location = new System.Drawing.Point(29, 277);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(43, 40);
-            this.button1.TabIndex = 1;
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Form1
             // 

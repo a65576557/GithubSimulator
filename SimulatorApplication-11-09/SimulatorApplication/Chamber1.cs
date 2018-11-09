@@ -17,10 +17,18 @@ namespace SimulatorApplication
         List<string> strStepname1 = new List<string>();
         public static string mySec;
         public static int Sec;
+        public List<DateTime> ListStepStartTime = new List<DateTime>();
+        public List<DateTime> ListStepEndTime = new List<DateTime>();
 
-
-       
-
+        public Form1 form1 = new Form1();
+        string CI2;
+        string BCI3;
+        string SF6;
+        string CHF3;
+        string Oxygen;
+        string Oxygen1;
+        string Nitrogen;
+        string Argon;
 
         public Chamber1()
         {
@@ -38,7 +46,8 @@ namespace SimulatorApplication
         private void Chamber1_Load(object sender, EventArgs e)
 
         {
-            
+
+            this.ControlBox = false;
             //Form1 form1 = new Form1();
             // form1.loaddata += new Form1.LoadData(loaddata);
            // form1.loadchamber1 += new Form1.LoadChamber1(Chamber1_Load);
@@ -268,6 +277,7 @@ namespace SimulatorApplication
                 for (int i = 0; i < strStepname1.Count(); i += 1)
                 {
 
+                    ListStepStartTime.Add(DateTime.Now);
 
                     int count = i + 1;
                     // await Task.Delay(2000);
@@ -395,14 +405,149 @@ namespace SimulatorApplication
 
 
                     }
-
+                    ListStepEndTime.Add(DateTime.Now);
 
 
                     con.Close();
 
-                   // lblWafer.BackColor = Color.White;
-                  //  lblWafer.Text = "";
+                    con.Open();
 
+                    string strModuleRecipe = "insert into ModuleRecipe(RecipeName,StepName,StartTime,EndTime,noofrecipe,Logname) values(@recipename,@stepname,@starttime,@endtime,@noofrecipe,@Logname)";
+
+                    SqlCommand cmdmodulerecipe = new SqlCommand(strModuleRecipe, con);
+
+                    cmdmodulerecipe.Parameters.AddWithValue("@recipename", lblRecipe.Text);
+                    cmdmodulerecipe.Parameters.AddWithValue("@stepname", strStepname1[i]);
+                    cmdmodulerecipe.Parameters.AddWithValue("@starttime", ListStepStartTime[i]);
+                    cmdmodulerecipe.Parameters.AddWithValue("@endtime", ListStepEndTime[i]);
+                    cmdmodulerecipe.Parameters.AddWithValue("@noofrecipe", Form1.nooftherecipe);
+                    cmdmodulerecipe.Parameters.AddWithValue("@Logname", form1.str123);
+
+                    cmdmodulerecipe.ExecuteNonQuery();
+
+                    con.Close();
+
+                    //////////////////////////////////////////////////////////////////////////////////////////////////////get parameter value
+
+                    con.Open();
+
+                    string strSQL7 = "select * from newrecipe where stepname = @Newstepname1 and recipename = @Newrecipename1";
+
+
+                    SqlCommand cmd4 = new SqlCommand(strSQL7, con);
+                    cmd4.Parameters.AddWithValue("@Newstepname1", lblStepName.Text);
+                    cmd4.Parameters.AddWithValue("@Newrecipename1", lblRecipe.Text);
+                    SqlDataReader reader4 = cmd4.ExecuteReader();
+
+
+                    while (reader4.Read())
+                    {
+                        CI2 = reader4["CI2"].ToString();
+                        BCI3 = reader4["BCI3"].ToString();
+                        SF6 = reader4["SF6"].ToString();
+                        CHF3 = reader4["CHF3"].ToString();
+                        Oxygen = reader4["Oxygen"].ToString();
+                        Oxygen1 = reader4["Oxygen1"].ToString();
+                        Nitrogen = reader4["Nitrogen"].ToString();
+                        Argon = reader4["Argon"].ToString();
+
+
+
+                    }
+                    con.Close();
+
+                    ///////////////////////////////////////////////////////////////////////////////////////////////////
+                    con.Open();
+
+                    string strParameter = "insert into valueselection(parameter,Minimum,Maximum,Average,Units,recipename,stepname,valuedate,logid,noofrecipe) values(@11,@21,@31,@41,@51,@61,@71,@81,@91,@101),(@12,@22,@32,@42,@52,@62,@72,@82,@92,@102),(@13,@23,@33,@43,@53,@63,@73,@83,@93,@103)"
+                                                    + ",(@14,@24,@34,@44,@54,@64,@74,@84,@94,@104),(@15,@25,@35,@45,@55,@65,@75,@85,@95,@105),(@16,@26,@36,@46,@56,@66,@76,@86,@96,@106),(@17,@27,@37,@47,@57,@67,@77,@87,@97,@107),(@18,@28,@38,@48,@58,@68,@78,@88,@98,@108)";
+                    // lblWafer.BackColor = Color.White;
+                    //  lblWafer.Text = "";
+                    string strParameter7 = "insert into valueselection(parameter,Minimum,Maximum,Average,Units,recipename,stepname,valuedate,logid,noofrecipe) values(@11,@21,@31,@41,@51,@61,@71,@81,@91,@101),(@12,@22,@32,@42,@52,@62,@72,@82,@92,@102),(@13,@23,@33,@43,@53,@63,@73,@83,@93,@103)"
+                                                   + ",(@14,@24,@34,@44,@54,@64,@74,@84,@94,@104),(@15,@25,@35,@45,@55,@65,@75,@85,@95,@105),(@16,@26,@36,@46,@56,@66,@76,@86,@96,@106),(@17,@27,@37,@47,@57,@67,@77,@87,@97,@107),(@18,@28,@38,@48,@58,@68,@78,@88,@98,@108)";
+                    SqlCommand cmdparameter = new SqlCommand(strParameter7, con);
+                    cmdparameter.Parameters.AddWithValue("@11", "CI2");
+                    cmdparameter.Parameters.AddWithValue("@12", "BCI3");
+                    cmdparameter.Parameters.AddWithValue("@13", "SF6");
+                    cmdparameter.Parameters.AddWithValue("@14", "CHF3");
+                    cmdparameter.Parameters.AddWithValue("@15", "Oxygen");
+                    cmdparameter.Parameters.AddWithValue("@16", "Oxygen");
+                    cmdparameter.Parameters.AddWithValue("@17", "Nitrogen");
+                    cmdparameter.Parameters.AddWithValue("@18", "Argon");
+                    cmdparameter.Parameters.AddWithValue("@21", CI2);
+                    cmdparameter.Parameters.AddWithValue("@22", BCI3);
+                    cmdparameter.Parameters.AddWithValue("@23", SF6);
+                    cmdparameter.Parameters.AddWithValue("@24", CHF3);
+                    cmdparameter.Parameters.AddWithValue("@25", Oxygen);
+                    cmdparameter.Parameters.AddWithValue("@26", Oxygen1);
+                    cmdparameter.Parameters.AddWithValue("@27", Nitrogen);
+                    cmdparameter.Parameters.AddWithValue("@28", Argon);
+                    cmdparameter.Parameters.AddWithValue("@31", CI2);
+                    cmdparameter.Parameters.AddWithValue("@32", BCI3);
+                    cmdparameter.Parameters.AddWithValue("@33", SF6);
+                    cmdparameter.Parameters.AddWithValue("@34", CHF3);
+                    cmdparameter.Parameters.AddWithValue("@35", Oxygen);
+                    cmdparameter.Parameters.AddWithValue("@36", Oxygen1);
+                    cmdparameter.Parameters.AddWithValue("@37", Nitrogen);
+                    cmdparameter.Parameters.AddWithValue("@38", Argon);
+                    cmdparameter.Parameters.AddWithValue("@41", CI2);
+                    cmdparameter.Parameters.AddWithValue("@42", BCI3);
+                    cmdparameter.Parameters.AddWithValue("@43", SF6);
+                    cmdparameter.Parameters.AddWithValue("@44", CHF3);
+                    cmdparameter.Parameters.AddWithValue("@45", Oxygen);
+                    cmdparameter.Parameters.AddWithValue("@46", Oxygen1);
+                    cmdparameter.Parameters.AddWithValue("@47", Nitrogen);
+                    cmdparameter.Parameters.AddWithValue("@48", Argon);
+                    cmdparameter.Parameters.AddWithValue("@51", "sccm");
+                    cmdparameter.Parameters.AddWithValue("@52", "sccm");
+                    cmdparameter.Parameters.AddWithValue("@53", "sccm");
+                    cmdparameter.Parameters.AddWithValue("@54", "sccm");
+                    cmdparameter.Parameters.AddWithValue("@55", "sccm");
+                    cmdparameter.Parameters.AddWithValue("@56", "sccm");
+                    cmdparameter.Parameters.AddWithValue("@57", "sccm");
+                    cmdparameter.Parameters.AddWithValue("@58", "sccm");
+                    cmdparameter.Parameters.AddWithValue("@61", lblRecipe.Text);
+                    cmdparameter.Parameters.AddWithValue("@62", lblRecipe.Text);
+                    cmdparameter.Parameters.AddWithValue("@63", lblRecipe.Text);
+                    cmdparameter.Parameters.AddWithValue("@64", lblRecipe.Text);
+                    cmdparameter.Parameters.AddWithValue("@65", lblRecipe.Text);
+                    cmdparameter.Parameters.AddWithValue("@66", lblRecipe.Text);
+                    cmdparameter.Parameters.AddWithValue("@67", lblRecipe.Text);
+                    cmdparameter.Parameters.AddWithValue("@68", lblRecipe.Text);
+                    cmdparameter.Parameters.AddWithValue("@71", strStepname1[i]);
+                    cmdparameter.Parameters.AddWithValue("@72", strStepname1[i]);
+                    cmdparameter.Parameters.AddWithValue("@73", strStepname1[i]);
+                    cmdparameter.Parameters.AddWithValue("@74", strStepname1[i]);
+                    cmdparameter.Parameters.AddWithValue("@75", strStepname1[i]);
+                    cmdparameter.Parameters.AddWithValue("@76", strStepname1[i]);
+                    cmdparameter.Parameters.AddWithValue("@77", strStepname1[i]);
+                    cmdparameter.Parameters.AddWithValue("@78", strStepname1[i]);
+                    cmdparameter.Parameters.AddWithValue("@81", DateTime.Now);
+                    cmdparameter.Parameters.AddWithValue("@82", DateTime.Now);
+                    cmdparameter.Parameters.AddWithValue("@83", DateTime.Now);
+                    cmdparameter.Parameters.AddWithValue("@84", DateTime.Now);
+                    cmdparameter.Parameters.AddWithValue("@85", DateTime.Now);
+                    cmdparameter.Parameters.AddWithValue("@86", DateTime.Now);
+                    cmdparameter.Parameters.AddWithValue("@87", DateTime.Now);
+                    cmdparameter.Parameters.AddWithValue("@88", DateTime.Now);
+                    cmdparameter.Parameters.AddWithValue("@91", form1.str123);
+                    cmdparameter.Parameters.AddWithValue("@92", form1.str123);
+                    cmdparameter.Parameters.AddWithValue("@93", form1.str123);
+                    cmdparameter.Parameters.AddWithValue("@94", form1.str123);
+                    cmdparameter.Parameters.AddWithValue("@95", form1.str123);
+                    cmdparameter.Parameters.AddWithValue("@96", form1.str123);
+                    cmdparameter.Parameters.AddWithValue("@97", form1.str123);
+                    cmdparameter.Parameters.AddWithValue("@98", form1.str123);
+                    cmdparameter.Parameters.AddWithValue("@101", Form1.nooftherecipe);
+                    cmdparameter.Parameters.AddWithValue("@102", Form1.nooftherecipe);
+                    cmdparameter.Parameters.AddWithValue("@103", Form1.nooftherecipe);
+                    cmdparameter.Parameters.AddWithValue("@104", Form1.nooftherecipe);
+                    cmdparameter.Parameters.AddWithValue("@105", Form1.nooftherecipe);
+                    cmdparameter.Parameters.AddWithValue("@106", Form1.nooftherecipe);
+                    cmdparameter.Parameters.AddWithValue("@107", Form1.nooftherecipe);
+                    cmdparameter.Parameters.AddWithValue("@108", Form1.nooftherecipe);
+                    cmdparameter.ExecuteNonQuery();
+                    con.Close();
 
 
 
@@ -424,9 +569,12 @@ namespace SimulatorApplication
 
                     //  await Task.Delay(3000);
 
-                  
+
 
                 }
+                strStepname1.Clear();
+                ListStepStartTime.Clear();
+                ListStepEndTime.Clear();
 
                 //}
 
