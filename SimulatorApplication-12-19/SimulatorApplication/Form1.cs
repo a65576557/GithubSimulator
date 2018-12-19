@@ -1956,6 +1956,7 @@ namespace SimulatorApplication
                                             //   await Task.Delay(2000);
                                             //  picCentralize.Image = Properties.Resources.centralize2;//open centralize
                                             //  picMain.Image = Properties.Resources.robotleftA1opencentralize;
+
                                         }
                                         if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotAlignerWaferA2")
                                         {
@@ -2716,7 +2717,8 @@ namespace SimulatorApplication
                                         if (ispauserobot == false && picMain.Image.Tag.ToString() == "finishWaferA2"&&isStopRobot==false)
                                         {
                                             /////////////////////////////////////////////////////////start WaferA3
-
+                                            nooftherecipe = "3";
+                                            
                                             await Task.Delay(1000);
 
                                             //pictRobot.Image = Properties.Resources.new_robot;
@@ -3113,7 +3115,7 @@ namespace SimulatorApplication
                                                 cmdmodulerecipe.Parameters.AddWithValue("@noofrecipe", "3");
                                                 cmdmodulerecipe.Parameters.AddWithValue("@Logname", lbl123.Text);
 
-                                                cmdmodulerecipe.ExecuteNonQuery();
+                                          //      cmdmodulerecipe.ExecuteNonQuery();
 
                                                 con.Close();
                                                 //////////////////////////////////////////////////////////////////////////////////////////////////////get parameter value
@@ -3148,8 +3150,8 @@ namespace SimulatorApplication
                                                 con.Open();
                                               //  Chamber1 chamber1 = new Chamber1();
 
-                                                string strParameter = "insert into valueselection(parameter,Minimum,Maximum,Average,Units,recipename,stepname,valuedate,logid) values(@11,@21,@31,@41,@51,@61,@71,@81,@91),(@12,@22,@32,@42,@52,@62,@72,@82,@92),(@13,@23,@33,@43,@53,@63,@73,@83,@93)"
-                                                    + ",(@14,@24,@34,@44,@54,@64,@74,@84,@94),(@15,@25,@35,@45,@55,@65,@75,@85,@95),(@16,@26,@36,@46,@56,@66,@76,@86,@96),(@17,@27,@37,@47,@57,@67,@77,@87,@97),(@18,@28,@38,@48,@58,@68,@78,@88,@98)";
+                                                string strParameter = "insert into valueselection(parameter,Minimum,Maximum,Average,Units,recipename,stepname,valuedate,logid,NoOfRecipe) values(@11,@21,@31,@41,@51,@61,@71,@81,@91,@101),(@12,@22,@32,@42,@52,@62,@72,@82,@92,@102),(@13,@23,@33,@43,@53,@63,@73,@83,@93,@103)"
+                                                    + ",(@14,@24,@34,@44,@54,@64,@74,@84,@94,@104),(@15,@25,@35,@45,@55,@65,@75,@85,@95,@105),(@16,@26,@36,@46,@56,@66,@76,@86,@96,@106),(@17,@27,@37,@47,@57,@67,@77,@87,@97,@107),(@18,@28,@38,@48,@58,@68,@78,@88,@98,@108)";
                                                 SqlCommand cmdparameter = new SqlCommand(strParameter, con);
                                                 cmdparameter.Parameters.AddWithValue("@11", "CI2");
                                                 cmdparameter.Parameters.AddWithValue("@12", "BCI3");
@@ -3223,9 +3225,19 @@ namespace SimulatorApplication
                                                 cmdparameter.Parameters.AddWithValue("@96", lbl123.Text);
                                                 cmdparameter.Parameters.AddWithValue("@97", lbl123.Text);
                                                 cmdparameter.Parameters.AddWithValue("@98", lbl123.Text);
+                                                cmdparameter.Parameters.AddWithValue("@101", nooftherecipe);
+                                                cmdparameter.Parameters.AddWithValue("@102", nooftherecipe);
+                                                cmdparameter.Parameters.AddWithValue("@103", nooftherecipe);
+                                                cmdparameter.Parameters.AddWithValue("@104", nooftherecipe);
+                                                cmdparameter.Parameters.AddWithValue("@105", nooftherecipe);
+                                                cmdparameter.Parameters.AddWithValue("@106", nooftherecipe);
+                                                cmdparameter.Parameters.AddWithValue("@107", nooftherecipe);
+                                                cmdparameter.Parameters.AddWithValue("@108", nooftherecipe);
+                                               
+                                              
 
 
-                                                cmdparameter.ExecuteNonQuery();
+                                                //   cmdparameter.ExecuteNonQuery();
                                                 con.Close();
 
                                             }
@@ -3478,7 +3490,8 @@ namespace SimulatorApplication
 
                                       if (int.Parse(NoOfwafer[i]) >= 4)
                                       {
-                                          /////////////////////////////////////////////////////////start WaferA4
+                                        /////////////////////////////////////////////////////////start WaferA4
+                                        nooftherecipe = "4";
                                           if(ispauserobot==false&&picMain.Image.Tag.ToString()=="finishWaferA3"&&isStopRobot==false)
                                           await Task.Delay(1000);
 
@@ -3873,7 +3886,7 @@ namespace SimulatorApplication
                                                 cmdmodulerecipe.Parameters.AddWithValue("@noofrecipe", "4");
                                                 cmdmodulerecipe.Parameters.AddWithValue("@Logname", lbl123.Text);
 
-                                                cmdmodulerecipe.ExecuteNonQuery();
+                                               // cmdmodulerecipe.ExecuteNonQuery();
 
                                                 con.Close();
                                                 //////////////////////////////////////////////////////////////////////////////////////////////////////get parameter value
@@ -4223,7 +4236,7 @@ namespace SimulatorApplication
                                     if (int.Parse(NoOfwafer[i]) >= 5)
                                     {
                                         /////////////////////////////////////////////////////////start WaferA5
-
+                                        nooftherecipe = "5";
                                         if (ispauserobot == false && picMain.Image.Tag.ToString() == "finishwaferA4" && isStopRobot == false)
                                         {
                                             await Task.Delay(1000);
@@ -4615,7 +4628,7 @@ namespace SimulatorApplication
                                                 cmdmodulerecipe.Parameters.AddWithValue("@noofrecipe", "5");
                                                 cmdmodulerecipe.Parameters.AddWithValue("@Logname", lbl123.Text);
 
-                                                cmdmodulerecipe.ExecuteNonQuery();
+                                             //   cmdmodulerecipe.ExecuteNonQuery();
 
                                                 con.Close();
                                                 //////////////////////////////////////////////////////////////////////////////////////////////////////get parameter value
@@ -4719,7 +4732,7 @@ namespace SimulatorApplication
                                                 cmdparameter.Parameters.AddWithValue("@88", DateTime.Now);
 
 
-                                                cmdparameter.ExecuteNonQuery();
+                                               // cmdparameter.ExecuteNonQuery();
                                                 con.Close();
 
                                             }
@@ -4936,1311 +4949,2584 @@ namespace SimulatorApplication
                                       }
 
 
-                                      /*
 
-                                      if (int.Parse(NoOfwafer[i]) >= 6)
-                                      {
-                                          /////////////////////////////////////////////////////////start WaferA6
 
-                                          picCassette.Image = Properties.Resources.cassette;
-                                          await Task.Delay(1000);
+                                    if (int.Parse(NoOfwafer[i]) >= 6)
+                                    {
+                                        /////////////////////////////////////////////////////////start WaferA6
 
-                                          if (NoOfwafer[i] == "1")
-                                          {
-                                              picwafer.Image = Properties.Resources.wafer;
-                                              picwafer.Image.Tag = "wafer";
-                                          }
-                                          else if (NoOfwafer[i] == "2")
-                                          {
-                                              picwafer.Image = Properties.Resources.waferA1full;
-                                          }
-                                          else if (NoOfwafer[i] == "3")
-                                          {
-                                              picwafer.Image = Properties.Resources.waferA2full;
+                                        nooftherecipe = "6";
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "finishwaferA5" && isStopRobot == false)
+                                        {
+                                            picCassette.Image = Properties.Resources.cassette;
+                                            await Task.Delay(1000);
+                                            //  picMain.Image.Tag = "waferA6";
 
-                                          }
-                                          else if (NoOfwafer[i] == "4")
-                                          {
-                                              picwafer.Image = Properties.Resources.waferA3full;
-                                          }
-                                          else if (NoOfwafer[i] == "5")
-                                          {
-                                              picwafer.Image = Properties.Resources.waferA4full;
-                                          }
-                                          else if (NoOfwafer[i] == "6")
-                                          {
-                                              picwafer.Image = Properties.Resources.waferA5full;
+                                            if (NoOfwafer[i] == "1")
+                                            {
+                                                picwafer.Image = Properties.Resources.wafer;
+                                                picwafer.Image.Tag = "wafer";
+                                            }
+                                            else if (NoOfwafer[i] == "2")
+                                            {
+                                                picwafer.Image = Properties.Resources.waferA1full;
+                                            }
+                                            else if (NoOfwafer[i] == "3")
+                                            {
+                                                picwafer.Image = Properties.Resources.waferA2full;
 
-                                          }
-                                          StartTime = DateTime.Now;
+                                            }
+                                            else if (NoOfwafer[i] == "4")
+                                            {
+                                                picwafer.Image = Properties.Resources.waferA3full;
+                                            }
+                                            else if (NoOfwafer[i] == "5")
+                                            {
+                                                picwafer.Image = Properties.Resources.waferA4full;
+                                            }
+                                            else if (NoOfwafer[i] == "6")
+                                            {
+                                                picwafer.Image = Properties.Resources.waferA5full;
 
+                                            }
+                                            StartTime = DateTime.Now;
 
-                                          con.Open();
 
-                                          string strWaferSelection = "insert into WaferSelection(NoOfWafers,StartTime,CassetteRecipeName,Logname) values(@NoOfWafer,@StartTime,@CassetteRecipeName,@Logname)";
-                                          SqlCommand cmdwaferselection = new SqlCommand(strWaferSelection, con);
-                                          cmdwaferselection.Parameters.AddWithValue("@NoOfWafer", "6");
-                                          cmdwaferselection.Parameters.AddWithValue("@StartTime", StartTime);
-                                          cmdwaferselection.Parameters.AddWithValue("@CassetteRecipeName", form2Msg);
-                                          cmdwaferselection.Parameters.AddWithValue("@Logname", lbl123.Text);
+                                            con.Open();
 
-                                          cmdwaferselection.ExecuteNonQuery();
+                                            string strWaferSelection = "insert into WaferSelection(NoOfWafers,StartTime,CassetteRecipeName,Logname) values(@NoOfWafer,@StartTime,@CassetteRecipeName,@Logname)";
+                                            SqlCommand cmdwaferselection = new SqlCommand(strWaferSelection, con);
+                                            cmdwaferselection.Parameters.AddWithValue("@NoOfWafer", "6");
+                                            cmdwaferselection.Parameters.AddWithValue("@StartTime", StartTime);
+                                            cmdwaferselection.Parameters.AddWithValue("@CassetteRecipeName", form2Msg);
+                                            cmdwaferselection.Parameters.AddWithValue("@Logname", lbl123.Text);
 
-                                          con.Close();
+                                            cmdwaferselection.ExecuteNonQuery();
+
+                                            con.Close();
+
+
+
 
 
 
 
 
 
+                                            await Task.Delay(1000);
 
+                                            //pictRobot.Image = Properties.Resources.new_robot;
+                                            picMain.Image = Properties.Resources.mainpicture;
+                                            picMain.Image.Tag = "waferA6mainpicture";
+                                            await Task.Delay(1000);
 
+                                        }
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "waferA6mainpicture")
+                                        {
 
-                                          await Task.Delay(1000);
+                                            //   picCassette.Image = Properties.Resources.cassette3;//open cassette
+                                            // picMain.Image = Properties.Resources.mainpicCassetteopen;  
+                                            await Task.Delay(1000);
 
-                                          //pictRobot.Image = Properties.Resources.new_robot;
-                                          picMain.Image = Properties.Resources.mainpicture;
-                                          await Task.Delay(1000);
+                                            picMain.Image = Properties.Resources.picrobotintocassette;
+                                            picMain.Image.Tag = "picrobotintocassetteA6";
+                                            picCassette.Image = Properties.Resources.robot_into_cassetteA1;
 
-                                          //   picCassette.Image = Properties.Resources.cassette3;//open cassette
-                                          // picMain.Image = Properties.Resources.mainpicCassetteopen;  
-                                          await Task.Delay(1000);
+                                            picCassette.Width += 25;
+                                            picCassette.Height += 220;
+                                            picCassette.Top -= 205;
+                                            picCassette.Image.Tag = "robot_into_cassetteA1";
+                                            picCassette.Left += 5;
+                                            label1.BackColor = Color.Blue;
+                                            lblLoad.Text = "";
+                                            lblLoad.BackColor = Color.Blue;
+                                            lbl123.BackColor = Color.Blue;
+                                            lblState.BackColor = Color.Blue;
+                                            lblCassetteRecipename.BackColor = Color.Blue;
+                                            lblmTorr.BackColor = Color.Blue;
+
+
+                                            lblCassette.BackColor = Color.LimeGreen;
+                                        }
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotintocassetteA6")
+                                        {
+                                            await Task.Delay(1000);
+
+                                            //  pictRobot.Visible = true;
+
+                                            //  picMain.Image = Properties.Resources.mainpicture;
+                                            picMain.Image = Properties.Resources.picrobotArmWafer;
+                                            picMain.Image.Tag = "picrobotArmWaferA6";                                           // panel1.Visible = true;
+                                            //  ovalShape1.Visible = true;
+                                            lblwafer.Visible = true;
+                                            lblwafer.Text = "A5";
+
+                                            lblCassette.BackColor = Color.Blue;
+
+                                            picCassette.Image = Properties.Resources.cassette3;
+
+                                            // picMain.Image = Properties.Resources.mainpicCassetteopen;
+                                            picCassette.Height -= 220;
+                                            picCassette.Width -= 25;
+                                            picCassette.Top += 205;
+                                            picCassette.Image.Tag = "cassette";
+                                            picCassette.Left -= 5;
+                                            //  await Task.Delay(1000);
+                                            picCassette.Image = Properties.Resources.cassette;
+                                            // picMain.Image = Properties.Resources.robotgetwaferA1cassetteclose;
+
+                                        }
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotArmWaferA6")
+                                        {
+                                            await Task.Delay(1000);
+
+
+
+                                            // pictRobot.Image = Properties.Resources.robotleft_A1;
+                                            //   picMain.Image = Properties.Resources.picrobotcentralized;
+                                            picMain.Image = Properties.Resources.picrobotAlignerWafer;
+                                            //  ovalShape1.Visible = true;
+                                            // lblwafer.Visible = true;
+                                            ovalShape1.Left += 70;
+                                            ovalShape1.Top -= 85;
+                                            lblwafer.Visible = false;
+                                            lblwaferright.Visible = true;
+                                            lblwaferright.Text = "A5";
+                                            lblwafer.Left += 70;
+                                            lblwafer.Top -= 85;
+                                            // panel1.Visible = false;
+
+                                            picMain.Image.Tag = "picrobotAlignerWaferA6";
+
+                                            //   await Task.Delay(2000);
+                                            //  picCentralize.Image = Properties.Resources.centralize2;//open centralize
+                                            //  picMain.Image = Properties.Resources.robotleftA1opencentralize;
+                                        }
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotAlignerWaferA6")
+                                        {
+                                            await Task.Delay(2000);
+
+
+
+
+
+
+                                            // picCentralize.Image = Properties.Resources.robot_into_centralizeA1;
+
+                                            //  picMain.Image = Properties.Resources.picrobotintocentralized;
+                                            picMain.Image = Properties.Resources.picrobotintoAlignerWafer;
+                                            picMain.Image.Tag = "picrobotintoAlignerWaferA6";
+                                            lblCentralize.BackColor = Color.LimeGreen;
+                                            ovalShape1.Left += 155;
+                                            ovalShape1.Top += 0;
+                                            lblwaferright.Visible = false;
+                                            lblwaferaligner.Visible = true;
+                                            lblwaferaligner.Text = "A6";
+                                            lblwafer.Left += 155;
+                                            lblwafer.Top += 0;
+
+                                        }
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotintoAlignerWaferA6")
+                                        {
+                                            ////////////////////////////////////////////////////////////////////////////////////
+                                            await Task.Delay(2000);
+                                            // pictRobot.Visible = true;
+                                            // picCentralize.Image = Properties.Resources.centralize2;
+                                            // picMain.Image = Properties.Resources.picrobotcentralized;
+                                            picMain.Image = Properties.Resources.picrobotAlignerWafer;
+                                            picMain.Image.Tag = "picrobotAlignerWaferA6-2";
+                                            // ovalShape1.Visible = true;
+                                            //picwafer.Visible = true;
+                                            lblwaferaligner.Visible = false;
+                                            lblwaferright.Visible = true;
+                                            lblwaferright.Text = "A6";
+                                            ovalShape1.Left -= 155;
+                                            ovalShape1.Top -= 0;
+                                            lblwafer.Left -= 155;
+                                            lblwafer.Top -= 0;
+                                            lblCentralize.BackColor = Color.Blue;
+
+                                            // await Task.Delay(2000);
+                                            // picCentralize.Image = Properties.Resources.centralize;//close centralize
+                                            // picMain.Image = Properties.Resources.robotleftA1;
+                                        }
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotAlignerWaferA6-2")
+                                        {
+                                            await Task.Delay(2000);
+
+                                            //   picMain.Image = Properties.Resources.picrobotbotton;
+                                            picMain.Image = Properties.Resources.picrobotAPMWafer;
+                                            picMain.Image.Tag = "picrobotAPMWaferA6";
+                                            lblwaferright.Visible = false;
+                                            lblwaferup.Visible = true;
+                                            lblwaferup.Text = "A6";
+                                            ovalShape1.Left -= 82;
+                                            ovalShape1.Top -= 76;
+                                            lblwafer.Left -= 82;
+                                            lblwafer.Top -= 76;
+
+
+
+                                        }
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotAPMWaferA6" && picSV.Visible == true)
+                                        {
+
+                                            await Task.Delay(1000);
+
+                                            // picChamber.Image = Properties.Resources.new_chamber1;//open chamber
+                                            // picMain.Image = Properties.Resources.robotrightA1openchamber;
+                                            picSV.Visible = false;  // open sv of chamber
+
+                                        }
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotAPMWaferA6" && picSV.Visible == false)
+                                        {
+                                            await Task.Delay(1000);
+
+                                            //pictRobot.Visible = false;
+                                            //picChamber.Image = Properties.Resources.robot_into_chamberA11;
+                                            //  picMain.Image = Properties.Resources.picrobotintochamber;
+                                            picMain.Image = Properties.Resources.picrobotintoAPMWafer;
+                                            picMain.Image.Tag = "picrobotintoAPMWaferA6";
+                                            // picChamber.Width += 140;
+                                            //picChamber.Left -= 150;
+                                            //picChamber.Height += 10;
+                                            lblwaferup.Visible = false;
+                                            lblwaferAPM.Visible = true;
+                                            lblwaferAPM.Text = "A6";
+                                            ovalShape1.Top -= 145;
+                                            ovalShape1.Left += 3;
+                                            lblwafer.Top -= 145;
+                                            lblwafer.Left += 3;
 
-                                          picMain.Image = Properties.Resources.picrobotintocassette;
-                                          picCassette.Image = Properties.Resources.robot_into_cassetteA1;
 
-                                          picCassette.Width += 25;
-                                          picCassette.Height += 220;
-                                          picCassette.Top -= 205;
-                                          picCassette.Image.Tag = "robot_into_cassetteA1";
-                                          picCassette.Left += 5;
-                                          label1.BackColor = Color.Blue;
-                                          lblLoad.Text = "";
-                                          lblLoad.BackColor = Color.Blue;
-                                          lbl123.BackColor = Color.Blue;
-                                          lblState.BackColor = Color.Blue;
-                                          lblCassetteRecipename.BackColor = Color.Blue;
-                                          lblmTorr.BackColor = Color.Blue;
 
+                                            lblChamber.BackColor = Color.LimeGreen;
 
-                                          lblCassette.BackColor = Color.LimeGreen;
-                                          await Task.Delay(1000);
+                                            chamberload = "LimeGreen";
+                                        }
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotintoAPMWaferA6")
+                                        {
+                                            // loaddata();
+                                            // loadchamber1( sender, e);
+                                            await Task.Delay(1000);
+                                            picChamber.Image = Properties.Resources.ChamberWithA1;
+                                            //   picMain.Image = Properties.Resources.robotintochamberwithA1;
+                                            picMain.Image = Properties.Resources.picrobotbotton;
+                                            picMain.Image = Properties.Resources.picwaferinAPM;
+                                            picMain.Image.Tag = "picwaferinAPMA6";
+                                            ovalShape1.Left -= 1;
+                                            ovalShape1.Left += 1;
+                                            //  picMain.SendToBack();
+                                            // ovalShape1.BringToFront();
+                                            picChamber.Width -= 140;
+                                            picChamber.Left += 150;
+                                            picChamber.Height -= 10;
 
-                                          //  pictRobot.Visible = true;
 
-                                          //  picMain.Image = Properties.Resources.mainpicture;
-                                          picMain.Image = Properties.Resources.picrobotArmWafer;
-                                          // panel1.Visible = true;
-                                          //  ovalShape1.Visible = true;
-                                          lblwafer.Visible = true;
-                                          lblwafer.Text = "A5";
+                                            //  pictRobot.Visible = true;
+                                        }
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picwaferinAPMA6")
+                                        {
 
-                                          lblCassette.BackColor = Color.Blue;
+                                            await Task.Delay(1000);
 
-                                          picCassette.Image = Properties.Resources.cassette3;
+                                            picChamber.Image = Properties.Resources.ChamberWithA1Close;
+                                            //picMain.Image = Properties.Resources.robotintochamberwithA1close;
+                                            picSV.Visible = true;
 
-                                          // picMain.Image = Properties.Resources.mainpicCassetteopen;
-                                          picCassette.Height -= 220;
-                                          picCassette.Width -= 25;
-                                          picCassette.Top += 205;
-                                          picCassette.Image.Tag = "cassette";
-                                          picCassette.Left -= 5;
-                                          //  await Task.Delay(1000);
-                                          picCassette.Image = Properties.Resources.cassette;
-                                          // picMain.Image = Properties.Resources.robotgetwaferA1cassetteclose;
-                                          await Task.Delay(1000);
-
-
-
-                                          // pictRobot.Image = Properties.Resources.robotleft_A1;
-                                          //   picMain.Image = Properties.Resources.picrobotcentralized;
-                                          picMain.Image = Properties.Resources.picrobotAlignerWafer;
-                                          //  ovalShape1.Visible = true;
-                                          // lblwafer.Visible = true;
-                                          ovalShape1.Left += 70;
-                                          ovalShape1.Top -= 85;
-                                          lblwafer.Visible = false;
-                                          lblwaferright.Visible = true;
-                                          lblwaferright.Text = "A5";
-                                          lblwafer.Left += 70;
-                                          lblwafer.Top -= 85;
-                                          // panel1.Visible = false;
+                                            ///////////////////////////////////////////////////////////////////////////////////////////////////////WaferA5 into Chamber
 
 
+                                            lblRecipe.BackColor = Color.LimeGreen;
+                                            lblStepName.BackColor = Color.LimeGreen;
 
-                                          //   await Task.Delay(2000);
-                                          //  picCentralize.Image = Properties.Resources.centralize2;//open centralize
-                                          //  picMain.Image = Properties.Resources.robotleftA1opencentralize;
-
-                                          await Task.Delay(2000);
-
+                                            lblnum.BackColor = Color.LimeGreen;
 
+                                            lblData.BackColor = Color.LimeGreen;
+                                            lblData.Text = "";
+                                            label2.BackColor = Color.LimeGreen;
 
+                                            lblProcess.Text = "Processing";
+                                            lblProcess.BackColor = Color.LimeGreen;
+                                            lblProcessStep.Text = "Process Step";
+                                            lblProcessStep.BackColor = Color.LimeGreen;
 
 
 
-                                          // picCentralize.Image = Properties.Resources.robot_into_centralizeA1;
+                                            con.Open();
+                                            string strSQL = "select WaferRecipe from CassetteWafer  where CassetterecipeName = @NewWaferRecipe";
 
-                                          //  picMain.Image = Properties.Resources.picrobotintocentralized;
-                                          picMain.Image = Properties.Resources.picrobotintoAlignerWafer;
-                                          lblCentralize.BackColor = Color.LimeGreen;
-                                          ovalShape1.Left += 155;
-                                          ovalShape1.Top += 0;
-                                          lblwaferright.Visible = false;
-                                          lblwaferaligner.Visible = true;
-                                          lblwaferaligner.Text = "A6";
-                                          lblwafer.Left += 155;
-                                          lblwafer.Top += 0;
+                                            SqlCommand cmd = new SqlCommand(strSQL, con);
+                                            cmd.Parameters.AddWithValue("@NewWaferRecipe", Form1.form2Msg);
+                                            SqlDataReader reader = cmd.ExecuteReader();
+                                            while (reader.Read())
+                                            {
 
+                                                lblRecipe.Text = string.Format("{0}", reader["WaferRecipe"]);
 
-                                          ////////////////////////////////////////////////////////////////////////////////////
-                                          await Task.Delay(2000);
-                                          // pictRobot.Visible = true;
-                                          // picCentralize.Image = Properties.Resources.centralize2;
-                                          // picMain.Image = Properties.Resources.picrobotcentralized;
-                                          picMain.Image = Properties.Resources.picrobotAlignerWafer;
-                                          // ovalShape1.Visible = true;
-                                          //picwafer.Visible = true;
-                                          lblwaferaligner.Visible = false;
-                                          lblwaferright.Visible = true;
-                                          lblwaferright.Text = "A6";
-                                          ovalShape1.Left -= 155;
-                                          ovalShape1.Top -= 0;
-                                          lblwafer.Left -= 155;
-                                          lblwafer.Top -= 0;
-                                          lblCentralize.BackColor = Color.Blue;
 
-                                          // await Task.Delay(2000);
-                                          // picCentralize.Image = Properties.Resources.centralize;//close centralize
-                                          // picMain.Image = Properties.Resources.robotleftA1;
-                                          await Task.Delay(2000);
 
-                                          //   picMain.Image = Properties.Resources.picrobotbotton;
-                                          picMain.Image = Properties.Resources.picrobotAPMWafer;
-                                          lblwaferright.Visible = false;
-                                          lblwaferup.Visible = true;
-                                          lblwaferup.Text = "A6";
-                                          ovalShape1.Left -= 82;
-                                          ovalShape1.Top -= 76;
-                                          lblwafer.Left -= 82;
-                                          lblwafer.Top -= 76;
+                                            }
 
+                                            con.Close();
+                                            con.Open();
+                                            string strSQL1 = "select stepname from newrecipe where recipename = @Myrecipename";
 
+                                            SqlCommand cmd1 = new SqlCommand(strSQL1, con);
+                                            cmd1.Parameters.AddWithValue("@Myrecipename", lblRecipe.Text);
+                                            SqlDataReader reader1 = cmd1.ExecuteReader();
+                                            while (reader1.Read())
+                                            {
 
+                                                strStepname1.Add(string.Format("{0}", reader1["StepName"]));
 
 
-                                          await Task.Delay(1000);
+                                            }
 
-                                          // picChamber.Image = Properties.Resources.new_chamber1;//open chamber
-                                          // picMain.Image = Properties.Resources.robotrightA1openchamber;
-                                          picSV.Visible = false;  // open sv of chamber
+                                            con.Close();
 
-                                          await Task.Delay(1000);
+                                            con.Open();
+                                            string strSQL2 = "select StepName from newrecipe inner join CassetteWafer on newrecipe.recipename = cassettewafer.waferRecipe where cassettewafer.waferRecipe = @Newrecipename";
+                                            SqlCommand cmd2 = new SqlCommand(strSQL2, con);
+                                            cmd2.Parameters.AddWithValue("@Newrecipename", lblRecipe.Text);
 
-                                          //pictRobot.Visible = false;
-                                          //picChamber.Image = Properties.Resources.robot_into_chamberA11;
-                                          //  picMain.Image = Properties.Resources.picrobotintochamber;
-                                          picMain.Image = Properties.Resources.picrobotintoAPMWafer;
-                                          // picChamber.Width += 140;
-                                          //picChamber.Left -= 150;
-                                          //picChamber.Height += 10;
-                                          lblwaferup.Visible = false;
-                                          lblwaferAPM.Visible = true;
-                                          lblwaferAPM.Text = "A6";
-                                          ovalShape1.Top -= 145;
-                                          ovalShape1.Left += 3;
-                                          lblwafer.Top -= 145;
-                                          lblwafer.Left += 3;
+                                            cmd2.ExecuteNonQuery();
 
 
 
-                                          lblChamber.BackColor = Color.LimeGreen;
+                                            for (int j = 0; j < strStepname1.Count(); j += 1)
 
-                                          chamberload = "LimeGreen";
+                                            {
 
-                                          // loaddata();
-                                          // loadchamber1( sender, e);
-                                          await Task.Delay(1000);
-                                          picChamber.Image = Properties.Resources.ChamberWithA1;
-                                          //   picMain.Image = Properties.Resources.robotintochamberwithA1;
-                                          picMain.Image = Properties.Resources.picrobotbotton;
-                                          picMain.Image = Properties.Resources.picwaferinAPM;
-                                          ovalShape1.Left -= 1;
-                                          ovalShape1.Left += 1;
-                                          //  picMain.SendToBack();
-                                          // ovalShape1.BringToFront();
-                                          picChamber.Width -= 140;
-                                          picChamber.Left += 150;
-                                          picChamber.Height -= 10;
+                                                await Task.Delay(1000);
 
+                                                ListStepStartTime.Add(DateTime.Now);
 
-                                          //  pictRobot.Visible = true;
 
+                                                int count = j + 1;
 
-                                          await Task.Delay(1000);
 
-                                          picChamber.Image = Properties.Resources.ChamberWithA1Close;
-                                          //picMain.Image = Properties.Resources.robotintochamberwithA1close;
-                                          picSV.Visible = true;
+                                                lblStepName.Text = strStepname1[j];
+                                                lblnum.Text = "," + count + "/" + strStepname1.Count();
 
-                                          ///////////////////////////////////////////////////////////////////////////////////////////////////////WaferA5 into Chamber
 
+                                                con.Close();
 
-                                          lblRecipe.BackColor = Color.LimeGreen;
-                                          lblStepName.BackColor = Color.LimeGreen;
+                                                con.Open();
+                                                string strSQLStepSec = "select * from newrecipe where stepname = @NewSec";
 
-                                          lblnum.BackColor = Color.LimeGreen;
+                                                SqlCommand cmdSec = new SqlCommand(strSQLStepSec, con);
+                                                cmdSec.Parameters.AddWithValue("@NewSec", lblStepName.Text);
 
-                                          lblData.BackColor = Color.LimeGreen;
-                                          lblData.Text = "";
-                                          label2.BackColor = Color.LimeGreen;
+                                                SqlDataReader readerSec = cmdSec.ExecuteReader();
 
-                                          lblProcess.Text = "Processing";
-                                          lblProcess.BackColor = Color.LimeGreen;
-                                          lblProcessStep.Text = "Process Step";
-                                          lblProcessStep.BackColor = Color.LimeGreen;
 
+                                                while (readerSec.Read())
+                                                {
+                                                    mySec1 = readerSec["ProcessTime"].ToString();
 
+                                                    Int32.TryParse(mySec1, out Sec1);
 
-                                          con.Open();
-                                          string strSQL = "select WaferRecipe from CassetteWafer  where CassetterecipeName = @NewWaferRecipe";
+                                                }
 
-                                          SqlCommand cmd = new SqlCommand(strSQL, con);
-                                          cmd.Parameters.AddWithValue("@NewWaferRecipe", Form1.form2Msg);
-                                          SqlDataReader reader = cmd.ExecuteReader();
-                                          while (reader.Read())
-                                          {
+                                                for (int k = 1; k <= Sec1; k++)
+                                                {
+                                                    lblData.Text = k.ToString() + "/" + mySec1.ToString() + " Sec";
+                                                    await Task.Delay(1000);
 
-                                              lblRecipe.Text = string.Format("{0}", reader["WaferRecipe"]);
 
+                                                }
+                                                ListStepEndTime.Add(DateTime.Now);
 
+                                                con.Close();
+
+                                                con.Open();
+
+                                                string strModuleRecipe = "insert into ModuleRecipe(RecipeName,StepName,StartTime,EndTime,noofrecipe,logname) values(@recipename,@stepname,@starttime,@endtime,@noofrecipe,@Logname)";
+
+                                                SqlCommand cmdmodulerecipe = new SqlCommand(strModuleRecipe, con);
+
+                                                cmdmodulerecipe.Parameters.AddWithValue("@recipename", lblRecipe.Text);
+                                                cmdmodulerecipe.Parameters.AddWithValue("@stepname", strStepname1[j]);
+                                                cmdmodulerecipe.Parameters.AddWithValue("@starttime", ListStepStartTime[j]);
+                                                cmdmodulerecipe.Parameters.AddWithValue("@endtime", ListStepEndTime[j]);
+                                                cmdmodulerecipe.Parameters.AddWithValue("@noofrecipe", "6");
+                                                cmdmodulerecipe.Parameters.AddWithValue("@Logname", lbl123.Text);
+
+                                                cmdmodulerecipe.ExecuteNonQuery();
+
+                                                con.Close();
+                                                //////////////////////////////////////////////////////////////////////////////////////////////////////get parameter value
 
-                                          }
+                                                con.Open();
+
+                                                string strSQL3 = "select * from newrecipe where stepname = @Newstepname and recipename = @Newrecipename";
 
-                                          con.Close();
-                                          con.Open();
-                                          string strSQL1 = "select stepname from newrecipe where recipename = @Myrecipename";
+                                                SqlCommand cmd3 = new SqlCommand(strSQL3, con);
+                                                cmd3.Parameters.AddWithValue("@Newstepname", lblStepName.Text);
+                                                cmd3.Parameters.AddWithValue("@Newrecipename", lblRecipe.Text);
+                                                SqlDataReader reader2 = cmd3.ExecuteReader();
 
-                                          SqlCommand cmd1 = new SqlCommand(strSQL1, con);
-                                          cmd1.Parameters.AddWithValue("@Myrecipename", lblRecipe.Text);
-                                          SqlDataReader reader1 = cmd1.ExecuteReader();
-                                          while (reader1.Read())
-                                          {
+                                                while (reader2.Read())
+                                                {
+                                                    CI2 = reader2["CI2"].ToString();
+                                                    BCI3 = reader2["BCI3"].ToString();
+                                                    SF6 = reader2["SF6"].ToString();
+                                                    CHF3 = reader2["CHF3"].ToString();
+                                                    Oxygen = reader2["Oxygen"].ToString();
+                                                    Oxygen1 = reader2["Oxygen1"].ToString();
+                                                    Nitrogen = reader2["Nitrogen"].ToString();
+                                                    Argon = reader2["Argon"].ToString();
 
-                                              strStepname1.Add(string.Format("{0}", reader1["StepName"]));
 
 
-                                          }
+                                                }
 
-                                          con.Close();
+                                                con.Close();
 
-                                          con.Open();
-                                          string strSQL2 = "select StepName from newrecipe inner join CassetteWafer on newrecipe.recipename = cassettewafer.waferRecipe where cassettewafer.waferRecipe = @Newrecipename";
-                                          SqlCommand cmd2 = new SqlCommand(strSQL2, con);
-                                          cmd2.Parameters.AddWithValue("@Newrecipename", lblRecipe.Text);
+                                                ///////////////////////////////////////////////////////////////////////////////////////////////////
+                                                con.Open();
+                                                Chamber1 chamber1 = new Chamber1();
 
-                                          cmd2.ExecuteNonQuery();
+                                                string strParameter = "insert into valueselection(parameter,Minimum,Maximum,Average,Units,recipename,stepname) values(@11,@21,@31,@41,@51,@61,@71),(@12,@22,@32,@42,@52,@62,@72),(@13,@23,@33,@43,@53,@63,@73)"
+                                                    + ",(@14,@24,@34,@44,@54,@64,@74),(@15,@25,@35,@45,@55,@65,@75),(@16,@26,@36,@46,@56,@66,@76),(@17,@27,@37,@47,@57,@67,@77),(@18,@28,@38,@48,@58,@68,@78)";
+                                                SqlCommand cmdparameter = new SqlCommand(strParameter, con);
+                                                cmdparameter.Parameters.AddWithValue("@11", "CI2");
+                                                cmdparameter.Parameters.AddWithValue("@12", "BCI3");
+                                                cmdparameter.Parameters.AddWithValue("@13", "SF6");
+                                                cmdparameter.Parameters.AddWithValue("@14", "CHF3");
+                                                cmdparameter.Parameters.AddWithValue("@15", "Oxygen");
+                                                cmdparameter.Parameters.AddWithValue("@16", "Oxygen");
+                                                cmdparameter.Parameters.AddWithValue("@17", "Nitrogen");
+                                                cmdparameter.Parameters.AddWithValue("@18", "Argon");
+                                                cmdparameter.Parameters.AddWithValue("@21", CI2);
+                                                cmdparameter.Parameters.AddWithValue("@22", BCI3);
+                                                cmdparameter.Parameters.AddWithValue("@23", SF6);
+                                                cmdparameter.Parameters.AddWithValue("@24", CHF3);
+                                                cmdparameter.Parameters.AddWithValue("@25", Oxygen);
+                                                cmdparameter.Parameters.AddWithValue("@26", Oxygen1);
+                                                cmdparameter.Parameters.AddWithValue("@27", Nitrogen);
+                                                cmdparameter.Parameters.AddWithValue("@28", Argon);
+                                                cmdparameter.Parameters.AddWithValue("@31", CI2);
+                                                cmdparameter.Parameters.AddWithValue("@32", BCI3);
+                                                cmdparameter.Parameters.AddWithValue("@33", SF6);
+                                                cmdparameter.Parameters.AddWithValue("@34", CHF3);
+                                                cmdparameter.Parameters.AddWithValue("@35", Oxygen);
+                                                cmdparameter.Parameters.AddWithValue("@36", Oxygen1);
+                                                cmdparameter.Parameters.AddWithValue("@37", Nitrogen);
+                                                cmdparameter.Parameters.AddWithValue("@38", Argon);
+                                                cmdparameter.Parameters.AddWithValue("@41", CI2);
+                                                cmdparameter.Parameters.AddWithValue("@42", BCI3);
+                                                cmdparameter.Parameters.AddWithValue("@43", SF6);
+                                                cmdparameter.Parameters.AddWithValue("@44", CHF3);
+                                                cmdparameter.Parameters.AddWithValue("@45", Oxygen);
+                                                cmdparameter.Parameters.AddWithValue("@46", Oxygen1);
+                                                cmdparameter.Parameters.AddWithValue("@47", Nitrogen);
+                                                cmdparameter.Parameters.AddWithValue("@48", Argon);
+                                                cmdparameter.Parameters.AddWithValue("@51", "sccm");
+                                                cmdparameter.Parameters.AddWithValue("@52", "sccm");
+                                                cmdparameter.Parameters.AddWithValue("@53", "sccm");
+                                                cmdparameter.Parameters.AddWithValue("@54", "sccm");
+                                                cmdparameter.Parameters.AddWithValue("@55", "sccm");
+                                                cmdparameter.Parameters.AddWithValue("@56", "sccm");
+                                                cmdparameter.Parameters.AddWithValue("@57", "sccm");
+                                                cmdparameter.Parameters.AddWithValue("@58", "sccm");
+                                                cmdparameter.Parameters.AddWithValue("@61", lblRecipe.Text);
+                                                cmdparameter.Parameters.AddWithValue("@62", lblRecipe.Text);
+                                                cmdparameter.Parameters.AddWithValue("@63", lblRecipe.Text);
+                                                cmdparameter.Parameters.AddWithValue("@64", lblRecipe.Text);
+                                                cmdparameter.Parameters.AddWithValue("@65", lblRecipe.Text);
+                                                cmdparameter.Parameters.AddWithValue("@66", lblRecipe.Text);
+                                                cmdparameter.Parameters.AddWithValue("@67", lblRecipe.Text);
+                                                cmdparameter.Parameters.AddWithValue("@68", lblRecipe.Text);
+                                                cmdparameter.Parameters.AddWithValue("@71", strStepname1[j]);
+                                                cmdparameter.Parameters.AddWithValue("@72", strStepname1[j]);
+                                                cmdparameter.Parameters.AddWithValue("@73", strStepname1[j]);
+                                                cmdparameter.Parameters.AddWithValue("@74", strStepname1[j]);
+                                                cmdparameter.Parameters.AddWithValue("@75", strStepname1[j]);
+                                                cmdparameter.Parameters.AddWithValue("@76", strStepname1[j]);
+                                                cmdparameter.Parameters.AddWithValue("@77", strStepname1[j]);
+                                                cmdparameter.Parameters.AddWithValue("@78", strStepname1[j]);
 
 
+                                                cmdparameter.ExecuteNonQuery();
+                                                con.Close();
 
-                                          for (int j = 0; j < strStepname1.Count(); j += 1)
+                                            }
+                                            ///////////////////////////////////////////////
 
-                                          {
 
-                                              await Task.Delay(1000);
+                                            strStepname1.Clear();
+                                            ListStepStartTime.Clear();
+                                            ListStepEndTime.Clear();
 
-                                              ListStepStartTime.Add(DateTime.Now);
+                                            // }
 
 
-                                              int count = j + 1;
 
 
-                                              lblStepName.Text = strStepname1[j];
-                                              lblnum.Text = "," + count + "/" + strStepname1.Count();
 
 
-                                              con.Close();
 
-                                              con.Open();
-                                              string strSQLStepSec = "select * from newrecipe where stepname = @NewSec";
 
-                                              SqlCommand cmdSec = new SqlCommand(strSQLStepSec, con);
-                                              cmdSec.Parameters.AddWithValue("@NewSec", lblStepName.Text);
 
-                                              SqlDataReader readerSec = cmdSec.ExecuteReader();
 
 
-                                              while (readerSec.Read())
-                                              {
-                                                  mySec1 = readerSec["ProcessTime"].ToString();
+                                            /////////////////////////////////////////////////////////////////////////////////////////////////// 
+                                            picMain.Image.Tag = "A6finishChamber";
+                                        }
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "A6finishChamber" && picSV.Visible == true)
 
-                                                  Int32.TryParse(mySec1, out Sec1);
+                                        {
+                                            await Task.Delay(1000);
+                                            picChamber.Image = Properties.Resources.ChamberWithA1;
+                                            //picMain.Image = Properties.Resources.robotintochamberwithA1;
+                                            picSV.Visible = false;
+                                        }
 
-                                              }
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "A6finishChamber" && picSV.Visible == false)
+                                        {
+                                            await Task.Delay(1000);
+
+                                            picChamber.Image = Properties.Resources.robot_into_chamberA11;
+                                            picMain.Image = Properties.Resources.picrobotintochamber;
+                                            picMain.Image = Properties.Resources.picrobotintoAPMWafer;
+                                            ovalShape1.Left += 1;
+                                            ovalShape1.Left -= 1;
+                                            picChamber.Width += 140;
+                                            picChamber.Left -= 150;
+                                            picChamber.Height += 10;
+                                            await Task.Delay(1000);
+                                            label2.BackColor = Color.Blue;
+                                            lblProcess.BackColor = Color.Blue;
+                                            lblProcessStep.BackColor = Color.Blue;
+                                            lblRecipe.BackColor = Color.Blue;
+                                            lblStepName.BackColor = Color.Blue;
+                                            lblData.BackColor = Color.Blue;
+                                            lblnum.BackColor = Color.Blue;
+
+                                            lblProcess.Text = "Aborted";
+                                            lblProcessStep.Text = "";
+                                            lblRecipe.Text = "";
+                                            lblStepName.Text = "";
+                                            lblnum.Text = "";
+                                            lblData.Text = "???????????";
+
+
+                                            // pictRobot.Visible = true;
+
+                                            picChamber.Image = Properties.Resources.new_chamber1;
+                                            picMain.Image = Properties.Resources.picrobotbotton;
+                                            picMain.Image = Properties.Resources.picrobotAPMWafer;
+                                            picMain.Image.Tag = "picrobotAPMWaferA6-2";
+                                            lblwaferAPM.Visible = false;
+                                            lblwaferup.Visible = true;
+
+                                            ovalShape1.Top += 145;
+                                            ovalShape1.Left -= 3;
+                                            lblwafer.Top += 145;
+                                            lblwafer.Left -= 3;
+
+                                            lblChamber.BackColor = Color.Blue;
+                                            chamberload = "Blue";
+                                            picChamber.Width -= 140;
+                                            picChamber.Left += 150;
+                                            picChamber.Height -= 10;
+
+                                        }
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotAPMWaferA6-2" && picSV.Visible == false)
+                                        {
+                                            await Task.Delay(2000);
+                                            picChamber.Image = Properties.Resources.new_chamber;//close chamber
+
+                                            // picMain.Image = Properties.Resources.robotrightA1;
+                                            picSV.Visible = true;
+
+
+                                        }
+
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotAPMWaferA6-2" && picSV.Visible == true)
+                                        {
+                                            await Task.Delay(2000);
+
+                                            // pictRobot.Height += 20;
+
+                                            // picMain.Image = Properties.Resources.robotgetwaferA1cassetteclose;
+                                            picMain.Image = Properties.Resources.mainpicture;
+                                            picMain.Image = Properties.Resources.picrobotArmWafer;
+                                            picMain.Image.Tag = "picrobotArmWaferA6-2";
+                                            lblwaferup.Visible = false;
+                                            lblwafer.Visible = true;
+                                            ovalShape1.Top += 162;
+                                            lblwafer.Top += 162;
+                                            ovalShape1.Left += 12;
+                                            lblwafer.Left += 12;
+
+                                            await Task.Delay(2000);
+
+                                            await Task.Delay(1000);
+                                            picCassette.Image = Properties.Resources.cassette3;//open cassette
+                                                                                               // picMain.Image = Properties.Resources.robotgetwaferA1;
+                                        }
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotArmWaferA6-2")
+                                        {
+                                            await Task.Delay(1000);
+
+                                            lblCassette.BackColor = Color.LimeGreen;
+
+                                            picCassette.Image = Properties.Resources.robot_into_cassetteA1;
+                                            picMain.Image = Properties.Resources.picrobotintocassette;
+                                            picMain.Image.Tag = "picrobotintocassetteA6-2";
+                                            lblwafer.Visible = false;
+                                            lblwafer.Visible = false;
+                                            ovalShape1.Visible = false;
+                                            picCassette.Height += 220;
+                                            picCassette.Width += 25;
+                                            picCassette.Top -= 205;
+                                        }
+                                        if (ispauserobot == false && picMain.Tag.ToString() == "picrobotintocassetteA6-2")
+                                        {
+                                            await Task.Delay(2000);
+                                            lblCassette.BackColor = Color.Blue;
+                                            //  pictRobot.Visible = true;
+
+                                            picMain.Image = Properties.Resources.mainpicture;
+                                            picMain.Image.Tag = "mainpictureA6-2";
+                                            picCassette.Image = Properties.Resources.cassette3;
+                                            picCassette.Width -= 25;
+                                            picCassette.Height -= 220;
+                                            picCassette.Top += 205;
+                                        }
+                                        if (ispauserobot == false && picMain.Tag.ToString() == "mainpictureA6-2")
+                                        {
+                                            await Task.Delay(2000);
+                                            //  picMain.Image = Properties.Resources.mainpic;
+                                            picCassette.Image = Properties.Resources.cassette;
+                                            // picwafer.Image = Properties.Resources.waferfull;
+                                            if (NoOfwafer[i] == "1")
+                                            {
+                                                picwafer.Image = Properties.Resources.waferA1full;
+                                            }
+                                            if (NoOfwafer[i] == "2")
+                                            {
+                                                picwafer.Image = Properties.Resources.waferA2full;
+                                            }
+                                            if (NoOfwafer[i] == "3")
+                                            {
+                                                picwafer.Image = Properties.Resources.waferA3full;
+                                            }
+                                            if (NoOfwafer[i] == "4")
+                                            {
+                                                picwafer.Image = Properties.Resources.waferA4full;
+                                            }
+
+                                            if (NoOfwafer[i] == "5")
+                                            {
+                                                picwafer.Image = Properties.Resources.waferA5full;
+                                            }
+                                            if (NoOfwafer[i] == "6")
+                                            {
+                                                picwafer.Image = Properties.Resources.waferA6full;
+                                            }
+
+                                            //////////////////////////////////////////////////////////////////Save DataLog
+                                            if (int.Parse(NoOfwafer[i]) == 6)
+                                            {
+                                                EndTime = DateTime.Now;
+
+
+                                                con.Open();
+
+                                                string strinsertdatalog = "insert into DataLogger(logname,cassetterecipename,starttime) values(@1,@2,@3) ";
+                                                SqlCommand cmdinsertdatalog = new SqlCommand(strinsertdatalog, con);
+
+                                                cmdinsertdatalog.Parameters.AddWithValue("@1", lbl123.Text);
+                                                cmdinsertdatalog.Parameters.AddWithValue("@2", form2Msg);
+                                                cmdinsertdatalog.Parameters.AddWithValue("@3", StartTime);
+
+                                                cmdinsertdatalog.ExecuteNonQuery();
+
+                                                con.Close();
+
+
+                                            }
+
+                                            //////////////////////////////////////////////////////////////////////////finish waferA6
+                                            picMain.Image.Tag = "finishWaferA6";
+                                        }
+                                    }
+
+
+                                    if (int.Parse(NoOfwafer[i]) >= 7)
+                                    {
+                                        //////////////////////////////////////////////////////////////////////////start waferA7
+                                        nooftherecipe = "7";
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "finishWaferA6" && isStopRobot == false && iscancelrecipe == false)
+                                        {
+                                            await Task.Delay(2000);
+
+                                            picCassette.Image = Properties.Resources.cassette1;
+
+                                            if (NoOfwafer[i] == "1")
+                                            {
+                                                picwafer.Image = Properties.Resources.wafer;
+                                                picwafer.Image.Tag = "wafer";
+                                            }
+                                            else if (NoOfwafer[i] == "2")
+                                            {
+                                                picwafer.Image = Properties.Resources.waferA1full;
+                                            }
+                                            else if (NoOfwafer[i] == "3")
+                                            {
+                                                picwafer.Image = Properties.Resources.waferA2full;
+
+                                            }
+                                            else if (NoOfwafer[i] == "4")
+                                            {
+                                                picwafer.Image = Properties.Resources.waferA3full;
+                                            }
+                                            else if (NoOfwafer[i] == "5")
+                                            {
+                                                picwafer.Image = Properties.Resources.waferA4full;
+                                            }
+                                            else if (NoOfwafer[i] == "6")
+                                            {
+                                                picwafer.Image = Properties.Resources.waferA5full;
+
+                                            }
+                                            else if (NoOfwafer[i] == "7")
+                                            {
+                                                picwafer.Image = Properties.Resources.waferA6full;
+
+                                            }
+
+
+                                            StartTime = DateTime.Now;
+
+
+
+
+                                            await Task.Delay(2000);
+                                            con.Open();
+
+                                            string strWaferSelection = "insert into WaferSelection(NoOfWafers,StartTime,CassetteRecipeName,Logname) values(@NoOfWafer,@StartTime,@CassetteRecipeName,@Logname)";
+                                            SqlCommand cmdwaferselection = new SqlCommand(strWaferSelection, con);
+                                            cmdwaferselection.Parameters.AddWithValue("@NoOfWafer", "7");
+                                            cmdwaferselection.Parameters.AddWithValue("@StartTime", StartTime);
+                                            cmdwaferselection.Parameters.AddWithValue("@CassetteRecipeName", form2Msg);
+                                            cmdwaferselection.Parameters.AddWithValue("@Logname", lbl123.Text);
+
+                                            cmdwaferselection.ExecuteNonQuery();
+
+                                            con.Close();
+
+                                            await Task.Delay(1000);
+
+                                            picMain.Image = Properties.Resources.mainpicture;
+                                            picMain.Image.Tag = "waferA7mainpicture";
+
+                                            await Task.Delay(1000);
+                                        }
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "waferA7mainpicture")
+                                        {
+                                            // lblCassette.BackColor = Color.LimeGreen;
+                                            await Task.Delay(1000);
+
+                                            picMain.Image = Properties.Resources.picrobotintocassette;
+                                            picMain.Image.Tag = "picrobotintocassetteA7";
+                                            label1.BackColor = Color.Blue;
+                                            lblLoad.Text = "";
+                                            lblLoad.BackColor = Color.Blue;
+                                            lbl123.BackColor = Color.Blue;
+                                            lblState.BackColor = Color.Blue;
+                                            lblCassetteRecipename.BackColor = Color.Blue;
+                                            lblmTorr.BackColor = Color.Blue;
+
+
+                                            lblCassette.BackColor = Color.LimeGreen;
+
+                                        }
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotintocassetteA7")
+                                        {
+                                            await Task.Delay(1000);
+                                            picMain.Image = Properties.Resources.picrobotArmWafer;
+                                            picMain.Image.Tag = "picrobotArmWaferA7";
+
+                                            lblwafer.Visible = true;
+                                            lblwafer.Text = "A7";
+
+                                            lblCassette.BackColor = Color.Blue;
+                                        }
+
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotArmWaferA7")
+                                        {
+                                            await Task.Delay(1000);
+                                            picMain.Image = Properties.Resources.picrobotAlignerWafer;
+                                            picMain.Image.Tag = "picrobotAlignerWaferA7";
+
+                                            ovalShape1.Left += 70;
+                                            ovalShape1.Top -= 85;
+                                            lblwafer.Visible = false;
+                                            lblwaferright.Visible = true;
+                                            lblwaferright.Text = "A7";
+                                            lblwafer.Left += 70;
+                                            lblwafer.Top -= 85;
+
+                                        }
+
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotAlignerWaferA7")
+                                        {
+                                            await Task.Delay(1000);
+
+                                            picMain.Image = Properties.Resources.picrobotintoAlignerWafer;
+                                            picMain.Image.Tag = "picrobotintoAlignerWaferA7";
+                                            lblCentralize.BackColor = Color.LimeGreen;
+                                            ovalShape1.Left += 155;
+                                            ovalShape1.Top += 0;
+                                            lblwaferright.Visible = false;
+                                            lblwaferaligner.Visible = true;
+                                            lblwaferaligner.Text = "A7";
+                                            lblwafer.Left += 155;
+                                            lblwafer.Top += 0;
+
+                                        }
+
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotintoAlignerWaferA7")
+                                        {
+                                            await Task.Delay(1000);
+                                            picMain.Image = Properties.Resources.picrobotAlignerWafer;
+                                            picMain.Image.Tag = "picrobotAlignerWaferA7-2";
+
+                                            lblwaferaligner.Visible = false;
+                                            lblwaferright.Visible = true;
+                                            lblwaferright.Text = "A7";
+                                            ovalShape1.Left -= 155;
+                                            ovalShape1.Top -= 0;
+                                            lblwafer.Left -= 155;
+                                            lblwafer.Top -= 0;
+                                            lblCentralize.BackColor = Color.Blue;
+                                        }
+
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotAlignerWaferA7-2")
+                                        {
+                                            await Task.Delay(1000);
+
+                                            picMain.Image = Properties.Resources.picrobotAPMWafer;
+                                            picMain.Image.Tag = "picrobotAPMWaferA7";
+                                            lblwaferright.Visible = false;
+                                            lblwaferup.Visible = true;
+                                            lblwaferup.Text = "A7";
+                                            ovalShape1.Left -= 82;
+                                            ovalShape1.Top -= 76;
+                                            lblwafer.Left -= 82;
+                                            lblwafer.Top -= 76;
+                                        }
+
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotAPMWaferA7" && picSV.Visible == true)
+                                        {
+                                            await Task.Delay(1000);
+
+
+                                            picSV.Visible = false;  // open sv of chamber
+                                        }
+
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotAPMWaferA7" && picSV.Visible == false)
+                                        { 
+                                            await Task.Delay(1000);
+
+                                        picMain.Image = Properties.Resources.picrobotintoAPMWafer;
+                                        picMain.Image.Tag = "picrobotintoAPMWaferA7";
+
+                                        lblwaferup.Visible = false;
+                                        lblwaferAPM.Visible = true;
+                                        lblwaferAPM.Text = "A7";
+                                        ovalShape1.Top -= 145;
+                                        ovalShape1.Left += 3;
+                                        lblwafer.Top -= 145;
+                                        lblwafer.Left += 3;
+
+
+
+                                        lblChamber.BackColor = Color.LimeGreen;
+
+                                        chamberload = "LimeGreen";
+                                    }
 
-                                              for (int k = 1; k <= Sec1; k++)
-                                              {
-                                                  lblData.Text = k.ToString() + "/" + mySec1.ToString() + " Sec";
-                                                  await Task.Delay(1000);
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotintoAPMWaferA7")
+                                        {
+                                            await Task.Delay(1000);
+                                            picChamber.Image = Properties.Resources.ChamberWithA1;
 
+                                            //   picMain.Image = Properties.Resources.robotintochamberwithA1;
+                                            picMain.Image = Properties.Resources.picrobotbotton;
+                                            picMain.Image = Properties.Resources.picwaferinAPM;
+                                            picMain.Image.Tag = "picwaferinAPMA7";
+                                            ovalShape1.Left -= 1;
+                                            ovalShape1.Left += 1;
+                                            //  picMain.SendToBack();
+                                            // ovalShape1.BringToFront();
+                                            picChamber.Width -= 140;
+                                            picChamber.Left += 150;
+                                            picChamber.Height -= 10;
 
-                                              }
-                                              ListStepEndTime.Add(DateTime.Now);
 
-                                              con.Close();
+                                            //  pictRobot.Visible = true;
+                                        }
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picwaferinAPMA7")
 
-                                              con.Open();
+                                        {
+                                            await Task.Delay(1000);
 
-                                              string strModuleRecipe = "insert into ModuleRecipe(RecipeName,StepName,StartTime,EndTime,noofrecipe,logname) values(@recipename,@stepname,@starttime,@endtime,@noofrecipe,@Logname)";
+                                            picChamber.Image = Properties.Resources.ChamberWithA1Close;
+                                            //picMain.Image = Properties.Resources.robotintochamberwithA1close;
+                                            picSV.Visible = true;
 
-                                              SqlCommand cmdmodulerecipe = new SqlCommand(strModuleRecipe, con);
+                                            ///////////////////////////////////////////////////////////////////////////////////////////////////////WaferA7 into Chamber
+                                            Chamber1 chamber1 = new Chamber1();
+                                            chamber1.ShowDialog();
 
-                                              cmdmodulerecipe.Parameters.AddWithValue("@recipename", lblRecipe.Text);
-                                              cmdmodulerecipe.Parameters.AddWithValue("@stepname", strStepname1[j]);
-                                              cmdmodulerecipe.Parameters.AddWithValue("@starttime", ListStepStartTime[j]);
-                                              cmdmodulerecipe.Parameters.AddWithValue("@endtime", ListStepEndTime[j]);
-                                              cmdmodulerecipe.Parameters.AddWithValue("@noofrecipe", "6");
-                                              cmdmodulerecipe.Parameters.AddWithValue("@Logname", lbl123.Text);
+                                            lblRecipe.BackColor = Color.LimeGreen;
+                                            lblStepName.BackColor = Color.LimeGreen;
 
-                                              cmdmodulerecipe.ExecuteNonQuery();
+                                            lblnum.BackColor = Color.LimeGreen;
 
-                                              con.Close();
-                                              //////////////////////////////////////////////////////////////////////////////////////////////////////get parameter value
+                                            lblData.BackColor = Color.LimeGreen;
+                                            lblData.Text = "";
+                                            label2.BackColor = Color.LimeGreen;
 
-                                              con.Open();
+                                            lblProcess.Text = "Processing";
+                                            lblProcess.BackColor = Color.LimeGreen;
+                                            lblProcessStep.Text = "Process Step";
+                                            lblProcessStep.BackColor = Color.LimeGreen;
 
-                                              string strSQL3 = "select * from newrecipe where stepname = @Newstepname and recipename = @Newrecipename";
 
-                                              SqlCommand cmd3 = new SqlCommand(strSQL3, con);
-                                              cmd3.Parameters.AddWithValue("@Newstepname", lblStepName.Text);
-                                              cmd3.Parameters.AddWithValue("@Newrecipename", lblRecipe.Text);
-                                              SqlDataReader reader2 = cmd3.ExecuteReader();
 
-                                              while (reader2.Read())
-                                              {
-                                                  CI2 = reader2["CI2"].ToString();
-                                                  BCI3 = reader2["BCI3"].ToString();
-                                                  SF6 = reader2["SF6"].ToString();
-                                                  CHF3 = reader2["CHF3"].ToString();
-                                                  Oxygen = reader2["Oxygen"].ToString();
-                                                  Oxygen1 = reader2["Oxygen1"].ToString();
-                                                  Nitrogen = reader2["Nitrogen"].ToString();
-                                                  Argon = reader2["Argon"].ToString();
+                                            con.Open();
+                                            string strSQL = "select WaferRecipe from CassetteWafer  where CassetterecipeName = @NewWaferRecipe";
 
+                                            SqlCommand cmd = new SqlCommand(strSQL, con);
+                                            cmd.Parameters.AddWithValue("@NewWaferRecipe", Form1.form2Msg);
+                                            SqlDataReader reader = cmd.ExecuteReader();
+                                            while (reader.Read())
+                                            {
 
+                                                lblRecipe.Text = string.Format("{0}", reader["WaferRecipe"]);
 
-                                              }
 
-                                              con.Close();
 
-                                              ///////////////////////////////////////////////////////////////////////////////////////////////////
-                                              con.Open();
-                                              Chamber1 chamber1 = new Chamber1();
+                                            }
 
-                                              string strParameter = "insert into valueselection(parameter,Minimum,Maximum,Average,Units,recipename,stepname) values(@11,@21,@31,@41,@51,@61,@71),(@12,@22,@32,@42,@52,@62,@72),(@13,@23,@33,@43,@53,@63,@73)"
-                                                  + ",(@14,@24,@34,@44,@54,@64,@74),(@15,@25,@35,@45,@55,@65,@75),(@16,@26,@36,@46,@56,@66,@76),(@17,@27,@37,@47,@57,@67,@77),(@18,@28,@38,@48,@58,@68,@78)";
-                                              SqlCommand cmdparameter = new SqlCommand(strParameter, con);
-                                              cmdparameter.Parameters.AddWithValue("@11", "CI2");
-                                              cmdparameter.Parameters.AddWithValue("@12", "BCI3");
-                                              cmdparameter.Parameters.AddWithValue("@13", "SF6");
-                                              cmdparameter.Parameters.AddWithValue("@14", "CHF3");
-                                              cmdparameter.Parameters.AddWithValue("@15", "Oxygen");
-                                              cmdparameter.Parameters.AddWithValue("@16", "Oxygen");
-                                              cmdparameter.Parameters.AddWithValue("@17", "Nitrogen");
-                                              cmdparameter.Parameters.AddWithValue("@18", "Argon");
-                                              cmdparameter.Parameters.AddWithValue("@21", CI2);
-                                              cmdparameter.Parameters.AddWithValue("@22", BCI3);
-                                              cmdparameter.Parameters.AddWithValue("@23", SF6);
-                                              cmdparameter.Parameters.AddWithValue("@24", CHF3);
-                                              cmdparameter.Parameters.AddWithValue("@25", Oxygen);
-                                              cmdparameter.Parameters.AddWithValue("@26", Oxygen1);
-                                              cmdparameter.Parameters.AddWithValue("@27", Nitrogen);
-                                              cmdparameter.Parameters.AddWithValue("@28", Argon);
-                                              cmdparameter.Parameters.AddWithValue("@31", CI2);
-                                              cmdparameter.Parameters.AddWithValue("@32", BCI3);
-                                              cmdparameter.Parameters.AddWithValue("@33", SF6);
-                                              cmdparameter.Parameters.AddWithValue("@34", CHF3);
-                                              cmdparameter.Parameters.AddWithValue("@35", Oxygen);
-                                              cmdparameter.Parameters.AddWithValue("@36", Oxygen1);
-                                              cmdparameter.Parameters.AddWithValue("@37", Nitrogen);
-                                              cmdparameter.Parameters.AddWithValue("@38", Argon);
-                                              cmdparameter.Parameters.AddWithValue("@41", CI2);
-                                              cmdparameter.Parameters.AddWithValue("@42", BCI3);
-                                              cmdparameter.Parameters.AddWithValue("@43", SF6);
-                                              cmdparameter.Parameters.AddWithValue("@44", CHF3);
-                                              cmdparameter.Parameters.AddWithValue("@45", Oxygen);
-                                              cmdparameter.Parameters.AddWithValue("@46", Oxygen1);
-                                              cmdparameter.Parameters.AddWithValue("@47", Nitrogen);
-                                              cmdparameter.Parameters.AddWithValue("@48", Argon);
-                                              cmdparameter.Parameters.AddWithValue("@51", "sccm");
-                                              cmdparameter.Parameters.AddWithValue("@52", "sccm");
-                                              cmdparameter.Parameters.AddWithValue("@53", "sccm");
-                                              cmdparameter.Parameters.AddWithValue("@54", "sccm");
-                                              cmdparameter.Parameters.AddWithValue("@55", "sccm");
-                                              cmdparameter.Parameters.AddWithValue("@56", "sccm");
-                                              cmdparameter.Parameters.AddWithValue("@57", "sccm");
-                                              cmdparameter.Parameters.AddWithValue("@58", "sccm");
-                                              cmdparameter.Parameters.AddWithValue("@61", lblRecipe.Text);
-                                              cmdparameter.Parameters.AddWithValue("@62", lblRecipe.Text);
-                                              cmdparameter.Parameters.AddWithValue("@63", lblRecipe.Text);
-                                              cmdparameter.Parameters.AddWithValue("@64", lblRecipe.Text);
-                                              cmdparameter.Parameters.AddWithValue("@65", lblRecipe.Text);
-                                              cmdparameter.Parameters.AddWithValue("@66", lblRecipe.Text);
-                                              cmdparameter.Parameters.AddWithValue("@67", lblRecipe.Text);
-                                              cmdparameter.Parameters.AddWithValue("@68", lblRecipe.Text);
-                                              cmdparameter.Parameters.AddWithValue("@71", strStepname1[j]);
-                                              cmdparameter.Parameters.AddWithValue("@72", strStepname1[j]);
-                                              cmdparameter.Parameters.AddWithValue("@73", strStepname1[j]);
-                                              cmdparameter.Parameters.AddWithValue("@74", strStepname1[j]);
-                                              cmdparameter.Parameters.AddWithValue("@75", strStepname1[j]);
-                                              cmdparameter.Parameters.AddWithValue("@76", strStepname1[j]);
-                                              cmdparameter.Parameters.AddWithValue("@77", strStepname1[j]);
-                                              cmdparameter.Parameters.AddWithValue("@78", strStepname1[j]);
+                                            con.Close();
+                                            con.Open();
+                                            string strSQL1 = "select stepname from newrecipe where recipename = @Myrecipename";
 
+                                            SqlCommand cmd1 = new SqlCommand(strSQL1, con);
+                                            cmd1.Parameters.AddWithValue("@Myrecipename", lblRecipe.Text);
+                                            SqlDataReader reader1 = cmd1.ExecuteReader();
+                                            while (reader1.Read())
+                                            {
 
-                                              cmdparameter.ExecuteNonQuery();
-                                              con.Close();
+                                                strStepname1.Add(string.Format("{0}", reader1["StepName"]));
 
-                                          }
-                                          ///////////////////////////////////////////////
 
+                                            }
 
-                                          strStepname1.Clear();
-                                          ListStepStartTime.Clear();
-                                          ListStepEndTime.Clear();
+                                            con.Close();
 
-                                          // }
+                                            con.Open();
+                                            string strSQL2 = "select StepName from newrecipe inner join CassetteWafer on newrecipe.recipename = cassettewafer.waferRecipe where cassettewafer.waferRecipe = @Newrecipename";
+                                            SqlCommand cmd2 = new SqlCommand(strSQL2, con);
+                                            cmd2.Parameters.AddWithValue("@Newrecipename", lblRecipe.Text);
 
+                                            cmd2.ExecuteNonQuery();
 
 
 
+                                            for (int j = 0; j < strStepname1.Count(); j += 1)
 
+                                            {
 
+                                                //  await Task.Delay(1000);
 
+                                                ListStepStartTime.Add(DateTime.Now);
 
 
+                                                int count = j + 1;
 
 
-                                          /////////////////////////////////////////////////////////////////////////////////////////////////// 
-                                          await Task.Delay(1000);
-                                          picChamber.Image = Properties.Resources.ChamberWithA1;
-                                          //picMain.Image = Properties.Resources.robotintochamberwithA1;
-                                          picSV.Visible = false;
-                                          await Task.Delay(1000);
+                                                lblStepName.Text = strStepname1[j];
+                                                lblnum.Text = "," + count + "/" + strStepname1.Count();
 
-                                          picChamber.Image = Properties.Resources.robot_into_chamberA11;
-                                          picMain.Image = Properties.Resources.picrobotintochamber;
-                                          picMain.Image = Properties.Resources.picrobotintoAPMWafer;
-                                          ovalShape1.Left += 1;
-                                          ovalShape1.Left -= 1;
-                                          picChamber.Width += 140;
-                                          picChamber.Left -= 150;
-                                          picChamber.Height += 10;
-                                          await Task.Delay(1000);
-                                          label2.BackColor = Color.Blue;
-                                          lblProcess.BackColor = Color.Blue;
-                                          lblProcessStep.BackColor = Color.Blue;
-                                          lblRecipe.BackColor = Color.Blue;
-                                          lblStepName.BackColor = Color.Blue;
-                                          lblData.BackColor = Color.Blue;
-                                          lblnum.BackColor = Color.Blue;
 
-                                          lblProcess.Text = "Aborted";
-                                          lblProcessStep.Text = "";
-                                          lblRecipe.Text = "";
-                                          lblStepName.Text = "";
-                                          lblnum.Text = "";
-                                          lblData.Text = "???????????";
+                                                con.Close();
 
+                                                con.Open();
+                                                string strSQLStepSec = "select * from newrecipe where stepname = @NewSec";
 
-                                          // pictRobot.Visible = true;
+                                                SqlCommand cmdSec = new SqlCommand(strSQLStepSec, con);
+                                                cmdSec.Parameters.AddWithValue("@NewSec", lblStepName.Text);
 
-                                          picChamber.Image = Properties.Resources.new_chamber1;
-                                          picMain.Image = Properties.Resources.picrobotbotton;
-                                          picMain.Image = Properties.Resources.picrobotAPMWafer;
-                                          lblwaferAPM.Visible = false;
-                                          lblwaferup.Visible = true;
+                                                SqlDataReader readerSec = cmdSec.ExecuteReader();
 
-                                          ovalShape1.Top += 145;
-                                          ovalShape1.Left -= 3;
-                                          lblwafer.Top += 145;
-                                          lblwafer.Left -= 3;
 
-                                          lblChamber.BackColor = Color.Blue;
-                                          chamberload = "Blue";
-                                          picChamber.Width -= 140;
-                                          picChamber.Left += 150;
-                                          picChamber.Height -= 10;
-                                          await Task.Delay(2000);
-                                          picChamber.Image = Properties.Resources.new_chamber;//close chamber
+                                                while (readerSec.Read())
+                                                {
+                                                    mySec1 = readerSec["ProcessTime"].ToString();
 
-                                          // picMain.Image = Properties.Resources.robotrightA1;
-                                          picSV.Visible = true;
+                                                    Int32.TryParse(mySec1, out Sec1);
 
+                                                }
 
+                                                for (int k = 1; k <= Sec1; k++)
+                                                {
+                                                    lblData.Text = k.ToString() + "/" + mySec1.ToString() + " Sec";
+                                                    // await Task.Delay(1000);
+
+
+                                                }
+                                                ListStepEndTime.Add(DateTime.Now);
+
+                                                con.Close();
+
+                                                con.Open();
+
+                                                string strModuleRecipe = "insert into ModuleRecipe(RecipeName,StepName,StartTime,EndTime,noofrecipe,logname) values(@recipename,@stepname,@starttime,@endtime,@noofrecipe,@Logname)";
+
+                                                SqlCommand cmdmodulerecipe = new SqlCommand(strModuleRecipe, con);
+
+                                                cmdmodulerecipe.Parameters.AddWithValue("@recipename", lblRecipe.Text);
+                                                cmdmodulerecipe.Parameters.AddWithValue("@stepname", strStepname1[j]);
+                                                cmdmodulerecipe.Parameters.AddWithValue("@starttime", ListStepStartTime[j]);
+                                                cmdmodulerecipe.Parameters.AddWithValue("@endtime", ListStepEndTime[j]);
+                                                cmdmodulerecipe.Parameters.AddWithValue("@noofrecipe", "7");
+                                                cmdmodulerecipe.Parameters.AddWithValue("@Logname", lbl123.Text);
+
+                                                // cmdmodulerecipe.ExecuteNonQuery();
+
+                                                con.Close();
+                                                //////////////////////////////////////////////////////////////////////////////////////////////////////get parameter value
+
+                                                con.Open();
+
+                                                string strSQL3 = "select * from newrecipe where stepname = @Newstepname and recipename = @Newrecipename";
+
+                                                SqlCommand cmd3 = new SqlCommand(strSQL3, con);
+                                                cmd3.Parameters.AddWithValue("@Newstepname", lblStepName.Text);
+                                                cmd3.Parameters.AddWithValue("@Newrecipename", lblRecipe.Text);
+                                                SqlDataReader reader2 = cmd3.ExecuteReader();
+
+                                                while (reader2.Read())
+                                                {
+                                                    CI2 = reader2["CI2"].ToString();
+                                                    BCI3 = reader2["BCI3"].ToString();
+                                                    SF6 = reader2["SF6"].ToString();
+                                                    CHF3 = reader2["CHF3"].ToString();
+                                                    Oxygen = reader2["Oxygen"].ToString();
+                                                    Oxygen1 = reader2["Oxygen1"].ToString();
+                                                    Nitrogen = reader2["Nitrogen"].ToString();
+                                                    Argon = reader2["Argon"].ToString();
 
 
-                                          await Task.Delay(2000);
 
-                                          // pictRobot.Height += 20;
+                                                }
 
-                                          // picMain.Image = Properties.Resources.robotgetwaferA1cassetteclose;
-                                          picMain.Image = Properties.Resources.mainpicture;
-                                          picMain.Image = Properties.Resources.picrobotArmWafer;
-                                          lblwaferup.Visible = false;
-                                          lblwafer.Visible = true;
-                                          ovalShape1.Top += 162;
-                                          lblwafer.Top += 162;
-                                          ovalShape1.Left += 12;
-                                          lblwafer.Left += 12;
-                                          await Task.Delay(2000);
+                                                con.Close();
 
-                                          await Task.Delay(1000);
-                                          picCassette.Image = Properties.Resources.cassette3;//open cassette
-                                                                                             // picMain.Image = Properties.Resources.robotgetwaferA1;
-                                          await Task.Delay(1000);
+                                                ///////////////////////////////////////////////////////////////////////////////////////////////////
+                                                con.Open();
+                                                //  Chamber1 chamber1 = new Chamber1();
 
-                                          lblCassette.BackColor = Color.LimeGreen;
+                                                string strParameter = "insert into valueselection(parameter,Minimum,Maximum,Average,Units,recipename,stepname,valuedate) values(@11,@21,@31,@41,@51,@61,@71,@81),(@12,@22,@32,@42,@52,@62,@72,@82),(@13,@23,@33,@43,@53,@63,@73,@83)"
+                                                    + ",(@14,@24,@34,@44,@54,@64,@74,@84),(@15,@25,@35,@45,@55,@65,@75,@85),(@16,@26,@36,@46,@56,@66,@76,@86),(@17,@27,@37,@47,@57,@67,@77,@87),(@18,@28,@38,@48,@58,@68,@78,@88)";
+                                                SqlCommand cmdparameter = new SqlCommand(strParameter, con);
+                                                cmdparameter.Parameters.AddWithValue("@11", "CI2");
+                                                cmdparameter.Parameters.AddWithValue("@12", "BCI3");
+                                                cmdparameter.Parameters.AddWithValue("@13", "SF6");
+                                                cmdparameter.Parameters.AddWithValue("@14", "CHF3");
+                                                cmdparameter.Parameters.AddWithValue("@15", "Oxygen");
+                                                cmdparameter.Parameters.AddWithValue("@16", "Oxygen");
+                                                cmdparameter.Parameters.AddWithValue("@17", "Nitrogen");
+                                                cmdparameter.Parameters.AddWithValue("@18", "Argon");
+                                                cmdparameter.Parameters.AddWithValue("@21", CI2);
+                                                cmdparameter.Parameters.AddWithValue("@22", BCI3);
+                                                cmdparameter.Parameters.AddWithValue("@23", SF6);
+                                                cmdparameter.Parameters.AddWithValue("@24", CHF3);
+                                                cmdparameter.Parameters.AddWithValue("@25", Oxygen);
+                                                cmdparameter.Parameters.AddWithValue("@26", Oxygen1);
+                                                cmdparameter.Parameters.AddWithValue("@27", Nitrogen);
+                                                cmdparameter.Parameters.AddWithValue("@28", Argon);
+                                                cmdparameter.Parameters.AddWithValue("@31", CI2);
+                                                cmdparameter.Parameters.AddWithValue("@32", BCI3);
+                                                cmdparameter.Parameters.AddWithValue("@33", SF6);
+                                                cmdparameter.Parameters.AddWithValue("@34", CHF3);
+                                                cmdparameter.Parameters.AddWithValue("@35", Oxygen);
+                                                cmdparameter.Parameters.AddWithValue("@36", Oxygen1);
+                                                cmdparameter.Parameters.AddWithValue("@37", Nitrogen);
+                                                cmdparameter.Parameters.AddWithValue("@38", Argon);
+                                                cmdparameter.Parameters.AddWithValue("@41", CI2);
+                                                cmdparameter.Parameters.AddWithValue("@42", BCI3);
+                                                cmdparameter.Parameters.AddWithValue("@43", SF6);
+                                                cmdparameter.Parameters.AddWithValue("@44", CHF3);
+                                                cmdparameter.Parameters.AddWithValue("@45", Oxygen);
+                                                cmdparameter.Parameters.AddWithValue("@46", Oxygen1);
+                                                cmdparameter.Parameters.AddWithValue("@47", Nitrogen);
+                                                cmdparameter.Parameters.AddWithValue("@48", Argon);
+                                                cmdparameter.Parameters.AddWithValue("@51", "sccm");
+                                                cmdparameter.Parameters.AddWithValue("@52", "sccm");
+                                                cmdparameter.Parameters.AddWithValue("@53", "sccm");
+                                                cmdparameter.Parameters.AddWithValue("@54", "sccm");
+                                                cmdparameter.Parameters.AddWithValue("@55", "sccm");
+                                                cmdparameter.Parameters.AddWithValue("@56", "sccm");
+                                                cmdparameter.Parameters.AddWithValue("@57", "sccm");
+                                                cmdparameter.Parameters.AddWithValue("@58", "sccm");
+                                                cmdparameter.Parameters.AddWithValue("@61", lblRecipe.Text);
+                                                cmdparameter.Parameters.AddWithValue("@62", lblRecipe.Text);
+                                                cmdparameter.Parameters.AddWithValue("@63", lblRecipe.Text);
+                                                cmdparameter.Parameters.AddWithValue("@64", lblRecipe.Text);
+                                                cmdparameter.Parameters.AddWithValue("@65", lblRecipe.Text);
+                                                cmdparameter.Parameters.AddWithValue("@66", lblRecipe.Text);
+                                                cmdparameter.Parameters.AddWithValue("@67", lblRecipe.Text);
+                                                cmdparameter.Parameters.AddWithValue("@68", lblRecipe.Text);
+                                                cmdparameter.Parameters.AddWithValue("@71", strStepname1[j]);
+                                                cmdparameter.Parameters.AddWithValue("@72", strStepname1[j]);
+                                                cmdparameter.Parameters.AddWithValue("@73", strStepname1[j]);
+                                                cmdparameter.Parameters.AddWithValue("@74", strStepname1[j]);
+                                                cmdparameter.Parameters.AddWithValue("@75", strStepname1[j]);
+                                                cmdparameter.Parameters.AddWithValue("@76", strStepname1[j]);
+                                                cmdparameter.Parameters.AddWithValue("@77", strStepname1[j]);
+                                                cmdparameter.Parameters.AddWithValue("@78", strStepname1[j]);
+                                                cmdparameter.Parameters.AddWithValue("@81", DateTime.Now);
+                                                cmdparameter.Parameters.AddWithValue("@82", DateTime.Now);
+                                                cmdparameter.Parameters.AddWithValue("@83", DateTime.Now);
+                                                cmdparameter.Parameters.AddWithValue("@84", DateTime.Now);
+                                                cmdparameter.Parameters.AddWithValue("@85", DateTime.Now);
+                                                cmdparameter.Parameters.AddWithValue("@86", DateTime.Now);
+                                                cmdparameter.Parameters.AddWithValue("@87", DateTime.Now);
+                                                cmdparameter.Parameters.AddWithValue("@88", DateTime.Now);
+
+
+                                                cmdparameter.ExecuteNonQuery();
+                                                con.Close();
+
+                                            }
+                                            ///////////////////////////////////////////////
+
+
+                                            strStepname1.Clear();
+                                            ListStepStartTime.Clear();
+                                            ListStepEndTime.Clear();
+
+                                            // }
+
+
+
+
+
+
+                                            picMain.Image.Tag = "finishchamberA7";
+
+
+
+
+                                            /////////////////////////////////////////////////////////////////////////////////////////////////// 
+                                        }
+
+
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "finishchamberA7" && picSV.Visible == true)
+                                        {
+
+                                            await Task.Delay(1000);
+                                            picChamber.Image = Properties.Resources.ChamberWithA1;
+                                            //picMain.Image = Properties.Resources.robotintochamberwithA1;
+                                            picSV.Visible = false;
+                                        }
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "finishchamberA7" && picSV.Visible == false)
+                                        {
+                                            await Task.Delay(1000);
+
+                                            picChamber.Image = Properties.Resources.robot_into_chamberA11;
+                                            picMain.Image = Properties.Resources.picrobotintochamber;
+                                            picMain.Image = Properties.Resources.picrobotintoAPMWafer;
+                                            picMain.Image.Tag = "picrobotintoAPMWaferA7-2";
+
+                                            ovalShape1.Left += 1;
+                                            ovalShape1.Left -= 1;
+                                            picChamber.Width += 140;
+                                            picChamber.Left -= 150;
+                                            picChamber.Height += 10;
+                                        }
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotintoAPMWaferA7-2")
+                                        {
+                                            await Task.Delay(1000);
+                                            label2.BackColor = Color.Blue;
+                                            lblProcess.BackColor = Color.Blue;
+                                            lblProcessStep.BackColor = Color.Blue;
+                                            lblRecipe.BackColor = Color.Blue;
+                                            lblStepName.BackColor = Color.Blue;
+                                            lblData.BackColor = Color.Blue;
+                                            lblnum.BackColor = Color.Blue;
+
+                                            lblProcess.Text = "Idle";
+                                            lblProcessStep.Text = "";
+                                            lblRecipe.Text = "";
+                                            lblStepName.Text = "";
+                                            lblnum.Text = "";
+                                            lblData.Text = "";
+
+
+                                            // pictRobot.Visible = true;
+
+                                            picChamber.Image = Properties.Resources.new_chamber1;
+                                            picMain.Image = Properties.Resources.picrobotbotton;
+                                            picMain.Image = Properties.Resources.picrobotAPMWafer;
+
+                                            picMain.Image.Tag = "picrobotAPMWaferA7-2";
+
+                                            lblwaferAPM.Visible = false;
+                                            lblwaferup.Visible = true;
+
+                                            ovalShape1.Top += 145;
+                                            ovalShape1.Left -= 3;
+                                            lblwafer.Top += 145;
+                                            lblwafer.Left -= 3;
+
+                                            lblChamber.BackColor = Color.Blue;
+                                            chamberload = "Blue";
+                                            picChamber.Width -= 140;
+                                            picChamber.Left += 150;
+                                            picChamber.Height -= 10;
+                                        }
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotAPMWaferA7-2" && picSV.Visible == false)
+                                        {
+                                            await Task.Delay(2000);
+                                            picChamber.Image = Properties.Resources.new_chamber;//close chamber
+
+                                            // picMain.Image = Properties.Resources.robotrightA1;
+                                            picSV.Visible = true;
+
+
+                                        }
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotAPMWaferA7-2" && picSV.Visible == true)
+                                        {
+                                            await Task.Delay(2000);
+
+                                            // pictRobot.Height += 20;
+
+                                            // picMain.Image = Properties.Resources.robotgetwaferA1cassetteclose;
+                                            picMain.Image = Properties.Resources.mainpicture;
+                                            picMain.Image = Properties.Resources.picrobotArmWafer;
+                                            picMain.Image.Tag = "picrobotArmWaferA7-2";
+                                            lblwaferup.Visible = false;
+                                            lblwafer.Visible = true;
+                                            ovalShape1.Top += 162;
+                                            lblwafer.Top += 162;
+                                            ovalShape1.Left += 12;
+                                            lblwafer.Left += 12;
+                                            await Task.Delay(2000);
+
+                                            await Task.Delay(1000);
+                                            picCassette.Image = Properties.Resources.cassette3;//open cassette
+                                                                                               // picMain.Image = Properties.Resources.robotgetwaferA1;
+                                        }
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotArmWaferA7-2")
+                                        {
+                                            await Task.Delay(1000);
+
+                                            lblCassette.BackColor = Color.LimeGreen;
+
+                                            picCassette.Image = Properties.Resources.robot_into_cassetteA1;
+                                            picMain.Image = Properties.Resources.picrobotintocassette;
+                                            picMain.Image.Tag = "picrobotintocassettA7-2";
+                                            lblwafer.Visible = false;
+                                            lblwafer.Visible = false;
+                                            ovalShape1.Visible = false;
+                                            picCassette.Height += 220;
+                                            picCassette.Width += 25;
+                                            picCassette.Top -= 205;
+                                        }
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotintocassettA7-2")
+                                        {
+                                            await Task.Delay(2000);
+                                            lblCassette.BackColor = Color.Blue;
+                                            //  pictRobot.Visible = true;
+
+                                            picMain.Image = Properties.Resources.mainpicture;
+                                            picCassette.Image = Properties.Resources.cassette3;
+                                            picCassette.Width -= 25;
+                                            picCassette.Height -= 220;
+                                            picCassette.Top += 205;
+                                            await Task.Delay(2000);
+                                            //  picMain.Image = Properties.Resources.mainpic;
+                                            picCassette.Image = Properties.Resources.cassette;
+                                            // picwafer.Image = Properties.Resources.waferfull;
+                                            if (NoOfwafer[i] == "1")
+                                            {
+                                                //  picwafer.Image = Properties.Resources.waferA1full;
+                                                picWafer1.Visible = true;
+                                            }
+                                            if (NoOfwafer[i] == "2")
+                                            {
+                                                //  picwafer.Image = Properties.Resources.waferA2full;
+                                                picWafer1.Visible = true;
+                                                picWafer2.Visible = true;
+                                            }
+                                            if (NoOfwafer[i] == "3")
+                                            {
+                                                //  picwafer.Image = Properties.Resources.waferA3full;
+                                                picWafer1.Visible = true;
+                                                picWafer2.Visible = true;
+                                                picWafer3.Visible = true;
+                                            }
+                                            if (NoOfwafer[i] == "4")
+                                            {
+                                                // picwafer.Image = Properties.Resources.waferA4full;
+                                                picWafer1.Visible = true;
+                                                picWafer2.Visible = true;
+                                                picWafer3.Visible = true;
+                                                picWafer4.Visible = true;
+                                                picWafer2.Image = Properties.Resources.picWaferGreen;
+                                                picWafer1.Image = Properties.Resources.picWaferGreen;
+                                                picWafer3.Image = Properties.Resources.picWaferGreen;
+                                                picWafer4.Image = Properties.Resources.picWaferGreen;
+                                            }
+
+                                            if (NoOfwafer[i] == "5")
+                                            {
+                                                //  picwafer.Image = Properties.Resources.waferA5full;
+                                                picWafer1.Visible = true;
+                                                picWafer2.Visible = true;
+                                                picWafer3.Visible = true;
+                                                picWafer4.Visible = true;
+                                                picWafer5.Visible = true;
+                                                picWafer2.Image = Properties.Resources.picWaferGreen;
+                                                picWafer1.Image = Properties.Resources.picWaferGreen;
+                                                picWafer3.Image = Properties.Resources.picWaferGreen;
+                                                picWafer4.Image = Properties.Resources.picWaferGreen;
+                                                picWafer5.Image = Properties.Resources.picWaferGreen;
+                                            }
+
+                                            if (NoOfwafer[i] == "6")
+                                            {
+                                                //  picwafer.Image = Properties.Resources.waferA5full;
+                                                picWafer1.Visible = true;
+                                                picWafer2.Visible = true;
+                                                picWafer3.Visible = true;
+                                                picWafer4.Visible = true;
+                                                picWafer5.Visible = true;
+                                                picWafer6.Visible = true;
+                                                picWafer2.Image = Properties.Resources.picWaferGreen;
+                                                picWafer1.Image = Properties.Resources.picWaferGreen;
+                                                picWafer3.Image = Properties.Resources.picWaferGreen;
+                                                picWafer4.Image = Properties.Resources.picWaferGreen;
+                                                picWafer5.Image = Properties.Resources.picWaferGreen;
+                                                picWafer6.Image = Properties.Resources.picWaferGreen;
+                                            }
+
+                                            if (NoOfwafer[i] == "7")
+                                            {
+                                                //  picwafer.Image = Properties.Resources.waferA5full;
+                                                picWafer1.Visible = true;
+                                                picWafer2.Visible = true;
+                                                picWafer3.Visible = true;
+                                                picWafer4.Visible = true;
+                                                picWafer5.Visible = true;
+                                                picWafer6.Visible = true;
+                                                picWafer7.Visible = true;
+                                                picWafer2.Image = Properties.Resources.picWaferGreen;
+                                                picWafer1.Image = Properties.Resources.picWaferGreen;
+                                                picWafer3.Image = Properties.Resources.picWaferGreen;
+                                                picWafer4.Image = Properties.Resources.picWaferGreen;
+                                                picWafer5.Image = Properties.Resources.picWaferGreen;
+                                                picWafer6.Image = Properties.Resources.picWaferGreen;
+                                                picWafer7.Image = Properties.Resources.picWaferGreen;
+                                            }
+
+
+
+
+                                            //////////////////////////////////////////////////////////////////Save DataLog
+                                            if (int.Parse(NoOfwafer[i]) == 7)
+                                            {
+                                                EndTime = DateTime.Now;
+
+
+                                                con.Open();
+
+                                                string strinsertdatalog = "insert into DataLogger(logname,cassetterecipename,starttime) values(@1,@2,@3) ";
+                                                SqlCommand cmdinsertdatalog = new SqlCommand(strinsertdatalog, con);
+
+                                                cmdinsertdatalog.Parameters.AddWithValue("@1", lbl123.Text);
+                                                cmdinsertdatalog.Parameters.AddWithValue("@2", form2Msg);
+                                                cmdinsertdatalog.Parameters.AddWithValue("@3", StartTime);
+
+                                                cmdinsertdatalog.ExecuteNonQuery();
+
+                                                con.Close();
+
+                                                lblState.Text = "Finished";
+
+
+
+                                            }
+                                            picMain.Image.Tag = "finishwaferA7";
+                                            if (isStopRobot == true)
+                                            {
+                                                button2.Enabled = true;
+                                                lblState.Text = "Stopping";
+                                            }
+
+
+                                        }
+                                        /////////////////////////////////////////////////////////finish waferA7
+                                    }
+
+
+
+
+                                    /*
+                                    if (int.Parse(NoOfwafer[i]) >= 8)
+                                    {
+
+                                        //////////////////////////////////////////////////////////////////////////start waferA8
+                                        await Task.Delay(2000);
+
+                                        picCassette.Image = Properties.Resources.cassette1;
+                                        await Task.Delay(2000);
+                                        Wafer8StartTime = DateTime.Now;
+                                        scsb = new SqlConnectionStringBuilder();
+                                        scsb.DataSource = @"HP-PC\SQLEXPRESS";
+                                        scsb.InitialCatalog = "RecipeType";
+                                        scsb.IntegratedSecurity = true;
+                                        SqlConnection con7 = new SqlConnection(scsb.ToString());
+                                        con7.Open();
+
+                                        string wafer8strWaferSelection = "insert into WaferSelection(NoOfWafers,StartTime,CassetteRecipeName) values(@NoOfWafer,@StartTime,@CassetteRecipeName)";
+                                        SqlCommand wafer8cmdwaferselection = new SqlCommand(wafer8strWaferSelection, con7);
+                                        wafer8cmdwaferselection.Parameters.AddWithValue("@NoOfWafer", "8");
+                                        wafer8cmdwaferselection.Parameters.AddWithValue("@StartTime", Wafer8StartTime);
+                                        wafer8cmdwaferselection.Parameters.AddWithValue("@CassetteRecipeName", form2Msg);
+                                        wafer8cmdwaferselection.ExecuteNonQuery();
+
+                                        con7.Close();
+
+
+
+
+                                        // lblCassette.BackColor = Color.LimeGreen;
+
+                                        lblCassette.BackColor = Color.LimeGreen;
+                                        picCassette.Image = Properties.Resources.robot_into_cassetteA1;
+                                        picCassette.Height += 150;
+                                        picCassette.Top -= 150;
+                                        await Task.Delay(2000);
+                                        picwafer.Image = Properties.Resources.waferA8;
+                                        await Task.Delay(2000);
+                                        // WaferTime = DateTime.Now;
+                                        lblCassette.BackColor = Color.Blue;
+
+
+                                        picCassette.Image = Properties.Resources.cassette1;
+                                        picCassette.Height -= 150;
+                                        picCassette.Top += 150;
+                                        await Task.Delay(2000);
+                                        picCassette.Image = Properties.Resources.cassette;
+                                        await Task.Delay(2000);
+
+                                        await Task.Delay(2000);
+
+
+                                        lblCentralize.BackColor = Color.LimeGreen;
+
+                                        await Task.Delay(2000);
+
+
+                                        lblCentralize.BackColor = Color.Blue;
+
+                                        //picCentralize.Height -= 100;
+
+                                        await Task.Delay(2000);
+
+                                        await Task.Delay(2000);
+
+                                        picChamber.Image = Properties.Resources.new_chamber1;
+
+                                        await Task.Delay(2000);
+
+
+                                        picChamber.Image = Properties.Resources.robot_into_chamberA8;
+                                        picChamber.Width += 100;
+                                        picChamber.Left -= 150;
+                                        lblChamber.BackColor = Color.LimeGreen;
+
+                                        chamberload = "LimeGreen";
+                                        //////////////////////////////////////////////////////////////////////////////////wafer2 into chamber
+                                        WaferTime = DateTime.Now;
+                                        lblRecipe.BackColor = Color.LimeGreen;
+                                        lblStepName.BackColor = Color.LimeGreen;
+                                        lblnum.BackColor = Color.LimeGreen;
+                                        lblData.BackColor = Color.LimeGreen;
+                                        lblData.Text = "";
+                                        label2.BackColor = Color.LimeGreen;
+                                        lblProcess.Text = "Processing";
+                                        lblProcess.BackColor = Color.LimeGreen;
+                                        lblProcessStep.Text = "Process Step";
+                                        lblProcessStep.BackColor = Color.LimeGreen;
+
+                                        con7.Open();
+                                        string wafer8strSQL = "select WaferRecipe from CassetteWafer  where CassetterecipeName = @NewWaferRecipe";
+
+                                        SqlCommand wafer8cmd = new SqlCommand(wafer8strSQL, con7);
+                                        wafer8cmd.Parameters.AddWithValue("@NewWaferRecipe", Form1.form2Msg);
+                                        SqlDataReader wafer8reader = wafer8cmd.ExecuteReader();
+                                        while (wafer8reader.Read())
+                                        {
+
+                                            lblRecipe.Text = string.Format("{0}", wafer8reader["WaferRecipe"]);
+
+
+
+                                        }
+
+                                        con7.Close();
+                                        con7.Open();
+                                        string wafer8strSQL1 = "select stepname from newrecipe where recipename = @Myrecipename";
+
+                                        SqlCommand wafer8cmd1 = new SqlCommand(wafer8strSQL1, con7);
+                                        wafer8cmd1.Parameters.AddWithValue("@Myrecipename", lblRecipe.Text);
+                                        SqlDataReader wafer8reader1 = wafer8cmd1.ExecuteReader();
+                                        while (wafer8reader1.Read())
+                                        {
+
+                                            strStepname1.Add(string.Format("{0}", wafer8reader1["StepName"]));
+
+
+                                        }
+
+                                        con7.Close();
+                                        con7.Open();
+                                        string wafer8strSQL2 = "select StepName from newrecipe inner join CassetteWafer on newrecipe.recipename = cassettewafer.waferRecipe where cassettewafer.waferRecipe = @Newrecipename";
+                                        SqlCommand wafer8cmd2 = new SqlCommand(wafer8strSQL2, con7);
+                                        wafer8cmd2.Parameters.AddWithValue("@Newrecipename", lblRecipe.Text);
+                                        //SqlDataReader reader2 = cmd2.ExecuteReader();
+                                        wafer8cmd2.ExecuteNonQuery();
+
+                                        // while (reader2.Read())
+                                        // {
+                                        //strStepname.Add(string.Format("{0}", reader2["StepName"]));
+                                        // int row = strStepname.Count();
+                                        for (int a8 = 0; a8 < strStepname1.Count(); a8 += 1)
+                                        {
+                                            await Task.Delay(1000);
+                                            ListStepStartTime.Add(DateTime.Now);
+                                            int count = i + a8;
+                                            // await Task.Delay(2000);
+                                            lblStepName.Text = strStepname1[a8];
+                                            lblnum.Text = "," + count + "/" + strStepname1.Count();
+                                            // lblnum.Text = "," + count + "/" + strStepname.Count();
+                                            //  await Task.Delay(2000);
+
+                                            con7.Close();
+
+                                            con7.Open();
+                                            string wafer8strSQLStepSec = "select * from newrecipe where stepname = @NewSec";
+
+                                            SqlCommand wafer8cmdSec = new SqlCommand(wafer8strSQLStepSec, con7);
+                                            wafer8cmdSec.Parameters.AddWithValue("@NewSec", lblStepName.Text);
+
+                                            SqlDataReader wafer8readerSec = wafer8cmdSec.ExecuteReader();
+
+
+                                            while (wafer8readerSec.Read())
+                                            {
+                                                mySec1 = wafer8readerSec["ProcessTime"].ToString();
+                                                // lblSec.Text = string.Format("{0}", readerSec["ProcessPressure"]);
+                                                Int32.TryParse(mySec1, out Sec1);
+
+                                            }
+
+                                            for (int j = 1; j <= Sec1; j++)
+                                            {
+                                                lblData.Text = j.ToString() + "/" + mySec1.ToString() + " Sec";
+                                                await Task.Delay(1000);
+
+
+                                            }
+                                            ListStepEndTime.Add(DateTime.Now);
+
+                                            con7.Close();
+
+
+                                            con7.Open();
+
+                                            string strModuleRecipe = "insert into ModuleRecipe(RecipeName,StepName,StartTime,EndTime,noofrecipe) values(@recipename,@stepname,@starttime,@endtime,@noofrecipe)";
+
+                                            SqlCommand cmdmodulerecipe = new SqlCommand(strModuleRecipe, con7);
+
+                                            cmdmodulerecipe.Parameters.AddWithValue("@recipename", lblRecipe.Text);
+                                            cmdmodulerecipe.Parameters.AddWithValue("@stepname", strStepname1[a8]);
+                                            cmdmodulerecipe.Parameters.AddWithValue("@starttime", ListStepStartTime[a8]);
+                                            cmdmodulerecipe.Parameters.AddWithValue("@endtime", ListStepEndTime[a8]);
+                                            cmdmodulerecipe.Parameters.AddWithValue("@noofrecipe", "8");
+
+                                            cmdmodulerecipe.ExecuteNonQuery();
+
+                                            con7.Close();
+                                            ///////////////////////////////////////////////////////get parameter value
+
+                                            con7.Open();
+
+                                            string strSQL3 = "select * from newrecipe where stepname = @Newstepname and recipename = @Newrecipename";
+
+                                            SqlCommand cmd3 = new SqlCommand(strSQL3, con7);
+                                            cmd3.Parameters.AddWithValue("@Newstepname", lblStepName.Text);
+                                            cmd3.Parameters.AddWithValue("@Newrecipename", lblRecipe.Text);
+                                            SqlDataReader reader2 = cmd3.ExecuteReader();
+
+                                            while (reader2.Read())
+                                            {
+                                                CI2 = reader2["CI2"].ToString();
+                                                BCI3 = reader2["BCI3"].ToString();
+                                                SF6 = reader2["SF6"].ToString();
+                                                CHF3 = reader2["CHF3"].ToString();
+                                                Oxygen = reader2["Oxygen"].ToString();
+                                                Oxygen1 = reader2["Oxygen1"].ToString();
+                                                Nitrogen = reader2["Nitrogen"].ToString();
+                                                Argon = reader2["Argon"].ToString();
+
+
+
+                                            }
+
+                                            con7.Close();
+
+
+                                            ////////////////////////////////////////////////
+                                            con7.Open();
+                                            Chamber1 chamber1 = new Chamber1();
+
+                                            string wafer8strParameter = "insert into valueselection(parameter,Minimum,Maximum,Average,Units,recipename,stepname) values(@11,@21,@31,@41,@51,@61,@71),(@12,@22,@32,@42,@52,@62,@72),(@13,@23,@33,@43,@53,@63,@73)"
+                                                + ",(@14,@24,@34,@44,@54,@64,@74),(@15,@25,@35,@45,@55,@65,@75),(@16,@26,@36,@46,@56,@66,@76),(@17,@27,@37,@47,@57,@67,@77),(@18,@28,@38,@48,@58,@68,@78)";
+                                            SqlCommand wafer2cmdparameter = new SqlCommand(wafer8strParameter, con7);
+                                            wafer2cmdparameter.Parameters.AddWithValue("@11", "CI2");
+                                            wafer2cmdparameter.Parameters.AddWithValue("@12", "BCI3");
+                                            wafer2cmdparameter.Parameters.AddWithValue("@13", "SF6");
+                                            wafer2cmdparameter.Parameters.AddWithValue("@14", "CHF3");
+                                            wafer2cmdparameter.Parameters.AddWithValue("@15", "Oxygen");
+                                            wafer2cmdparameter.Parameters.AddWithValue("@16", "Oxygen");
+                                            wafer2cmdparameter.Parameters.AddWithValue("@17", "Nitrogen");
+                                            wafer2cmdparameter.Parameters.AddWithValue("@18", "Argon");
+                                            wafer2cmdparameter.Parameters.AddWithValue("@21", CI2);
+                                            wafer2cmdparameter.Parameters.AddWithValue("@22", BCI3);
+                                            wafer2cmdparameter.Parameters.AddWithValue("@23", SF6);
+                                            wafer2cmdparameter.Parameters.AddWithValue("@24", CHF3);
+                                            wafer2cmdparameter.Parameters.AddWithValue("@25", Oxygen);
+                                            wafer2cmdparameter.Parameters.AddWithValue("@26", Oxygen1);
+                                            wafer2cmdparameter.Parameters.AddWithValue("@27", Nitrogen);
+                                            wafer2cmdparameter.Parameters.AddWithValue("@28", Argon);
+                                            wafer2cmdparameter.Parameters.AddWithValue("@31", CI2);
+                                            wafer2cmdparameter.Parameters.AddWithValue("@32", BCI3);
+                                            wafer2cmdparameter.Parameters.AddWithValue("@33", SF6);
+                                            wafer2cmdparameter.Parameters.AddWithValue("@34", CHF3);
+                                            wafer2cmdparameter.Parameters.AddWithValue("@35", Oxygen);
+                                            wafer2cmdparameter.Parameters.AddWithValue("@36", Oxygen1);
+                                            wafer2cmdparameter.Parameters.AddWithValue("@37", Nitrogen);
+                                            wafer2cmdparameter.Parameters.AddWithValue("@38", Argon);
+                                            wafer2cmdparameter.Parameters.AddWithValue("@41", CI2);
+                                            wafer2cmdparameter.Parameters.AddWithValue("@42", BCI3);
+                                            wafer2cmdparameter.Parameters.AddWithValue("@43", SF6);
+                                            wafer2cmdparameter.Parameters.AddWithValue("@44", CHF3);
+                                            wafer2cmdparameter.Parameters.AddWithValue("@45", Oxygen);
+                                            wafer2cmdparameter.Parameters.AddWithValue("@46", Oxygen1);
+                                            wafer2cmdparameter.Parameters.AddWithValue("@47", Nitrogen);
+                                            wafer2cmdparameter.Parameters.AddWithValue("@48", Argon);
+                                            wafer2cmdparameter.Parameters.AddWithValue("@51", "sccm");
+                                            wafer2cmdparameter.Parameters.AddWithValue("@52", "sccm");
+                                            wafer2cmdparameter.Parameters.AddWithValue("@53", "sccm");
+                                            wafer2cmdparameter.Parameters.AddWithValue("@54", "sccm");
+                                            wafer2cmdparameter.Parameters.AddWithValue("@55", "sccm");
+                                            wafer2cmdparameter.Parameters.AddWithValue("@56", "sccm");
+                                            wafer2cmdparameter.Parameters.AddWithValue("@57", "sccm");
+                                            wafer2cmdparameter.Parameters.AddWithValue("@58", "sccm");
+                                            wafer2cmdparameter.Parameters.AddWithValue("@61", lblRecipe.Text);
+                                            wafer2cmdparameter.Parameters.AddWithValue("@62", lblRecipe.Text);
+                                            wafer2cmdparameter.Parameters.AddWithValue("@63", lblRecipe.Text);
+                                            wafer2cmdparameter.Parameters.AddWithValue("@64", lblRecipe.Text);
+                                            wafer2cmdparameter.Parameters.AddWithValue("@65", lblRecipe.Text);
+                                            wafer2cmdparameter.Parameters.AddWithValue("@66", lblRecipe.Text);
+                                            wafer2cmdparameter.Parameters.AddWithValue("@67", lblRecipe.Text);
+                                            wafer2cmdparameter.Parameters.AddWithValue("@68", lblRecipe.Text);
+                                            wafer2cmdparameter.Parameters.AddWithValue("@71", strStepname1[a8]);
+                                            wafer2cmdparameter.Parameters.AddWithValue("@72", strStepname1[a8]);
+                                            wafer2cmdparameter.Parameters.AddWithValue("@73", strStepname1[a8]);
+                                            wafer2cmdparameter.Parameters.AddWithValue("@74", strStepname1[a8]);
+                                            wafer2cmdparameter.Parameters.AddWithValue("@75", strStepname1[a8]);
+                                            wafer2cmdparameter.Parameters.AddWithValue("@76", strStepname1[a8]);
+                                            wafer2cmdparameter.Parameters.AddWithValue("@77", strStepname1[a8]);
+                                            wafer2cmdparameter.Parameters.AddWithValue("@78", strStepname1[a8]);
+
+
+                                            wafer2cmdparameter.ExecuteNonQuery();
+                                            con7.Close();
+
+
+
+
+
+
+
+
+                                        }
+
+
+                                        strStepname1.Clear();
+                                        ListStepStartTime.Clear();
+                                        ListStepEndTime.Clear();
+
+                                        /////////////////////////////////////////////////////////////////
+
+                                        await Task.Delay(2000);
+
+                                        label2.BackColor = Color.Blue;
+                                        lblProcess.BackColor = Color.Blue;
+                                        lblProcessStep.BackColor = Color.Blue;
+                                        lblRecipe.BackColor = Color.Blue;
+                                        lblStepName.BackColor = Color.Blue;
+                                        lblData.BackColor = Color.Blue;
+                                        lblnum.BackColor = Color.Blue;
+
+                                        lblProcess.Text = "Aborted";
+                                        lblProcessStep.Text = "";
+                                        lblRecipe.Text = "";
+                                        lblStepName.Text = "";
+                                        lblnum.Text = "";
+                                        lblData.Text = "???????????";
+
+
+                                        picChamber.Image = Properties.Resources.new_chamber1;
+                                        lblChamber.BackColor = Color.Blue;
+                                        chamberload = "Blue";
+                                        picChamber.Width -= 100;
+                                        picChamber.Left += 150;
+                                        await Task.Delay(2000);
+                                        picChamber.Image = Properties.Resources.new_chamber;
+
+
+
+
+
+                                        await Task.Delay(2000);
+
+                                        await Task.Delay(2000);
+
+                                        await Task.Delay(2000);
+                                        picCassette.Image = Properties.Resources.cassette1;
+                                        await Task.Delay(2000);
+
+                                        lblCassette.BackColor = Color.LimeGreen;
+
+                                        picCassette.Image = Properties.Resources.robot_into_cassetteA1;
+                                        picCassette.Height += 150;
+                                        picCassette.Top -= 150;
+                                        await Task.Delay(2000);
+                                        lblCassette.BackColor = Color.Blue;
 
-                                          picCassette.Image = Properties.Resources.robot_into_cassetteA1;
-                                          picMain.Image = Properties.Resources.picrobotintocassette;
-                                          lblwafer.Visible = false;
-                                          lblwafer.Visible = false;
-                                          ovalShape1.Visible = false;
-                                          picCassette.Height += 220;
-                                          picCassette.Width += 25;
-                                          picCassette.Top -= 205;
-                                          await Task.Delay(2000);
-                                          lblCassette.BackColor = Color.Blue;
-                                          //  pictRobot.Visible = true;
+                                        picCassette.Image = Properties.Resources.cassette1;
+                                        picCassette.Height -= 150;
+                                        picCassette.Top += 150;
+                                        await Task.Delay(2000);
+                                        picCassette.Image = Properties.Resources.cassette;
+                                        picwafer.Image = Properties.Resources.waferfull;
 
-                                          picMain.Image = Properties.Resources.mainpicture;
-                                          picCassette.Image = Properties.Resources.cassette3;
-                                          picCassette.Width -= 25;
-                                          picCassette.Height -= 220;
-                                          picCassette.Top += 205;
-                                          await Task.Delay(2000);
-                                          //  picMain.Image = Properties.Resources.mainpic;
-                                          picCassette.Image = Properties.Resources.cassette;
-                                          // picwafer.Image = Properties.Resources.waferfull;
-                                          if (NoOfwafer[i] == "1")
-                                          {
-                                              picwafer.Image = Properties.Resources.waferA1full;
-                                          }
-                                          if (NoOfwafer[i] == "2")
-                                          {
-                                              picwafer.Image = Properties.Resources.waferA2full;
-                                          }
-                                          if (NoOfwafer[i] == "3")
-                                          {
-                                              picwafer.Image = Properties.Resources.waferA3full;
-                                          }
-                                          if (NoOfwafer[i] == "4")
-                                          {
-                                              picwafer.Image = Properties.Resources.waferA4full;
-                                          }
+                                        //////////////////////////////////////////////////////////////////Save DataLog
+                                        EndTime = DateTime.Now;
+                                        con7.Close();
+                                        if (int.Parse(NoOfwafer[i]) == 8)
+                                        {
+                                            con7.Open();
+
+                                            string wafer2strinsertdatalog = "insert into DataLogger(logname,cassetterecipename,starttime) values(@1,@2,@3) ";
+                                            SqlCommand wafer2cmdinsertdatalog = new SqlCommand(wafer2strinsertdatalog, con7);
+
+                                            wafer2cmdinsertdatalog.Parameters.AddWithValue("@1", lbl123.Text);
+                                            wafer2cmdinsertdatalog.Parameters.AddWithValue("@2", form2Msg);
+                                            wafer2cmdinsertdatalog.Parameters.AddWithValue("@3", StartTime);
+
+                                            wafer2cmdinsertdatalog.ExecuteNonQuery();
+
+                                            con7.Close();
+
+
+
+                                        }
+
+
 
-                                          if (NoOfwafer[i] == "5")
-                                          {
-                                              picwafer.Image = Properties.Resources.waferA5full;
-                                          }
-                                          if (NoOfwafer[i] == "6")
-                                          {
-                                              picwafer.Image = Properties.Resources.waferA6full;
-                                          }
+                                        //////////////////////////////////////////////////////////////////////////finish waferA8
 
-                                          //////////////////////////////////////////////////////////////////Save DataLog
-                                          if (int.Parse(NoOfwafer[i]) == 6)
-                                          {
-                                              EndTime = DateTime.Now;
+                                    }
+                                    if (int.Parse(NoOfwafer[i]) >= 9)
+                                    {
 
+                                        //////////////////////////////////////////////////////////////////////////start waferA9
+                                        await Task.Delay(2000);
 
-                                              con.Open();
+                                        picCassette.Image = Properties.Resources.cassette1;
+                                        await Task.Delay(2000);
+                                        Wafer9StartTime = DateTime.Now;
+                                        scsb = new SqlConnectionStringBuilder();
+                                        scsb.DataSource = @"HP-PC\SQLEXPRESS";
+                                        scsb.InitialCatalog = "RecipeType";
+                                        scsb.IntegratedSecurity = true;
+                                        SqlConnection con8 = new SqlConnection(scsb.ToString());
+                                        con8.Open();
 
-                                              string strinsertdatalog = "insert into DataLogger(logname,cassetterecipename,starttime) values(@1,@2,@3) ";
-                                              SqlCommand cmdinsertdatalog = new SqlCommand(strinsertdatalog, con);
+                                        string wafer9strWaferSelection = "insert into WaferSelection(NoOfWafers,StartTime,CassetteRecipeName) values(@NoOfWafer,@StartTime,@CassetteRecipeName)";
+                                        SqlCommand wafer9cmdwaferselection = new SqlCommand(wafer9strWaferSelection, con8);
+                                        wafer9cmdwaferselection.Parameters.AddWithValue("@NoOfWafer", "9");
+                                        wafer9cmdwaferselection.Parameters.AddWithValue("@StartTime", Wafer9StartTime);
+                                        wafer9cmdwaferselection.Parameters.AddWithValue("@CassetteRecipeName", form2Msg);
+                                        wafer9cmdwaferselection.ExecuteNonQuery();
 
-                                              cmdinsertdatalog.Parameters.AddWithValue("@1", lbl123.Text);
-                                              cmdinsertdatalog.Parameters.AddWithValue("@2", form2Msg);
-                                              cmdinsertdatalog.Parameters.AddWithValue("@3", StartTime);
+                                        con8.Close();
 
-                                              cmdinsertdatalog.ExecuteNonQuery();
 
-                                              con.Close();
+
+
+                                        // lblCassette.BackColor = Color.LimeGreen;
+
+                                        lblCassette.BackColor = Color.LimeGreen;
+                                        picCassette.Image = Properties.Resources.robot_into_cassetteA1;
+                                        picCassette.Height += 150;
+                                        picCassette.Top -= 150;
+                                        await Task.Delay(2000);
+                                        picwafer.Image = Properties.Resources.waferA9;
+                                        await Task.Delay(2000);
+                                        // WaferTime = DateTime.Now;
+                                        lblCassette.BackColor = Color.Blue;
+
+                                        picCassette.Image = Properties.Resources.cassette1;
+                                        picCassette.Height -= 150;
+                                        picCassette.Top += 150;
+                                        await Task.Delay(2000);
+                                        picCassette.Image = Properties.Resources.cassette;
+                                        await Task.Delay(2000);
+
+                                        await Task.Delay(2000);
 
-                                              /////////////////////////////////////////////////////////finish waferA5
-                                          }
+                                        await Task.Delay(2000);
+
+                                        lblCentralize.BackColor = Color.LimeGreen;
+
 
-                                          //////////////////////////////////////////////////////////////////////////finish waferA6
-                                      }
-                                      if (int.Parse(NoOfwafer[i]) >= 7)
-                                      {
-                                          //////////////////////////////////////////////////////////////////////////start waferA7
-                                          await Task.Delay(2000);
+                                        //picCentralize.Height -= 100;
 
-                                          picCassette.Image = Properties.Resources.cassette1;
-                                          await Task.Delay(2000);
-                                          Wafer7StartTime = DateTime.Now;
-                                          scsb = new SqlConnectionStringBuilder();
-                                          scsb.DataSource = @"HP-PC\SQLEXPRESS";
-                                          scsb.InitialCatalog = "RecipeType";
-                                          scsb.IntegratedSecurity = true;
-                                          SqlConnection con6 = new SqlConnection(scsb.ToString());
-                                          con6.Open();
 
-                                          string wafer7strWaferSelection = "insert into WaferSelection(NoOfWafers,StartTime,CassetteRecipeName) values(@NoOfWafer,@StartTime,@CassetteRecipeName)";
-                                          SqlCommand wafer7cmdwaferselection = new SqlCommand(wafer7strWaferSelection, con6);
-                                          wafer7cmdwaferselection.Parameters.AddWithValue("@NoOfWafer", "7");
-                                          wafer7cmdwaferselection.Parameters.AddWithValue("@StartTime", Wafer7StartTime);
-                                          wafer7cmdwaferselection.Parameters.AddWithValue("@CassetteRecipeName", form2Msg);
-                                          wafer7cmdwaferselection.ExecuteNonQuery();
+                                        await Task.Delay(2000);
+
+                                        picChamber.Image = Properties.Resources.new_chamber1;
 
-                                          con6.Close();
+                                        await Task.Delay(2000);
 
 
+                                        picChamber.Image = Properties.Resources.robot_into_chamberA9;
+                                        picChamber.Width += 100;
+                                        picChamber.Left -= 150;
+                                        lblChamber.BackColor = Color.LimeGreen;
 
+                                        chamberload = "LimeGreen";
+                                        //////////////////////////////////////////////////////////////////////////////////waferA9 into chamber
+                                        WaferTime = DateTime.Now;
+                                        lblRecipe.BackColor = Color.LimeGreen;
+                                        lblStepName.BackColor = Color.LimeGreen;
+                                        lblnum.BackColor = Color.LimeGreen;
+                                        lblData.BackColor = Color.LimeGreen;
+                                        lblData.Text = "";
+                                        label2.BackColor = Color.LimeGreen;
+                                        lblProcess.Text = "Processing";
+                                        lblProcess.BackColor = Color.LimeGreen;
+                                        lblProcessStep.Text = "Process Step";
+                                        lblProcessStep.BackColor = Color.LimeGreen;
 
-                                          // lblCassette.BackColor = Color.LimeGreen;
+                                        con8.Open();
+                                        string wafer9strSQL = "select WaferRecipe from CassetteWafer  where CassetterecipeName = @NewWaferRecipe";
 
-                                          lblCassette.BackColor = Color.LimeGreen;
-                                          picCassette.Image = Properties.Resources.robot_into_cassetteA1;
-                                          picCassette.Height += 150;
-                                          picCassette.Top -= 150;
-                                          await Task.Delay(2000);
-                                          picwafer.Image = Properties.Resources.waferA7;
-                                          await Task.Delay(2000);
-                                          // WaferTime = DateTime.Now;
-                                          lblCassette.BackColor = Color.Blue;
+                                        SqlCommand wafer9cmd = new SqlCommand(wafer9strSQL, con8);
+                                        wafer9cmd.Parameters.AddWithValue("@NewWaferRecipe", Form1.form2Msg);
+                                        SqlDataReader wafer9reader = wafer9cmd.ExecuteReader();
+                                        while (wafer9reader.Read())
+                                        {
 
-                                          picCassette.Image = Properties.Resources.cassette1;
-                                          picCassette.Height -= 150;
-                                          picCassette.Top += 150;
-                                          await Task.Delay(2000);
-                                          picCassette.Image = Properties.Resources.cassette;
-                                          await Task.Delay(2000);
+                                            lblRecipe.Text = string.Format("{0}", wafer9reader["WaferRecipe"]);
 
-                                          await Task.Delay(2000);
 
-                                          await Task.Delay(2000);
 
-                                          lblCentralize.BackColor = Color.LimeGreen;
+                                        }
 
-                                          // picCentralize.Height += 100;
+                                        con8.Close();
+                                        con8.Open();
+                                        string wafer9strSQL1 = "select stepname from newrecipe where recipename = @Myrecipename";
 
-                                          await Task.Delay(2000);
+                                        SqlCommand wafer9cmd1 = new SqlCommand(wafer9strSQL1, con8);
+                                        wafer9cmd1.Parameters.AddWithValue("@Myrecipename", lblRecipe.Text);
+                                        SqlDataReader wafer9reader1 = wafer9cmd1.ExecuteReader();
+                                        while (wafer9reader1.Read())
+                                        {
 
-                                          lblCentralize.BackColor = Color.Blue;
+                                            strStepname1.Add(string.Format("{0}", wafer9reader1["StepName"]));
 
-                                          //picCentralize.Height -= 100;
 
-                                          await Task.Delay(2000);
+                                        }
 
+                                        con8.Close();
+                                        con8.Open();
+                                        string wafer9strSQL2 = "select StepName from newrecipe inner join CassetteWafer on newrecipe.recipename = cassettewafer.waferRecipe where cassettewafer.waferRecipe = @Newrecipename";
+                                        SqlCommand wafer9cmd2 = new SqlCommand(wafer9strSQL2, con8);
+                                        wafer9cmd2.Parameters.AddWithValue("@Newrecipename", lblRecipe.Text);
+                                        //SqlDataReader reader2 = cmd2.ExecuteReader();
+                                        wafer9cmd2.ExecuteNonQuery();
 
-                                          await Task.Delay(2000);
+                                        // while (reader2.Read())
+                                        // {
+                                        //strStepname.Add(string.Format("{0}", reader2["StepName"]));
+                                        // int row = strStepname.Count();
+                                        for (int a9 = 0; a9 < strStepname1.Count(); a9 += 1)
+                                        {
+                                            await Task.Delay(1000);
+                                            ListStepStartTime.Add(DateTime.Now);
+                                            int count = a9 + 1;
+                                            // await Task.Delay(2000);
+                                            lblStepName.Text = strStepname1[a9];
+                                            lblnum.Text = "," + count + "/" + strStepname1.Count();
+                                            // lblnum.Text = "," + count + "/" + strStepname.Count();
+                                            //  await Task.Delay(2000);
 
-                                          picChamber.Image = Properties.Resources.new_chamber1;
+                                            con8.Close();
 
-                                          await Task.Delay(2000);
+                                            con8.Open();
+                                            string wafer9strSQLStepSec = "select * from newrecipe where stepname = @NewSec";
 
+                                            SqlCommand wafer9cmdSec = new SqlCommand(wafer9strSQLStepSec, con8);
+                                            wafer9cmdSec.Parameters.AddWithValue("@NewSec", lblStepName.Text);
+
+                                            SqlDataReader wafer9readerSec = wafer9cmdSec.ExecuteReader();
+
+
+                                            while (wafer9readerSec.Read())
+                                            {
+                                                mySec1 = wafer9readerSec["ProcessTime"].ToString();
+                                                // lblSec.Text = string.Format("{0}", readerSec["ProcessPressure"]);
+                                                Int32.TryParse(mySec1, out Sec1);
+
+                                            }
+
+                                            for (int j = 1; j <= Sec1; j++)
+                                            {
+                                                lblData.Text = j.ToString() + "/" + mySec1.ToString() + " Sec";
+                                                await Task.Delay(1000);
+
+
+                                            }
+                                            ListStepEndTime.Add(DateTime.Now);
+
+                                            con8.Close();
+
+
+                                            con8.Open();
+
+                                            string strModuleRecipe = "insert into ModuleRecipe(RecipeName,StepName,StartTime,EndTime,noofrecipe) values(@recipename,@stepname,@starttime,@endtime,@noofrecipe)";
+
+                                            SqlCommand cmdmodulerecipe = new SqlCommand(strModuleRecipe, con8);
+
+                                            cmdmodulerecipe.Parameters.AddWithValue("@recipename", lblRecipe.Text);
+                                            cmdmodulerecipe.Parameters.AddWithValue("@stepname", strStepname1[a9]);
+                                            cmdmodulerecipe.Parameters.AddWithValue("@starttime", ListStepStartTime[a9]);
+                                            cmdmodulerecipe.Parameters.AddWithValue("@endtime", ListStepEndTime[a9]);
+                                            cmdmodulerecipe.Parameters.AddWithValue("@noofrecipe", "9");
+
+                                            cmdmodulerecipe.ExecuteNonQuery();
+
+                                            con8.Close();
+                                            ///////////////////////////////////////////////////////get parameter value
+
+                                            con8.Open();
+
+                                            string strSQL3 = "select * from newrecipe where stepname = @Newstepname and recipename = @Newrecipename";
+
+                                            SqlCommand cmd3 = new SqlCommand(strSQL3, con8);
+                                            cmd3.Parameters.AddWithValue("@Newstepname", lblStepName.Text);
+                                            cmd3.Parameters.AddWithValue("@Newrecipename", lblRecipe.Text);
+                                            SqlDataReader reader2 = cmd3.ExecuteReader();
+
+                                            while (reader2.Read())
+                                            {
+                                                CI2 = reader2["CI2"].ToString();
+                                                BCI3 = reader2["BCI3"].ToString();
+                                                SF6 = reader2["SF6"].ToString();
+                                                CHF3 = reader2["CHF3"].ToString();
+                                                Oxygen = reader2["Oxygen"].ToString();
+                                                Oxygen1 = reader2["Oxygen1"].ToString();
+                                                Nitrogen = reader2["Nitrogen"].ToString();
+                                                Argon = reader2["Argon"].ToString();
+
+
 
-                                          picChamber.Image = Properties.Resources.robot_into_chamberA7;
-                                          picChamber.Width += 100;
-                                          picChamber.Left -= 150;
-                                          lblChamber.BackColor = Color.LimeGreen;
+                                            }
+
+                                            con8.Close();
+
+
+                                            ////////////////////////////////////////////////
+                                            con8.Open();
+                                            Chamber1 chamber1 = new Chamber1();
 
-                                          chamberload = "LimeGreen";
-                                          //////////////////////////////////////////////////////////////////////////////////waferA7 into chamber
-                                          WaferTime = DateTime.Now;
-                                          lblRecipe.BackColor = Color.LimeGreen;
-                                          lblStepName.BackColor = Color.LimeGreen;
-                                          lblnum.BackColor = Color.LimeGreen;
-                                          lblData.BackColor = Color.LimeGreen;
-                                          lblData.Text = "";
-                                          label2.BackColor = Color.LimeGreen;
-                                          lblProcess.Text = "Processing";
-                                          lblProcess.BackColor = Color.LimeGreen;
-                                          lblProcessStep.Text = "Process Step";
-                                          lblProcessStep.BackColor = Color.LimeGreen;
+                                            string wafer9strParameter = "insert into valueselection(parameter,Minimum,Maximum,Average,Units,recipename,stepname) values(@11,@21,@31,@41,@51,@61,@71),(@12,@22,@32,@42,@52,@62,@72),(@13,@23,@33,@43,@53,@63,@73)"
+                                                + ",(@14,@24,@34,@44,@54,@64,@74),(@15,@25,@35,@45,@55,@65,@75),(@16,@26,@36,@46,@56,@66,@76),(@17,@27,@37,@47,@57,@67,@77),(@18,@28,@38,@48,@58,@68,@78)";
+                                            SqlCommand wafer2cmdparameter = new SqlCommand(wafer9strParameter, con8);
+                                            wafer2cmdparameter.Parameters.AddWithValue("@11", "CI2");
+                                            wafer2cmdparameter.Parameters.AddWithValue("@12", "BCI3");
+                                            wafer2cmdparameter.Parameters.AddWithValue("@13", "SF6");
+                                            wafer2cmdparameter.Parameters.AddWithValue("@14", "CHF3");
+                                            wafer2cmdparameter.Parameters.AddWithValue("@15", "Oxygen");
+                                            wafer2cmdparameter.Parameters.AddWithValue("@16", "Oxygen");
+                                            wafer2cmdparameter.Parameters.AddWithValue("@17", "Nitrogen");
+                                            wafer2cmdparameter.Parameters.AddWithValue("@18", "Argon");
+                                            wafer2cmdparameter.Parameters.AddWithValue("@21", CI2);
+                                            wafer2cmdparameter.Parameters.AddWithValue("@22", BCI3);
+                                            wafer2cmdparameter.Parameters.AddWithValue("@23", SF6);
+                                            wafer2cmdparameter.Parameters.AddWithValue("@24", CHF3);
+                                            wafer2cmdparameter.Parameters.AddWithValue("@25", Oxygen);
+                                            wafer2cmdparameter.Parameters.AddWithValue("@26", Oxygen1);
+                                            wafer2cmdparameter.Parameters.AddWithValue("@27", Nitrogen);
+                                            wafer2cmdparameter.Parameters.AddWithValue("@28", Argon);
+                                            wafer2cmdparameter.Parameters.AddWithValue("@31", CI2);
+                                            wafer2cmdparameter.Parameters.AddWithValue("@32", BCI3);
+                                            wafer2cmdparameter.Parameters.AddWithValue("@33", SF6);
+                                            wafer2cmdparameter.Parameters.AddWithValue("@34", CHF3);
+                                            wafer2cmdparameter.Parameters.AddWithValue("@35", Oxygen);
+                                            wafer2cmdparameter.Parameters.AddWithValue("@36", Oxygen1);
+                                            wafer2cmdparameter.Parameters.AddWithValue("@37", Nitrogen);
+                                            wafer2cmdparameter.Parameters.AddWithValue("@38", Argon);
+                                            wafer2cmdparameter.Parameters.AddWithValue("@41", CI2);
+                                            wafer2cmdparameter.Parameters.AddWithValue("@42", BCI3);
+                                            wafer2cmdparameter.Parameters.AddWithValue("@43", SF6);
+                                            wafer2cmdparameter.Parameters.AddWithValue("@44", CHF3);
+                                            wafer2cmdparameter.Parameters.AddWithValue("@45", Oxygen);
+                                            wafer2cmdparameter.Parameters.AddWithValue("@46", Oxygen1);
+                                            wafer2cmdparameter.Parameters.AddWithValue("@47", Nitrogen);
+                                            wafer2cmdparameter.Parameters.AddWithValue("@48", Argon);
+                                            wafer2cmdparameter.Parameters.AddWithValue("@51", "sccm");
+                                            wafer2cmdparameter.Parameters.AddWithValue("@52", "sccm");
+                                            wafer2cmdparameter.Parameters.AddWithValue("@53", "sccm");
+                                            wafer2cmdparameter.Parameters.AddWithValue("@54", "sccm");
+                                            wafer2cmdparameter.Parameters.AddWithValue("@55", "sccm");
+                                            wafer2cmdparameter.Parameters.AddWithValue("@56", "sccm");
+                                            wafer2cmdparameter.Parameters.AddWithValue("@57", "sccm");
+                                            wafer2cmdparameter.Parameters.AddWithValue("@58", "sccm");
+                                            wafer2cmdparameter.Parameters.AddWithValue("@61", lblRecipe.Text);
+                                            wafer2cmdparameter.Parameters.AddWithValue("@62", lblRecipe.Text);
+                                            wafer2cmdparameter.Parameters.AddWithValue("@63", lblRecipe.Text);
+                                            wafer2cmdparameter.Parameters.AddWithValue("@64", lblRecipe.Text);
+                                            wafer2cmdparameter.Parameters.AddWithValue("@65", lblRecipe.Text);
+                                            wafer2cmdparameter.Parameters.AddWithValue("@66", lblRecipe.Text);
+                                            wafer2cmdparameter.Parameters.AddWithValue("@67", lblRecipe.Text);
+                                            wafer2cmdparameter.Parameters.AddWithValue("@68", lblRecipe.Text);
+                                            wafer2cmdparameter.Parameters.AddWithValue("@71", strStepname1[a9]);
+                                            wafer2cmdparameter.Parameters.AddWithValue("@72", strStepname1[a9]);
+                                            wafer2cmdparameter.Parameters.AddWithValue("@73", strStepname1[a9]);
+                                            wafer2cmdparameter.Parameters.AddWithValue("@74", strStepname1[a9]);
+                                            wafer2cmdparameter.Parameters.AddWithValue("@75", strStepname1[a9]);
+                                            wafer2cmdparameter.Parameters.AddWithValue("@76", strStepname1[a9]);
+                                            wafer2cmdparameter.Parameters.AddWithValue("@77", strStepname1[a9]);
+                                            wafer2cmdparameter.Parameters.AddWithValue("@78", strStepname1[a9]);
 
-                                          con6.Open();
-                                          string wafer7strSQL = "select WaferRecipe from CassetteWafer  where CassetterecipeName = @NewWaferRecipe";
 
-                                          SqlCommand wafer7cmd = new SqlCommand(wafer7strSQL, con6);
-                                          wafer7cmd.Parameters.AddWithValue("@NewWaferRecipe", Form1.form2Msg);
-                                          SqlDataReader wafer7reader = wafer7cmd.ExecuteReader();
-                                          while (wafer7reader.Read())
-                                          {
+                                            wafer2cmdparameter.ExecuteNonQuery();
+                                            con8.Close();
 
-                                              lblRecipe.Text = string.Format("{0}", wafer7reader["WaferRecipe"]);
 
 
 
-                                          }
 
-                                          con6.Close();
-                                          con6.Open();
-                                          string wafer7strSQL1 = "select stepname from newrecipe where recipename = @Myrecipename";
 
-                                          SqlCommand wafer7cmd1 = new SqlCommand(wafer7strSQL1, con6);
-                                          wafer7cmd1.Parameters.AddWithValue("@Myrecipename", lblRecipe.Text);
-                                          SqlDataReader wafer7reader1 = wafer7cmd1.ExecuteReader();
-                                          while (wafer7reader1.Read())
-                                          {
 
-                                              strStepname1.Add(string.Format("{0}", wafer7reader1["StepName"]));
 
+                                        }
 
-                                          }
 
-                                          con6.Close();
-                                          con6.Open();
-                                          string wafer7strSQL2 = "select StepName from newrecipe inner join CassetteWafer on newrecipe.recipename = cassettewafer.waferRecipe where cassettewafer.waferRecipe = @Newrecipename";
-                                          SqlCommand wafer7cmd2 = new SqlCommand(wafer7strSQL2, con6);
-                                          wafer7cmd2.Parameters.AddWithValue("@Newrecipename", lblRecipe.Text);
-                                          //SqlDataReader reader2 = cmd2.ExecuteReader();
-                                          wafer7cmd2.ExecuteNonQuery();
+                                        strStepname1.Clear();
+                                        ListStepStartTime.Clear();
+                                        ListStepEndTime.Clear();
 
-                                          // while (reader2.Read())
-                                          // {
-                                          //strStepname.Add(string.Format("{0}", reader2["StepName"]));
-                                          // int row = strStepname.Count();
-                                          for (int a7 = 0; a7 < strStepname1.Count(); a7 += 1)
-                                          {
-                                              await Task.Delay(1000);
-                                              ListStepStartTime.Add(DateTime.Now);
-                                              int count = a7 + 1;
-                                              // await Task.Delay(2000);
-                                              lblStepName.Text = strStepname1[a7];
-                                              lblnum.Text = "," + count + "/" + strStepname1.Count();
-                                              // lblnum.Text = "," + count + "/" + strStepname.Count();
-                                              //  await Task.Delay(2000);
+                                        /////////////////////////////////////////////////////////////////
 
-                                              con6.Close();
+                                        await Task.Delay(2000);
 
-                                              con6.Open();
-                                              string wafer7strSQLStepSec = "select * from newrecipe where stepname = @NewSec";
+                                        label2.BackColor = Color.Blue;
+                                        lblProcess.BackColor = Color.Blue;
+                                        lblProcessStep.BackColor = Color.Blue;
+                                        lblRecipe.BackColor = Color.Blue;
+                                        lblStepName.BackColor = Color.Blue;
+                                        lblData.BackColor = Color.Blue;
+                                        lblnum.BackColor = Color.Blue;
 
-                                              SqlCommand wafer7cmdSec = new SqlCommand(wafer7strSQLStepSec, con6);
-                                              wafer7cmdSec.Parameters.AddWithValue("@NewSec", lblStepName.Text);
+                                        lblProcess.Text = "Aborted";
+                                        lblProcessStep.Text = "";
+                                        lblRecipe.Text = "";
+                                        lblStepName.Text = "";
+                                        lblnum.Text = "";
+                                        lblData.Text = "???????????";
 
-                                              SqlDataReader wafer7readerSec = wafer7cmdSec.ExecuteReader();
 
 
-                                              while (wafer7readerSec.Read())
-                                              {
-                                                  mySec1 = wafer7readerSec["ProcessTime"].ToString();
-                                                  // lblSec.Text = string.Format("{0}", readerSec["ProcessPressure"]);
-                                                  Int32.TryParse(mySec1, out Sec1);
+                                        picChamber.Image = Properties.Resources.new_chamber1;
+                                        lblChamber.BackColor = Color.Blue;
+                                        chamberload = "Blue";
+                                        picChamber.Width -= 100;
+                                        picChamber.Left += 150;
+                                        await Task.Delay(2000);
+                                        picChamber.Image = Properties.Resources.new_chamber;
 
-                                              }
 
-                                              for (int j = 1; j <= Sec1; j++)
-                                              {
-                                                  lblData.Text = j.ToString() + "/" + mySec1.ToString() + " Sec";
-                                                  await Task.Delay(1000);
 
 
-                                              }
-                                              ListStepEndTime.Add(DateTime.Now);
 
-                                              con6.Close();
+                                        await Task.Delay(2000);
 
 
-                                              con6.Open();
+                                        await Task.Delay(2000);
 
-                                              string strModuleRecipe = "insert into ModuleRecipe(RecipeName,StepName,StartTime,EndTime,noofrecipe) values(@recipename,@stepname,@starttime,@endtime,@noofrecipe)";
+                                        await Task.Delay(2000);
+                                        picCassette.Image = Properties.Resources.cassette1;
+                                        await Task.Delay(2000);
 
-                                              SqlCommand cmdmodulerecipe = new SqlCommand(strModuleRecipe, con6);
+                                        lblCassette.BackColor = Color.LimeGreen;
 
-                                              cmdmodulerecipe.Parameters.AddWithValue("@recipename", lblRecipe.Text);
-                                              cmdmodulerecipe.Parameters.AddWithValue("@stepname", strStepname1[a7]);
-                                              cmdmodulerecipe.Parameters.AddWithValue("@starttime", ListStepStartTime[a7]);
-                                              cmdmodulerecipe.Parameters.AddWithValue("@endtime", ListStepEndTime[a7]);
-                                              cmdmodulerecipe.Parameters.AddWithValue("@noofrecipe", "7");
+                                        picCassette.Image = Properties.Resources.robot_into_cassetteA1;
+                                        picCassette.Height += 150;
+                                        picCassette.Top -= 150;
+                                        await Task.Delay(2000);
+                                        lblCassette.BackColor = Color.Blue;
 
-                                              cmdmodulerecipe.ExecuteNonQuery();
+                                        picCassette.Image = Properties.Resources.cassette1;
+                                        picCassette.Height -= 150;
+                                        picCassette.Top += 150;
+                                        await Task.Delay(2000);
+                                        picCassette.Image = Properties.Resources.cassette;
+                                        picwafer.Image = Properties.Resources.waferfull;
 
-                                              con6.Close();
-                                              ///////////////////////////////////////////////////////get parameter value
+                                        //////////////////////////////////////////////////////////////////Save DataLog
+                                        EndTime = DateTime.Now;
+                                        con8.Close();
+                                        if (int.Parse(NoOfwafer[i]) == 9)
+                                        {
+                                            con8.Open();
 
-                                              con6.Open();
+                                            string wafer2strinsertdatalog = "insert into DataLogger(logname,cassetterecipename,starttime) values(@1,@2,@3) ";
+                                            SqlCommand wafer2cmdinsertdatalog = new SqlCommand(wafer2strinsertdatalog, con8);
 
-                                              string strSQL3 = "select * from newrecipe where stepname = @Newstepname and recipename = @Newrecipename";
+                                            wafer2cmdinsertdatalog.Parameters.AddWithValue("@1", lbl123.Text);
+                                            wafer2cmdinsertdatalog.Parameters.AddWithValue("@2", form2Msg);
+                                            wafer2cmdinsertdatalog.Parameters.AddWithValue("@3", StartTime);
 
-                                              SqlCommand cmd3 = new SqlCommand(strSQL3, con6);
-                                              cmd3.Parameters.AddWithValue("@Newstepname", lblStepName.Text);
-                                              cmd3.Parameters.AddWithValue("@Newrecipename", lblRecipe.Text);
-                                              SqlDataReader reader2 = cmd3.ExecuteReader();
+                                            wafer2cmdinsertdatalog.ExecuteNonQuery();
 
-                                              while (reader2.Read())
-                                              {
-                                                  CI2 = reader2["CI2"].ToString();
-                                                  BCI3 = reader2["BCI3"].ToString();
-                                                  SF6 = reader2["SF6"].ToString();
-                                                  CHF3 = reader2["CHF3"].ToString();
-                                                  Oxygen = reader2["Oxygen"].ToString();
-                                                  Oxygen1 = reader2["Oxygen1"].ToString();
-                                                  Nitrogen = reader2["Nitrogen"].ToString();
-                                                  Argon = reader2["Argon"].ToString();
+                                            con8.Close();
 
+                                        }
 
+                                        //////////////////////////////////////////////////////////////////////////finish waferA9
 
-                                              }
+                                    }
+                                    if (int.Parse(NoOfwafer[i]) >= 10)
+                                    {
 
-                                              con6.Close();
+                                        //////////////////////////////////////////////////////////////////////////start waferA10
 
 
-                                              ////////////////////////////////////////////////
-                                              con6.Open();
-                                              Chamber1 chamber1 = new Chamber1();
+                                        await Task.Delay(2000);
 
-                                              string wafer7strParameter = "insert into valueselection(parameter,Minimum,Maximum,Average,Units,recipename,stepname) values(@11,@21,@31,@41,@51,@61,@71),(@12,@22,@32,@42,@52,@62,@72),(@13,@23,@33,@43,@53,@63,@73)"
-                                                  + ",(@14,@24,@34,@44,@54,@64,@74),(@15,@25,@35,@45,@55,@65,@75),(@16,@26,@36,@46,@56,@66,@76),(@17,@27,@37,@47,@57,@67,@77),(@18,@28,@38,@48,@58,@68,@78)";
-                                              SqlCommand wafer2cmdparameter = new SqlCommand(wafer7strParameter, con6);
-                                              wafer2cmdparameter.Parameters.AddWithValue("@11", "CI2");
-                                              wafer2cmdparameter.Parameters.AddWithValue("@12", "BCI3");
-                                              wafer2cmdparameter.Parameters.AddWithValue("@13", "SF6");
-                                              wafer2cmdparameter.Parameters.AddWithValue("@14", "CHF3");
-                                              wafer2cmdparameter.Parameters.AddWithValue("@15", "Oxygen");
-                                              wafer2cmdparameter.Parameters.AddWithValue("@16", "Oxygen");
-                                              wafer2cmdparameter.Parameters.AddWithValue("@17", "Nitrogen");
-                                              wafer2cmdparameter.Parameters.AddWithValue("@18", "Argon");
-                                              wafer2cmdparameter.Parameters.AddWithValue("@21", CI2);
-                                              wafer2cmdparameter.Parameters.AddWithValue("@22", BCI3);
-                                              wafer2cmdparameter.Parameters.AddWithValue("@23", SF6);
-                                              wafer2cmdparameter.Parameters.AddWithValue("@24", CHF3);
-                                              wafer2cmdparameter.Parameters.AddWithValue("@25", Oxygen);
-                                              wafer2cmdparameter.Parameters.AddWithValue("@26", Oxygen1);
-                                              wafer2cmdparameter.Parameters.AddWithValue("@27", Nitrogen);
-                                              wafer2cmdparameter.Parameters.AddWithValue("@28", Argon);
-                                              wafer2cmdparameter.Parameters.AddWithValue("@31", CI2);
-                                              wafer2cmdparameter.Parameters.AddWithValue("@32", BCI3);
-                                              wafer2cmdparameter.Parameters.AddWithValue("@33", SF6);
-                                              wafer2cmdparameter.Parameters.AddWithValue("@34", CHF3);
-                                              wafer2cmdparameter.Parameters.AddWithValue("@35", Oxygen);
-                                              wafer2cmdparameter.Parameters.AddWithValue("@36", Oxygen1);
-                                              wafer2cmdparameter.Parameters.AddWithValue("@37", Nitrogen);
-                                              wafer2cmdparameter.Parameters.AddWithValue("@38", Argon);
-                                              wafer2cmdparameter.Parameters.AddWithValue("@41", CI2);
-                                              wafer2cmdparameter.Parameters.AddWithValue("@42", BCI3);
-                                              wafer2cmdparameter.Parameters.AddWithValue("@43", SF6);
-                                              wafer2cmdparameter.Parameters.AddWithValue("@44", CHF3);
-                                              wafer2cmdparameter.Parameters.AddWithValue("@45", Oxygen);
-                                              wafer2cmdparameter.Parameters.AddWithValue("@46", Oxygen1);
-                                              wafer2cmdparameter.Parameters.AddWithValue("@47", Nitrogen);
-                                              wafer2cmdparameter.Parameters.AddWithValue("@48", Argon);
-                                              wafer2cmdparameter.Parameters.AddWithValue("@51", "sccm");
-                                              wafer2cmdparameter.Parameters.AddWithValue("@52", "sccm");
-                                              wafer2cmdparameter.Parameters.AddWithValue("@53", "sccm");
-                                              wafer2cmdparameter.Parameters.AddWithValue("@54", "sccm");
-                                              wafer2cmdparameter.Parameters.AddWithValue("@55", "sccm");
-                                              wafer2cmdparameter.Parameters.AddWithValue("@56", "sccm");
-                                              wafer2cmdparameter.Parameters.AddWithValue("@57", "sccm");
-                                              wafer2cmdparameter.Parameters.AddWithValue("@58", "sccm");
-                                              wafer2cmdparameter.Parameters.AddWithValue("@61", lblRecipe.Text);
-                                              wafer2cmdparameter.Parameters.AddWithValue("@62", lblRecipe.Text);
-                                              wafer2cmdparameter.Parameters.AddWithValue("@63", lblRecipe.Text);
-                                              wafer2cmdparameter.Parameters.AddWithValue("@64", lblRecipe.Text);
-                                              wafer2cmdparameter.Parameters.AddWithValue("@65", lblRecipe.Text);
-                                              wafer2cmdparameter.Parameters.AddWithValue("@66", lblRecipe.Text);
-                                              wafer2cmdparameter.Parameters.AddWithValue("@67", lblRecipe.Text);
-                                              wafer2cmdparameter.Parameters.AddWithValue("@68", lblRecipe.Text);
-                                              wafer2cmdparameter.Parameters.AddWithValue("@71", strStepname1[a7]);
-                                              wafer2cmdparameter.Parameters.AddWithValue("@72", strStepname1[a7]);
-                                              wafer2cmdparameter.Parameters.AddWithValue("@73", strStepname1[a7]);
-                                              wafer2cmdparameter.Parameters.AddWithValue("@74", strStepname1[a7]);
-                                              wafer2cmdparameter.Parameters.AddWithValue("@75", strStepname1[a7]);
-                                              wafer2cmdparameter.Parameters.AddWithValue("@76", strStepname1[a7]);
-                                              wafer2cmdparameter.Parameters.AddWithValue("@77", strStepname1[a7]);
-                                              wafer2cmdparameter.Parameters.AddWithValue("@78", strStepname1[a7]);
+                                        picCassette.Image = Properties.Resources.cassette1;
+                                        await Task.Delay(2000);
+                                        Wafer10StartTime = DateTime.Now;
+                                        scsb = new SqlConnectionStringBuilder();
+                                        scsb.DataSource = @"HP-PC\SQLEXPRESS";
+                                        scsb.InitialCatalog = "RecipeType";
+                                        scsb.IntegratedSecurity = true;
+                                        SqlConnection con9 = new SqlConnection(scsb.ToString());
+                                        con9.Open();
 
+                                        string wafer10strWaferSelection = "insert into WaferSelection(NoOfWafers,StartTime,CassetteRecipeName) values(@NoOfWafer,@StartTime,@CassetteRecipeName)";
+                                        SqlCommand wafer10cmdwaferselection = new SqlCommand(wafer10strWaferSelection, con9);
+                                        wafer10cmdwaferselection.Parameters.AddWithValue("@NoOfWafer", "10");
+                                        wafer10cmdwaferselection.Parameters.AddWithValue("@StartTime", Wafer10StartTime);
+                                        wafer10cmdwaferselection.Parameters.AddWithValue("@CassetteRecipeName", form2Msg);
+                                        wafer10cmdwaferselection.ExecuteNonQuery();
 
-                                              wafer2cmdparameter.ExecuteNonQuery();
-                                              con6.Close();
+                                        con9.Close();
 
 
 
 
+                                        // lblCassette.BackColor = Color.LimeGreen;
 
+                                        lblCassette.BackColor = Color.LimeGreen;
+                                        picCassette.Image = Properties.Resources.robot_into_cassetteA1;
+                                        picCassette.Height += 150;
+                                        picCassette.Top -= 150;
+                                        await Task.Delay(2000);
+                                        picwafer.Image = Properties.Resources.waferA10;
+                                        await Task.Delay(2000);
+                                        // WaferTime = DateTime.Now;
+                                        lblCassette.BackColor = Color.Blue;
 
 
+                                        picCassette.Image = Properties.Resources.cassette1;
+                                        picCassette.Height -= 150;
+                                        picCassette.Top += 150;
+                                        await Task.Delay(2000);
+                                        picCassette.Image = Properties.Resources.cassette;
+                                        await Task.Delay(2000);
 
-                                          }
 
+                                        await Task.Delay(2000);
 
-                                          strStepname1.Clear();
-                                          ListStepStartTime.Clear();
-                                          ListStepEndTime.Clear();
+                                        lblCentralize.BackColor = Color.LimeGreen;
 
-                                          /////////////////////////////////////////////////////////////////
 
-                                          await Task.Delay(2000);
+                                        await Task.Delay(2000);
 
-                                          label2.BackColor = Color.Blue;
-                                          lblProcess.BackColor = Color.Blue;
-                                          lblProcessStep.BackColor = Color.Blue;
-                                          lblRecipe.BackColor = Color.Blue;
-                                          lblStepName.BackColor = Color.Blue;
-                                          lblData.BackColor = Color.Blue;
-                                          lblnum.BackColor = Color.Blue;
+                                        lblCentralize.BackColor = Color.Blue;
 
-                                          lblProcess.Text = "Aborted";
-                                          lblProcessStep.Text = "";
-                                          lblRecipe.Text = "";
-                                          lblStepName.Text = "";
-                                          lblnum.Text = "";
-                                          lblData.Text = "???????????";
+                                        //picCentralize.Height -= 100;
 
 
 
-                                          picChamber.Image = Properties.Resources.new_chamber1;
-                                          lblChamber.BackColor = Color.Blue;
-                                          chamberload = "Blue";
-                                          picChamber.Width -= 100;
-                                          picChamber.Left += 150;
-                                          await Task.Delay(2000);
-                                          picChamber.Image = Properties.Resources.new_chamber;
+                                        await Task.Delay(2000);
 
+                                        picChamber.Image = Properties.Resources.new_chamber1;
 
+                                        await Task.Delay(2000);
 
+                                        picChamber.Image = Properties.Resources.robot_into_chamberA10;
+                                        picChamber.Width += 100;
+                                        picChamber.Left -= 150;
+                                        lblChamber.BackColor = Color.LimeGreen;
 
+                                        chamberload = "LimeGreen";
+                                        //////////////////////////////////////////////////////////////////////////////////waferA10 into chamber
+                                        WaferTime = DateTime.Now;
+                                        lblRecipe.BackColor = Color.LimeGreen;
+                                        lblStepName.BackColor = Color.LimeGreen;
+                                        lblnum.BackColor = Color.LimeGreen;
+                                        lblData.BackColor = Color.LimeGreen;
+                                        lblData.Text = "";
+                                        label2.BackColor = Color.LimeGreen;
+                                        lblProcess.Text = "Processing";
+                                        lblProcess.BackColor = Color.LimeGreen;
+                                        lblProcessStep.Text = "Process Step";
+                                        lblProcessStep.BackColor = Color.LimeGreen;
 
-                                          await Task.Delay(2000);
+                                        con9.Open();
+                                        string wafer10strSQL = "select WaferRecipe from CassetteWafer  where CassetterecipeName = @NewWaferRecipe";
 
+                                        SqlCommand wafer10cmd = new SqlCommand(wafer10strSQL, con9);
+                                        wafer10cmd.Parameters.AddWithValue("@NewWaferRecipe", Form1.form2Msg);
+                                        SqlDataReader wafer10reader = wafer10cmd.ExecuteReader();
+                                        while (wafer10reader.Read())
+                                        {
 
+                                            lblRecipe.Text = string.Format("{0}", wafer10reader["WaferRecipe"]);
 
-                                          await Task.Delay(2000);
 
-                                          await Task.Delay(2000);
-                                          picCassette.Image = Properties.Resources.cassette1;
-                                          await Task.Delay(2000);
 
-                                          lblCassette.BackColor = Color.LimeGreen;
+                                        }
 
-                                          picCassette.Image = Properties.Resources.robot_into_cassetteA1;
-                                          picCassette.Height += 150;
-                                          picCassette.Top -= 150;
-                                          await Task.Delay(2000);
-                                          lblCassette.BackColor = Color.Blue;
+                                        con9.Close();
+                                        con9.Open();
+                                        string wafer10strSQL1 = "select stepname from newrecipe where recipename = @Myrecipename";
 
-                                          picCassette.Image = Properties.Resources.cassette1;
-                                          picCassette.Height -= 150;
-                                          picCassette.Top += 150;
-                                          await Task.Delay(2000);
-                                          picCassette.Image = Properties.Resources.cassette;
-                                          picwafer.Image = Properties.Resources.waferfull;
+                                        SqlCommand wafer10cmd1 = new SqlCommand(wafer10strSQL1, con9);
+                                        wafer10cmd1.Parameters.AddWithValue("@Myrecipename", lblRecipe.Text);
+                                        SqlDataReader wafer10reader1 = wafer10cmd1.ExecuteReader();
+                                        while (wafer10reader1.Read())
+                                        {
 
-                                          //////////////////////////////////////////////////////////////////Save DataLog
-                                          EndTime = DateTime.Now;
-                                          con6.Close();
-                                          if (int.Parse(NoOfwafer[i]) == 7)
-                                          {
-                                              con6.Open();
+                                            strStepname1.Add(string.Format("{0}", wafer10reader1["StepName"]));
 
-                                              string wafer2strinsertdatalog = "insert into DataLogger(logname,cassetterecipename,starttime) values(@1,@2,@3) ";
-                                              SqlCommand wafer2cmdinsertdatalog = new SqlCommand(wafer2strinsertdatalog, con6);
 
-                                              wafer2cmdinsertdatalog.Parameters.AddWithValue("@1", lbl123.Text);
-                                              wafer2cmdinsertdatalog.Parameters.AddWithValue("@2", form2Msg);
-                                              wafer2cmdinsertdatalog.Parameters.AddWithValue("@3", StartTime);
+                                        }
 
-                                              wafer2cmdinsertdatalog.ExecuteNonQuery();
+                                        con9.Close();
+                                        con9.Open();
+                                        string wafer10strSQL2 = "select StepName from newrecipe inner join CassetteWafer on newrecipe.recipename = cassettewafer.waferRecipe where cassettewafer.waferRecipe = @Newrecipename";
+                                        SqlCommand wafer10cmd2 = new SqlCommand(wafer10strSQL2, con9);
+                                        wafer10cmd2.Parameters.AddWithValue("@Newrecipename", lblRecipe.Text);
+                                        //SqlDataReader reader2 = cmd2.ExecuteReader();
+                                        wafer10cmd2.ExecuteNonQuery();
 
-                                              con6.Close();
+                                        // while (reader2.Read())
+                                        // {
+                                        //strStepname.Add(string.Format("{0}", reader2["StepName"]));
+                                        // int row = strStepname.Count();
+                                        for (int a10 = 0; a10 < strStepname1.Count(); a10 += 1)
+                                        {
+                                            await Task.Delay(1000);
+                                            ListStepStartTime.Add(DateTime.Now);
+                                            int count = a10 + 1;
+                                            // await Task.Delay(2000);
+                                            lblStepName.Text = strStepname1[a10];
+                                            lblnum.Text = "," + count + "/" + strStepname1.Count();
+                                            // lblnum.Text = "," + count + "/" + strStepname.Count();
+                                            //  await Task.Delay(2000);
 
+                                            con9.Close();
 
-                                          }
+                                            con9.Open();
+                                            string wafer10strSQLStepSec = "select * from newrecipe where stepname = @NewSec";
 
+                                            SqlCommand wafer10cmdSec = new SqlCommand(wafer10strSQLStepSec, con9);
+                                            wafer10cmdSec.Parameters.AddWithValue("@NewSec", lblStepName.Text);
 
+                                            SqlDataReader wafer10readerSec = wafer10cmdSec.ExecuteReader();
 
 
-                                          //////////////////////////////////////////////////////////////////////////finish waferA7
+                                            while (wafer10readerSec.Read())
+                                            {
+                                                mySec1 = wafer10readerSec["ProcessTime"].ToString();
+                                                // lblSec.Text = string.Format("{0}", readerSec["ProcessPressure"]);
+                                                Int32.TryParse(mySec1, out Sec1);
 
+                                            }
 
-                                      }
-                                      if (int.Parse(NoOfwafer[i]) >= 8)
-                                      {
+                                            for (int j = 1; j <= Sec1; j++)
+                                            {
+                                                lblData.Text = j.ToString() + "/" + mySec1.ToString() + " Sec";
+                                                await Task.Delay(1000);
 
-                                          //////////////////////////////////////////////////////////////////////////start waferA8
-                                          await Task.Delay(2000);
 
-                                          picCassette.Image = Properties.Resources.cassette1;
-                                          await Task.Delay(2000);
-                                          Wafer8StartTime = DateTime.Now;
-                                          scsb = new SqlConnectionStringBuilder();
-                                          scsb.DataSource = @"HP-PC\SQLEXPRESS";
-                                          scsb.InitialCatalog = "RecipeType";
-                                          scsb.IntegratedSecurity = true;
-                                          SqlConnection con7 = new SqlConnection(scsb.ToString());
-                                          con7.Open();
+                                            }
+                                            ListStepEndTime.Add(DateTime.Now);
 
-                                          string wafer8strWaferSelection = "insert into WaferSelection(NoOfWafers,StartTime,CassetteRecipeName) values(@NoOfWafer,@StartTime,@CassetteRecipeName)";
-                                          SqlCommand wafer8cmdwaferselection = new SqlCommand(wafer8strWaferSelection, con7);
-                                          wafer8cmdwaferselection.Parameters.AddWithValue("@NoOfWafer", "8");
-                                          wafer8cmdwaferselection.Parameters.AddWithValue("@StartTime", Wafer8StartTime);
-                                          wafer8cmdwaferselection.Parameters.AddWithValue("@CassetteRecipeName", form2Msg);
-                                          wafer8cmdwaferselection.ExecuteNonQuery();
+                                            con9.Close();
 
-                                          con7.Close();
 
+                                            con9.Open();
 
+                                            string strModuleRecipe = "insert into ModuleRecipe(RecipeName,StepName,StartTime,EndTime,noofrecipe) values(@recipename,@stepname,@starttime,@endtime,@noofrecipe)";
 
+                                            SqlCommand cmdmodulerecipe = new SqlCommand(strModuleRecipe, con9);
 
-                                          // lblCassette.BackColor = Color.LimeGreen;
+                                            cmdmodulerecipe.Parameters.AddWithValue("@recipename", lblRecipe.Text);
+                                            cmdmodulerecipe.Parameters.AddWithValue("@stepname", strStepname1[a10]);
+                                            cmdmodulerecipe.Parameters.AddWithValue("@starttime", ListStepStartTime[a10]);
+                                            cmdmodulerecipe.Parameters.AddWithValue("@endtime", ListStepEndTime[a10]);
+                                            cmdmodulerecipe.Parameters.AddWithValue("@noofrecipe", "10");
 
-                                          lblCassette.BackColor = Color.LimeGreen;
-                                          picCassette.Image = Properties.Resources.robot_into_cassetteA1;
-                                          picCassette.Height += 150;
-                                          picCassette.Top -= 150;
-                                          await Task.Delay(2000);
-                                          picwafer.Image = Properties.Resources.waferA8;
-                                          await Task.Delay(2000);
-                                          // WaferTime = DateTime.Now;
-                                          lblCassette.BackColor = Color.Blue;
+                                            cmdmodulerecipe.ExecuteNonQuery();
 
+                                            con9.Close();
+                                            ///////////////////////////////////////////////////////get parameter value
 
-                                          picCassette.Image = Properties.Resources.cassette1;
-                                          picCassette.Height -= 150;
-                                          picCassette.Top += 150;
-                                          await Task.Delay(2000);
-                                          picCassette.Image = Properties.Resources.cassette;
-                                          await Task.Delay(2000);
+                                            con9.Open();
 
-                                          await Task.Delay(2000);
+                                            string strSQL3 = "select * from newrecipe where stepname = @Newstepname and recipename = @Newrecipename";
 
+                                            SqlCommand cmd3 = new SqlCommand(strSQL3, con9);
+                                            cmd3.Parameters.AddWithValue("@Newstepname", lblStepName.Text);
+                                            cmd3.Parameters.AddWithValue("@Newrecipename", lblRecipe.Text);
+                                            SqlDataReader reader2 = cmd3.ExecuteReader();
 
-                                          lblCentralize.BackColor = Color.LimeGreen;
+                                            while (reader2.Read())
+                                            {
+                                                CI2 = reader2["CI2"].ToString();
+                                                BCI3 = reader2["BCI3"].ToString();
+                                                SF6 = reader2["SF6"].ToString();
+                                                CHF3 = reader2["CHF3"].ToString();
+                                                Oxygen = reader2["Oxygen"].ToString();
+                                                Oxygen1 = reader2["Oxygen1"].ToString();
+                                                Nitrogen = reader2["Nitrogen"].ToString();
+                                                Argon = reader2["Argon"].ToString();
 
-                                          await Task.Delay(2000);
 
 
-                                          lblCentralize.BackColor = Color.Blue;
+                                            }
 
-                                          //picCentralize.Height -= 100;
+                                            con9.Close();
 
-                                          await Task.Delay(2000);
 
-                                          await Task.Delay(2000);
+                                            ////////////////////////////////////////////////
+                                            con9.Open();
+                                            Chamber1 chamber1 = new Chamber1();
 
-                                          picChamber.Image = Properties.Resources.new_chamber1;
+                                            string wafer10strParameter = "insert into valueselection(parameter,Minimum,Maximum,Average,Units,recipename,stepname) values(@11,@21,@31,@41,@51,@61,@71),(@12,@22,@32,@42,@52,@62,@72),(@13,@23,@33,@43,@53,@63,@73)"
+                                                + ",(@14,@24,@34,@44,@54,@64,@74),(@15,@25,@35,@45,@55,@65,@75),(@16,@26,@36,@46,@56,@66,@76),(@17,@27,@37,@47,@57,@67,@77),(@18,@28,@38,@48,@58,@68,@78)";
+                                            SqlCommand wafer2cmdparameter = new SqlCommand(wafer10strParameter, con9);
+                                            wafer2cmdparameter.Parameters.AddWithValue("@11", "CI2");
+                                            wafer2cmdparameter.Parameters.AddWithValue("@12", "BCI3");
+                                            wafer2cmdparameter.Parameters.AddWithValue("@13", "SF6");
+                                            wafer2cmdparameter.Parameters.AddWithValue("@14", "CHF3");
+                                            wafer2cmdparameter.Parameters.AddWithValue("@15", "Oxygen");
+                                            wafer2cmdparameter.Parameters.AddWithValue("@16", "Oxygen");
+                                            wafer2cmdparameter.Parameters.AddWithValue("@17", "Nitrogen");
+                                            wafer2cmdparameter.Parameters.AddWithValue("@18", "Argon");
+                                            wafer2cmdparameter.Parameters.AddWithValue("@21", CI2);
+                                            wafer2cmdparameter.Parameters.AddWithValue("@22", BCI3);
+                                            wafer2cmdparameter.Parameters.AddWithValue("@23", SF6);
+                                            wafer2cmdparameter.Parameters.AddWithValue("@24", CHF3);
+                                            wafer2cmdparameter.Parameters.AddWithValue("@25", Oxygen);
+                                            wafer2cmdparameter.Parameters.AddWithValue("@26", Oxygen1);
+                                            wafer2cmdparameter.Parameters.AddWithValue("@27", Nitrogen);
+                                            wafer2cmdparameter.Parameters.AddWithValue("@28", Argon);
+                                            wafer2cmdparameter.Parameters.AddWithValue("@31", CI2);
+                                            wafer2cmdparameter.Parameters.AddWithValue("@32", BCI3);
+                                            wafer2cmdparameter.Parameters.AddWithValue("@33", SF6);
+                                            wafer2cmdparameter.Parameters.AddWithValue("@34", CHF3);
+                                            wafer2cmdparameter.Parameters.AddWithValue("@35", Oxygen);
+                                            wafer2cmdparameter.Parameters.AddWithValue("@36", Oxygen1);
+                                            wafer2cmdparameter.Parameters.AddWithValue("@37", Nitrogen);
+                                            wafer2cmdparameter.Parameters.AddWithValue("@38", Argon);
+                                            wafer2cmdparameter.Parameters.AddWithValue("@41", CI2);
+                                            wafer2cmdparameter.Parameters.AddWithValue("@42", BCI3);
+                                            wafer2cmdparameter.Parameters.AddWithValue("@43", SF6);
+                                            wafer2cmdparameter.Parameters.AddWithValue("@44", CHF3);
+                                            wafer2cmdparameter.Parameters.AddWithValue("@45", Oxygen);
+                                            wafer2cmdparameter.Parameters.AddWithValue("@46", Oxygen1);
+                                            wafer2cmdparameter.Parameters.AddWithValue("@47", Nitrogen);
+                                            wafer2cmdparameter.Parameters.AddWithValue("@48", Argon);
+                                            wafer2cmdparameter.Parameters.AddWithValue("@51", "sccm");
+                                            wafer2cmdparameter.Parameters.AddWithValue("@52", "sccm");
+                                            wafer2cmdparameter.Parameters.AddWithValue("@53", "sccm");
+                                            wafer2cmdparameter.Parameters.AddWithValue("@54", "sccm");
+                                            wafer2cmdparameter.Parameters.AddWithValue("@55", "sccm");
+                                            wafer2cmdparameter.Parameters.AddWithValue("@56", "sccm");
+                                            wafer2cmdparameter.Parameters.AddWithValue("@57", "sccm");
+                                            wafer2cmdparameter.Parameters.AddWithValue("@58", "sccm");
+                                            wafer2cmdparameter.Parameters.AddWithValue("@61", lblRecipe.Text);
+                                            wafer2cmdparameter.Parameters.AddWithValue("@62", lblRecipe.Text);
+                                            wafer2cmdparameter.Parameters.AddWithValue("@63", lblRecipe.Text);
+                                            wafer2cmdparameter.Parameters.AddWithValue("@64", lblRecipe.Text);
+                                            wafer2cmdparameter.Parameters.AddWithValue("@65", lblRecipe.Text);
+                                            wafer2cmdparameter.Parameters.AddWithValue("@66", lblRecipe.Text);
+                                            wafer2cmdparameter.Parameters.AddWithValue("@67", lblRecipe.Text);
+                                            wafer2cmdparameter.Parameters.AddWithValue("@68", lblRecipe.Text);
+                                            wafer2cmdparameter.Parameters.AddWithValue("@71", strStepname1[a10]);
+                                            wafer2cmdparameter.Parameters.AddWithValue("@72", strStepname1[a10]);
+                                            wafer2cmdparameter.Parameters.AddWithValue("@73", strStepname1[a10]);
+                                            wafer2cmdparameter.Parameters.AddWithValue("@74", strStepname1[a10]);
+                                            wafer2cmdparameter.Parameters.AddWithValue("@75", strStepname1[a10]);
+                                            wafer2cmdparameter.Parameters.AddWithValue("@76", strStepname1[a10]);
+                                            wafer2cmdparameter.Parameters.AddWithValue("@77", strStepname1[a10]);
+                                            wafer2cmdparameter.Parameters.AddWithValue("@78", strStepname1[a10]);
 
-                                          await Task.Delay(2000);
 
+                                            wafer2cmdparameter.ExecuteNonQuery();
+                                            con9.Close();
 
-                                          picChamber.Image = Properties.Resources.robot_into_chamberA8;
-                                          picChamber.Width += 100;
-                                          picChamber.Left -= 150;
-                                          lblChamber.BackColor = Color.LimeGreen;
 
-                                          chamberload = "LimeGreen";
-                                          //////////////////////////////////////////////////////////////////////////////////wafer2 into chamber
-                                          WaferTime = DateTime.Now;
-                                          lblRecipe.BackColor = Color.LimeGreen;
-                                          lblStepName.BackColor = Color.LimeGreen;
-                                          lblnum.BackColor = Color.LimeGreen;
-                                          lblData.BackColor = Color.LimeGreen;
-                                          lblData.Text = "";
-                                          label2.BackColor = Color.LimeGreen;
-                                          lblProcess.Text = "Processing";
-                                          lblProcess.BackColor = Color.LimeGreen;
-                                          lblProcessStep.Text = "Process Step";
-                                          lblProcessStep.BackColor = Color.LimeGreen;
 
-                                          con7.Open();
-                                          string wafer8strSQL = "select WaferRecipe from CassetteWafer  where CassetterecipeName = @NewWaferRecipe";
 
-                                          SqlCommand wafer8cmd = new SqlCommand(wafer8strSQL, con7);
-                                          wafer8cmd.Parameters.AddWithValue("@NewWaferRecipe", Form1.form2Msg);
-                                          SqlDataReader wafer8reader = wafer8cmd.ExecuteReader();
-                                          while (wafer8reader.Read())
-                                          {
 
-                                              lblRecipe.Text = string.Format("{0}", wafer8reader["WaferRecipe"]);
 
 
 
-                                          }
+                                        }
 
-                                          con7.Close();
-                                          con7.Open();
-                                          string wafer8strSQL1 = "select stepname from newrecipe where recipename = @Myrecipename";
 
-                                          SqlCommand wafer8cmd1 = new SqlCommand(wafer8strSQL1, con7);
-                                          wafer8cmd1.Parameters.AddWithValue("@Myrecipename", lblRecipe.Text);
-                                          SqlDataReader wafer8reader1 = wafer8cmd1.ExecuteReader();
-                                          while (wafer8reader1.Read())
-                                          {
+                                        strStepname1.Clear();
+                                        ListStepStartTime.Clear();
+                                        ListStepEndTime.Clear();
 
-                                              strStepname1.Add(string.Format("{0}", wafer8reader1["StepName"]));
+                                        /////////////////////////////////////////////////////////////////
 
+                                        await Task.Delay(2000);
 
-                                          }
+                                        label2.BackColor = Color.Blue;
+                                        lblProcess.BackColor = Color.Blue;
+                                        lblProcessStep.BackColor = Color.Blue;
+                                        lblRecipe.BackColor = Color.Blue;
+                                        lblStepName.BackColor = Color.Blue;
+                                        lblData.BackColor = Color.Blue;
+                                        lblnum.BackColor = Color.Blue;
 
-                                          con7.Close();
-                                          con7.Open();
-                                          string wafer8strSQL2 = "select StepName from newrecipe inner join CassetteWafer on newrecipe.recipename = cassettewafer.waferRecipe where cassettewafer.waferRecipe = @Newrecipename";
-                                          SqlCommand wafer8cmd2 = new SqlCommand(wafer8strSQL2, con7);
-                                          wafer8cmd2.Parameters.AddWithValue("@Newrecipename", lblRecipe.Text);
-                                          //SqlDataReader reader2 = cmd2.ExecuteReader();
-                                          wafer8cmd2.ExecuteNonQuery();
+                                        lblProcess.Text = "Aborted";
+                                        lblProcessStep.Text = "";
+                                        lblRecipe.Text = "";
+                                        lblStepName.Text = "";
+                                        lblnum.Text = "";
+                                        lblData.Text = "???????????";
 
-                                          // while (reader2.Read())
-                                          // {
-                                          //strStepname.Add(string.Format("{0}", reader2["StepName"]));
-                                          // int row = strStepname.Count();
-                                          for (int a8 = 0; a8 < strStepname1.Count(); a8 += 1)
-                                          {
-                                              await Task.Delay(1000);
-                                              ListStepStartTime.Add(DateTime.Now);
-                                              int count = i + a8;
-                                              // await Task.Delay(2000);
-                                              lblStepName.Text = strStepname1[a8];
-                                              lblnum.Text = "," + count + "/" + strStepname1.Count();
-                                              // lblnum.Text = "," + count + "/" + strStepname.Count();
-                                              //  await Task.Delay(2000);
 
-                                              con7.Close();
 
-                                              con7.Open();
-                                              string wafer8strSQLStepSec = "select * from newrecipe where stepname = @NewSec";
+                                        picChamber.Image = Properties.Resources.new_chamber1;
+                                        lblChamber.BackColor = Color.Blue;
+                                        chamberload = "Blue";
+                                        picChamber.Width -= 100;
+                                        picChamber.Left += 150;
+                                        await Task.Delay(2000);
+                                        picChamber.Image = Properties.Resources.new_chamber;
 
-                                              SqlCommand wafer8cmdSec = new SqlCommand(wafer8strSQLStepSec, con7);
-                                              wafer8cmdSec.Parameters.AddWithValue("@NewSec", lblStepName.Text);
 
-                                              SqlDataReader wafer8readerSec = wafer8cmdSec.ExecuteReader();
 
 
-                                              while (wafer8readerSec.Read())
-                                              {
-                                                  mySec1 = wafer8readerSec["ProcessTime"].ToString();
-                                                  // lblSec.Text = string.Format("{0}", readerSec["ProcessPressure"]);
-                                                  Int32.TryParse(mySec1, out Sec1);
 
-                                              }
+                                        await Task.Delay(2000);
 
-                                              for (int j = 1; j <= Sec1; j++)
-                                              {
-                                                  lblData.Text = j.ToString() + "/" + mySec1.ToString() + " Sec";
-                                                  await Task.Delay(1000);
+                                        await Task.Delay(2000);
 
+                                        await Task.Delay(2000);
+                                        picCassette.Image = Properties.Resources.cassette1;
+                                        await Task.Delay(2000);
 
-                                              }
-                                              ListStepEndTime.Add(DateTime.Now);
+                                        lblCassette.BackColor = Color.LimeGreen;
 
-                                              con7.Close();
+                                        picCassette.Image = Properties.Resources.robot_into_cassetteA1;
+                                        picCassette.Height += 150;
+                                        picCassette.Top -= 150;
+                                        await Task.Delay(2000);
+                                        lblCassette.BackColor = Color.Blue;
 
+                                        picCassette.Image = Properties.Resources.cassette1;
+                                        picCassette.Height -= 150;
+                                        picCassette.Top += 150;
+                                        await Task.Delay(2000);
+                                        picCassette.Image = Properties.Resources.cassette;
+                                        picwafer.Image = Properties.Resources.waferfull;
 
-                                              con7.Open();
+                                        //////////////////////////////////////////////////////////////////Save DataLog
+                                        if (int.Parse(NoOfwafer[i]) == 10)
+                                        {
+                                            EndTime = DateTime.Now;
+                                            con9.Close();
 
-                                              string strModuleRecipe = "insert into ModuleRecipe(RecipeName,StepName,StartTime,EndTime,noofrecipe) values(@recipename,@stepname,@starttime,@endtime,@noofrecipe)";
+                                            con9.Open();
 
-                                              SqlCommand cmdmodulerecipe = new SqlCommand(strModuleRecipe, con7);
+                                            string wafer10strinsertdatalog = "insert into DataLogger(logname,cassetterecipename,starttime) values(@1,@2,@3) ";
+                                            SqlCommand wafer10cmdinsertdatalog = new SqlCommand(wafer10strinsertdatalog, con9);
 
-                                              cmdmodulerecipe.Parameters.AddWithValue("@recipename", lblRecipe.Text);
-                                              cmdmodulerecipe.Parameters.AddWithValue("@stepname", strStepname1[a8]);
-                                              cmdmodulerecipe.Parameters.AddWithValue("@starttime", ListStepStartTime[a8]);
-                                              cmdmodulerecipe.Parameters.AddWithValue("@endtime", ListStepEndTime[a8]);
-                                              cmdmodulerecipe.Parameters.AddWithValue("@noofrecipe", "8");
+                                            wafer10cmdinsertdatalog.Parameters.AddWithValue("@1", lbl123.Text);
+                                            wafer10cmdinsertdatalog.Parameters.AddWithValue("@2", form2Msg);
+                                            wafer10cmdinsertdatalog.Parameters.AddWithValue("@3", StartTime);
 
-                                              cmdmodulerecipe.ExecuteNonQuery();
+                                            wafer10cmdinsertdatalog.ExecuteNonQuery();
 
-                                              con7.Close();
-                                              ///////////////////////////////////////////////////////get parameter value
+                                            con9.Close();
+                                        }
+                                        //////////////////////////////////////////////////////////////////////////finish waferA10
 
-                                              con7.Open();
 
-                                              string strSQL3 = "select * from newrecipe where stepname = @Newstepname and recipename = @Newrecipename";
 
-                                              SqlCommand cmd3 = new SqlCommand(strSQL3, con7);
-                                              cmd3.Parameters.AddWithValue("@Newstepname", lblStepName.Text);
-                                              cmd3.Parameters.AddWithValue("@Newrecipename", lblRecipe.Text);
-                                              SqlDataReader reader2 = cmd3.ExecuteReader();
 
-                                              while (reader2.Read())
-                                              {
-                                                  CI2 = reader2["CI2"].ToString();
-                                                  BCI3 = reader2["BCI3"].ToString();
-                                                  SF6 = reader2["SF6"].ToString();
-                                                  CHF3 = reader2["CHF3"].ToString();
-                                                  Oxygen = reader2["Oxygen"].ToString();
-                                                  Oxygen1 = reader2["Oxygen1"].ToString();
-                                                  Nitrogen = reader2["Nitrogen"].ToString();
-                                                  Argon = reader2["Argon"].ToString();
+                                    }
 
 
 
-                                              }
 
-                                              con7.Close();
 
 
-                                              ////////////////////////////////////////////////
-                                              con7.Open();
-                                              Chamber1 chamber1 = new Chamber1();
+                                }
 
-                                              string wafer8strParameter = "insert into valueselection(parameter,Minimum,Maximum,Average,Units,recipename,stepname) values(@11,@21,@31,@41,@51,@61,@71),(@12,@22,@32,@42,@52,@62,@72),(@13,@23,@33,@43,@53,@63,@73)"
-                                                  + ",(@14,@24,@34,@44,@54,@64,@74),(@15,@25,@35,@45,@55,@65,@75),(@16,@26,@36,@46,@56,@66,@76),(@17,@27,@37,@47,@57,@67,@77),(@18,@28,@38,@48,@58,@68,@78)";
-                                              SqlCommand wafer2cmdparameter = new SqlCommand(wafer8strParameter, con7);
-                                              wafer2cmdparameter.Parameters.AddWithValue("@11", "CI2");
-                                              wafer2cmdparameter.Parameters.AddWithValue("@12", "BCI3");
-                                              wafer2cmdparameter.Parameters.AddWithValue("@13", "SF6");
-                                              wafer2cmdparameter.Parameters.AddWithValue("@14", "CHF3");
-                                              wafer2cmdparameter.Parameters.AddWithValue("@15", "Oxygen");
-                                              wafer2cmdparameter.Parameters.AddWithValue("@16", "Oxygen");
-                                              wafer2cmdparameter.Parameters.AddWithValue("@17", "Nitrogen");
-                                              wafer2cmdparameter.Parameters.AddWithValue("@18", "Argon");
-                                              wafer2cmdparameter.Parameters.AddWithValue("@21", CI2);
-                                              wafer2cmdparameter.Parameters.AddWithValue("@22", BCI3);
-                                              wafer2cmdparameter.Parameters.AddWithValue("@23", SF6);
-                                              wafer2cmdparameter.Parameters.AddWithValue("@24", CHF3);
-                                              wafer2cmdparameter.Parameters.AddWithValue("@25", Oxygen);
-                                              wafer2cmdparameter.Parameters.AddWithValue("@26", Oxygen1);
-                                              wafer2cmdparameter.Parameters.AddWithValue("@27", Nitrogen);
-                                              wafer2cmdparameter.Parameters.AddWithValue("@28", Argon);
-                                              wafer2cmdparameter.Parameters.AddWithValue("@31", CI2);
-                                              wafer2cmdparameter.Parameters.AddWithValue("@32", BCI3);
-                                              wafer2cmdparameter.Parameters.AddWithValue("@33", SF6);
-                                              wafer2cmdparameter.Parameters.AddWithValue("@34", CHF3);
-                                              wafer2cmdparameter.Parameters.AddWithValue("@35", Oxygen);
-                                              wafer2cmdparameter.Parameters.AddWithValue("@36", Oxygen1);
-                                              wafer2cmdparameter.Parameters.AddWithValue("@37", Nitrogen);
-                                              wafer2cmdparameter.Parameters.AddWithValue("@38", Argon);
-                                              wafer2cmdparameter.Parameters.AddWithValue("@41", CI2);
-                                              wafer2cmdparameter.Parameters.AddWithValue("@42", BCI3);
-                                              wafer2cmdparameter.Parameters.AddWithValue("@43", SF6);
-                                              wafer2cmdparameter.Parameters.AddWithValue("@44", CHF3);
-                                              wafer2cmdparameter.Parameters.AddWithValue("@45", Oxygen);
-                                              wafer2cmdparameter.Parameters.AddWithValue("@46", Oxygen1);
-                                              wafer2cmdparameter.Parameters.AddWithValue("@47", Nitrogen);
-                                              wafer2cmdparameter.Parameters.AddWithValue("@48", Argon);
-                                              wafer2cmdparameter.Parameters.AddWithValue("@51", "sccm");
-                                              wafer2cmdparameter.Parameters.AddWithValue("@52", "sccm");
-                                              wafer2cmdparameter.Parameters.AddWithValue("@53", "sccm");
-                                              wafer2cmdparameter.Parameters.AddWithValue("@54", "sccm");
-                                              wafer2cmdparameter.Parameters.AddWithValue("@55", "sccm");
-                                              wafer2cmdparameter.Parameters.AddWithValue("@56", "sccm");
-                                              wafer2cmdparameter.Parameters.AddWithValue("@57", "sccm");
-                                              wafer2cmdparameter.Parameters.AddWithValue("@58", "sccm");
-                                              wafer2cmdparameter.Parameters.AddWithValue("@61", lblRecipe.Text);
-                                              wafer2cmdparameter.Parameters.AddWithValue("@62", lblRecipe.Text);
-                                              wafer2cmdparameter.Parameters.AddWithValue("@63", lblRecipe.Text);
-                                              wafer2cmdparameter.Parameters.AddWithValue("@64", lblRecipe.Text);
-                                              wafer2cmdparameter.Parameters.AddWithValue("@65", lblRecipe.Text);
-                                              wafer2cmdparameter.Parameters.AddWithValue("@66", lblRecipe.Text);
-                                              wafer2cmdparameter.Parameters.AddWithValue("@67", lblRecipe.Text);
-                                              wafer2cmdparameter.Parameters.AddWithValue("@68", lblRecipe.Text);
-                                              wafer2cmdparameter.Parameters.AddWithValue("@71", strStepname1[a8]);
-                                              wafer2cmdparameter.Parameters.AddWithValue("@72", strStepname1[a8]);
-                                              wafer2cmdparameter.Parameters.AddWithValue("@73", strStepname1[a8]);
-                                              wafer2cmdparameter.Parameters.AddWithValue("@74", strStepname1[a8]);
-                                              wafer2cmdparameter.Parameters.AddWithValue("@75", strStepname1[a8]);
-                                              wafer2cmdparameter.Parameters.AddWithValue("@76", strStepname1[a8]);
-                                              wafer2cmdparameter.Parameters.AddWithValue("@77", strStepname1[a8]);
-                                              wafer2cmdparameter.Parameters.AddWithValue("@78", strStepname1[a8]);
 
 
-                                              wafer2cmdparameter.ExecuteNonQuery();
-                                              con7.Close();
 
 
 
@@ -6249,948 +7535,88 @@ namespace SimulatorApplication
 
 
 
-                                          }
+                                ////////////////////////////////////////////////////////////////////////////////////////////////////start WaferA1
 
+                                ////////////////////////////////////////////////////////////////////////////////////////////////finish waferA1
+                                /////////////////////////////////////////////////////////////////////////////////////////////////start waferA2
 
-                                          strStepname1.Clear();
-                                          ListStepStartTime.Clear();
-                                          ListStepEndTime.Clear();
 
-                                          /////////////////////////////////////////////////////////////////
+                                //////////////////////////////////////////////////////////////////////////////A2 finish
 
-                                          await Task.Delay(2000);
+                                //////////////////////////////////////////////////////////////////////////////start A3
 
-                                          label2.BackColor = Color.Blue;
-                                          lblProcess.BackColor = Color.Blue;
-                                          lblProcessStep.BackColor = Color.Blue;
-                                          lblRecipe.BackColor = Color.Blue;
-                                          lblStepName.BackColor = Color.Blue;
-                                          lblData.BackColor = Color.Blue;
-                                          lblnum.BackColor = Color.Blue;
 
-                                          lblProcess.Text = "Aborted";
-                                          lblProcessStep.Text = "";
-                                          lblRecipe.Text = "";
-                                          lblStepName.Text = "";
-                                          lblnum.Text = "";
-                                          lblData.Text = "???????????";
+                                /////////////////////////////////////////////////////////////////////////////////////////waferA3 finish 
 
+                                ////////////////////////////////////////////////////////////////////////////////////////start waferA4
 
-                                          picChamber.Image = Properties.Resources.new_chamber1;
-                                          lblChamber.BackColor = Color.Blue;
-                                          chamberload = "Blue";
-                                          picChamber.Width -= 100;
-                                          picChamber.Left += 150;
-                                          await Task.Delay(2000);
-                                          picChamber.Image = Properties.Resources.new_chamber;
 
 
 
 
 
-                                          await Task.Delay(2000);
 
-                                          await Task.Delay(2000);
 
-                                          await Task.Delay(2000);
-                                          picCassette.Image = Properties.Resources.cassette1;
-                                          await Task.Delay(2000);
+                                ///////////////////////////////////////////////////////////////////////////////////////////waferA4 finish
 
-                                          lblCassette.BackColor = Color.LimeGreen;
+                                ////////////////////////////////////////////////////////////////////////////////////////////////start waferA5
 
-                                          picCassette.Image = Properties.Resources.robot_into_cassetteA1;
-                                          picCassette.Height += 150;
-                                          picCassette.Top -= 150;
-                                          await Task.Delay(2000);
-                                          lblCassette.BackColor = Color.Blue;
 
-                                          picCassette.Image = Properties.Resources.cassette1;
-                                          picCassette.Height -= 150;
-                                          picCassette.Top += 150;
-                                          await Task.Delay(2000);
-                                          picCassette.Image = Properties.Resources.cassette;
-                                          picwafer.Image = Properties.Resources.waferfull;
 
-                                          //////////////////////////////////////////////////////////////////Save DataLog
-                                          EndTime = DateTime.Now;
-                                          con7.Close();
-                                          if (int.Parse(NoOfwafer[i]) == 8)
-                                          {
-                                              con7.Open();
 
-                                              string wafer2strinsertdatalog = "insert into DataLogger(logname,cassetterecipename,starttime) values(@1,@2,@3) ";
-                                              SqlCommand wafer2cmdinsertdatalog = new SqlCommand(wafer2strinsertdatalog, con7);
+                                ///////////////////////////////////////////////////////////////////////////////////////////////////////waferA5 finish
 
-                                              wafer2cmdinsertdatalog.Parameters.AddWithValue("@1", lbl123.Text);
-                                              wafer2cmdinsertdatalog.Parameters.AddWithValue("@2", form2Msg);
-                                              wafer2cmdinsertdatalog.Parameters.AddWithValue("@3", StartTime);
+                                ////////////////////////////////////////////////////////////////////////////////////////////////////////////start waferA6
 
-                                              wafer2cmdinsertdatalog.ExecuteNonQuery();
 
-                                              con7.Close();
 
 
 
-                                          }
+                                //////////////////////////////////////////////////////////////////////////////////////////////////////////////waferA6 finish
 
+                                //////////////////////////////////////////////////////////////////////////////////////////////////////////////start waferA7
 
 
-                                          //////////////////////////////////////////////////////////////////////////finish waferA8
 
-                                      }
-                                      if (int.Parse(NoOfwafer[i]) >= 9)
-                                      {
 
-                                          //////////////////////////////////////////////////////////////////////////start waferA9
-                                          await Task.Delay(2000);
 
-                                          picCassette.Image = Properties.Resources.cassette1;
-                                          await Task.Delay(2000);
-                                          Wafer9StartTime = DateTime.Now;
-                                          scsb = new SqlConnectionStringBuilder();
-                                          scsb.DataSource = @"HP-PC\SQLEXPRESS";
-                                          scsb.InitialCatalog = "RecipeType";
-                                          scsb.IntegratedSecurity = true;
-                                          SqlConnection con8 = new SqlConnection(scsb.ToString());
-                                          con8.Open();
 
-                                          string wafer9strWaferSelection = "insert into WaferSelection(NoOfWafers,StartTime,CassetteRecipeName) values(@NoOfWafer,@StartTime,@CassetteRecipeName)";
-                                          SqlCommand wafer9cmdwaferselection = new SqlCommand(wafer9strWaferSelection, con8);
-                                          wafer9cmdwaferselection.Parameters.AddWithValue("@NoOfWafer", "9");
-                                          wafer9cmdwaferselection.Parameters.AddWithValue("@StartTime", Wafer9StartTime);
-                                          wafer9cmdwaferselection.Parameters.AddWithValue("@CassetteRecipeName", form2Msg);
-                                          wafer9cmdwaferselection.ExecuteNonQuery();
 
-                                          con8.Close();
+                                ///////////////////////////////////////////////////////////////////////////////////////////////////////////////waferA7 finisg
 
+                                ///////////////////////////////////////////////////////////////////////////////////////////////////////////////start waferA8
 
 
 
-                                          // lblCassette.BackColor = Color.LimeGreen;
 
-                                          lblCassette.BackColor = Color.LimeGreen;
-                                          picCassette.Image = Properties.Resources.robot_into_cassetteA1;
-                                          picCassette.Height += 150;
-                                          picCassette.Top -= 150;
-                                          await Task.Delay(2000);
-                                          picwafer.Image = Properties.Resources.waferA9;
-                                          await Task.Delay(2000);
-                                          // WaferTime = DateTime.Now;
-                                          lblCassette.BackColor = Color.Blue;
 
-                                          picCassette.Image = Properties.Resources.cassette1;
-                                          picCassette.Height -= 150;
-                                          picCassette.Top += 150;
-                                          await Task.Delay(2000);
-                                          picCassette.Image = Properties.Resources.cassette;
-                                          await Task.Delay(2000);
 
-                                          await Task.Delay(2000);
 
-                                          await Task.Delay(2000);
 
-                                          lblCentralize.BackColor = Color.LimeGreen;
 
 
-                                          //picCentralize.Height -= 100;
 
 
-                                          await Task.Delay(2000);
+                                ///////////////////////////////////////////////////////////////////////////////////////////////////////////////waferA8 finish
 
-                                          picChamber.Image = Properties.Resources.new_chamber1;
+                                ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////start waferA9
 
-                                          await Task.Delay(2000);
 
 
-                                          picChamber.Image = Properties.Resources.robot_into_chamberA9;
-                                          picChamber.Width += 100;
-                                          picChamber.Left -= 150;
-                                          lblChamber.BackColor = Color.LimeGreen;
 
-                                          chamberload = "LimeGreen";
-                                          //////////////////////////////////////////////////////////////////////////////////waferA9 into chamber
-                                          WaferTime = DateTime.Now;
-                                          lblRecipe.BackColor = Color.LimeGreen;
-                                          lblStepName.BackColor = Color.LimeGreen;
-                                          lblnum.BackColor = Color.LimeGreen;
-                                          lblData.BackColor = Color.LimeGreen;
-                                          lblData.Text = "";
-                                          label2.BackColor = Color.LimeGreen;
-                                          lblProcess.Text = "Processing";
-                                          lblProcess.BackColor = Color.LimeGreen;
-                                          lblProcessStep.Text = "Process Step";
-                                          lblProcessStep.BackColor = Color.LimeGreen;
 
-                                          con8.Open();
-                                          string wafer9strSQL = "select WaferRecipe from CassetteWafer  where CassetterecipeName = @NewWaferRecipe";
 
-                                          SqlCommand wafer9cmd = new SqlCommand(wafer9strSQL, con8);
-                                          wafer9cmd.Parameters.AddWithValue("@NewWaferRecipe", Form1.form2Msg);
-                                          SqlDataReader wafer9reader = wafer9cmd.ExecuteReader();
-                                          while (wafer9reader.Read())
-                                          {
+                                ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////waferA9 finish
 
-                                              lblRecipe.Text = string.Format("{0}", wafer9reader["WaferRecipe"]);
 
+                                ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////start waferA10
 
 
-                                          }
 
-                                          con8.Close();
-                                          con8.Open();
-                                          string wafer9strSQL1 = "select stepname from newrecipe where recipename = @Myrecipename";
 
-                                          SqlCommand wafer9cmd1 = new SqlCommand(wafer9strSQL1, con8);
-                                          wafer9cmd1.Parameters.AddWithValue("@Myrecipename", lblRecipe.Text);
-                                          SqlDataReader wafer9reader1 = wafer9cmd1.ExecuteReader();
-                                          while (wafer9reader1.Read())
-                                          {
 
-                                              strStepname1.Add(string.Format("{0}", wafer9reader1["StepName"]));
-
-
-                                          }
-
-                                          con8.Close();
-                                          con8.Open();
-                                          string wafer9strSQL2 = "select StepName from newrecipe inner join CassetteWafer on newrecipe.recipename = cassettewafer.waferRecipe where cassettewafer.waferRecipe = @Newrecipename";
-                                          SqlCommand wafer9cmd2 = new SqlCommand(wafer9strSQL2, con8);
-                                          wafer9cmd2.Parameters.AddWithValue("@Newrecipename", lblRecipe.Text);
-                                          //SqlDataReader reader2 = cmd2.ExecuteReader();
-                                          wafer9cmd2.ExecuteNonQuery();
-
-                                          // while (reader2.Read())
-                                          // {
-                                          //strStepname.Add(string.Format("{0}", reader2["StepName"]));
-                                          // int row = strStepname.Count();
-                                          for (int a9 = 0; a9 < strStepname1.Count(); a9 += 1)
-                                          {
-                                              await Task.Delay(1000);
-                                              ListStepStartTime.Add(DateTime.Now);
-                                              int count = a9 + 1;
-                                              // await Task.Delay(2000);
-                                              lblStepName.Text = strStepname1[a9];
-                                              lblnum.Text = "," + count + "/" + strStepname1.Count();
-                                              // lblnum.Text = "," + count + "/" + strStepname.Count();
-                                              //  await Task.Delay(2000);
-
-                                              con8.Close();
-
-                                              con8.Open();
-                                              string wafer9strSQLStepSec = "select * from newrecipe where stepname = @NewSec";
-
-                                              SqlCommand wafer9cmdSec = new SqlCommand(wafer9strSQLStepSec, con8);
-                                              wafer9cmdSec.Parameters.AddWithValue("@NewSec", lblStepName.Text);
-
-                                              SqlDataReader wafer9readerSec = wafer9cmdSec.ExecuteReader();
-
-
-                                              while (wafer9readerSec.Read())
-                                              {
-                                                  mySec1 = wafer9readerSec["ProcessTime"].ToString();
-                                                  // lblSec.Text = string.Format("{0}", readerSec["ProcessPressure"]);
-                                                  Int32.TryParse(mySec1, out Sec1);
-
-                                              }
-
-                                              for (int j = 1; j <= Sec1; j++)
-                                              {
-                                                  lblData.Text = j.ToString() + "/" + mySec1.ToString() + " Sec";
-                                                  await Task.Delay(1000);
-
-
-                                              }
-                                              ListStepEndTime.Add(DateTime.Now);
-
-                                              con8.Close();
-
-
-                                              con8.Open();
-
-                                              string strModuleRecipe = "insert into ModuleRecipe(RecipeName,StepName,StartTime,EndTime,noofrecipe) values(@recipename,@stepname,@starttime,@endtime,@noofrecipe)";
-
-                                              SqlCommand cmdmodulerecipe = new SqlCommand(strModuleRecipe, con8);
-
-                                              cmdmodulerecipe.Parameters.AddWithValue("@recipename", lblRecipe.Text);
-                                              cmdmodulerecipe.Parameters.AddWithValue("@stepname", strStepname1[a9]);
-                                              cmdmodulerecipe.Parameters.AddWithValue("@starttime", ListStepStartTime[a9]);
-                                              cmdmodulerecipe.Parameters.AddWithValue("@endtime", ListStepEndTime[a9]);
-                                              cmdmodulerecipe.Parameters.AddWithValue("@noofrecipe", "9");
-
-                                              cmdmodulerecipe.ExecuteNonQuery();
-
-                                              con8.Close();
-                                              ///////////////////////////////////////////////////////get parameter value
-
-                                              con8.Open();
-
-                                              string strSQL3 = "select * from newrecipe where stepname = @Newstepname and recipename = @Newrecipename";
-
-                                              SqlCommand cmd3 = new SqlCommand(strSQL3, con8);
-                                              cmd3.Parameters.AddWithValue("@Newstepname", lblStepName.Text);
-                                              cmd3.Parameters.AddWithValue("@Newrecipename", lblRecipe.Text);
-                                              SqlDataReader reader2 = cmd3.ExecuteReader();
-
-                                              while (reader2.Read())
-                                              {
-                                                  CI2 = reader2["CI2"].ToString();
-                                                  BCI3 = reader2["BCI3"].ToString();
-                                                  SF6 = reader2["SF6"].ToString();
-                                                  CHF3 = reader2["CHF3"].ToString();
-                                                  Oxygen = reader2["Oxygen"].ToString();
-                                                  Oxygen1 = reader2["Oxygen1"].ToString();
-                                                  Nitrogen = reader2["Nitrogen"].ToString();
-                                                  Argon = reader2["Argon"].ToString();
-
-
-
-                                              }
-
-                                              con8.Close();
-
-
-                                              ////////////////////////////////////////////////
-                                              con8.Open();
-                                              Chamber1 chamber1 = new Chamber1();
-
-                                              string wafer9strParameter = "insert into valueselection(parameter,Minimum,Maximum,Average,Units,recipename,stepname) values(@11,@21,@31,@41,@51,@61,@71),(@12,@22,@32,@42,@52,@62,@72),(@13,@23,@33,@43,@53,@63,@73)"
-                                                  + ",(@14,@24,@34,@44,@54,@64,@74),(@15,@25,@35,@45,@55,@65,@75),(@16,@26,@36,@46,@56,@66,@76),(@17,@27,@37,@47,@57,@67,@77),(@18,@28,@38,@48,@58,@68,@78)";
-                                              SqlCommand wafer2cmdparameter = new SqlCommand(wafer9strParameter, con8);
-                                              wafer2cmdparameter.Parameters.AddWithValue("@11", "CI2");
-                                              wafer2cmdparameter.Parameters.AddWithValue("@12", "BCI3");
-                                              wafer2cmdparameter.Parameters.AddWithValue("@13", "SF6");
-                                              wafer2cmdparameter.Parameters.AddWithValue("@14", "CHF3");
-                                              wafer2cmdparameter.Parameters.AddWithValue("@15", "Oxygen");
-                                              wafer2cmdparameter.Parameters.AddWithValue("@16", "Oxygen");
-                                              wafer2cmdparameter.Parameters.AddWithValue("@17", "Nitrogen");
-                                              wafer2cmdparameter.Parameters.AddWithValue("@18", "Argon");
-                                              wafer2cmdparameter.Parameters.AddWithValue("@21", CI2);
-                                              wafer2cmdparameter.Parameters.AddWithValue("@22", BCI3);
-                                              wafer2cmdparameter.Parameters.AddWithValue("@23", SF6);
-                                              wafer2cmdparameter.Parameters.AddWithValue("@24", CHF3);
-                                              wafer2cmdparameter.Parameters.AddWithValue("@25", Oxygen);
-                                              wafer2cmdparameter.Parameters.AddWithValue("@26", Oxygen1);
-                                              wafer2cmdparameter.Parameters.AddWithValue("@27", Nitrogen);
-                                              wafer2cmdparameter.Parameters.AddWithValue("@28", Argon);
-                                              wafer2cmdparameter.Parameters.AddWithValue("@31", CI2);
-                                              wafer2cmdparameter.Parameters.AddWithValue("@32", BCI3);
-                                              wafer2cmdparameter.Parameters.AddWithValue("@33", SF6);
-                                              wafer2cmdparameter.Parameters.AddWithValue("@34", CHF3);
-                                              wafer2cmdparameter.Parameters.AddWithValue("@35", Oxygen);
-                                              wafer2cmdparameter.Parameters.AddWithValue("@36", Oxygen1);
-                                              wafer2cmdparameter.Parameters.AddWithValue("@37", Nitrogen);
-                                              wafer2cmdparameter.Parameters.AddWithValue("@38", Argon);
-                                              wafer2cmdparameter.Parameters.AddWithValue("@41", CI2);
-                                              wafer2cmdparameter.Parameters.AddWithValue("@42", BCI3);
-                                              wafer2cmdparameter.Parameters.AddWithValue("@43", SF6);
-                                              wafer2cmdparameter.Parameters.AddWithValue("@44", CHF3);
-                                              wafer2cmdparameter.Parameters.AddWithValue("@45", Oxygen);
-                                              wafer2cmdparameter.Parameters.AddWithValue("@46", Oxygen1);
-                                              wafer2cmdparameter.Parameters.AddWithValue("@47", Nitrogen);
-                                              wafer2cmdparameter.Parameters.AddWithValue("@48", Argon);
-                                              wafer2cmdparameter.Parameters.AddWithValue("@51", "sccm");
-                                              wafer2cmdparameter.Parameters.AddWithValue("@52", "sccm");
-                                              wafer2cmdparameter.Parameters.AddWithValue("@53", "sccm");
-                                              wafer2cmdparameter.Parameters.AddWithValue("@54", "sccm");
-                                              wafer2cmdparameter.Parameters.AddWithValue("@55", "sccm");
-                                              wafer2cmdparameter.Parameters.AddWithValue("@56", "sccm");
-                                              wafer2cmdparameter.Parameters.AddWithValue("@57", "sccm");
-                                              wafer2cmdparameter.Parameters.AddWithValue("@58", "sccm");
-                                              wafer2cmdparameter.Parameters.AddWithValue("@61", lblRecipe.Text);
-                                              wafer2cmdparameter.Parameters.AddWithValue("@62", lblRecipe.Text);
-                                              wafer2cmdparameter.Parameters.AddWithValue("@63", lblRecipe.Text);
-                                              wafer2cmdparameter.Parameters.AddWithValue("@64", lblRecipe.Text);
-                                              wafer2cmdparameter.Parameters.AddWithValue("@65", lblRecipe.Text);
-                                              wafer2cmdparameter.Parameters.AddWithValue("@66", lblRecipe.Text);
-                                              wafer2cmdparameter.Parameters.AddWithValue("@67", lblRecipe.Text);
-                                              wafer2cmdparameter.Parameters.AddWithValue("@68", lblRecipe.Text);
-                                              wafer2cmdparameter.Parameters.AddWithValue("@71", strStepname1[a9]);
-                                              wafer2cmdparameter.Parameters.AddWithValue("@72", strStepname1[a9]);
-                                              wafer2cmdparameter.Parameters.AddWithValue("@73", strStepname1[a9]);
-                                              wafer2cmdparameter.Parameters.AddWithValue("@74", strStepname1[a9]);
-                                              wafer2cmdparameter.Parameters.AddWithValue("@75", strStepname1[a9]);
-                                              wafer2cmdparameter.Parameters.AddWithValue("@76", strStepname1[a9]);
-                                              wafer2cmdparameter.Parameters.AddWithValue("@77", strStepname1[a9]);
-                                              wafer2cmdparameter.Parameters.AddWithValue("@78", strStepname1[a9]);
-
-
-                                              wafer2cmdparameter.ExecuteNonQuery();
-                                              con8.Close();
-
-
-
-
-
-
-
-
-                                          }
-
-
-                                          strStepname1.Clear();
-                                          ListStepStartTime.Clear();
-                                          ListStepEndTime.Clear();
-
-                                          /////////////////////////////////////////////////////////////////
-
-                                          await Task.Delay(2000);
-
-                                          label2.BackColor = Color.Blue;
-                                          lblProcess.BackColor = Color.Blue;
-                                          lblProcessStep.BackColor = Color.Blue;
-                                          lblRecipe.BackColor = Color.Blue;
-                                          lblStepName.BackColor = Color.Blue;
-                                          lblData.BackColor = Color.Blue;
-                                          lblnum.BackColor = Color.Blue;
-
-                                          lblProcess.Text = "Aborted";
-                                          lblProcessStep.Text = "";
-                                          lblRecipe.Text = "";
-                                          lblStepName.Text = "";
-                                          lblnum.Text = "";
-                                          lblData.Text = "???????????";
-
-
-
-                                          picChamber.Image = Properties.Resources.new_chamber1;
-                                          lblChamber.BackColor = Color.Blue;
-                                          chamberload = "Blue";
-                                          picChamber.Width -= 100;
-                                          picChamber.Left += 150;
-                                          await Task.Delay(2000);
-                                          picChamber.Image = Properties.Resources.new_chamber;
-
-
-
-
-
-                                          await Task.Delay(2000);
-
-
-                                          await Task.Delay(2000);
-
-                                          await Task.Delay(2000);
-                                          picCassette.Image = Properties.Resources.cassette1;
-                                          await Task.Delay(2000);
-
-                                          lblCassette.BackColor = Color.LimeGreen;
-
-                                          picCassette.Image = Properties.Resources.robot_into_cassetteA1;
-                                          picCassette.Height += 150;
-                                          picCassette.Top -= 150;
-                                          await Task.Delay(2000);
-                                          lblCassette.BackColor = Color.Blue;
-
-                                          picCassette.Image = Properties.Resources.cassette1;
-                                          picCassette.Height -= 150;
-                                          picCassette.Top += 150;
-                                          await Task.Delay(2000);
-                                          picCassette.Image = Properties.Resources.cassette;
-                                          picwafer.Image = Properties.Resources.waferfull;
-
-                                          //////////////////////////////////////////////////////////////////Save DataLog
-                                          EndTime = DateTime.Now;
-                                          con8.Close();
-                                          if (int.Parse(NoOfwafer[i]) == 9)
-                                          {
-                                              con8.Open();
-
-                                              string wafer2strinsertdatalog = "insert into DataLogger(logname,cassetterecipename,starttime) values(@1,@2,@3) ";
-                                              SqlCommand wafer2cmdinsertdatalog = new SqlCommand(wafer2strinsertdatalog, con8);
-
-                                              wafer2cmdinsertdatalog.Parameters.AddWithValue("@1", lbl123.Text);
-                                              wafer2cmdinsertdatalog.Parameters.AddWithValue("@2", form2Msg);
-                                              wafer2cmdinsertdatalog.Parameters.AddWithValue("@3", StartTime);
-
-                                              wafer2cmdinsertdatalog.ExecuteNonQuery();
-
-                                              con8.Close();
-
-                                          }
-
-                                          //////////////////////////////////////////////////////////////////////////finish waferA9
-
-                                      }
-                                      if (int.Parse(NoOfwafer[i]) >= 10)
-                                      {
-
-                                          //////////////////////////////////////////////////////////////////////////start waferA10
-
-
-                                          await Task.Delay(2000);
-
-                                          picCassette.Image = Properties.Resources.cassette1;
-                                          await Task.Delay(2000);
-                                          Wafer10StartTime = DateTime.Now;
-                                          scsb = new SqlConnectionStringBuilder();
-                                          scsb.DataSource = @"HP-PC\SQLEXPRESS";
-                                          scsb.InitialCatalog = "RecipeType";
-                                          scsb.IntegratedSecurity = true;
-                                          SqlConnection con9 = new SqlConnection(scsb.ToString());
-                                          con9.Open();
-
-                                          string wafer10strWaferSelection = "insert into WaferSelection(NoOfWafers,StartTime,CassetteRecipeName) values(@NoOfWafer,@StartTime,@CassetteRecipeName)";
-                                          SqlCommand wafer10cmdwaferselection = new SqlCommand(wafer10strWaferSelection, con9);
-                                          wafer10cmdwaferselection.Parameters.AddWithValue("@NoOfWafer", "10");
-                                          wafer10cmdwaferselection.Parameters.AddWithValue("@StartTime", Wafer10StartTime);
-                                          wafer10cmdwaferselection.Parameters.AddWithValue("@CassetteRecipeName", form2Msg);
-                                          wafer10cmdwaferselection.ExecuteNonQuery();
-
-                                          con9.Close();
-
-
-
-
-                                          // lblCassette.BackColor = Color.LimeGreen;
-
-                                          lblCassette.BackColor = Color.LimeGreen;
-                                          picCassette.Image = Properties.Resources.robot_into_cassetteA1;
-                                          picCassette.Height += 150;
-                                          picCassette.Top -= 150;
-                                          await Task.Delay(2000);
-                                          picwafer.Image = Properties.Resources.waferA10;
-                                          await Task.Delay(2000);
-                                          // WaferTime = DateTime.Now;
-                                          lblCassette.BackColor = Color.Blue;
-
-
-                                          picCassette.Image = Properties.Resources.cassette1;
-                                          picCassette.Height -= 150;
-                                          picCassette.Top += 150;
-                                          await Task.Delay(2000);
-                                          picCassette.Image = Properties.Resources.cassette;
-                                          await Task.Delay(2000);
-
-
-                                          await Task.Delay(2000);
-
-                                          lblCentralize.BackColor = Color.LimeGreen;
-
-
-                                          await Task.Delay(2000);
-
-                                          lblCentralize.BackColor = Color.Blue;
-
-                                          //picCentralize.Height -= 100;
-
-
-
-                                          await Task.Delay(2000);
-
-                                          picChamber.Image = Properties.Resources.new_chamber1;
-
-                                          await Task.Delay(2000);
-
-                                          picChamber.Image = Properties.Resources.robot_into_chamberA10;
-                                          picChamber.Width += 100;
-                                          picChamber.Left -= 150;
-                                          lblChamber.BackColor = Color.LimeGreen;
-
-                                          chamberload = "LimeGreen";
-                                          //////////////////////////////////////////////////////////////////////////////////waferA10 into chamber
-                                          WaferTime = DateTime.Now;
-                                          lblRecipe.BackColor = Color.LimeGreen;
-                                          lblStepName.BackColor = Color.LimeGreen;
-                                          lblnum.BackColor = Color.LimeGreen;
-                                          lblData.BackColor = Color.LimeGreen;
-                                          lblData.Text = "";
-                                          label2.BackColor = Color.LimeGreen;
-                                          lblProcess.Text = "Processing";
-                                          lblProcess.BackColor = Color.LimeGreen;
-                                          lblProcessStep.Text = "Process Step";
-                                          lblProcessStep.BackColor = Color.LimeGreen;
-
-                                          con9.Open();
-                                          string wafer10strSQL = "select WaferRecipe from CassetteWafer  where CassetterecipeName = @NewWaferRecipe";
-
-                                          SqlCommand wafer10cmd = new SqlCommand(wafer10strSQL, con9);
-                                          wafer10cmd.Parameters.AddWithValue("@NewWaferRecipe", Form1.form2Msg);
-                                          SqlDataReader wafer10reader = wafer10cmd.ExecuteReader();
-                                          while (wafer10reader.Read())
-                                          {
-
-                                              lblRecipe.Text = string.Format("{0}", wafer10reader["WaferRecipe"]);
-
-
-
-                                          }
-
-                                          con9.Close();
-                                          con9.Open();
-                                          string wafer10strSQL1 = "select stepname from newrecipe where recipename = @Myrecipename";
-
-                                          SqlCommand wafer10cmd1 = new SqlCommand(wafer10strSQL1, con9);
-                                          wafer10cmd1.Parameters.AddWithValue("@Myrecipename", lblRecipe.Text);
-                                          SqlDataReader wafer10reader1 = wafer10cmd1.ExecuteReader();
-                                          while (wafer10reader1.Read())
-                                          {
-
-                                              strStepname1.Add(string.Format("{0}", wafer10reader1["StepName"]));
-
-
-                                          }
-
-                                          con9.Close();
-                                          con9.Open();
-                                          string wafer10strSQL2 = "select StepName from newrecipe inner join CassetteWafer on newrecipe.recipename = cassettewafer.waferRecipe where cassettewafer.waferRecipe = @Newrecipename";
-                                          SqlCommand wafer10cmd2 = new SqlCommand(wafer10strSQL2, con9);
-                                          wafer10cmd2.Parameters.AddWithValue("@Newrecipename", lblRecipe.Text);
-                                          //SqlDataReader reader2 = cmd2.ExecuteReader();
-                                          wafer10cmd2.ExecuteNonQuery();
-
-                                          // while (reader2.Read())
-                                          // {
-                                          //strStepname.Add(string.Format("{0}", reader2["StepName"]));
-                                          // int row = strStepname.Count();
-                                          for (int a10 = 0; a10 < strStepname1.Count(); a10 += 1)
-                                          {
-                                              await Task.Delay(1000);
-                                              ListStepStartTime.Add(DateTime.Now);
-                                              int count = a10 + 1;
-                                              // await Task.Delay(2000);
-                                              lblStepName.Text = strStepname1[a10];
-                                              lblnum.Text = "," + count + "/" + strStepname1.Count();
-                                              // lblnum.Text = "," + count + "/" + strStepname.Count();
-                                              //  await Task.Delay(2000);
-
-                                              con9.Close();
-
-                                              con9.Open();
-                                              string wafer10strSQLStepSec = "select * from newrecipe where stepname = @NewSec";
-
-                                              SqlCommand wafer10cmdSec = new SqlCommand(wafer10strSQLStepSec, con9);
-                                              wafer10cmdSec.Parameters.AddWithValue("@NewSec", lblStepName.Text);
-
-                                              SqlDataReader wafer10readerSec = wafer10cmdSec.ExecuteReader();
-
-
-                                              while (wafer10readerSec.Read())
-                                              {
-                                                  mySec1 = wafer10readerSec["ProcessTime"].ToString();
-                                                  // lblSec.Text = string.Format("{0}", readerSec["ProcessPressure"]);
-                                                  Int32.TryParse(mySec1, out Sec1);
-
-                                              }
-
-                                              for (int j = 1; j <= Sec1; j++)
-                                              {
-                                                  lblData.Text = j.ToString() + "/" + mySec1.ToString() + " Sec";
-                                                  await Task.Delay(1000);
-
-
-                                              }
-                                              ListStepEndTime.Add(DateTime.Now);
-
-                                              con9.Close();
-
-
-                                              con9.Open();
-
-                                              string strModuleRecipe = "insert into ModuleRecipe(RecipeName,StepName,StartTime,EndTime,noofrecipe) values(@recipename,@stepname,@starttime,@endtime,@noofrecipe)";
-
-                                              SqlCommand cmdmodulerecipe = new SqlCommand(strModuleRecipe, con9);
-
-                                              cmdmodulerecipe.Parameters.AddWithValue("@recipename", lblRecipe.Text);
-                                              cmdmodulerecipe.Parameters.AddWithValue("@stepname", strStepname1[a10]);
-                                              cmdmodulerecipe.Parameters.AddWithValue("@starttime", ListStepStartTime[a10]);
-                                              cmdmodulerecipe.Parameters.AddWithValue("@endtime", ListStepEndTime[a10]);
-                                              cmdmodulerecipe.Parameters.AddWithValue("@noofrecipe", "10");
-
-                                              cmdmodulerecipe.ExecuteNonQuery();
-
-                                              con9.Close();
-                                              ///////////////////////////////////////////////////////get parameter value
-
-                                              con9.Open();
-
-                                              string strSQL3 = "select * from newrecipe where stepname = @Newstepname and recipename = @Newrecipename";
-
-                                              SqlCommand cmd3 = new SqlCommand(strSQL3, con9);
-                                              cmd3.Parameters.AddWithValue("@Newstepname", lblStepName.Text);
-                                              cmd3.Parameters.AddWithValue("@Newrecipename", lblRecipe.Text);
-                                              SqlDataReader reader2 = cmd3.ExecuteReader();
-
-                                              while (reader2.Read())
-                                              {
-                                                  CI2 = reader2["CI2"].ToString();
-                                                  BCI3 = reader2["BCI3"].ToString();
-                                                  SF6 = reader2["SF6"].ToString();
-                                                  CHF3 = reader2["CHF3"].ToString();
-                                                  Oxygen = reader2["Oxygen"].ToString();
-                                                  Oxygen1 = reader2["Oxygen1"].ToString();
-                                                  Nitrogen = reader2["Nitrogen"].ToString();
-                                                  Argon = reader2["Argon"].ToString();
-
-
-
-                                              }
-
-                                              con9.Close();
-
-
-                                              ////////////////////////////////////////////////
-                                              con9.Open();
-                                              Chamber1 chamber1 = new Chamber1();
-
-                                              string wafer10strParameter = "insert into valueselection(parameter,Minimum,Maximum,Average,Units,recipename,stepname) values(@11,@21,@31,@41,@51,@61,@71),(@12,@22,@32,@42,@52,@62,@72),(@13,@23,@33,@43,@53,@63,@73)"
-                                                  + ",(@14,@24,@34,@44,@54,@64,@74),(@15,@25,@35,@45,@55,@65,@75),(@16,@26,@36,@46,@56,@66,@76),(@17,@27,@37,@47,@57,@67,@77),(@18,@28,@38,@48,@58,@68,@78)";
-                                              SqlCommand wafer2cmdparameter = new SqlCommand(wafer10strParameter, con9);
-                                              wafer2cmdparameter.Parameters.AddWithValue("@11", "CI2");
-                                              wafer2cmdparameter.Parameters.AddWithValue("@12", "BCI3");
-                                              wafer2cmdparameter.Parameters.AddWithValue("@13", "SF6");
-                                              wafer2cmdparameter.Parameters.AddWithValue("@14", "CHF3");
-                                              wafer2cmdparameter.Parameters.AddWithValue("@15", "Oxygen");
-                                              wafer2cmdparameter.Parameters.AddWithValue("@16", "Oxygen");
-                                              wafer2cmdparameter.Parameters.AddWithValue("@17", "Nitrogen");
-                                              wafer2cmdparameter.Parameters.AddWithValue("@18", "Argon");
-                                              wafer2cmdparameter.Parameters.AddWithValue("@21", CI2);
-                                              wafer2cmdparameter.Parameters.AddWithValue("@22", BCI3);
-                                              wafer2cmdparameter.Parameters.AddWithValue("@23", SF6);
-                                              wafer2cmdparameter.Parameters.AddWithValue("@24", CHF3);
-                                              wafer2cmdparameter.Parameters.AddWithValue("@25", Oxygen);
-                                              wafer2cmdparameter.Parameters.AddWithValue("@26", Oxygen1);
-                                              wafer2cmdparameter.Parameters.AddWithValue("@27", Nitrogen);
-                                              wafer2cmdparameter.Parameters.AddWithValue("@28", Argon);
-                                              wafer2cmdparameter.Parameters.AddWithValue("@31", CI2);
-                                              wafer2cmdparameter.Parameters.AddWithValue("@32", BCI3);
-                                              wafer2cmdparameter.Parameters.AddWithValue("@33", SF6);
-                                              wafer2cmdparameter.Parameters.AddWithValue("@34", CHF3);
-                                              wafer2cmdparameter.Parameters.AddWithValue("@35", Oxygen);
-                                              wafer2cmdparameter.Parameters.AddWithValue("@36", Oxygen1);
-                                              wafer2cmdparameter.Parameters.AddWithValue("@37", Nitrogen);
-                                              wafer2cmdparameter.Parameters.AddWithValue("@38", Argon);
-                                              wafer2cmdparameter.Parameters.AddWithValue("@41", CI2);
-                                              wafer2cmdparameter.Parameters.AddWithValue("@42", BCI3);
-                                              wafer2cmdparameter.Parameters.AddWithValue("@43", SF6);
-                                              wafer2cmdparameter.Parameters.AddWithValue("@44", CHF3);
-                                              wafer2cmdparameter.Parameters.AddWithValue("@45", Oxygen);
-                                              wafer2cmdparameter.Parameters.AddWithValue("@46", Oxygen1);
-                                              wafer2cmdparameter.Parameters.AddWithValue("@47", Nitrogen);
-                                              wafer2cmdparameter.Parameters.AddWithValue("@48", Argon);
-                                              wafer2cmdparameter.Parameters.AddWithValue("@51", "sccm");
-                                              wafer2cmdparameter.Parameters.AddWithValue("@52", "sccm");
-                                              wafer2cmdparameter.Parameters.AddWithValue("@53", "sccm");
-                                              wafer2cmdparameter.Parameters.AddWithValue("@54", "sccm");
-                                              wafer2cmdparameter.Parameters.AddWithValue("@55", "sccm");
-                                              wafer2cmdparameter.Parameters.AddWithValue("@56", "sccm");
-                                              wafer2cmdparameter.Parameters.AddWithValue("@57", "sccm");
-                                              wafer2cmdparameter.Parameters.AddWithValue("@58", "sccm");
-                                              wafer2cmdparameter.Parameters.AddWithValue("@61", lblRecipe.Text);
-                                              wafer2cmdparameter.Parameters.AddWithValue("@62", lblRecipe.Text);
-                                              wafer2cmdparameter.Parameters.AddWithValue("@63", lblRecipe.Text);
-                                              wafer2cmdparameter.Parameters.AddWithValue("@64", lblRecipe.Text);
-                                              wafer2cmdparameter.Parameters.AddWithValue("@65", lblRecipe.Text);
-                                              wafer2cmdparameter.Parameters.AddWithValue("@66", lblRecipe.Text);
-                                              wafer2cmdparameter.Parameters.AddWithValue("@67", lblRecipe.Text);
-                                              wafer2cmdparameter.Parameters.AddWithValue("@68", lblRecipe.Text);
-                                              wafer2cmdparameter.Parameters.AddWithValue("@71", strStepname1[a10]);
-                                              wafer2cmdparameter.Parameters.AddWithValue("@72", strStepname1[a10]);
-                                              wafer2cmdparameter.Parameters.AddWithValue("@73", strStepname1[a10]);
-                                              wafer2cmdparameter.Parameters.AddWithValue("@74", strStepname1[a10]);
-                                              wafer2cmdparameter.Parameters.AddWithValue("@75", strStepname1[a10]);
-                                              wafer2cmdparameter.Parameters.AddWithValue("@76", strStepname1[a10]);
-                                              wafer2cmdparameter.Parameters.AddWithValue("@77", strStepname1[a10]);
-                                              wafer2cmdparameter.Parameters.AddWithValue("@78", strStepname1[a10]);
-
-
-                                              wafer2cmdparameter.ExecuteNonQuery();
-                                              con9.Close();
-
-
-
-
-
-
-
-
-                                          }
-
-
-                                          strStepname1.Clear();
-                                          ListStepStartTime.Clear();
-                                          ListStepEndTime.Clear();
-
-                                          /////////////////////////////////////////////////////////////////
-
-                                          await Task.Delay(2000);
-
-                                          label2.BackColor = Color.Blue;
-                                          lblProcess.BackColor = Color.Blue;
-                                          lblProcessStep.BackColor = Color.Blue;
-                                          lblRecipe.BackColor = Color.Blue;
-                                          lblStepName.BackColor = Color.Blue;
-                                          lblData.BackColor = Color.Blue;
-                                          lblnum.BackColor = Color.Blue;
-
-                                          lblProcess.Text = "Aborted";
-                                          lblProcessStep.Text = "";
-                                          lblRecipe.Text = "";
-                                          lblStepName.Text = "";
-                                          lblnum.Text = "";
-                                          lblData.Text = "???????????";
-
-
-
-                                          picChamber.Image = Properties.Resources.new_chamber1;
-                                          lblChamber.BackColor = Color.Blue;
-                                          chamberload = "Blue";
-                                          picChamber.Width -= 100;
-                                          picChamber.Left += 150;
-                                          await Task.Delay(2000);
-                                          picChamber.Image = Properties.Resources.new_chamber;
-
-
-
-
-
-                                          await Task.Delay(2000);
-
-                                          await Task.Delay(2000);
-
-                                          await Task.Delay(2000);
-                                          picCassette.Image = Properties.Resources.cassette1;
-                                          await Task.Delay(2000);
-
-                                          lblCassette.BackColor = Color.LimeGreen;
-
-                                          picCassette.Image = Properties.Resources.robot_into_cassetteA1;
-                                          picCassette.Height += 150;
-                                          picCassette.Top -= 150;
-                                          await Task.Delay(2000);
-                                          lblCassette.BackColor = Color.Blue;
-
-                                          picCassette.Image = Properties.Resources.cassette1;
-                                          picCassette.Height -= 150;
-                                          picCassette.Top += 150;
-                                          await Task.Delay(2000);
-                                          picCassette.Image = Properties.Resources.cassette;
-                                          picwafer.Image = Properties.Resources.waferfull;
-
-                                          //////////////////////////////////////////////////////////////////Save DataLog
-                                          if (int.Parse(NoOfwafer[i]) == 10)
-                                          {
-                                              EndTime = DateTime.Now;
-                                              con9.Close();
-
-                                              con9.Open();
-
-                                              string wafer10strinsertdatalog = "insert into DataLogger(logname,cassetterecipename,starttime) values(@1,@2,@3) ";
-                                              SqlCommand wafer10cmdinsertdatalog = new SqlCommand(wafer10strinsertdatalog, con9);
-
-                                              wafer10cmdinsertdatalog.Parameters.AddWithValue("@1", lbl123.Text);
-                                              wafer10cmdinsertdatalog.Parameters.AddWithValue("@2", form2Msg);
-                                              wafer10cmdinsertdatalog.Parameters.AddWithValue("@3", StartTime);
-
-                                              wafer10cmdinsertdatalog.ExecuteNonQuery();
-
-                                              con9.Close();
-                                          }
-                                          //////////////////////////////////////////////////////////////////////////finish waferA10
-
-
-
-
-                                      }
-
-
-
-
-
-
-                                  }
-
-
-
-
-
-
-
-
-
-
-
-                                  ////////////////////////////////////////////////////////////////////////////////////////////////////start WaferA1
-
-                                  ////////////////////////////////////////////////////////////////////////////////////////////////finish waferA1
-                                  /////////////////////////////////////////////////////////////////////////////////////////////////start waferA2
-
-
-                                  //////////////////////////////////////////////////////////////////////////////A2 finish
-
-                                  //////////////////////////////////////////////////////////////////////////////start A3
-
-
-                                  /////////////////////////////////////////////////////////////////////////////////////////waferA3 finish 
-
-                                  ////////////////////////////////////////////////////////////////////////////////////////start waferA4
-
-
-
-
-
-
-
-
-                                  ///////////////////////////////////////////////////////////////////////////////////////////waferA4 finish
-
-                                  ////////////////////////////////////////////////////////////////////////////////////////////////start waferA5
-
-
-
-
-                                  ///////////////////////////////////////////////////////////////////////////////////////////////////////waferA5 finish
-
-                                  ////////////////////////////////////////////////////////////////////////////////////////////////////////////start waferA6
-
-
-
-
-
-                                  //////////////////////////////////////////////////////////////////////////////////////////////////////////////waferA6 finish
-
-                                  //////////////////////////////////////////////////////////////////////////////////////////////////////////////start waferA7
-
-
-
-
-
-
-
-                                  ///////////////////////////////////////////////////////////////////////////////////////////////////////////////waferA7 finisg
-
-                                  ///////////////////////////////////////////////////////////////////////////////////////////////////////////////start waferA8
-
-
-
-
-
-
-
-
-
-
-
-
-                                  ///////////////////////////////////////////////////////////////////////////////////////////////////////////////waferA8 finish
-
-                                  ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////start waferA9
-
-
-
-
-
-
-                                  ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////waferA9 finish
-
-
-                                  ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////start waferA10
-
-
-
-
-
-                                  ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////waferA10 finish
-                                  */
+                                ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////waferA10 finish
+                                */
                                 }
                             }
                             if(ispauserobot==true)

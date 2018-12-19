@@ -234,11 +234,12 @@ namespace SimulatorApplication
             SqlConnection con = new SqlConnection(scsb.ToString());
             con.Open();
 
-            string Strsearchvalue = "select * from valueselection where stepname like @1 and recipename like @2 and noofrecipe like @3";
+            string Strsearchvalue = "select * from valueselection where stepname like @1 and recipename like @2 and noofrecipe like @3 and logid like @4";
             SqlCommand cmd = new SqlCommand(Strsearchvalue, con);
             cmd.Parameters.AddWithValue("@1", stepnamevalue);
             cmd.Parameters.AddWithValue("@2", modulerecipevalue);
             cmd.Parameters.AddWithValue("@3", noofwafer);
+            cmd.Parameters.AddWithValue("@4", DataLogger.strLogname);
             SqlDataReader reader = cmd.ExecuteReader();
             if (ValueSelection.Items.Count == 0)
             {
