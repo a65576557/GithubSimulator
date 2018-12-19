@@ -1506,7 +1506,7 @@ namespace SimulatorApplication
                                             picChamber.Left += 150;
                                             picChamber.Height -= 10;
                                         }
-                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotAPMWaferA1-2" && picSV.Visible == false)
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotAPMWaferA1-2" && picSV.Visible == false&&iscancelrecipe==false)
                                         {
                                             await Task.Delay(2000);
                                             picChamber.Image = Properties.Resources.new_chamber;//close chamber
@@ -1516,7 +1516,7 @@ namespace SimulatorApplication
 
                                         }
 
-                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotAPMWaferA1-2" && picSV.Visible == true)
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotAPMWaferA1-2" && picSV.Visible == true&&iscancelrecipe==false)
                                         {
                                             await Task.Delay(2000);
 
@@ -1538,7 +1538,7 @@ namespace SimulatorApplication
                                             picCassette.Image = Properties.Resources.cassette3;//open cassette
                                                                                                // picMain.Image = Properties.Resources.robotgetwaferA1;
                                         }
-                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotArmWaferA1-2")
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotArmWaferA1-2"&&iscancelrecipe==false)
                                         {
                                             await Task.Delay(1000);
 
@@ -1554,7 +1554,7 @@ namespace SimulatorApplication
                                             picCassette.Width += 25;
                                             picCassette.Top -= 205;
                                         }
-                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotintocassette2")
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotintocassette2"&&iscancelrecipe==false)
                                         {
                                             await Task.Delay(2000);
                                             lblCassette.BackColor = Color.Blue;
@@ -1568,7 +1568,7 @@ namespace SimulatorApplication
                                             picCassette.Top += 205;
                                         }
 
-                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "mainpicture3")
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "mainpicture3"&&iscancelrecipe==false)
                                         {
                                             await Task.Delay(2000);
                                             //  picMain.Image = Properties.Resources.mainpic;
@@ -1817,7 +1817,7 @@ namespace SimulatorApplication
                                     if (int.Parse(NoOfwafer[i]) >= 2)
                                     {
                                         nooftherecipe = "2";
-                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "finishWaferA1"&&isStopRobot==false)
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "finishWaferA1"&&isStopRobot==false&&iscancelrecipe==false)
                                         {
                                             /////////////////////////////////////////////////////////start WaferA2
                                             lblState.Text = "starting";
@@ -1907,7 +1907,7 @@ namespace SimulatorApplication
 
                                         }
 
-                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotintocassetteA2")
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotintocassetteA2"&&iscancelrecipe==false)
                                         {
                                             await Task.Delay(1000);
                                             picMain.Image = Properties.Resources.picrobotArmWafer;
@@ -1958,7 +1958,7 @@ namespace SimulatorApplication
                                             //  picMain.Image = Properties.Resources.robotleftA1opencentralize;
 
                                         }
-                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotAlignerWaferA2")
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotAlignerWaferA2" && iscancelrecipe == false)
                                         {
                                             await Task.Delay(2000);
 
@@ -1981,7 +1981,7 @@ namespace SimulatorApplication
                                             lblwafer.Left += 155;
                                             lblwafer.Top += 0;
                                         }
-                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotintoAlignerWaferA2")
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotintoAlignerWaferA2" && iscancelrecipe == false)
                                         {
                                             ////////////////////////////////////////////////////////////////////////////////////
                                             await Task.Delay(2000);
@@ -2006,7 +2006,7 @@ namespace SimulatorApplication
                                             // picCentralize.Image = Properties.Resources.centralize;//close centralize
                                             // picMain.Image = Properties.Resources.robotleftA1;
                                         }
-                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotAlignerWaferA2-2")
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotAlignerWaferA2-2" && iscancelrecipe == false)
                                         {
                                             await Task.Delay(2000);
 
@@ -2024,7 +2024,7 @@ namespace SimulatorApplication
 
 
                                         }
-                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotAPMWaferA2" && picSV.Visible == true)
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotAPMWaferA2" && picSV.Visible == true && iscancelrecipe == false)
                                         {
                                             await Task.Delay(1000);
 
@@ -2032,7 +2032,7 @@ namespace SimulatorApplication
                                             // picMain.Image = Properties.Resources.robotrightA1openchamber;
                                             picSV.Visible = false;  // open sv of chamber
                                         }
-                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotAPMWaferA2" && picSV.Visible == false)
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotAPMWaferA2" && picSV.Visible == false && iscancelrecipe == false)
                                         {
                                             await Task.Delay(1000);
 
@@ -2061,7 +2061,7 @@ namespace SimulatorApplication
                                             // loaddata();
                                             // loadchamber1( sender, e);
                                         }
-                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotintoAPMWaferA2")
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotintoAPMWaferA2" && iscancelrecipe == false)
                                         {
                                             await Task.Delay(1000);
                                             picChamber.Image = Properties.Resources.ChamberWithA1;
@@ -2081,7 +2081,7 @@ namespace SimulatorApplication
                                             //  pictRobot.Visible = true;
 
                                         }
-                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picwaferinAPMA2" && picSV.Visible == false)
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picwaferinAPMA2" && picSV.Visible == false && iscancelrecipe == false)
                                         {
                                             await Task.Delay(1000);
 
@@ -2354,7 +2354,7 @@ namespace SimulatorApplication
 
                                             /////////////////////////////////////////////////////////////////////////////////////////////////// 
                                         }
-                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picwaferinAPMA2" && picSV.Visible == true)
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picwaferinAPMA2" && picSV.Visible == true && iscancelrecipe == false)
                                         {
                                             await Task.Delay(1000);
                                             picChamber.Image = Properties.Resources.ChamberWithA1;
@@ -2362,7 +2362,7 @@ namespace SimulatorApplication
                                             picSV.Visible = false;
                                             picMain.Image.Tag = "waferA2finishChamber";
                                         }
-                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "waferA2finishChamber")
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "waferA2finishChamber" && iscancelrecipe == false)
                                         {
                                             await Task.Delay(1000);
 
@@ -2376,7 +2376,7 @@ namespace SimulatorApplication
                                             picChamber.Left -= 150;
                                             picChamber.Height += 10;
                                         }
-                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotintoAPMWaferA2-2")
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotintoAPMWaferA2-2" && iscancelrecipe == false)
                                         {
                                             await Task.Delay(1000);
                                             label2.BackColor = Color.Blue;
@@ -2415,7 +2415,7 @@ namespace SimulatorApplication
                                             picChamber.Left += 150;
                                             picChamber.Height -= 10;
                                         }
-                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotAPMWaferA2-2" && picSV.Visible == false)
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotAPMWaferA2-2" && picSV.Visible == false && iscancelrecipe == false)
                                         {
                                             await Task.Delay(2000);
                                             picChamber.Image = Properties.Resources.new_chamber;//close chamber
@@ -2425,7 +2425,7 @@ namespace SimulatorApplication
 
 
                                         }
-                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotAPMWaferA2-2" && picSV.Visible == true)
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotAPMWaferA2-2" && picSV.Visible == true && iscancelrecipe == false)
                                         {
                                             await Task.Delay(2000);
 
@@ -2447,7 +2447,7 @@ namespace SimulatorApplication
                                             picCassette.Image = Properties.Resources.cassette3;//open cassette
                                                                                                // picMain.Image = Properties.Resources.robotgetwaferA1;
                                         }
-                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotArmWaferA2-2")
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotArmWaferA2-2" && iscancelrecipe == false)
                                         {
                                             await Task.Delay(1000);
 
@@ -2463,7 +2463,7 @@ namespace SimulatorApplication
                                             picCassette.Width += 25;
                                             picCassette.Top -= 205;
                                         }
-                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "A2picrobotintocassette2")
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "A2picrobotintocassette2" && iscancelrecipe == false)
                                         {
                                             await Task.Delay(2000);
                                             lblCassette.BackColor = Color.Blue;
@@ -2714,7 +2714,7 @@ namespace SimulatorApplication
 
                                     if (int.Parse(NoOfwafer[i]) >= 3)
                                     {
-                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "finishWaferA2"&&isStopRobot==false)
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "finishWaferA2"&&isStopRobot==false && iscancelrecipe == false)
                                         {
                                             /////////////////////////////////////////////////////////start WaferA3
                                             nooftherecipe = "3";
@@ -2729,7 +2729,7 @@ namespace SimulatorApplication
                                             //   picCassette.Image = Properties.Resources.cassette3;//open cassette
                                             // picMain.Image = Properties.Resources.mainpicCassetteopen;  
                                         }
-                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "A3mainpicture")
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "A3mainpicture" && iscancelrecipe == false)
                                         {
                                             await Task.Delay(1000);
 
@@ -2753,7 +2753,7 @@ namespace SimulatorApplication
 
                                             lblCassette.BackColor = Color.LimeGreen;
                                         }
-                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotintocassetteA3")
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotintocassetteA3" && iscancelrecipe == false)
                                         {
                                             await Task.Delay(1000);
 
@@ -2830,7 +2830,7 @@ namespace SimulatorApplication
                                             picCassette.Image = Properties.Resources.cassette;
                                             // picMain.Image = Properties.Resources.robotgetwaferA1cassetteclose;
                                         }
-                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotArmWaferA3")
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotArmWaferA3" && iscancelrecipe == false)
                                         {
                                             await Task.Delay(1000);
 
@@ -2857,7 +2857,7 @@ namespace SimulatorApplication
                                             //  picCentralize.Image = Properties.Resources.centralize2;//open centralize
                                             //  picMain.Image = Properties.Resources.robotleftA1opencentralize;
                                         }
-                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotAlignerWaferA3")
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotAlignerWaferA3" && iscancelrecipe == false)
                                         {
                                             await Task.Delay(2000);
 
@@ -2883,7 +2883,7 @@ namespace SimulatorApplication
 
                                             ////////////////////////////////////////////////////////////////////////////////////
                                         }
-                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotintoAlignerWaferA3")
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotintoAlignerWaferA3" && iscancelrecipe == false)
                                         {
                                             await Task.Delay(2000);
                                             // pictRobot.Visible = true;
@@ -2907,7 +2907,7 @@ namespace SimulatorApplication
                                             // picCentralize.Image = Properties.Resources.centralize;//close centralize
                                             // picMain.Image = Properties.Resources.robotleftA1;
                                         }
-                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotAlignerWaferA3-2")
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotAlignerWaferA3-2" && iscancelrecipe == false)
                                         {
                                             await Task.Delay(2000);
 
@@ -2925,7 +2925,7 @@ namespace SimulatorApplication
 
 
                                         }
-                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotAPMWaferA3" && picSV.Visible == true)
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotAPMWaferA3" && picSV.Visible == true && iscancelrecipe == false)
                                         {
                                             await Task.Delay(1000);
 
@@ -2933,7 +2933,7 @@ namespace SimulatorApplication
                                             // picMain.Image = Properties.Resources.robotrightA1openchamber;
                                             picSV.Visible = false;  // open sv of chamber
                                         }
-                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotAPMWaferA3" && picSV.Visible == false)
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotAPMWaferA3" && picSV.Visible == false && iscancelrecipe == false)
                                         {
                                             await Task.Delay(1000);
 
@@ -2962,7 +2962,7 @@ namespace SimulatorApplication
                                             // loaddata();
                                             // loadchamber1( sender, e);
                                         }
-                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotintoAPMWaferA3")
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotintoAPMWaferA3" && iscancelrecipe == false)
                                         {
                                             await Task.Delay(1000);
                                             picChamber.Image = Properties.Resources.ChamberWithA1;
@@ -2981,7 +2981,7 @@ namespace SimulatorApplication
 
                                             //  pictRobot.Visible = true;
                                         }
-                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picwaferinAPMA3" && picSV.Visible == false)
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picwaferinAPMA3" && picSV.Visible == false && iscancelrecipe == false)
                                         {
                                             await Task.Delay(1000);
                                              
@@ -3263,7 +3263,7 @@ namespace SimulatorApplication
                                             /////////////////////////////////////////////////////////////////////////////////////////////////// 
                                         }
 
-                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picwaferinAPMA3" && picSV.Visible == true)
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picwaferinAPMA3" && picSV.Visible == true && iscancelrecipe == false)
                                         {
                                             await Task.Delay(1000);
                                             picChamber.Image = Properties.Resources.ChamberWithA1;
@@ -3271,7 +3271,7 @@ namespace SimulatorApplication
                                             picSV.Visible = false;
                                             picMain.Image.Tag = "A3finishChamber";
                                         }
-                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "A3finishChamber")
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "A3finishChamber" && iscancelrecipe == false)
                                         {
                                             await Task.Delay(1000);
 
@@ -3285,7 +3285,7 @@ namespace SimulatorApplication
                                             picChamber.Left -= 150;
                                             picChamber.Height += 10;
                                         }
-                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotintoAPMWaferA3-2")
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotintoAPMWaferA3-2" && iscancelrecipe == false)
                                         {
                                             await Task.Delay(1000);
                                             label2.BackColor = Color.Blue;
@@ -3323,7 +3323,7 @@ namespace SimulatorApplication
                                             picChamber.Left += 150;
                                             picChamber.Height -= 10;
                                         }
-                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotAPMWaferA3-2" && picSV.Visible == false)
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotAPMWaferA3-2" && picSV.Visible == false && iscancelrecipe == false)
                                         {
                                             await Task.Delay(2000);
                                             picChamber.Image = Properties.Resources.new_chamber;//close chamber
@@ -3333,7 +3333,7 @@ namespace SimulatorApplication
 
 
                                         }
-                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotAPMWaferA3-2" && picSV.Visible == true)
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotAPMWaferA3-2" && picSV.Visible == true && iscancelrecipe == false)
                                         {
                                             await Task.Delay(2000);
 
@@ -3361,7 +3361,7 @@ namespace SimulatorApplication
 
                                             picCassette.Image = Properties.Resources.robot_into_cassetteA1;
                                         }
-                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotArmWaferA3-2")
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotArmWaferA3-2" && iscancelrecipe == false)
                                         {
                                             await Task.Delay(1000);
                                             picMain.Image = Properties.Resources.picrobotintocassette;
@@ -3373,7 +3373,7 @@ namespace SimulatorApplication
                                             picCassette.Width += 25;
                                             picCassette.Top -= 205;
                                         }
-                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "A3picrobotintocassette-2")
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "A3picrobotintocassette-2" && iscancelrecipe == false)
                                         {
                                             await Task.Delay(2000);
                                             lblCassette.BackColor = Color.Blue;
@@ -3386,7 +3386,7 @@ namespace SimulatorApplication
                                             picCassette.Height -= 220;
                                             picCassette.Top += 205;
                                         }
-                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "A3mainpicture-2")
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "A3mainpicture-2" && iscancelrecipe == false)
                                         {
                                             await Task.Delay(2000);
                                             //  picMain.Image = Properties.Resources.mainpic;
@@ -3492,7 +3492,7 @@ namespace SimulatorApplication
                                       {
                                         /////////////////////////////////////////////////////////start WaferA4
                                         nooftherecipe = "4";
-                                          if(ispauserobot==false&&picMain.Image.Tag.ToString()=="finishWaferA3"&&isStopRobot==false)
+                                          if(ispauserobot==false&&picMain.Image.Tag.ToString()=="finishWaferA3"&&isStopRobot==false && iscancelrecipe == false)
                                           await Task.Delay(1000);
 
                                           //pictRobot.Image = Properties.Resources.new_robot;
@@ -3582,7 +3582,7 @@ namespace SimulatorApplication
 
 
                                         }
-                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotintocassetteA4")
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotintocassetteA4" && iscancelrecipe == false)
                                         {
 
                                             await Task.Delay(1000);
@@ -3607,7 +3607,7 @@ namespace SimulatorApplication
                                             picCassette.Image = Properties.Resources.cassette;
                                             // picMain.Image = Properties.Resources.robotgetwaferA1cassetteclose;
                                         }
-                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotArmWaferA4")
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotArmWaferA4" && iscancelrecipe == false)
                                         {
                                             await Task.Delay(1000);
 
@@ -3634,7 +3634,7 @@ namespace SimulatorApplication
                                             //  picCentralize.Image = Properties.Resources.centralize2;//open centralize
                                             //  picMain.Image = Properties.Resources.robotleftA1opencentralize;
                                         }
-                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotAlignerWaferA4")
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotAlignerWaferA4" && iscancelrecipe == false)
                                         {
                                             await Task.Delay(2000);
 
@@ -3658,7 +3658,7 @@ namespace SimulatorApplication
                                             lblwafer.Top += 0;
 
                                         }
-                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotintoAlignerWaferA4")
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotintoAlignerWaferA4" && iscancelrecipe == false)
                                         {
                                             ////////////////////////////////////////////////////////////////////////////////////
                                             await Task.Delay(2000);
@@ -3678,7 +3678,7 @@ namespace SimulatorApplication
                                             lblwafer.Top -= 0;
                                             lblCentralize.BackColor = Color.Blue;
                                         }
-                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotAlignerWaferA4-2")
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotAlignerWaferA4-2" && iscancelrecipe == false)
                                         {
                                             // await Task.Delay(2000);
                                             // picCentralize.Image = Properties.Resources.centralize;//close centralize
@@ -3697,7 +3697,7 @@ namespace SimulatorApplication
                                             lblwafer.Top -= 76;
 
                                         }
-                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotAPMWaferA4")
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotAPMWaferA4" && iscancelrecipe == false)
                                         {
 
                                             await Task.Delay(1000);
@@ -3706,7 +3706,7 @@ namespace SimulatorApplication
                                             // picMain.Image = Properties.Resources.robotrightA1openchamber;
                                             picSV.Visible = false;  // open sv of chamber
                                         }
-                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotAPMWaferA4" && picSV.Visible == false)
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotAPMWaferA4" && picSV.Visible == false && iscancelrecipe == false)
                                         {
                                             await Task.Delay(1000);
 
@@ -3736,7 +3736,7 @@ namespace SimulatorApplication
                                             // loadchamber1( sender, e);
 
                                         }
-                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotintoAPMWaferA4")
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotintoAPMWaferA4" && iscancelrecipe == false)
                                         {
                                             await Task.Delay(1000);
                                             picChamber.Image = Properties.Resources.ChamberWithA1;
@@ -3758,7 +3758,7 @@ namespace SimulatorApplication
                                             //  pictRobot.Visible = true;
 
                                         }
-                                        if(ispauserobot==false&&picMain.Image.Tag.ToString()== "picwaferinAPMA4"&&picSV.Visible==false)
+                                        if(ispauserobot==false&&picMain.Image.Tag.ToString()== "picwaferinAPMA4"&&picSV.Visible==false && iscancelrecipe == false)
                                         { 
                                             await Task.Delay(1000);
 
@@ -4017,7 +4017,7 @@ namespace SimulatorApplication
                                         }
 
 
-                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "finishchamberA4" && picSV.Visible==true)
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "finishchamberA4" && picSV.Visible==true && iscancelrecipe == false)
                                         {
 
                                             await Task.Delay(1000);
@@ -4025,7 +4025,7 @@ namespace SimulatorApplication
                                             //picMain.Image = Properties.Resources.robotintochamberwithA1;
                                             picSV.Visible = false;
                                         }
-                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "finishchamberA4" && picSV.Visible == false)
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "finishchamberA4" && picSV.Visible == false && iscancelrecipe == false)
                                         {
                                             await Task.Delay(1000);
 
@@ -4040,7 +4040,7 @@ namespace SimulatorApplication
                                             picChamber.Left -= 150;
                                             picChamber.Height += 10;
                                         }
-                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotintoAPMWaferA4-2")
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotintoAPMWaferA4-2" && iscancelrecipe == false)
                                         {
                                             await Task.Delay(1000);
                                             label2.BackColor = Color.Blue;
@@ -4081,7 +4081,7 @@ namespace SimulatorApplication
                                             picChamber.Left += 150;
                                             picChamber.Height -= 10;
                                         }
-                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotAPMWaferA4-2" && picSV.Visible == false)
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotAPMWaferA4-2" && picSV.Visible == false && iscancelrecipe == false)
                                         {
                                             await Task.Delay(2000);
                                             picChamber.Image = Properties.Resources.new_chamber;//close chamber
@@ -4091,7 +4091,7 @@ namespace SimulatorApplication
 
 
                                         }
-                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotAPMWaferA4-2" && picSV.Visible == true)
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotAPMWaferA4-2" && picSV.Visible == true && iscancelrecipe == false)
                                         {
                                             await Task.Delay(2000);
 
@@ -4113,7 +4113,7 @@ namespace SimulatorApplication
                                             picCassette.Image = Properties.Resources.cassette3;//open cassette
                                                                                                // picMain.Image = Properties.Resources.robotgetwaferA1;
                                         }
-                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotArmWaferA4-2")
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotArmWaferA4-2" && iscancelrecipe == false)
                                         {
                                             await Task.Delay(1000);
 
@@ -4129,7 +4129,7 @@ namespace SimulatorApplication
                                             picCassette.Width += 25;
                                             picCassette.Top -= 205;
                                         }
-                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotintocassettA4-2")
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotintocassettA4-2" && iscancelrecipe == false)
                                         {
                                             await Task.Delay(2000);
                                             lblCassette.BackColor = Color.Blue;
@@ -4237,7 +4237,7 @@ namespace SimulatorApplication
                                     {
                                         /////////////////////////////////////////////////////////start WaferA5
                                         nooftherecipe = "5";
-                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "finishwaferA4" && isStopRobot == false)
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "finishwaferA4" && isStopRobot == false && iscancelrecipe == false)
                                         {
                                             await Task.Delay(1000);
 
@@ -4247,7 +4247,7 @@ namespace SimulatorApplication
 
                                         }
 
-                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "mainpictureA5")
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "mainpictureA5" && iscancelrecipe == false)
                                         {
                                             await Task.Delay(1000);
 
@@ -4326,7 +4326,7 @@ namespace SimulatorApplication
 
                                         }
 
-                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotintocassetteA5")
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotintocassetteA5" && iscancelrecipe == false)
                                         { 
                                         await Task.Delay(1000);
 
@@ -4350,7 +4350,7 @@ namespace SimulatorApplication
                                         picCassette.Image = Properties.Resources.cassette;
                                         // picMain.Image = Properties.Resources.robotgetwaferA1cassetteclose;
                                     }
-                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotArmWaferA5")
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotArmWaferA5" && iscancelrecipe == false)
                                         {
                                             await Task.Delay(1000);
 
@@ -4377,7 +4377,7 @@ namespace SimulatorApplication
                                             //  picCentralize.Image = Properties.Resources.centralize2;//open centralize
                                             //  picMain.Image = Properties.Resources.robotleftA1opencentralize;
                                         }
-                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotAlignerWaferA5")
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotAlignerWaferA5" && iscancelrecipe == false)
                                         {
                                             await Task.Delay(2000);
 
@@ -4400,7 +4400,7 @@ namespace SimulatorApplication
                                             lblwafer.Left += 155;
                                             lblwafer.Top += 0;
                                         }
-                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotintoAlignerWaferA5")
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotintoAlignerWaferA5" && iscancelrecipe == false)
                                         {
                                             ////////////////////////////////////////////////////////////////////////////////////
                                             await Task.Delay(2000);
@@ -4424,7 +4424,7 @@ namespace SimulatorApplication
                                             // picCentralize.Image = Properties.Resources.centralize;//close centralize
                                             // picMain.Image = Properties.Resources.robotleftA1;
                                         }
-                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotAlignerWaferA5-2")
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotAlignerWaferA5-2" && iscancelrecipe == false)
                                         {
                                             await Task.Delay(2000);
 
@@ -4442,7 +4442,7 @@ namespace SimulatorApplication
 
 
                                         }
-                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotAPMWaferA5" && picSV.Visible == true)
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotAPMWaferA5" && picSV.Visible == true && iscancelrecipe == false)
                                         {
                                             await Task.Delay(1000);
 
@@ -4451,7 +4451,7 @@ namespace SimulatorApplication
                                             picSV.Visible = false;  // open sv of chamber
                                         }
 
-                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotAPMWaferA5" && picSV.Visible == false)
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotAPMWaferA5" && picSV.Visible == false && iscancelrecipe == false)
                                         {
                                             await Task.Delay(1000);
 
@@ -4481,7 +4481,7 @@ namespace SimulatorApplication
                                             // loadchamber1( sender, e);
                                         }
 
-                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotintoAPMWaferA5")
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotintoAPMWaferA5" && iscancelrecipe == false)
                                         {
                                             await Task.Delay(1000);
                                             picChamber.Image = Properties.Resources.ChamberWithA1;
@@ -4501,7 +4501,7 @@ namespace SimulatorApplication
 
                                             //  pictRobot.Visible = true;
                                         }
-                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picwaferinAPMA5")
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picwaferinAPMA5" && iscancelrecipe == false)
                                         {
                                             await Task.Delay(1000);
 
@@ -4763,7 +4763,7 @@ namespace SimulatorApplication
 
                                         }
 
-                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "finishchamberA5" && picSV.Visible == true)
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "finishchamberA5" && picSV.Visible == true && iscancelrecipe == false)
                                         {
                                             await Task.Delay(1000);
                                             picChamber.Image = Properties.Resources.ChamberWithA1;
@@ -4771,7 +4771,7 @@ namespace SimulatorApplication
                                             picSV.Visible = false;
                                         }
 
-                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "finishchamberA5" && picSV.Visible == true)
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "finishchamberA5" && picSV.Visible == true && iscancelrecipe == false)
                                         {
                                             await Task.Delay(1000);
 
@@ -4786,7 +4786,7 @@ namespace SimulatorApplication
                                             picChamber.Height += 10;
                                         }
 
-                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotintoAPMWaferA5-2")
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotintoAPMWaferA5-2" && iscancelrecipe == false)
                                         {
                                             await Task.Delay(1000);
                                             label2.BackColor = Color.Blue;
@@ -4826,7 +4826,7 @@ namespace SimulatorApplication
                                             picChamber.Left += 150;
                                             picChamber.Height -= 10;
                                         }
-                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotAPMWaferA5-2" && picSV.Visible == false)
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotAPMWaferA5-2" && picSV.Visible == false && iscancelrecipe == false)
                                         {
                                             await Task.Delay(2000);
                                             picChamber.Image = Properties.Resources.new_chamber;//close chamber
@@ -4836,7 +4836,7 @@ namespace SimulatorApplication
 
                                         }
 
-                                        if (ispauserobot==false&&picMain.Image.Tag.ToString()== "picrobotAPMWaferA5-2" && picSV.Visible == true)
+                                        if (ispauserobot==false&&picMain.Image.Tag.ToString()== "picrobotAPMWaferA5-2" && picSV.Visible == true && iscancelrecipe == false)
                                         {
                                             await Task.Delay(2000);
 
@@ -4853,7 +4853,7 @@ namespace SimulatorApplication
                                             ovalShape1.Left += 12;
                                             lblwafer.Left += 12;
                                         }
-                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotArmWaferA5-2")
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotArmWaferA5-2" && iscancelrecipe == false)
                                         {
                                             await Task.Delay(2000);
 
@@ -4874,7 +4874,7 @@ namespace SimulatorApplication
                                             picCassette.Width += 25;
                                             picCassette.Top -= 205;
                                         }
-                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotintocassetteA5-2")
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotintocassetteA5-2" && iscancelrecipe == false)
                                         {
                                             await Task.Delay(2000);
                                             lblCassette.BackColor = Color.Blue;
@@ -4956,7 +4956,7 @@ namespace SimulatorApplication
                                         /////////////////////////////////////////////////////////start WaferA6
 
                                         nooftherecipe = "6";
-                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "finishwaferA5" && isStopRobot == false)
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "finishwaferA5" && isStopRobot == false && iscancelrecipe == false)
                                         {
                                             picCassette.Image = Properties.Resources.cassette;
                                             await Task.Delay(1000);
@@ -5021,7 +5021,7 @@ namespace SimulatorApplication
                                             await Task.Delay(1000);
 
                                         }
-                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "waferA6mainpicture")
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "waferA6mainpicture" && iscancelrecipe == false)
                                         {
 
                                             //   picCassette.Image = Properties.Resources.cassette3;//open cassette
@@ -5048,7 +5048,7 @@ namespace SimulatorApplication
 
                                             lblCassette.BackColor = Color.LimeGreen;
                                         }
-                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotintocassetteA6")
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotintocassetteA6" && iscancelrecipe == false)
                                         {
                                             await Task.Delay(1000);
 
@@ -5076,7 +5076,7 @@ namespace SimulatorApplication
                                             // picMain.Image = Properties.Resources.robotgetwaferA1cassetteclose;
 
                                         }
-                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotArmWaferA6")
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotArmWaferA6" && iscancelrecipe == false)
                                         {
                                             await Task.Delay(1000);
 
@@ -5102,7 +5102,7 @@ namespace SimulatorApplication
                                             //  picCentralize.Image = Properties.Resources.centralize2;//open centralize
                                             //  picMain.Image = Properties.Resources.robotleftA1opencentralize;
                                         }
-                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotAlignerWaferA6")
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotAlignerWaferA6" && iscancelrecipe == false)
                                         {
                                             await Task.Delay(2000);
 
@@ -5126,7 +5126,7 @@ namespace SimulatorApplication
                                             lblwafer.Top += 0;
 
                                         }
-                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotintoAlignerWaferA6")
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotintoAlignerWaferA6" && iscancelrecipe == false)
                                         {
                                             ////////////////////////////////////////////////////////////////////////////////////
                                             await Task.Delay(2000);
@@ -5150,7 +5150,7 @@ namespace SimulatorApplication
                                             // picCentralize.Image = Properties.Resources.centralize;//close centralize
                                             // picMain.Image = Properties.Resources.robotleftA1;
                                         }
-                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotAlignerWaferA6-2")
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotAlignerWaferA6-2" && iscancelrecipe == false)
                                         {
                                             await Task.Delay(2000);
 
@@ -5168,7 +5168,7 @@ namespace SimulatorApplication
 
 
                                         }
-                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotAPMWaferA6" && picSV.Visible == true)
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotAPMWaferA6" && picSV.Visible == true && iscancelrecipe == false)
                                         {
 
                                             await Task.Delay(1000);
@@ -5178,7 +5178,7 @@ namespace SimulatorApplication
                                             picSV.Visible = false;  // open sv of chamber
 
                                         }
-                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotAPMWaferA6" && picSV.Visible == false)
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotAPMWaferA6" && picSV.Visible == false && iscancelrecipe == false)
                                         {
                                             await Task.Delay(1000);
 
@@ -5204,7 +5204,7 @@ namespace SimulatorApplication
 
                                             chamberload = "LimeGreen";
                                         }
-                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotintoAPMWaferA6")
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotintoAPMWaferA6" && iscancelrecipe == false)
                                         {
                                             // loaddata();
                                             // loadchamber1( sender, e);
@@ -5225,7 +5225,7 @@ namespace SimulatorApplication
 
                                             //  pictRobot.Visible = true;
                                         }
-                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picwaferinAPMA6")
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picwaferinAPMA6" && iscancelrecipe == false)
                                         {
 
                                             await Task.Delay(1000);
@@ -5234,7 +5234,7 @@ namespace SimulatorApplication
                                             //picMain.Image = Properties.Resources.robotintochamberwithA1close;
                                             picSV.Visible = true;
 
-                                            ///////////////////////////////////////////////////////////////////////////////////////////////////////WaferA5 into Chamber
+                                            ///////////////////////////////////////////////////////////////////////////////////////////////////////WaferA6 into Chamber
 
 
                                             lblRecipe.BackColor = Color.LimeGreen;
@@ -5475,7 +5475,7 @@ namespace SimulatorApplication
                                             /////////////////////////////////////////////////////////////////////////////////////////////////// 
                                             picMain.Image.Tag = "A6finishChamber";
                                         }
-                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "A6finishChamber" && picSV.Visible == true)
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "A6finishChamber" && picSV.Visible == true && iscancelrecipe == false)
 
                                         {
                                             await Task.Delay(1000);
@@ -5484,7 +5484,7 @@ namespace SimulatorApplication
                                             picSV.Visible = false;
                                         }
 
-                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "A6finishChamber" && picSV.Visible == false)
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "A6finishChamber" && picSV.Visible == false && iscancelrecipe == false)
                                         {
                                             await Task.Delay(1000);
 
@@ -5534,7 +5534,7 @@ namespace SimulatorApplication
                                             picChamber.Height -= 10;
 
                                         }
-                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotAPMWaferA6-2" && picSV.Visible == false)
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotAPMWaferA6-2" && picSV.Visible == false && iscancelrecipe == false)
                                         {
                                             await Task.Delay(2000);
                                             picChamber.Image = Properties.Resources.new_chamber;//close chamber
@@ -5545,7 +5545,7 @@ namespace SimulatorApplication
 
                                         }
 
-                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotAPMWaferA6-2" && picSV.Visible == true)
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotAPMWaferA6-2" && picSV.Visible == true && iscancelrecipe == false)
                                         {
                                             await Task.Delay(2000);
 
@@ -5568,7 +5568,7 @@ namespace SimulatorApplication
                                             picCassette.Image = Properties.Resources.cassette3;//open cassette
                                                                                                // picMain.Image = Properties.Resources.robotgetwaferA1;
                                         }
-                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotArmWaferA6-2")
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotArmWaferA6-2" && iscancelrecipe == false)
                                         {
                                             await Task.Delay(1000);
 
@@ -5584,7 +5584,7 @@ namespace SimulatorApplication
                                             picCassette.Width += 25;
                                             picCassette.Top -= 205;
                                         }
-                                        if (ispauserobot == false && picMain.Tag.ToString() == "picrobotintocassetteA6-2")
+                                        if (ispauserobot == false && picMain.Tag.ToString() == "picrobotintocassetteA6-2" && iscancelrecipe == false)
                                         {
                                             await Task.Delay(2000);
                                             lblCassette.BackColor = Color.Blue;
@@ -5597,7 +5597,7 @@ namespace SimulatorApplication
                                             picCassette.Height -= 220;
                                             picCassette.Top += 205;
                                         }
-                                        if (ispauserobot == false && picMain.Tag.ToString() == "mainpictureA6-2")
+                                        if (ispauserobot == false && picMain.Tag.ToString() == "mainpictureA6-2" && iscancelrecipe == false)
                                         {
                                             await Task.Delay(2000);
                                             //  picMain.Image = Properties.Resources.mainpic;
