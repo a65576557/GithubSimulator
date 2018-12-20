@@ -99,7 +99,7 @@ namespace SimulatorApplication
                 form1.lblProcessStep.BackColor = Color.LimeGreen;
 
                 scsb = new SqlConnectionStringBuilder();
-                scsb.DataSource = @"HP-PC\SQLEXPRESS";
+                scsb.DataSource = Form1.datasource;
                 scsb.InitialCatalog = "RecipeType";
                 scsb.IntegratedSecurity = true;
                 SqlConnection con = new SqlConnection(scsb.ToString());
@@ -225,7 +225,7 @@ namespace SimulatorApplication
             listBox1.Items.Clear();
            
             scsb = new SqlConnectionStringBuilder();
-            scsb.DataSource = @"HP-PC\SQLEXPRESS";
+            scsb.DataSource = Form1.datasource;
             scsb.InitialCatalog = "RecipeType";
             scsb.IntegratedSecurity = true;
             SqlConnection con = new SqlConnection(scsb.ToString());

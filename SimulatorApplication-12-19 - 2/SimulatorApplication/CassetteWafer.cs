@@ -44,7 +44,7 @@ namespace SimulatorApplication
         {
             //將資料從暫存資料表新增到主要資料表
             scsb = new SqlConnectionStringBuilder();
-            scsb.DataSource = @"HP-PC\SQLEXPRESS";
+            scsb.DataSource = Form1.datasource;
             scsb.InitialCatalog = "RecipeType";
             scsb.IntegratedSecurity = true;
             // RecipeType rct = new RecipeType();
@@ -1235,7 +1235,7 @@ namespace SimulatorApplication
 
 
                 scsb = new SqlConnectionStringBuilder();
-                scsb.DataSource = @"HP-PC\SQLEXPRESS";
+                scsb.DataSource = Form1.datasource;
                 scsb.InitialCatalog = "RecipeType";
                 scsb.IntegratedSecurity = true;
                 SqlConnection con = new SqlConnection(scsb.ToString());
@@ -1338,7 +1338,7 @@ namespace SimulatorApplication
 
             //////////////////////////////////////////////////////將ICP recipe 資料加入cmbWaferRecipe裡面
             scsb = new SqlConnectionStringBuilder();
-            scsb.DataSource = @"HP-PC\SQLEXPRESS";
+            scsb.DataSource = Form1.datasource;
             scsb.InitialCatalog = "RecipeType";
             scsb.IntegratedSecurity = true;
             SqlConnection con = new SqlConnection(scsb.ToString());

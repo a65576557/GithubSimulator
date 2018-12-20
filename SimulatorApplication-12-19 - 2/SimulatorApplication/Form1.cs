@@ -7836,7 +7836,7 @@ namespace SimulatorApplication
             {
 
                 if (lblProcess.Text == "Idle" && lbltm.Text == "Idle")
-
+                    
                 {
                   //  LotInformation lot = new LotInformation();
                    // DialogResult dr = lot.ShowDialog();

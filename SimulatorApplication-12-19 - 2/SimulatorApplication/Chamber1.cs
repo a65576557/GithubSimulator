@@ -225,7 +225,7 @@ namespace SimulatorApplication
                 lblProcess.Text = "Processing";
                 lblProcessStep.Text = "Process Step";
                 scsb = new SqlConnectionStringBuilder();
-                scsb.DataSource = @"HP-PC\SQLEXPRESS";
+                scsb.DataSource = Form1.datasource;
                 scsb.InitialCatalog = "RecipeType";
                 scsb.IntegratedSecurity = true;
                 SqlConnection con = new SqlConnection(scsb.ToString());
