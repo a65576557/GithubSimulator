@@ -65,7 +65,7 @@ namespace SimulatorApplication
             tbModulename10.Text = "APM";
 
             scsb = new SqlConnectionStringBuilder();
-            scsb.DataSource = @"HP-PC\SQLEXPRESS";
+            scsb.DataSource = Form1.datasource;
             scsb.InitialCatalog = "RecipeType";
             scsb.IntegratedSecurity = true;
            
@@ -317,7 +317,7 @@ namespace SimulatorApplication
         private void btnSave_Click(object sender, EventArgs e)
         {
             scsb = new SqlConnectionStringBuilder();
-            scsb.DataSource = @"HP-PC\SQLEXPRESS";
+            scsb.DataSource = Form1.datasource;
             scsb.InitialCatalog = "RecipeType";
             scsb.IntegratedSecurity = true;
             // RecipeType rct = new RecipeType();
@@ -773,7 +773,7 @@ namespace SimulatorApplication
         private void btnSaveAs_Click(object sender, EventArgs e)
         {
             scsb = new SqlConnectionStringBuilder();
-            scsb.DataSource = @"HP-PC\SQLEXPRESS";
+            scsb.DataSource = Form1.datasource;
             scsb.InitialCatalog = "RecipeType";
             scsb.IntegratedSecurity = true;
             // RecipeType rct = new RecipeType();

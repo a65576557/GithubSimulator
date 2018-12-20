@@ -116,7 +116,7 @@ namespace SimulatorApplication
              con.Close();*/
             /////////////////////////////////////////////////////////////////////////////////
               scsb = new SqlConnectionStringBuilder();
-              scsb.DataSource = @"HP-PC\SQLEXPRESS";
+              scsb.DataSource = Form1.datasource;
               scsb.InitialCatalog = "RecipeType";
               scsb.IntegratedSecurity = true;
               SqlConnection con = new SqlConnection(scsb.ToString());
@@ -364,7 +364,7 @@ namespace SimulatorApplication
             // TODO: 這行程式碼會將資料載入 'recipeTypeDataSet.recipe' 資料表。您可以視需要進行移動或移除。
             // this.recipeTableAdapter.Fill(this.recipeTypeDataSet.recipe);
             scsb = new SqlConnectionStringBuilder();
-            scsb.DataSource = @"HP-PC\SQLEXPRESS";
+            scsb.DataSource = Form1.datasource;
             scsb.InitialCatalog = "RecipeType";
             scsb.IntegratedSecurity = true;
             SqlConnection con = new SqlConnection(scsb.ToString());
@@ -453,7 +453,7 @@ namespace SimulatorApplication
             // TODO: 這行程式碼會將資料載入 'recipeTypeDataSet.recipe' 資料表。您可以視需要進行移動或移除。
             // this.recipeTableAdapter.Fill(this.recipeTypeDataSet.recipe);
             scsb = new SqlConnectionStringBuilder();
-            scsb.DataSource = @"HP-PC\SQLEXPRESS";
+            scsb.DataSource = Form1.datasource;
             scsb.InitialCatalog = "RecipeType";
             scsb.IntegratedSecurity = true;
             SqlConnection con = new SqlConnection(scsb.ToString());
@@ -480,7 +480,7 @@ namespace SimulatorApplication
         public  void update()
         {
             scsb = new SqlConnectionStringBuilder();
-            scsb.DataSource = @"HP-PC\SQLEXPRESS";
+            scsb.DataSource = Form1.datasource;
             scsb.InitialCatalog = "RecipeType";
             scsb.IntegratedSecurity = true;
             SqlConnection con = new SqlConnection(scsb.ToString());
@@ -520,7 +520,7 @@ namespace SimulatorApplication
             tbrecipeDate.ReadOnly = true;
 
             scsb = new SqlConnectionStringBuilder();
-            scsb.DataSource = @"HP-PC\SQLEXPRESS";
+            scsb.DataSource = Form1.datasource;
             scsb.InitialCatalog = "RecipeType";
             scsb.IntegratedSecurity = true;
             SqlConnection con = new SqlConnection(scsb.ToString());

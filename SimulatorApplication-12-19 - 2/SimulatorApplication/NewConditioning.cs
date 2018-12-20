@@ -33,7 +33,7 @@ namespace SimulatorApplication
         private void btnAppend_Click(object sender, EventArgs e)
         {
             scsb = new SqlConnectionStringBuilder();
-            scsb.DataSource = @"HP-PC\SQLEXPRESS";
+            scsb.DataSource = Form1.datasource;
             scsb.InitialCatalog = "RecipeType";
             scsb.IntegratedSecurity = true;
             SqlConnection con = new SqlConnection(scsb.ToString());
@@ -125,7 +125,7 @@ namespace SimulatorApplication
              con.Open();*/
 
             scsb = new SqlConnectionStringBuilder();
-            scsb.DataSource = @"HP-PC\SQLEXPRESS";
+            scsb.DataSource = Form1.datasource;
             scsb.InitialCatalog = "RecipeType";
             scsb.IntegratedSecurity = true;
             SqlConnection con = new SqlConnection(scsb.ToString());
@@ -177,7 +177,7 @@ namespace SimulatorApplication
         private void btnSave_Click(object sender, EventArgs e)
         {
             scsb = new SqlConnectionStringBuilder();
-            scsb.DataSource = @"HP-PC\SQLEXPRESS";
+            scsb.DataSource = Form1.datasource;
             scsb.InitialCatalog = "RecipeType";
             scsb.IntegratedSecurity = true;
             // RecipeType rct = new RecipeType();

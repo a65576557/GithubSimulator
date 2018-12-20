@@ -100,7 +100,7 @@ namespace SimulatorApplication
 
 
             scsb = new SqlConnectionStringBuilder();
-            scsb.DataSource = @"HP-PC\SQLEXPRESS";
+            scsb.DataSource = Form1.datasource;
             scsb.InitialCatalog = "RecipeType";
             scsb.IntegratedSecurity = true;
            // RecipeType rct = new RecipeType();

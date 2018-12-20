@@ -64,7 +64,7 @@ namespace SimulatorApplication
           //  DateTime.TryParse(DataLogger.strRecipeName,out startdatetime);
 
             scsb = new SqlConnectionStringBuilder();
-            scsb.DataSource = @"HP-PC\SQLEXPRESS";
+            scsb.DataSource = Form1.datasource;
             scsb.InitialCatalog = "RecipeType";
             scsb.IntegratedSecurity = true;
             SqlConnection con = new SqlConnection(scsb.ToString());
@@ -141,7 +141,7 @@ namespace SimulatorApplication
             noofwafer = WaferSelection.SelectedItems[0].SubItems[0].Text; 
 
             scsb = new SqlConnectionStringBuilder();
-            scsb.DataSource = @"HP-PC\SQLEXPRESS";
+            scsb.DataSource = Form1.datasource;
             scsb.InitialCatalog = "RecipeType";
             scsb.IntegratedSecurity = true;
             SqlConnection con = new SqlConnection(scsb.ToString());
@@ -228,7 +228,7 @@ namespace SimulatorApplication
             //  MessageBox.Show(stepnamevalue);
 
             scsb = new SqlConnectionStringBuilder();
-            scsb.DataSource = @"HP-PC\SQLEXPRESS";
+            scsb.DataSource = Form1.datasource;
             scsb.InitialCatalog = "RecipeType";
             scsb.IntegratedSecurity = true;
             SqlConnection con = new SqlConnection(scsb.ToString());
