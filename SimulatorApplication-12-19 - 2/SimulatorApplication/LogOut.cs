@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -17,6 +18,8 @@ namespace SimulatorApplication
         {
             InitializeComponent();
         }
+
+        SqlConnectionStringBuilder scsb;
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -40,6 +43,27 @@ namespace SimulatorApplication
 
             form1.btnLogIn.Tag = "LogIn";
             form1.lbllog.Text = "System: Monitor";
+
+            scsb = new SqlConnectionStringBuilder();
+
+            scsb.DataSource = Form1.datasource;
+            scsb.InitialCatalog = "RecipeType";
+            scsb.IntegratedSecurity = true;
+            SqlConnection con = new SqlConnection(scsb.ToString());
+
+            con.Open();
+
+            string strSQL = "insert into EventLog (Date,Event,Info) values(@1,@2,@3)";
+            SqlCommand cmd = new SqlCommand(strSQL, con);
+
+            cmd.Parameters.AddWithValue("@1", DateTime.Now);
+            cmd.Parameters.AddWithValue("@2", "Machine user logged out");
+            cmd.Parameters.AddWithValue("@3", "User:username access level: me with control");
+
+            cmd.ExecuteNonQuery();
+            con.Close();
+
+
         }
 
         private void LogOut_Load(object sender, EventArgs e)

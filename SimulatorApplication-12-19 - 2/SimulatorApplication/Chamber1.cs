@@ -421,7 +421,7 @@ namespace SimulatorApplication
                     cmdmodulerecipe.Parameters.AddWithValue("@starttime", ListStepStartTime[i]);
                     cmdmodulerecipe.Parameters.AddWithValue("@endtime", ListStepEndTime[i]);
                     cmdmodulerecipe.Parameters.AddWithValue("@noofrecipe", Form1.nooftherecipe);
-                    cmdmodulerecipe.Parameters.AddWithValue("@Logname", form1.str123);
+                    cmdmodulerecipe.Parameters.AddWithValue("@Logname", Form1.str123);
 
                     cmdmodulerecipe.ExecuteNonQuery();
 
@@ -530,14 +530,14 @@ namespace SimulatorApplication
                     cmdparameter.Parameters.AddWithValue("@86", DateTime.Now);
                     cmdparameter.Parameters.AddWithValue("@87", DateTime.Now);
                     cmdparameter.Parameters.AddWithValue("@88", DateTime.Now);
-                    cmdparameter.Parameters.AddWithValue("@91", form1.str123);
-                    cmdparameter.Parameters.AddWithValue("@92", form1.str123);
-                    cmdparameter.Parameters.AddWithValue("@93", form1.str123);
-                    cmdparameter.Parameters.AddWithValue("@94", form1.str123);
-                    cmdparameter.Parameters.AddWithValue("@95", form1.str123);
-                    cmdparameter.Parameters.AddWithValue("@96", form1.str123);
-                    cmdparameter.Parameters.AddWithValue("@97", form1.str123);
-                    cmdparameter.Parameters.AddWithValue("@98", form1.str123);
+                    cmdparameter.Parameters.AddWithValue("@91", Form1.str123);
+                    cmdparameter.Parameters.AddWithValue("@92", Form1.str123);
+                    cmdparameter.Parameters.AddWithValue("@93", Form1.str123);
+                    cmdparameter.Parameters.AddWithValue("@94", Form1.str123);
+                    cmdparameter.Parameters.AddWithValue("@95", Form1.str123);
+                    cmdparameter.Parameters.AddWithValue("@96", Form1.str123);
+                    cmdparameter.Parameters.AddWithValue("@97", Form1.str123);
+                    cmdparameter.Parameters.AddWithValue("@98", Form1.str123);
                     cmdparameter.Parameters.AddWithValue("@101", Form1.nooftherecipe);
                     cmdparameter.Parameters.AddWithValue("@102", Form1.nooftherecipe);
                     cmdparameter.Parameters.AddWithValue("@103", Form1.nooftherecipe);

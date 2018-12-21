@@ -29,7 +29,7 @@ namespace SimulatorApplication
         public static string nooftherecipe;
 
 
-        public string str123;
+        public static string str123;
 
         Thread t = new Thread(threadwait);
 
@@ -352,6 +352,9 @@ namespace SimulatorApplication
                             if (ispauserobot == false)
                             {
 
+
+
+
                                 //   pauseSignal = new ManualResetEvent(true);
                                 //   taskTimer = new Task(timerCallback);
                                 //  taskTimer.Start();
@@ -359,8 +362,17 @@ namespace SimulatorApplication
 
 
                                 button2.Enabled = false;
-                              //  button2.Tag = "robotStart";
+                                //  button2.Tag = "robotStart";
 
+
+                             /*   con.Open();
+                                string SQLeventlog = "insert into EventLog (Date,Event,Info) values(@1,@2,@3)";
+
+                                SqlCommand cmdeventlog = new SqlCommand(SQLeventlog,con);
+                                cmdeventlog.Parameters.AddWithValue("@1",DateTime.Now);
+                                cmdeventlog.Parameters.AddWithValue("@2", "");
+                                cmdeventlog.Parameters.AddWithValue("@3", "");
+                                con.Close();*/
 
                                 con.Open();
                                 string SQLnoofwafer = "select noofwafers from cassettewafer where cassetterecipename like @searchcassetterecipename";
