@@ -11345,11 +11345,11 @@ namespace SimulatorApplication
                                         /////////////////////////////////////////////////////////finish waferA13
                                     }
 
-                                    if (int.Parse(NoOfwafer[i]) >= 10)
+                                    if (int.Parse(NoOfwafer[i]) >= 14)
                                     {
-                                        //////////////////////////////////////////////////////////////////////////start waferA10
-                                        nooftherecipe = "10";
-                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "finishWaferA9" && isStopRobot == false && iscancelrecipe == false)
+                                        //////////////////////////////////////////////////////////////////////////start waferA14
+                                        nooftherecipe = "14";
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "finishWaferA13" && isStopRobot == false && iscancelrecipe == false)
                                         {
                                             await Task.Delay(2000);
 
@@ -11402,6 +11402,30 @@ namespace SimulatorApplication
                                                 picwafer.Image = Properties.Resources.waferA9full;
 
                                             }
+                                            else if (NoOfwafer[i] == "11")
+                                            {
+                                                picwafer.Image = Properties.Resources.waferA9full;
+
+                                            }
+
+                                            else if (NoOfwafer[i] == "12")
+                                            {
+                                                picwafer.Image = Properties.Resources.waferA9full;
+
+                                            }
+
+                                            else if (NoOfwafer[i] == "13")
+                                            {
+                                                picwafer.Image = Properties.Resources.waferA9full;
+
+                                            }
+
+                                            else if (NoOfwafer[i] == "14")
+                                            {
+                                                //  picwafer.Image = Properties.Resources.waferA9full;
+                                                picWafer14.Visible = false;
+                                            }
+
 
 
                                             StartTime = DateTime.Now;
@@ -11414,7 +11438,7 @@ namespace SimulatorApplication
 
                                             string strWaferSelection = "insert into WaferSelection(NoOfWafers,StartTime,CassetteRecipeName,Logname) values(@NoOfWafer,@StartTime,@CassetteRecipeName,@Logname)";
                                             SqlCommand cmdwaferselection = new SqlCommand(strWaferSelection, con);
-                                            cmdwaferselection.Parameters.AddWithValue("@NoOfWafer", "10");
+                                            cmdwaferselection.Parameters.AddWithValue("@NoOfWafer", "14");
                                             cmdwaferselection.Parameters.AddWithValue("@StartTime", StartTime);
                                             cmdwaferselection.Parameters.AddWithValue("@CassetteRecipeName", form2Msg);
                                             cmdwaferselection.Parameters.AddWithValue("@Logname", lbl123.Text);
@@ -11426,17 +11450,17 @@ namespace SimulatorApplication
                                             await Task.Delay(1000);
 
                                             picMain.Image = Properties.Resources.mainpicture;
-                                            picMain.Image.Tag = "waferA8mainpicture";
+                                            picMain.Image.Tag = "waferA14mainpicture";
 
                                             await Task.Delay(1000);
                                         }
-                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "waferA8mainpicture")
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "waferA14mainpicture")
                                         {
                                             // lblCassette.BackColor = Color.LimeGreen;
                                             await Task.Delay(1000);
 
                                             picMain.Image = Properties.Resources.picrobotintocassette;
-                                            picMain.Image.Tag = "picrobotintocassetteA10";
+                                            picMain.Image.Tag = "picrobotintocassetteA14";
                                             label1.BackColor = Color.Blue;
                                             lblLoad.Text = "";
                                             lblLoad.BackColor = Color.Blue;
@@ -11449,60 +11473,60 @@ namespace SimulatorApplication
                                             lblCassette.BackColor = Color.LimeGreen;
 
                                         }
-                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotintocassetteA10")
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotintocassetteA14")
                                         {
                                             await Task.Delay(1000);
                                             picMain.Image = Properties.Resources.picrobotArmWafer;
-                                            picMain.Image.Tag = "picrobotArmWaferA10";
+                                            picMain.Image.Tag = "picrobotArmWaferA14";
 
                                             lblwafer.Visible = true;
-                                            lblwafer.Text = "A10";
+                                            lblwafer.Text = "A14";
 
                                             lblCassette.BackColor = Color.Blue;
                                         }
 
-                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotArmWaferA10")
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotArmWaferA14")
                                         {
                                             await Task.Delay(1000);
                                             picMain.Image = Properties.Resources.picrobotAlignerWafer;
-                                            picMain.Image.Tag = "picrobotAlignerWaferA10";
+                                            picMain.Image.Tag = "picrobotAlignerWaferA14";
 
                                             ovalShape1.Left += 70;
                                             ovalShape1.Top -= 85;
                                             lblwafer.Visible = false;
                                             lblwaferright.Visible = true;
-                                            lblwaferright.Text = "A10";
+                                            lblwaferright.Text = "A14";
                                             lblwafer.Left += 70;
                                             lblwafer.Top -= 85;
 
                                         }
 
-                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotAlignerWaferA10")
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotAlignerWaferA14")
                                         {
                                             await Task.Delay(1000);
 
                                             picMain.Image = Properties.Resources.picrobotintoAlignerWafer;
-                                            picMain.Image.Tag = "picrobotintoAlignerWaferA10";
+                                            picMain.Image.Tag = "picrobotintoAlignerWaferA14";
                                             lblCentralize.BackColor = Color.LimeGreen;
                                             ovalShape1.Left += 155;
                                             ovalShape1.Top += 0;
                                             lblwaferright.Visible = false;
                                             lblwaferaligner.Visible = true;
-                                            lblwaferaligner.Text = "A10";
+                                            lblwaferaligner.Text = "A14";
                                             lblwafer.Left += 155;
                                             lblwafer.Top += 0;
 
                                         }
 
-                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotintoAlignerWaferA10")
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotintoAlignerWaferA14")
                                         {
                                             await Task.Delay(1000);
                                             picMain.Image = Properties.Resources.picrobotAlignerWafer;
-                                            picMain.Image.Tag = "picrobotAlignerWaferA10-2";
+                                            picMain.Image.Tag = "picrobotAlignerWaferA14-2";
 
                                             lblwaferaligner.Visible = false;
                                             lblwaferright.Visible = true;
-                                            lblwaferright.Text = "A10";
+                                            lblwaferright.Text = "A14";
                                             ovalShape1.Left -= 155;
                                             ovalShape1.Top -= 0;
                                             lblwafer.Left -= 155;
@@ -11510,22 +11534,22 @@ namespace SimulatorApplication
                                             lblCentralize.BackColor = Color.Blue;
                                         }
 
-                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotAlignerWaferA10-2")
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotAlignerWaferA14-2")
                                         {
                                             await Task.Delay(1000);
 
                                             picMain.Image = Properties.Resources.picrobotAPMWafer;
-                                            picMain.Image.Tag = "picrobotAPMWaferA10";
+                                            picMain.Image.Tag = "picrobotAPMWaferA14";
                                             lblwaferright.Visible = false;
                                             lblwaferup.Visible = true;
-                                            lblwaferup.Text = "A10";
+                                            lblwaferup.Text = "A14";
                                             ovalShape1.Left -= 82;
                                             ovalShape1.Top -= 76;
                                             lblwafer.Left -= 82;
                                             lblwafer.Top -= 76;
                                         }
 
-                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotAPMWaferA10" && picSV.Visible == true)
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotAPMWaferA14" && picSV.Visible == true)
                                         {
                                             await Task.Delay(1000);
 
@@ -11533,16 +11557,16 @@ namespace SimulatorApplication
                                             picSV.Visible = false;  // open sv of chamber
                                         }
 
-                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotAPMWaferA10" && picSV.Visible == false)
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotAPMWaferA14" && picSV.Visible == false)
                                         {
                                             await Task.Delay(1000);
 
                                             picMain.Image = Properties.Resources.picrobotintoAPMWafer;
-                                            picMain.Image.Tag = "picrobotintoAPMWaferA10";
+                                            picMain.Image.Tag = "picrobotintoAPMWaferA14";
 
                                             lblwaferup.Visible = false;
                                             lblwaferAPM.Visible = true;
-                                            lblwaferAPM.Text = "A10";
+                                            lblwaferAPM.Text = "A14";
                                             ovalShape1.Top -= 145;
                                             ovalShape1.Left += 3;
                                             lblwafer.Top -= 145;
@@ -11555,7 +11579,7 @@ namespace SimulatorApplication
                                             chamberload = "LimeGreen";
                                         }
 
-                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotintoAPMWaferA10")
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotintoAPMWaferA14")
                                         {
                                             await Task.Delay(1000);
                                             picChamber.Image = Properties.Resources.ChamberWithA1;
@@ -11563,7 +11587,7 @@ namespace SimulatorApplication
                                             //   picMain.Image = Properties.Resources.robotintochamberwithA1;
                                             picMain.Image = Properties.Resources.picrobotbotton;
                                             picMain.Image = Properties.Resources.picwaferinAPM;
-                                            picMain.Image.Tag = "picwaferinAPMA10";
+                                            picMain.Image.Tag = "picwaferinAPMA14";
                                             ovalShape1.Left -= 1;
                                             ovalShape1.Left += 1;
                                             //  picMain.SendToBack();
@@ -11575,7 +11599,7 @@ namespace SimulatorApplication
 
                                             //  pictRobot.Visible = true;
                                         }
-                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picwaferinAPMA10")
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picwaferinAPMA14")
 
                                         {
                                             await Task.Delay(1000);
@@ -11584,7 +11608,7 @@ namespace SimulatorApplication
                                             //picMain.Image = Properties.Resources.robotintochamberwithA1close;
                                             picSV.Visible = true;
 
-                                            ///////////////////////////////////////////////////////////////////////////////////////////////////////WaferA10 into Chamber
+                                            ///////////////////////////////////////////////////////////////////////////////////////////////////////WaferA14 into Chamber
                                             Chamber1 chamber1 = new Chamber1();
                                             chamber1.ShowDialog();
 
@@ -11701,7 +11725,7 @@ namespace SimulatorApplication
                                                 cmdmodulerecipe.Parameters.AddWithValue("@stepname", strStepname1[j]);
                                                 cmdmodulerecipe.Parameters.AddWithValue("@starttime", ListStepStartTime[j]);
                                                 cmdmodulerecipe.Parameters.AddWithValue("@endtime", ListStepEndTime[j]);
-                                                cmdmodulerecipe.Parameters.AddWithValue("@noofrecipe", "10");
+                                                cmdmodulerecipe.Parameters.AddWithValue("@noofrecipe", "14");
                                                 cmdmodulerecipe.Parameters.AddWithValue("@Logname", lbl123.Text);
 
                                                 // cmdmodulerecipe.ExecuteNonQuery();
@@ -11826,7 +11850,7 @@ namespace SimulatorApplication
 
 
 
-                                            picMain.Image.Tag = "finishchamberA10";
+                                            picMain.Image.Tag = "finishchamberA14";
 
 
 
@@ -11835,7 +11859,7 @@ namespace SimulatorApplication
                                         }
 
 
-                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "finishchamberA10" && picSV.Visible == true)
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "finishchamberA14" && picSV.Visible == true)
                                         {
 
                                             await Task.Delay(1000);
@@ -11843,14 +11867,14 @@ namespace SimulatorApplication
                                             //picMain.Image = Properties.Resources.robotintochamberwithA1;
                                             picSV.Visible = false;
                                         }
-                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "finishchamberA10" && picSV.Visible == false)
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "finishchamberA14" && picSV.Visible == false)
                                         {
                                             await Task.Delay(1000);
 
                                             picChamber.Image = Properties.Resources.robot_into_chamberA11;
                                             picMain.Image = Properties.Resources.picrobotintochamber;
                                             picMain.Image = Properties.Resources.picrobotintoAPMWafer;
-                                            picMain.Image.Tag = "picrobotintoAPMWaferA10-2";
+                                            picMain.Image.Tag = "picrobotintoAPMWaferA14-2";
 
                                             ovalShape1.Left += 1;
                                             ovalShape1.Left -= 1;
@@ -11858,7 +11882,7 @@ namespace SimulatorApplication
                                             picChamber.Left -= 150;
                                             picChamber.Height += 10;
                                         }
-                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotintoAPMWaferA10-2")
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotintoAPMWaferA14-2")
                                         {
                                             await Task.Delay(1000);
                                             label2.BackColor = Color.Blue;
@@ -11883,7 +11907,7 @@ namespace SimulatorApplication
                                             picMain.Image = Properties.Resources.picrobotbotton;
                                             picMain.Image = Properties.Resources.picrobotAPMWafer;
 
-                                            picMain.Image.Tag = "picrobotAPMWaferA10-2";
+                                            picMain.Image.Tag = "picrobotAPMWaferA14-2";
 
                                             lblwaferAPM.Visible = false;
                                             lblwaferup.Visible = true;
@@ -11899,7 +11923,7 @@ namespace SimulatorApplication
                                             picChamber.Left += 150;
                                             picChamber.Height -= 10;
                                         }
-                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotAPMWaferA10-2" && picSV.Visible == false)
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotAPMWaferA14-2" && picSV.Visible == false)
                                         {
                                             await Task.Delay(2000);
                                             picChamber.Image = Properties.Resources.new_chamber;//close chamber
@@ -11909,7 +11933,7 @@ namespace SimulatorApplication
 
 
                                         }
-                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotAPMWaferA10-2" && picSV.Visible == true)
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotAPMWaferA14-2" && picSV.Visible == true)
                                         {
                                             await Task.Delay(2000);
 
@@ -11918,7 +11942,7 @@ namespace SimulatorApplication
                                             // picMain.Image = Properties.Resources.robotgetwaferA1cassetteclose;
                                             picMain.Image = Properties.Resources.mainpicture;
                                             picMain.Image = Properties.Resources.picrobotArmWafer;
-                                            picMain.Image.Tag = "picrobotArmWaferA10-2";
+                                            picMain.Image.Tag = "picrobotArmWaferA14-2";
                                             lblwaferup.Visible = false;
                                             lblwafer.Visible = true;
                                             ovalShape1.Top += 162;
@@ -11931,7 +11955,7 @@ namespace SimulatorApplication
                                             picCassette.Image = Properties.Resources.cassette3;//open cassette
                                                                                                // picMain.Image = Properties.Resources.robotgetwaferA1;
                                         }
-                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotArmWaferA10-2")
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotArmWaferA14-2")
                                         {
                                             await Task.Delay(1000);
 
@@ -11939,7 +11963,7 @@ namespace SimulatorApplication
 
                                             picCassette.Image = Properties.Resources.robot_into_cassetteA1;
                                             picMain.Image = Properties.Resources.picrobotintocassette;
-                                            picMain.Image.Tag = "picrobotintocassettA10-2";
+                                            picMain.Image.Tag = "picrobotintocassettA14-2";
                                             lblwafer.Visible = false;
                                             lblwafer.Visible = false;
                                             ovalShape1.Visible = false;
@@ -11947,7 +11971,7 @@ namespace SimulatorApplication
                                             picCassette.Width += 25;
                                             picCassette.Top -= 205;
                                         }
-                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotintocassettA10-2")
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotintocassettA14-2")
                                         {
                                             await Task.Delay(2000);
                                             lblCassette.BackColor = Color.Blue;
@@ -12109,12 +12133,118 @@ namespace SimulatorApplication
                                                 picWafer9.Image = Properties.Resources.picWaferGreen;
                                                 picWafer10.Image = Properties.Resources.picWaferGreen;
                                             }
+                                            if (NoOfwafer[i] == "11")
+                                            {
+                                                //  picwafer.Image = Properties.Resources.waferA5full;
+                                                picWafer1.Visible = true;
+                                                picWafer2.Visible = true;
+                                                picWafer3.Visible = true;
+                                                picWafer4.Visible = true;
+                                                picWafer5.Visible = true;
+                                                picWafer6.Visible = true;
+                                                picWafer7.Visible = true;
+                                                picWafer8.Visible = true;
+                                                picWafer9.Visible = true;
+                                                picWafer10.Visible = true;
+                                                picWafer2.Image = Properties.Resources.picWaferGreen;
+                                                picWafer1.Image = Properties.Resources.picWaferGreen;
+                                                picWafer3.Image = Properties.Resources.picWaferGreen;
+                                                picWafer4.Image = Properties.Resources.picWaferGreen;
+                                                picWafer5.Image = Properties.Resources.picWaferGreen;
+                                                picWafer6.Image = Properties.Resources.picWaferGreen;
+                                                picWafer7.Image = Properties.Resources.picWaferGreen;
+                                                picWafer8.Image = Properties.Resources.picWaferGreen;
+                                                picWafer9.Image = Properties.Resources.picWaferGreen;
+                                                picWafer10.Image = Properties.Resources.picWaferGreen;
+                                            }
+                                            if (NoOfwafer[i] == "12")
+                                            {
+                                                //  picwafer.Image = Properties.Resources.waferA5full;
+                                                picWafer1.Visible = true;
+                                                picWafer2.Visible = true;
+                                                picWafer3.Visible = true;
+                                                picWafer4.Visible = true;
+                                                picWafer5.Visible = true;
+                                                picWafer6.Visible = true;
+                                                picWafer7.Visible = true;
+                                                picWafer8.Visible = true;
+                                                picWafer9.Visible = true;
+                                                picWafer10.Visible = true;
+                                                picWafer2.Image = Properties.Resources.picWaferGreen;
+                                                picWafer1.Image = Properties.Resources.picWaferGreen;
+                                                picWafer3.Image = Properties.Resources.picWaferGreen;
+                                                picWafer4.Image = Properties.Resources.picWaferGreen;
+                                                picWafer5.Image = Properties.Resources.picWaferGreen;
+                                                picWafer6.Image = Properties.Resources.picWaferGreen;
+                                                picWafer7.Image = Properties.Resources.picWaferGreen;
+                                                picWafer8.Image = Properties.Resources.picWaferGreen;
+                                                picWafer9.Image = Properties.Resources.picWaferGreen;
+                                                picWafer10.Image = Properties.Resources.picWaferGreen;
+                                            }
+                                            if (NoOfwafer[i] == "13")
+                                            {
+                                                //  picwafer.Image = Properties.Resources.waferA5full;
+                                                picWafer1.Visible = true;
+                                                picWafer2.Visible = true;
+                                                picWafer3.Visible = true;
+                                                picWafer4.Visible = true;
+                                                picWafer5.Visible = true;
+                                                picWafer6.Visible = true;
+                                                picWafer7.Visible = true;
+                                                picWafer8.Visible = true;
+                                                picWafer9.Visible = true;
+                                                picWafer10.Visible = true;
+                                                picWafer2.Image = Properties.Resources.picWaferGreen;
+                                                picWafer1.Image = Properties.Resources.picWaferGreen;
+                                                picWafer3.Image = Properties.Resources.picWaferGreen;
+                                                picWafer4.Image = Properties.Resources.picWaferGreen;
+                                                picWafer5.Image = Properties.Resources.picWaferGreen;
+                                                picWafer6.Image = Properties.Resources.picWaferGreen;
+                                                picWafer7.Image = Properties.Resources.picWaferGreen;
+                                                picWafer8.Image = Properties.Resources.picWaferGreen;
+                                                picWafer9.Image = Properties.Resources.picWaferGreen;
+                                                picWafer10.Image = Properties.Resources.picWaferGreen;
+                                            }
+                                            if (NoOfwafer[i] == "14")
+                                            {
+                                                //  picwafer.Image = Properties.Resources.waferA5full;
+                                                picWafer1.Visible = true;
+                                                picWafer2.Visible = true;
+                                                picWafer3.Visible = true;
+                                                picWafer4.Visible = true;
+                                                picWafer5.Visible = true;
+                                                picWafer6.Visible = true;
+                                                picWafer7.Visible = true;
+                                                picWafer8.Visible = true;
+                                                picWafer9.Visible = true;
+                                                picWafer10.Visible = true;
+                                                picWafer11.Visible = true;
+                                                picWafer12.Visible = true;
+                                                picWafer13.Visible = true;
+                                                picWafer14.Visible = true;
+                                                picWafer2.Image = Properties.Resources.picWaferGreen;
+                                                picWafer1.Image = Properties.Resources.picWaferGreen;
+                                                picWafer3.Image = Properties.Resources.picWaferGreen;
+                                                picWafer4.Image = Properties.Resources.picWaferGreen;
+                                                picWafer5.Image = Properties.Resources.picWaferGreen;
+                                                picWafer6.Image = Properties.Resources.picWaferGreen;
+                                                picWafer7.Image = Properties.Resources.picWaferGreen;
+                                                picWafer8.Image = Properties.Resources.picWaferGreen;
+                                                picWafer9.Image = Properties.Resources.picWaferGreen;
+                                                picWafer10.Image = Properties.Resources.picWaferGreen;
+                                                picWafer11.Image = Properties.Resources.picWaferGreen;
+                                                picWafer12.Image = Properties.Resources.picWaferGreen;
+                                                picWafer13.Image = Properties.Resources.picWaferGreen;
+                                                picWafer14.Image = Properties.Resources.picWaferGreen;
+
+                                            }
+
 
 
 
 
                                             //////////////////////////////////////////////////////////////////Save DataLog
-                                            if (int.Parse(NoOfwafer[i]) == 10)
+                                            if (int.Parse(NoOfwafer[i]) == 14)
                                             {
                                                 EndTime = DateTime.Now;
 
@@ -12137,7 +12267,7 @@ namespace SimulatorApplication
 
 
                                             }
-                                            picMain.Image.Tag = "finishwaferA10";
+                                            picMain.Image.Tag = "finishwaferA14";
                                             if (isStopRobot == true)
                                             {
                                                 button2.Enabled = true;
@@ -12146,9 +12276,6492 @@ namespace SimulatorApplication
 
 
                                         }
-                                        /////////////////////////////////////////////////////////finish waferA10
+                                        /////////////////////////////////////////////////////////finish waferA14
                                     }
 
+                                    if (int.Parse(NoOfwafer[i]) >= 15)
+                                    {
+                                        //////////////////////////////////////////////////////////////////////////start waferA15
+                                        nooftherecipe = "15";
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "finishWaferA14" && isStopRobot == false && iscancelrecipe == false)
+                                        {
+                                            await Task.Delay(2000);
+
+                                            picCassette.Image = Properties.Resources.cassette1;
+
+                                            if (NoOfwafer[i] == "1")
+                                            {
+                                                picwafer.Image = Properties.Resources.wafer;
+                                                picwafer.Image.Tag = "wafer";
+                                            }
+                                            else if (NoOfwafer[i] == "2")
+                                            {
+                                                picwafer.Image = Properties.Resources.waferA1full;
+                                            }
+                                            else if (NoOfwafer[i] == "3")
+                                            {
+                                                picwafer.Image = Properties.Resources.waferA2full;
+
+                                            }
+                                            else if (NoOfwafer[i] == "4")
+                                            {
+                                                picwafer.Image = Properties.Resources.waferA3full;
+                                            }
+                                            else if (NoOfwafer[i] == "5")
+                                            {
+                                                picwafer.Image = Properties.Resources.waferA4full;
+                                            }
+                                            else if (NoOfwafer[i] == "6")
+                                            {
+                                                picwafer.Image = Properties.Resources.waferA5full;
+
+                                            }
+                                            else if (NoOfwafer[i] == "7")
+                                            {
+                                                picwafer.Image = Properties.Resources.waferA6full;
+
+                                            }
+                                            else if (NoOfwafer[i] == "8")
+                                            {
+                                                picwafer.Image = Properties.Resources.waferA7full;
+
+                                            }
+                                            else if (NoOfwafer[i] == "9")
+                                            {
+                                                picwafer.Image = Properties.Resources.waferA8full;
+
+                                            }
+                                            else if (NoOfwafer[i] == "10")
+                                            {
+                                                picwafer.Image = Properties.Resources.waferA9full;
+
+                                            }
+                                            else if (NoOfwafer[i] == "11")
+                                            {
+                                                picwafer.Image = Properties.Resources.waferA9full;
+
+                                            }
+
+                                            else if (NoOfwafer[i] == "12")
+                                            {
+                                                picwafer.Image = Properties.Resources.waferA9full;
+
+                                            }
+
+                                            else if (NoOfwafer[i] == "13")
+                                            {
+                                                picwafer.Image = Properties.Resources.waferA9full;
+
+                                            }
+
+                                            else if (NoOfwafer[i] == "14")
+                                            {
+                                                //  picwafer.Image = Properties.Resources.waferA9full;
+                                                picWafer14.Visible = false;
+                                            }
+
+                                            else if (NoOfwafer[i] == "15")
+                                            {
+                                                //  picwafer.Image = Properties.Resources.waferA9full;
+                                                picWafer15.Visible = false;
+                                            }
+
+
+
+                                            StartTime = DateTime.Now;
+
+
+
+
+                                            await Task.Delay(2000);
+                                            con.Open();
+
+                                            string strWaferSelection = "insert into WaferSelection(NoOfWafers,StartTime,CassetteRecipeName,Logname) values(@NoOfWafer,@StartTime,@CassetteRecipeName,@Logname)";
+                                            SqlCommand cmdwaferselection = new SqlCommand(strWaferSelection, con);
+                                            cmdwaferselection.Parameters.AddWithValue("@NoOfWafer", "15");
+                                            cmdwaferselection.Parameters.AddWithValue("@StartTime", StartTime);
+                                            cmdwaferselection.Parameters.AddWithValue("@CassetteRecipeName", form2Msg);
+                                            cmdwaferselection.Parameters.AddWithValue("@Logname", lbl123.Text);
+
+                                            cmdwaferselection.ExecuteNonQuery();
+
+                                            con.Close();
+
+                                            await Task.Delay(1000);
+
+                                            picMain.Image = Properties.Resources.mainpicture;
+                                            picMain.Image.Tag = "waferA15mainpicture";
+
+                                            await Task.Delay(1000);
+                                        }
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "waferA15mainpicture")
+                                        {
+                                            // lblCassette.BackColor = Color.LimeGreen;
+                                            await Task.Delay(1000);
+
+                                            picMain.Image = Properties.Resources.picrobotintocassette;
+                                            picMain.Image.Tag = "picrobotintocassetteA15";
+                                            label1.BackColor = Color.Blue;
+                                            lblLoad.Text = "";
+                                            lblLoad.BackColor = Color.Blue;
+                                            lbl123.BackColor = Color.Blue;
+                                            lblState.BackColor = Color.Blue;
+                                            lblCassetteRecipename.BackColor = Color.Blue;
+                                            lblmTorr.BackColor = Color.Blue;
+
+
+                                            lblCassette.BackColor = Color.LimeGreen;
+
+                                        }
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotintocassetteA15")
+                                        {
+                                            await Task.Delay(1000);
+                                            picMain.Image = Properties.Resources.picrobotArmWafer;
+                                            picMain.Image.Tag = "picrobotArmWaferA15";
+
+                                            lblwafer.Visible = true;
+                                            lblwafer.Text = "A15";
+
+                                            lblCassette.BackColor = Color.Blue;
+                                        }
+
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotArmWaferA15")
+                                        {
+                                            await Task.Delay(1000);
+                                            picMain.Image = Properties.Resources.picrobotAlignerWafer;
+                                            picMain.Image.Tag = "picrobotAlignerWaferA15";
+
+                                            ovalShape1.Left += 70;
+                                            ovalShape1.Top -= 85;
+                                            lblwafer.Visible = false;
+                                            lblwaferright.Visible = true;
+                                            lblwaferright.Text = "A15";
+                                            lblwafer.Left += 70;
+                                            lblwafer.Top -= 85;
+
+                                        }
+
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotAlignerWaferA15")
+                                        {
+                                            await Task.Delay(1000);
+
+                                            picMain.Image = Properties.Resources.picrobotintoAlignerWafer;
+                                            picMain.Image.Tag = "picrobotintoAlignerWaferA15";
+                                            lblCentralize.BackColor = Color.LimeGreen;
+                                            ovalShape1.Left += 155;
+                                            ovalShape1.Top += 0;
+                                            lblwaferright.Visible = false;
+                                            lblwaferaligner.Visible = true;
+                                            lblwaferaligner.Text = "A15";
+                                            lblwafer.Left += 155;
+                                            lblwafer.Top += 0;
+
+                                        }
+
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotintoAlignerWaferA15")
+                                        {
+                                            await Task.Delay(1000);
+                                            picMain.Image = Properties.Resources.picrobotAlignerWafer;
+                                            picMain.Image.Tag = "picrobotAlignerWaferA15-2";
+
+                                            lblwaferaligner.Visible = false;
+                                            lblwaferright.Visible = true;
+                                            lblwaferright.Text = "A15";
+                                            ovalShape1.Left -= 155;
+                                            ovalShape1.Top -= 0;
+                                            lblwafer.Left -= 155;
+                                            lblwafer.Top -= 0;
+                                            lblCentralize.BackColor = Color.Blue;
+                                        }
+
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotAlignerWaferA15-2")
+                                        {
+                                            await Task.Delay(1000);
+
+                                            picMain.Image = Properties.Resources.picrobotAPMWafer;
+                                            picMain.Image.Tag = "picrobotAPMWaferA15";
+                                            lblwaferright.Visible = false;
+                                            lblwaferup.Visible = true;
+                                            lblwaferup.Text = "A15";
+                                            ovalShape1.Left -= 82;
+                                            ovalShape1.Top -= 76;
+                                            lblwafer.Left -= 82;
+                                            lblwafer.Top -= 76;
+                                        }
+
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotAPMWaferA15" && picSV.Visible == true)
+                                        {
+                                            await Task.Delay(1000);
+
+
+                                            picSV.Visible = false;  // open sv of chamber
+                                        }
+
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotAPMWaferA15" && picSV.Visible == false)
+                                        {
+                                            await Task.Delay(1000);
+
+                                            picMain.Image = Properties.Resources.picrobotintoAPMWafer;
+                                            picMain.Image.Tag = "picrobotintoAPMWaferA15";
+
+                                            lblwaferup.Visible = false;
+                                            lblwaferAPM.Visible = true;
+                                            lblwaferAPM.Text = "A15";
+                                            ovalShape1.Top -= 145;
+                                            ovalShape1.Left += 3;
+                                            lblwafer.Top -= 145;
+                                            lblwafer.Left += 3;
+
+
+
+                                            lblChamber.BackColor = Color.LimeGreen;
+
+                                            chamberload = "LimeGreen";
+                                        }
+
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotintoAPMWaferA15")
+                                        {
+                                            await Task.Delay(1000);
+                                            picChamber.Image = Properties.Resources.ChamberWithA1;
+
+                                            //   picMain.Image = Properties.Resources.robotintochamberwithA1;
+                                            picMain.Image = Properties.Resources.picrobotbotton;
+                                            picMain.Image = Properties.Resources.picwaferinAPM;
+                                            picMain.Image.Tag = "picwaferinAPMA15";
+                                            ovalShape1.Left -= 1;
+                                            ovalShape1.Left += 1;
+                                            //  picMain.SendToBack();
+                                            // ovalShape1.BringToFront();
+                                            picChamber.Width -= 140;
+                                            picChamber.Left += 150;
+                                            picChamber.Height -= 10;
+
+
+                                            //  pictRobot.Visible = true;
+                                        }
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picwaferinAPMA15")
+
+                                        {
+                                            await Task.Delay(1000);
+
+                                            picChamber.Image = Properties.Resources.ChamberWithA1Close;
+                                            //picMain.Image = Properties.Resources.robotintochamberwithA1close;
+                                            picSV.Visible = true;
+
+                                            ///////////////////////////////////////////////////////////////////////////////////////////////////////WaferA15 into Chamber
+                                            Chamber1 chamber1 = new Chamber1();
+                                            chamber1.ShowDialog();
+
+                                            lblRecipe.BackColor = Color.LimeGreen;
+                                            lblStepName.BackColor = Color.LimeGreen;
+
+                                            lblnum.BackColor = Color.LimeGreen;
+
+                                            lblData.BackColor = Color.LimeGreen;
+                                            lblData.Text = "";
+                                            label2.BackColor = Color.LimeGreen;
+
+                                            lblProcess.Text = "Processing";
+                                            lblProcess.BackColor = Color.LimeGreen;
+                                            lblProcessStep.Text = "Process Step";
+                                            lblProcessStep.BackColor = Color.LimeGreen;
+
+
+
+                                            con.Open();
+                                            string strSQL = "select WaferRecipe from CassetteWafer  where CassetterecipeName = @NewWaferRecipe";
+
+                                            SqlCommand cmd = new SqlCommand(strSQL, con);
+                                            cmd.Parameters.AddWithValue("@NewWaferRecipe", Form1.form2Msg);
+                                            SqlDataReader reader = cmd.ExecuteReader();
+                                            while (reader.Read())
+                                            {
+
+                                                lblRecipe.Text = string.Format("{0}", reader["WaferRecipe"]);
+
+
+
+                                            }
+
+                                            con.Close();
+                                            con.Open();
+                                            string strSQL1 = "select stepname from newrecipe where recipename = @Myrecipename";
+
+                                            SqlCommand cmd1 = new SqlCommand(strSQL1, con);
+                                            cmd1.Parameters.AddWithValue("@Myrecipename", lblRecipe.Text);
+                                            SqlDataReader reader1 = cmd1.ExecuteReader();
+                                            while (reader1.Read())
+                                            {
+
+                                                strStepname1.Add(string.Format("{0}", reader1["StepName"]));
+
+
+                                            }
+
+                                            con.Close();
+
+                                            con.Open();
+                                            string strSQL2 = "select StepName from newrecipe inner join CassetteWafer on newrecipe.recipename = cassettewafer.waferRecipe where cassettewafer.waferRecipe = @Newrecipename";
+                                            SqlCommand cmd2 = new SqlCommand(strSQL2, con);
+                                            cmd2.Parameters.AddWithValue("@Newrecipename", lblRecipe.Text);
+
+                                            cmd2.ExecuteNonQuery();
+
+
+
+                                            for (int j = 0; j < strStepname1.Count(); j += 1)
+
+                                            {
+
+                                                //  await Task.Delay(1000);
+
+                                                ListStepStartTime.Add(DateTime.Now);
+
+
+                                                int count = j + 1;
+
+
+                                                lblStepName.Text = strStepname1[j];
+                                                lblnum.Text = "," + count + "/" + strStepname1.Count();
+
+
+                                                con.Close();
+
+                                                con.Open();
+                                                string strSQLStepSec = "select * from newrecipe where stepname = @NewSec";
+
+                                                SqlCommand cmdSec = new SqlCommand(strSQLStepSec, con);
+                                                cmdSec.Parameters.AddWithValue("@NewSec", lblStepName.Text);
+
+                                                SqlDataReader readerSec = cmdSec.ExecuteReader();
+
+
+                                                while (readerSec.Read())
+                                                {
+                                                    mySec1 = readerSec["ProcessTime"].ToString();
+
+                                                    Int32.TryParse(mySec1, out Sec1);
+
+                                                }
+
+                                                for (int k = 1; k <= Sec1; k++)
+                                                {
+                                                    lblData.Text = k.ToString() + "/" + mySec1.ToString() + " Sec";
+                                                    // await Task.Delay(1000);
+
+
+                                                }
+                                                ListStepEndTime.Add(DateTime.Now);
+
+                                                con.Close();
+
+                                                con.Open();
+
+                                                string strModuleRecipe = "insert into ModuleRecipe(RecipeName,StepName,StartTime,EndTime,noofrecipe,logname) values(@recipename,@stepname,@starttime,@endtime,@noofrecipe,@Logname)";
+
+                                                SqlCommand cmdmodulerecipe = new SqlCommand(strModuleRecipe, con);
+
+                                                cmdmodulerecipe.Parameters.AddWithValue("@recipename", lblRecipe.Text);
+                                                cmdmodulerecipe.Parameters.AddWithValue("@stepname", strStepname1[j]);
+                                                cmdmodulerecipe.Parameters.AddWithValue("@starttime", ListStepStartTime[j]);
+                                                cmdmodulerecipe.Parameters.AddWithValue("@endtime", ListStepEndTime[j]);
+                                                cmdmodulerecipe.Parameters.AddWithValue("@noofrecipe", "15");
+                                                cmdmodulerecipe.Parameters.AddWithValue("@Logname", lbl123.Text);
+
+                                                // cmdmodulerecipe.ExecuteNonQuery();
+
+                                                con.Close();
+                                                //////////////////////////////////////////////////////////////////////////////////////////////////////get parameter value
+
+                                                con.Open();
+
+                                                string strSQL3 = "select * from newrecipe where stepname = @Newstepname and recipename = @Newrecipename";
+
+                                                SqlCommand cmd3 = new SqlCommand(strSQL3, con);
+                                                cmd3.Parameters.AddWithValue("@Newstepname", lblStepName.Text);
+                                                cmd3.Parameters.AddWithValue("@Newrecipename", lblRecipe.Text);
+                                                SqlDataReader reader2 = cmd3.ExecuteReader();
+
+                                                while (reader2.Read())
+                                                {
+                                                    CI2 = reader2["CI2"].ToString();
+                                                    BCI3 = reader2["BCI3"].ToString();
+                                                    SF6 = reader2["SF6"].ToString();
+                                                    CHF3 = reader2["CHF3"].ToString();
+                                                    Oxygen = reader2["Oxygen"].ToString();
+                                                    Oxygen1 = reader2["Oxygen1"].ToString();
+                                                    Nitrogen = reader2["Nitrogen"].ToString();
+                                                    Argon = reader2["Argon"].ToString();
+
+
+
+                                                }
+
+                                                con.Close();
+
+                                                ///////////////////////////////////////////////////////////////////////////////////////////////////
+                                                con.Open();
+                                                //  Chamber1 chamber1 = new Chamber1();
+
+                                                string strParameter = "insert into valueselection(parameter,Minimum,Maximum,Average,Units,recipename,stepname,valuedate) values(@11,@21,@31,@41,@51,@61,@71,@81),(@12,@22,@32,@42,@52,@62,@72,@82),(@13,@23,@33,@43,@53,@63,@73,@83)"
+                                                    + ",(@14,@24,@34,@44,@54,@64,@74,@84),(@15,@25,@35,@45,@55,@65,@75,@85),(@16,@26,@36,@46,@56,@66,@76,@86),(@17,@27,@37,@47,@57,@67,@77,@87),(@18,@28,@38,@48,@58,@68,@78,@88)";
+                                                SqlCommand cmdparameter = new SqlCommand(strParameter, con);
+                                                cmdparameter.Parameters.AddWithValue("@11", "CI2");
+                                                cmdparameter.Parameters.AddWithValue("@12", "BCI3");
+                                                cmdparameter.Parameters.AddWithValue("@13", "SF6");
+                                                cmdparameter.Parameters.AddWithValue("@14", "CHF3");
+                                                cmdparameter.Parameters.AddWithValue("@15", "Oxygen");
+                                                cmdparameter.Parameters.AddWithValue("@16", "Oxygen");
+                                                cmdparameter.Parameters.AddWithValue("@17", "Nitrogen");
+                                                cmdparameter.Parameters.AddWithValue("@18", "Argon");
+                                                cmdparameter.Parameters.AddWithValue("@21", CI2);
+                                                cmdparameter.Parameters.AddWithValue("@22", BCI3);
+                                                cmdparameter.Parameters.AddWithValue("@23", SF6);
+                                                cmdparameter.Parameters.AddWithValue("@24", CHF3);
+                                                cmdparameter.Parameters.AddWithValue("@25", Oxygen);
+                                                cmdparameter.Parameters.AddWithValue("@26", Oxygen1);
+                                                cmdparameter.Parameters.AddWithValue("@27", Nitrogen);
+                                                cmdparameter.Parameters.AddWithValue("@28", Argon);
+                                                cmdparameter.Parameters.AddWithValue("@31", CI2);
+                                                cmdparameter.Parameters.AddWithValue("@32", BCI3);
+                                                cmdparameter.Parameters.AddWithValue("@33", SF6);
+                                                cmdparameter.Parameters.AddWithValue("@34", CHF3);
+                                                cmdparameter.Parameters.AddWithValue("@35", Oxygen);
+                                                cmdparameter.Parameters.AddWithValue("@36", Oxygen1);
+                                                cmdparameter.Parameters.AddWithValue("@37", Nitrogen);
+                                                cmdparameter.Parameters.AddWithValue("@38", Argon);
+                                                cmdparameter.Parameters.AddWithValue("@41", CI2);
+                                                cmdparameter.Parameters.AddWithValue("@42", BCI3);
+                                                cmdparameter.Parameters.AddWithValue("@43", SF6);
+                                                cmdparameter.Parameters.AddWithValue("@44", CHF3);
+                                                cmdparameter.Parameters.AddWithValue("@45", Oxygen);
+                                                cmdparameter.Parameters.AddWithValue("@46", Oxygen1);
+                                                cmdparameter.Parameters.AddWithValue("@47", Nitrogen);
+                                                cmdparameter.Parameters.AddWithValue("@48", Argon);
+                                                cmdparameter.Parameters.AddWithValue("@51", "sccm");
+                                                cmdparameter.Parameters.AddWithValue("@52", "sccm");
+                                                cmdparameter.Parameters.AddWithValue("@53", "sccm");
+                                                cmdparameter.Parameters.AddWithValue("@54", "sccm");
+                                                cmdparameter.Parameters.AddWithValue("@55", "sccm");
+                                                cmdparameter.Parameters.AddWithValue("@56", "sccm");
+                                                cmdparameter.Parameters.AddWithValue("@57", "sccm");
+                                                cmdparameter.Parameters.AddWithValue("@58", "sccm");
+                                                cmdparameter.Parameters.AddWithValue("@61", lblRecipe.Text);
+                                                cmdparameter.Parameters.AddWithValue("@62", lblRecipe.Text);
+                                                cmdparameter.Parameters.AddWithValue("@63", lblRecipe.Text);
+                                                cmdparameter.Parameters.AddWithValue("@64", lblRecipe.Text);
+                                                cmdparameter.Parameters.AddWithValue("@65", lblRecipe.Text);
+                                                cmdparameter.Parameters.AddWithValue("@66", lblRecipe.Text);
+                                                cmdparameter.Parameters.AddWithValue("@67", lblRecipe.Text);
+                                                cmdparameter.Parameters.AddWithValue("@68", lblRecipe.Text);
+                                                cmdparameter.Parameters.AddWithValue("@71", strStepname1[j]);
+                                                cmdparameter.Parameters.AddWithValue("@72", strStepname1[j]);
+                                                cmdparameter.Parameters.AddWithValue("@73", strStepname1[j]);
+                                                cmdparameter.Parameters.AddWithValue("@74", strStepname1[j]);
+                                                cmdparameter.Parameters.AddWithValue("@75", strStepname1[j]);
+                                                cmdparameter.Parameters.AddWithValue("@76", strStepname1[j]);
+                                                cmdparameter.Parameters.AddWithValue("@77", strStepname1[j]);
+                                                cmdparameter.Parameters.AddWithValue("@78", strStepname1[j]);
+                                                cmdparameter.Parameters.AddWithValue("@81", DateTime.Now);
+                                                cmdparameter.Parameters.AddWithValue("@82", DateTime.Now);
+                                                cmdparameter.Parameters.AddWithValue("@83", DateTime.Now);
+                                                cmdparameter.Parameters.AddWithValue("@84", DateTime.Now);
+                                                cmdparameter.Parameters.AddWithValue("@85", DateTime.Now);
+                                                cmdparameter.Parameters.AddWithValue("@86", DateTime.Now);
+                                                cmdparameter.Parameters.AddWithValue("@87", DateTime.Now);
+                                                cmdparameter.Parameters.AddWithValue("@88", DateTime.Now);
+
+
+                                                cmdparameter.ExecuteNonQuery();
+                                                con.Close();
+
+                                            }
+                                            ///////////////////////////////////////////////
+
+
+                                            strStepname1.Clear();
+                                            ListStepStartTime.Clear();
+                                            ListStepEndTime.Clear();
+
+                                            // }
+
+
+
+
+
+
+                                            picMain.Image.Tag = "finishchamberA15";
+
+
+
+
+                                            /////////////////////////////////////////////////////////////////////////////////////////////////// 
+                                        }
+
+
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "finishchamberA15" && picSV.Visible == true)
+                                        {
+
+                                            await Task.Delay(1000);
+                                            picChamber.Image = Properties.Resources.ChamberWithA1;
+                                            //picMain.Image = Properties.Resources.robotintochamberwithA1;
+                                            picSV.Visible = false;
+                                        }
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "finishchamberA15" && picSV.Visible == false)
+                                        {
+                                            await Task.Delay(1000);
+
+                                            picChamber.Image = Properties.Resources.robot_into_chamberA11;
+                                            picMain.Image = Properties.Resources.picrobotintochamber;
+                                            picMain.Image = Properties.Resources.picrobotintoAPMWafer;
+                                            picMain.Image.Tag = "picrobotintoAPMWaferA15-2";
+
+                                            ovalShape1.Left += 1;
+                                            ovalShape1.Left -= 1;
+                                            picChamber.Width += 140;
+                                            picChamber.Left -= 150;
+                                            picChamber.Height += 10;
+                                        }
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotintoAPMWaferA15-2")
+                                        {
+                                            await Task.Delay(1000);
+                                            label2.BackColor = Color.Blue;
+                                            lblProcess.BackColor = Color.Blue;
+                                            lblProcessStep.BackColor = Color.Blue;
+                                            lblRecipe.BackColor = Color.Blue;
+                                            lblStepName.BackColor = Color.Blue;
+                                            lblData.BackColor = Color.Blue;
+                                            lblnum.BackColor = Color.Blue;
+
+                                            lblProcess.Text = "Idle";
+                                            lblProcessStep.Text = "";
+                                            lblRecipe.Text = "";
+                                            lblStepName.Text = "";
+                                            lblnum.Text = "";
+                                            lblData.Text = "";
+
+
+                                            // pictRobot.Visible = true;
+
+                                            picChamber.Image = Properties.Resources.new_chamber1;
+                                            picMain.Image = Properties.Resources.picrobotbotton;
+                                            picMain.Image = Properties.Resources.picrobotAPMWafer;
+
+                                            picMain.Image.Tag = "picrobotAPMWaferA15-2";
+
+                                            lblwaferAPM.Visible = false;
+                                            lblwaferup.Visible = true;
+
+                                            ovalShape1.Top += 145;
+                                            ovalShape1.Left -= 3;
+                                            lblwafer.Top += 145;
+                                            lblwafer.Left -= 3;
+
+                                            lblChamber.BackColor = Color.Blue;
+                                            chamberload = "Blue";
+                                            picChamber.Width -= 140;
+                                            picChamber.Left += 150;
+                                            picChamber.Height -= 10;
+                                        }
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotAPMWaferA15-2" && picSV.Visible == false)
+                                        {
+                                            await Task.Delay(2000);
+                                            picChamber.Image = Properties.Resources.new_chamber;//close chamber
+
+                                            // picMain.Image = Properties.Resources.robotrightA1;
+                                            picSV.Visible = true;
+
+
+                                        }
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotAPMWaferA15-2" && picSV.Visible == true)
+                                        {
+                                            await Task.Delay(2000);
+
+                                            // pictRobot.Height += 20;
+
+                                            // picMain.Image = Properties.Resources.robotgetwaferA1cassetteclose;
+                                            picMain.Image = Properties.Resources.mainpicture;
+                                            picMain.Image = Properties.Resources.picrobotArmWafer;
+                                            picMain.Image.Tag = "picrobotArmWaferA15-2";
+                                            lblwaferup.Visible = false;
+                                            lblwafer.Visible = true;
+                                            ovalShape1.Top += 162;
+                                            lblwafer.Top += 162;
+                                            ovalShape1.Left += 12;
+                                            lblwafer.Left += 12;
+                                            await Task.Delay(2000);
+
+                                            await Task.Delay(1000);
+                                            picCassette.Image = Properties.Resources.cassette3;//open cassette
+                                                                                               // picMain.Image = Properties.Resources.robotgetwaferA1;
+                                        }
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotArmWaferA15-2")
+                                        {
+                                            await Task.Delay(1000);
+
+                                            lblCassette.BackColor = Color.LimeGreen;
+
+                                            picCassette.Image = Properties.Resources.robot_into_cassetteA1;
+                                            picMain.Image = Properties.Resources.picrobotintocassette;
+                                            picMain.Image.Tag = "picrobotintocassettA15-2";
+                                            lblwafer.Visible = false;
+                                            lblwafer.Visible = false;
+                                            ovalShape1.Visible = false;
+                                            picCassette.Height += 220;
+                                            picCassette.Width += 25;
+                                            picCassette.Top -= 205;
+                                        }
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotintocassettA15-2")
+                                        {
+                                            await Task.Delay(2000);
+                                            lblCassette.BackColor = Color.Blue;
+                                            //  pictRobot.Visible = true;
+
+                                            picMain.Image = Properties.Resources.mainpicture;
+                                            picCassette.Image = Properties.Resources.cassette3;
+                                            picCassette.Width -= 25;
+                                            picCassette.Height -= 220;
+                                            picCassette.Top += 205;
+                                            await Task.Delay(2000);
+                                            //  picMain.Image = Properties.Resources.mainpic;
+                                            picCassette.Image = Properties.Resources.cassette;
+                                            // picwafer.Image = Properties.Resources.waferfull;
+                                            if (NoOfwafer[i] == "1")
+                                            {
+                                                //  picwafer.Image = Properties.Resources.waferA1full;
+                                                picWafer1.Visible = true;
+                                            }
+                                            if (NoOfwafer[i] == "2")
+                                            {
+                                                //  picwafer.Image = Properties.Resources.waferA2full;
+                                                picWafer1.Visible = true;
+                                                picWafer2.Visible = true;
+                                            }
+                                            if (NoOfwafer[i] == "3")
+                                            {
+                                                //  picwafer.Image = Properties.Resources.waferA3full;
+                                                picWafer1.Visible = true;
+                                                picWafer2.Visible = true;
+                                                picWafer3.Visible = true;
+                                            }
+                                            if (NoOfwafer[i] == "4")
+                                            {
+                                                // picwafer.Image = Properties.Resources.waferA4full;
+                                                picWafer1.Visible = true;
+                                                picWafer2.Visible = true;
+                                                picWafer3.Visible = true;
+                                                picWafer4.Visible = true;
+                                                picWafer2.Image = Properties.Resources.picWaferGreen;
+                                                picWafer1.Image = Properties.Resources.picWaferGreen;
+                                                picWafer3.Image = Properties.Resources.picWaferGreen;
+                                                picWafer4.Image = Properties.Resources.picWaferGreen;
+                                            }
+
+                                            if (NoOfwafer[i] == "5")
+                                            {
+                                                //  picwafer.Image = Properties.Resources.waferA5full;
+                                                picWafer1.Visible = true;
+                                                picWafer2.Visible = true;
+                                                picWafer3.Visible = true;
+                                                picWafer4.Visible = true;
+                                                picWafer5.Visible = true;
+                                                picWafer2.Image = Properties.Resources.picWaferGreen;
+                                                picWafer1.Image = Properties.Resources.picWaferGreen;
+                                                picWafer3.Image = Properties.Resources.picWaferGreen;
+                                                picWafer4.Image = Properties.Resources.picWaferGreen;
+                                                picWafer5.Image = Properties.Resources.picWaferGreen;
+                                            }
+
+                                            if (NoOfwafer[i] == "6")
+                                            {
+                                                //  picwafer.Image = Properties.Resources.waferA5full;
+                                                picWafer1.Visible = true;
+                                                picWafer2.Visible = true;
+                                                picWafer3.Visible = true;
+                                                picWafer4.Visible = true;
+                                                picWafer5.Visible = true;
+                                                picWafer6.Visible = true;
+                                                picWafer2.Image = Properties.Resources.picWaferGreen;
+                                                picWafer1.Image = Properties.Resources.picWaferGreen;
+                                                picWafer3.Image = Properties.Resources.picWaferGreen;
+                                                picWafer4.Image = Properties.Resources.picWaferGreen;
+                                                picWafer5.Image = Properties.Resources.picWaferGreen;
+                                                picWafer6.Image = Properties.Resources.picWaferGreen;
+                                            }
+
+                                            if (NoOfwafer[i] == "7")
+                                            {
+                                                //  picwafer.Image = Properties.Resources.waferA5full;
+                                                picWafer1.Visible = true;
+                                                picWafer2.Visible = true;
+                                                picWafer3.Visible = true;
+                                                picWafer4.Visible = true;
+                                                picWafer5.Visible = true;
+                                                picWafer6.Visible = true;
+                                                picWafer7.Visible = true;
+                                                picWafer2.Image = Properties.Resources.picWaferGreen;
+                                                picWafer1.Image = Properties.Resources.picWaferGreen;
+                                                picWafer3.Image = Properties.Resources.picWaferGreen;
+                                                picWafer4.Image = Properties.Resources.picWaferGreen;
+                                                picWafer5.Image = Properties.Resources.picWaferGreen;
+                                                picWafer6.Image = Properties.Resources.picWaferGreen;
+                                                picWafer7.Image = Properties.Resources.picWaferGreen;
+                                            }
+                                            if (NoOfwafer[i] == "8")
+                                            {
+                                                //  picwafer.Image = Properties.Resources.waferA5full;
+                                                picWafer1.Visible = true;
+                                                picWafer2.Visible = true;
+                                                picWafer3.Visible = true;
+                                                picWafer4.Visible = true;
+                                                picWafer5.Visible = true;
+                                                picWafer6.Visible = true;
+                                                picWafer7.Visible = true;
+                                                picWafer8.Visible = true;
+                                                picWafer2.Image = Properties.Resources.picWaferGreen;
+                                                picWafer1.Image = Properties.Resources.picWaferGreen;
+                                                picWafer3.Image = Properties.Resources.picWaferGreen;
+                                                picWafer4.Image = Properties.Resources.picWaferGreen;
+                                                picWafer5.Image = Properties.Resources.picWaferGreen;
+                                                picWafer6.Image = Properties.Resources.picWaferGreen;
+                                                picWafer7.Image = Properties.Resources.picWaferGreen;
+                                                picWafer8.Image = Properties.Resources.picWaferGreen;
+                                            }
+                                            if (NoOfwafer[i] == "9")
+                                            {
+                                                //  picwafer.Image = Properties.Resources.waferA5full;
+                                                picWafer1.Visible = true;
+                                                picWafer2.Visible = true;
+                                                picWafer3.Visible = true;
+                                                picWafer4.Visible = true;
+                                                picWafer5.Visible = true;
+                                                picWafer6.Visible = true;
+                                                picWafer7.Visible = true;
+                                                picWafer8.Visible = true;
+                                                picWafer9.Visible = true;
+                                                picWafer2.Image = Properties.Resources.picWaferGreen;
+                                                picWafer1.Image = Properties.Resources.picWaferGreen;
+                                                picWafer3.Image = Properties.Resources.picWaferGreen;
+                                                picWafer4.Image = Properties.Resources.picWaferGreen;
+                                                picWafer5.Image = Properties.Resources.picWaferGreen;
+                                                picWafer6.Image = Properties.Resources.picWaferGreen;
+                                                picWafer7.Image = Properties.Resources.picWaferGreen;
+                                                picWafer8.Image = Properties.Resources.picWaferGreen;
+                                                picWafer9.Image = Properties.Resources.picWaferGreen;
+                                            }
+                                            if (NoOfwafer[i] == "10")
+                                            {
+                                                //  picwafer.Image = Properties.Resources.waferA5full;
+                                                picWafer1.Visible = true;
+                                                picWafer2.Visible = true;
+                                                picWafer3.Visible = true;
+                                                picWafer4.Visible = true;
+                                                picWafer5.Visible = true;
+                                                picWafer6.Visible = true;
+                                                picWafer7.Visible = true;
+                                                picWafer8.Visible = true;
+                                                picWafer9.Visible = true;
+                                                picWafer10.Visible = true;
+                                                picWafer2.Image = Properties.Resources.picWaferGreen;
+                                                picWafer1.Image = Properties.Resources.picWaferGreen;
+                                                picWafer3.Image = Properties.Resources.picWaferGreen;
+                                                picWafer4.Image = Properties.Resources.picWaferGreen;
+                                                picWafer5.Image = Properties.Resources.picWaferGreen;
+                                                picWafer6.Image = Properties.Resources.picWaferGreen;
+                                                picWafer7.Image = Properties.Resources.picWaferGreen;
+                                                picWafer8.Image = Properties.Resources.picWaferGreen;
+                                                picWafer9.Image = Properties.Resources.picWaferGreen;
+                                                picWafer10.Image = Properties.Resources.picWaferGreen;
+                                            }
+                                            if (NoOfwafer[i] == "11")
+                                            {
+                                                //  picwafer.Image = Properties.Resources.waferA5full;
+                                                picWafer1.Visible = true;
+                                                picWafer2.Visible = true;
+                                                picWafer3.Visible = true;
+                                                picWafer4.Visible = true;
+                                                picWafer5.Visible = true;
+                                                picWafer6.Visible = true;
+                                                picWafer7.Visible = true;
+                                                picWafer8.Visible = true;
+                                                picWafer9.Visible = true;
+                                                picWafer10.Visible = true;
+                                                picWafer2.Image = Properties.Resources.picWaferGreen;
+                                                picWafer1.Image = Properties.Resources.picWaferGreen;
+                                                picWafer3.Image = Properties.Resources.picWaferGreen;
+                                                picWafer4.Image = Properties.Resources.picWaferGreen;
+                                                picWafer5.Image = Properties.Resources.picWaferGreen;
+                                                picWafer6.Image = Properties.Resources.picWaferGreen;
+                                                picWafer7.Image = Properties.Resources.picWaferGreen;
+                                                picWafer8.Image = Properties.Resources.picWaferGreen;
+                                                picWafer9.Image = Properties.Resources.picWaferGreen;
+                                                picWafer10.Image = Properties.Resources.picWaferGreen;
+                                            }
+                                            if (NoOfwafer[i] == "12")
+                                            {
+                                                //  picwafer.Image = Properties.Resources.waferA5full;
+                                                picWafer1.Visible = true;
+                                                picWafer2.Visible = true;
+                                                picWafer3.Visible = true;
+                                                picWafer4.Visible = true;
+                                                picWafer5.Visible = true;
+                                                picWafer6.Visible = true;
+                                                picWafer7.Visible = true;
+                                                picWafer8.Visible = true;
+                                                picWafer9.Visible = true;
+                                                picWafer10.Visible = true;
+                                                picWafer2.Image = Properties.Resources.picWaferGreen;
+                                                picWafer1.Image = Properties.Resources.picWaferGreen;
+                                                picWafer3.Image = Properties.Resources.picWaferGreen;
+                                                picWafer4.Image = Properties.Resources.picWaferGreen;
+                                                picWafer5.Image = Properties.Resources.picWaferGreen;
+                                                picWafer6.Image = Properties.Resources.picWaferGreen;
+                                                picWafer7.Image = Properties.Resources.picWaferGreen;
+                                                picWafer8.Image = Properties.Resources.picWaferGreen;
+                                                picWafer9.Image = Properties.Resources.picWaferGreen;
+                                                picWafer10.Image = Properties.Resources.picWaferGreen;
+                                            }
+                                            if (NoOfwafer[i] == "13")
+                                            {
+                                                //  picwafer.Image = Properties.Resources.waferA5full;
+                                                picWafer1.Visible = true;
+                                                picWafer2.Visible = true;
+                                                picWafer3.Visible = true;
+                                                picWafer4.Visible = true;
+                                                picWafer5.Visible = true;
+                                                picWafer6.Visible = true;
+                                                picWafer7.Visible = true;
+                                                picWafer8.Visible = true;
+                                                picWafer9.Visible = true;
+                                                picWafer10.Visible = true;
+                                                picWafer2.Image = Properties.Resources.picWaferGreen;
+                                                picWafer1.Image = Properties.Resources.picWaferGreen;
+                                                picWafer3.Image = Properties.Resources.picWaferGreen;
+                                                picWafer4.Image = Properties.Resources.picWaferGreen;
+                                                picWafer5.Image = Properties.Resources.picWaferGreen;
+                                                picWafer6.Image = Properties.Resources.picWaferGreen;
+                                                picWafer7.Image = Properties.Resources.picWaferGreen;
+                                                picWafer8.Image = Properties.Resources.picWaferGreen;
+                                                picWafer9.Image = Properties.Resources.picWaferGreen;
+                                                picWafer10.Image = Properties.Resources.picWaferGreen;
+                                            }
+                                            if (NoOfwafer[i] == "14")
+                                            {
+                                                //  picwafer.Image = Properties.Resources.waferA5full;
+                                                picWafer1.Visible = true;
+                                                picWafer2.Visible = true;
+                                                picWafer3.Visible = true;
+                                                picWafer4.Visible = true;
+                                                picWafer5.Visible = true;
+                                                picWafer6.Visible = true;
+                                                picWafer7.Visible = true;
+                                                picWafer8.Visible = true;
+                                                picWafer9.Visible = true;
+                                                picWafer10.Visible = true;
+                                                picWafer11.Visible = true;
+                                                picWafer12.Visible = true;
+                                                picWafer13.Visible = true;
+                                                picWafer14.Visible = true;
+                                                picWafer2.Image = Properties.Resources.picWaferGreen;
+                                                picWafer1.Image = Properties.Resources.picWaferGreen;
+                                                picWafer3.Image = Properties.Resources.picWaferGreen;
+                                                picWafer4.Image = Properties.Resources.picWaferGreen;
+                                                picWafer5.Image = Properties.Resources.picWaferGreen;
+                                                picWafer6.Image = Properties.Resources.picWaferGreen;
+                                                picWafer7.Image = Properties.Resources.picWaferGreen;
+                                                picWafer8.Image = Properties.Resources.picWaferGreen;
+                                                picWafer9.Image = Properties.Resources.picWaferGreen;
+                                                picWafer10.Image = Properties.Resources.picWaferGreen;
+                                                picWafer11.Image = Properties.Resources.picWaferGreen;
+                                                picWafer12.Image = Properties.Resources.picWaferGreen;
+                                                picWafer13.Image = Properties.Resources.picWaferGreen;
+                                                picWafer14.Image = Properties.Resources.picWaferGreen;
+
+                                            }
+                                            if (NoOfwafer[i] == "15")
+                                            {
+                                                //  picwafer.Image = Properties.Resources.waferA5full;
+                                                picWafer1.Visible = true;
+                                                picWafer2.Visible = true;
+                                                picWafer3.Visible = true;
+                                                picWafer4.Visible = true;
+                                                picWafer5.Visible = true;
+                                                picWafer6.Visible = true;
+                                                picWafer7.Visible = true;
+                                                picWafer8.Visible = true;
+                                                picWafer9.Visible = true;
+                                                picWafer10.Visible = true;
+                                                picWafer11.Visible = true;
+                                                picWafer12.Visible = true;
+                                                picWafer13.Visible = true;
+                                                picWafer14.Visible = true;
+                                                picWafer15.Visible = true;
+                                                picWafer2.Image = Properties.Resources.picWaferGreen;
+                                                picWafer1.Image = Properties.Resources.picWaferGreen;
+                                                picWafer3.Image = Properties.Resources.picWaferGreen;
+                                                picWafer4.Image = Properties.Resources.picWaferGreen;
+                                                picWafer5.Image = Properties.Resources.picWaferGreen;
+                                                picWafer6.Image = Properties.Resources.picWaferGreen;
+                                                picWafer7.Image = Properties.Resources.picWaferGreen;
+                                                picWafer8.Image = Properties.Resources.picWaferGreen;
+                                                picWafer9.Image = Properties.Resources.picWaferGreen;
+                                                picWafer10.Image = Properties.Resources.picWaferGreen;
+                                                picWafer11.Image = Properties.Resources.picWaferGreen;
+                                                picWafer12.Image = Properties.Resources.picWaferGreen;
+                                                picWafer13.Image = Properties.Resources.picWaferGreen;
+                                                picWafer14.Image = Properties.Resources.picWaferGreen;
+                                                picWafer15.Image = Properties.Resources.picWaferGreen;
+                                            }
+
+
+
+
+                                            //////////////////////////////////////////////////////////////////Save DataLog
+                                            if (int.Parse(NoOfwafer[i]) == 15)
+                                            {
+                                                EndTime = DateTime.Now;
+
+
+                                                con.Open();
+
+                                                string strinsertdatalog = "insert into DataLogger(logname,cassetterecipename,starttime) values(@1,@2,@3) ";
+                                                SqlCommand cmdinsertdatalog = new SqlCommand(strinsertdatalog, con);
+
+                                                cmdinsertdatalog.Parameters.AddWithValue("@1", lbl123.Text);
+                                                cmdinsertdatalog.Parameters.AddWithValue("@2", form2Msg);
+                                                cmdinsertdatalog.Parameters.AddWithValue("@3", StartTime);
+
+                                                cmdinsertdatalog.ExecuteNonQuery();
+
+                                                con.Close();
+
+                                                lblState.Text = "Finished";
+
+
+
+                                            }
+                                            picMain.Image.Tag = "finishwaferA15";
+                                            if (isStopRobot == true)
+                                            {
+                                                button2.Enabled = true;
+                                                lblState.Text = "Stopping";
+                                            }
+
+
+                                        }
+                                        /////////////////////////////////////////////////////////finish waferA15
+                                    }
+
+                                    if (int.Parse(NoOfwafer[i]) >= 16)
+                                    {
+                                        //////////////////////////////////////////////////////////////////////////start waferA16
+                                        nooftherecipe = "16";
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "finishWaferA15" && isStopRobot == false && iscancelrecipe == false)
+                                        {
+                                            await Task.Delay(2000);
+
+                                            picCassette.Image = Properties.Resources.cassette1;
+
+                                            if (NoOfwafer[i] == "1")
+                                            {
+                                                picwafer.Image = Properties.Resources.wafer;
+                                                picwafer.Image.Tag = "wafer";
+                                            }
+                                            else if (NoOfwafer[i] == "2")
+                                            {
+                                                picwafer.Image = Properties.Resources.waferA1full;
+                                            }
+                                            else if (NoOfwafer[i] == "3")
+                                            {
+                                                picwafer.Image = Properties.Resources.waferA2full;
+
+                                            }
+                                            else if (NoOfwafer[i] == "4")
+                                            {
+                                                picwafer.Image = Properties.Resources.waferA3full;
+                                            }
+                                            else if (NoOfwafer[i] == "5")
+                                            {
+                                                picwafer.Image = Properties.Resources.waferA4full;
+                                            }
+                                            else if (NoOfwafer[i] == "6")
+                                            {
+                                                picwafer.Image = Properties.Resources.waferA5full;
+
+                                            }
+                                            else if (NoOfwafer[i] == "7")
+                                            {
+                                                picwafer.Image = Properties.Resources.waferA6full;
+
+                                            }
+                                            else if (NoOfwafer[i] == "8")
+                                            {
+                                                picwafer.Image = Properties.Resources.waferA7full;
+
+                                            }
+                                            else if (NoOfwafer[i] == "9")
+                                            {
+                                                picwafer.Image = Properties.Resources.waferA8full;
+
+                                            }
+                                            else if (NoOfwafer[i] == "10")
+                                            {
+                                                picwafer.Image = Properties.Resources.waferA9full;
+
+                                            }
+                                            else if (NoOfwafer[i] == "11")
+                                            {
+                                                picwafer.Image = Properties.Resources.waferA9full;
+
+                                            }
+
+                                            else if (NoOfwafer[i] == "12")
+                                            {
+                                                picwafer.Image = Properties.Resources.waferA9full;
+
+                                            }
+
+                                            else if (NoOfwafer[i] == "13")
+                                            {
+                                                picwafer.Image = Properties.Resources.waferA9full;
+
+                                            }
+
+                                            else if (NoOfwafer[i] == "14")
+                                            {
+                                                //  picwafer.Image = Properties.Resources.waferA9full;
+                                                picWafer14.Visible = false;
+                                            }
+
+                                            else if (NoOfwafer[i] == "15")
+                                            {
+                                                //  picwafer.Image = Properties.Resources.waferA9full;
+                                                picWafer15.Visible = false;
+                                            }
+
+                                            else if (NoOfwafer[i] == "16")
+                                            {
+                                                //  picwafer.Image = Properties.Resources.waferA9full;
+                                                picWafer16.Visible = false;
+                                            }
+
+                                            StartTime = DateTime.Now;
+
+
+
+
+                                            await Task.Delay(2000);
+                                            con.Open();
+
+                                            string strWaferSelection = "insert into WaferSelection(NoOfWafers,StartTime,CassetteRecipeName,Logname) values(@NoOfWafer,@StartTime,@CassetteRecipeName,@Logname)";
+                                            SqlCommand cmdwaferselection = new SqlCommand(strWaferSelection, con);
+                                            cmdwaferselection.Parameters.AddWithValue("@NoOfWafer", "16");
+                                            cmdwaferselection.Parameters.AddWithValue("@StartTime", StartTime);
+                                            cmdwaferselection.Parameters.AddWithValue("@CassetteRecipeName", form2Msg);
+                                            cmdwaferselection.Parameters.AddWithValue("@Logname", lbl123.Text);
+
+                                            cmdwaferselection.ExecuteNonQuery();
+
+                                            con.Close();
+
+                                            await Task.Delay(1000);
+
+                                            picMain.Image = Properties.Resources.mainpicture;
+                                            picMain.Image.Tag = "waferA16mainpicture";
+
+                                            await Task.Delay(1000);
+                                        }
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "waferA16mainpicture")
+                                        {
+                                            // lblCassette.BackColor = Color.LimeGreen;
+                                            await Task.Delay(1000);
+
+                                            picMain.Image = Properties.Resources.picrobotintocassette;
+                                            picMain.Image.Tag = "picrobotintocassetteA16";
+                                            label1.BackColor = Color.Blue;
+                                            lblLoad.Text = "";
+                                            lblLoad.BackColor = Color.Blue;
+                                            lbl123.BackColor = Color.Blue;
+                                            lblState.BackColor = Color.Blue;
+                                            lblCassetteRecipename.BackColor = Color.Blue;
+                                            lblmTorr.BackColor = Color.Blue;
+
+
+                                            lblCassette.BackColor = Color.LimeGreen;
+
+                                        }
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotintocassetteA16")
+                                        {
+                                            await Task.Delay(1000);
+                                            picMain.Image = Properties.Resources.picrobotArmWafer;
+                                            picMain.Image.Tag = "picrobotArmWaferA16";
+
+                                            lblwafer.Visible = true;
+                                            lblwafer.Text = "A16";
+
+                                            lblCassette.BackColor = Color.Blue;
+                                        }
+
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotArmWaferA16")
+                                        {
+                                            await Task.Delay(1000);
+                                            picMain.Image = Properties.Resources.picrobotAlignerWafer;
+                                            picMain.Image.Tag = "picrobotAlignerWaferA16";
+
+                                            ovalShape1.Left += 70;
+                                            ovalShape1.Top -= 85;
+                                            lblwafer.Visible = false;
+                                            lblwaferright.Visible = true;
+                                            lblwaferright.Text = "A16";
+                                            lblwafer.Left += 70;
+                                            lblwafer.Top -= 85;
+
+                                        }
+
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotAlignerWaferA16")
+                                        {
+                                            await Task.Delay(1000);
+
+                                            picMain.Image = Properties.Resources.picrobotintoAlignerWafer;
+                                            picMain.Image.Tag = "picrobotintoAlignerWaferA16";
+                                            lblCentralize.BackColor = Color.LimeGreen;
+                                            ovalShape1.Left += 155;
+                                            ovalShape1.Top += 0;
+                                            lblwaferright.Visible = false;
+                                            lblwaferaligner.Visible = true;
+                                            lblwaferaligner.Text = "A16";
+                                            lblwafer.Left += 155;
+                                            lblwafer.Top += 0;
+
+                                        }
+
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotintoAlignerWaferA16")
+                                        {
+                                            await Task.Delay(1000);
+                                            picMain.Image = Properties.Resources.picrobotAlignerWafer;
+                                            picMain.Image.Tag = "picrobotAlignerWaferA16-2";
+
+                                            lblwaferaligner.Visible = false;
+                                            lblwaferright.Visible = true;
+                                            lblwaferright.Text = "A16";
+                                            ovalShape1.Left -= 155;
+                                            ovalShape1.Top -= 0;
+                                            lblwafer.Left -= 155;
+                                            lblwafer.Top -= 0;
+                                            lblCentralize.BackColor = Color.Blue;
+                                        }
+
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotAlignerWaferA16-2")
+                                        {
+                                            await Task.Delay(1000);
+
+                                            picMain.Image = Properties.Resources.picrobotAPMWafer;
+                                            picMain.Image.Tag = "picrobotAPMWaferA16";
+                                            lblwaferright.Visible = false;
+                                            lblwaferup.Visible = true;
+                                            lblwaferup.Text = "A16";
+                                            ovalShape1.Left -= 82;
+                                            ovalShape1.Top -= 76;
+                                            lblwafer.Left -= 82;
+                                            lblwafer.Top -= 76;
+                                        }
+
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotAPMWaferA16" && picSV.Visible == true)
+                                        {
+                                            await Task.Delay(1000);
+
+
+                                            picSV.Visible = false;  // open sv of chamber
+                                        }
+
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotAPMWaferA16" && picSV.Visible == false)
+                                        {
+                                            await Task.Delay(1000);
+
+                                            picMain.Image = Properties.Resources.picrobotintoAPMWafer;
+                                            picMain.Image.Tag = "picrobotintoAPMWaferA16";
+
+                                            lblwaferup.Visible = false;
+                                            lblwaferAPM.Visible = true;
+                                            lblwaferAPM.Text = "A16";
+                                            ovalShape1.Top -= 145;
+                                            ovalShape1.Left += 3;
+                                            lblwafer.Top -= 145;
+                                            lblwafer.Left += 3;
+
+
+
+                                            lblChamber.BackColor = Color.LimeGreen;
+
+                                            chamberload = "LimeGreen";
+                                        }
+
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotintoAPMWaferA16")
+                                        {
+                                            await Task.Delay(1000);
+                                            picChamber.Image = Properties.Resources.ChamberWithA1;
+
+                                            //   picMain.Image = Properties.Resources.robotintochamberwithA1;
+                                            picMain.Image = Properties.Resources.picrobotbotton;
+                                            picMain.Image = Properties.Resources.picwaferinAPM;
+                                            picMain.Image.Tag = "picwaferinAPMA16";
+                                            ovalShape1.Left -= 1;
+                                            ovalShape1.Left += 1;
+                                            //  picMain.SendToBack();
+                                            // ovalShape1.BringToFront();
+                                            picChamber.Width -= 140;
+                                            picChamber.Left += 150;
+                                            picChamber.Height -= 10;
+
+
+                                            //  pictRobot.Visible = true;
+                                        }
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picwaferinAPMA16")
+
+                                        {
+                                            await Task.Delay(1000);
+
+                                            picChamber.Image = Properties.Resources.ChamberWithA1Close;
+                                            //picMain.Image = Properties.Resources.robotintochamberwithA1close;
+                                            picSV.Visible = true;
+
+                                            ///////////////////////////////////////////////////////////////////////////////////////////////////////WaferA16 into Chamber
+                                            Chamber1 chamber1 = new Chamber1();
+                                            chamber1.ShowDialog();
+
+                                            lblRecipe.BackColor = Color.LimeGreen;
+                                            lblStepName.BackColor = Color.LimeGreen;
+
+                                            lblnum.BackColor = Color.LimeGreen;
+
+                                            lblData.BackColor = Color.LimeGreen;
+                                            lblData.Text = "";
+                                            label2.BackColor = Color.LimeGreen;
+
+                                            lblProcess.Text = "Processing";
+                                            lblProcess.BackColor = Color.LimeGreen;
+                                            lblProcessStep.Text = "Process Step";
+                                            lblProcessStep.BackColor = Color.LimeGreen;
+
+
+
+                                            con.Open();
+                                            string strSQL = "select WaferRecipe from CassetteWafer  where CassetterecipeName = @NewWaferRecipe";
+
+                                            SqlCommand cmd = new SqlCommand(strSQL, con);
+                                            cmd.Parameters.AddWithValue("@NewWaferRecipe", Form1.form2Msg);
+                                            SqlDataReader reader = cmd.ExecuteReader();
+                                            while (reader.Read())
+                                            {
+
+                                                lblRecipe.Text = string.Format("{0}", reader["WaferRecipe"]);
+
+
+
+                                            }
+
+                                            con.Close();
+                                            con.Open();
+                                            string strSQL1 = "select stepname from newrecipe where recipename = @Myrecipename";
+
+                                            SqlCommand cmd1 = new SqlCommand(strSQL1, con);
+                                            cmd1.Parameters.AddWithValue("@Myrecipename", lblRecipe.Text);
+                                            SqlDataReader reader1 = cmd1.ExecuteReader();
+                                            while (reader1.Read())
+                                            {
+
+                                                strStepname1.Add(string.Format("{0}", reader1["StepName"]));
+
+
+                                            }
+
+                                            con.Close();
+
+                                            con.Open();
+                                            string strSQL2 = "select StepName from newrecipe inner join CassetteWafer on newrecipe.recipename = cassettewafer.waferRecipe where cassettewafer.waferRecipe = @Newrecipename";
+                                            SqlCommand cmd2 = new SqlCommand(strSQL2, con);
+                                            cmd2.Parameters.AddWithValue("@Newrecipename", lblRecipe.Text);
+
+                                            cmd2.ExecuteNonQuery();
+
+
+
+                                            for (int j = 0; j < strStepname1.Count(); j += 1)
+
+                                            {
+
+                                                //  await Task.Delay(1000);
+
+                                                ListStepStartTime.Add(DateTime.Now);
+
+
+                                                int count = j + 1;
+
+
+                                                lblStepName.Text = strStepname1[j];
+                                                lblnum.Text = "," + count + "/" + strStepname1.Count();
+
+
+                                                con.Close();
+
+                                                con.Open();
+                                                string strSQLStepSec = "select * from newrecipe where stepname = @NewSec";
+
+                                                SqlCommand cmdSec = new SqlCommand(strSQLStepSec, con);
+                                                cmdSec.Parameters.AddWithValue("@NewSec", lblStepName.Text);
+
+                                                SqlDataReader readerSec = cmdSec.ExecuteReader();
+
+
+                                                while (readerSec.Read())
+                                                {
+                                                    mySec1 = readerSec["ProcessTime"].ToString();
+
+                                                    Int32.TryParse(mySec1, out Sec1);
+
+                                                }
+
+                                                for (int k = 1; k <= Sec1; k++)
+                                                {
+                                                    lblData.Text = k.ToString() + "/" + mySec1.ToString() + " Sec";
+                                                    // await Task.Delay(1000);
+
+
+                                                }
+                                                ListStepEndTime.Add(DateTime.Now);
+
+                                                con.Close();
+
+                                                con.Open();
+
+                                                string strModuleRecipe = "insert into ModuleRecipe(RecipeName,StepName,StartTime,EndTime,noofrecipe,logname) values(@recipename,@stepname,@starttime,@endtime,@noofrecipe,@Logname)";
+
+                                                SqlCommand cmdmodulerecipe = new SqlCommand(strModuleRecipe, con);
+
+                                                cmdmodulerecipe.Parameters.AddWithValue("@recipename", lblRecipe.Text);
+                                                cmdmodulerecipe.Parameters.AddWithValue("@stepname", strStepname1[j]);
+                                                cmdmodulerecipe.Parameters.AddWithValue("@starttime", ListStepStartTime[j]);
+                                                cmdmodulerecipe.Parameters.AddWithValue("@endtime", ListStepEndTime[j]);
+                                                cmdmodulerecipe.Parameters.AddWithValue("@noofrecipe", "16");
+                                                cmdmodulerecipe.Parameters.AddWithValue("@Logname", lbl123.Text);
+
+                                                // cmdmodulerecipe.ExecuteNonQuery();
+
+                                                con.Close();
+                                                //////////////////////////////////////////////////////////////////////////////////////////////////////get parameter value
+
+                                                con.Open();
+
+                                                string strSQL3 = "select * from newrecipe where stepname = @Newstepname and recipename = @Newrecipename";
+
+                                                SqlCommand cmd3 = new SqlCommand(strSQL3, con);
+                                                cmd3.Parameters.AddWithValue("@Newstepname", lblStepName.Text);
+                                                cmd3.Parameters.AddWithValue("@Newrecipename", lblRecipe.Text);
+                                                SqlDataReader reader2 = cmd3.ExecuteReader();
+
+                                                while (reader2.Read())
+                                                {
+                                                    CI2 = reader2["CI2"].ToString();
+                                                    BCI3 = reader2["BCI3"].ToString();
+                                                    SF6 = reader2["SF6"].ToString();
+                                                    CHF3 = reader2["CHF3"].ToString();
+                                                    Oxygen = reader2["Oxygen"].ToString();
+                                                    Oxygen1 = reader2["Oxygen1"].ToString();
+                                                    Nitrogen = reader2["Nitrogen"].ToString();
+                                                    Argon = reader2["Argon"].ToString();
+
+
+
+                                                }
+
+                                                con.Close();
+
+                                                ///////////////////////////////////////////////////////////////////////////////////////////////////
+                                                con.Open();
+                                                //  Chamber1 chamber1 = new Chamber1();
+
+                                                string strParameter = "insert into valueselection(parameter,Minimum,Maximum,Average,Units,recipename,stepname,valuedate) values(@11,@21,@31,@41,@51,@61,@71,@81),(@12,@22,@32,@42,@52,@62,@72,@82),(@13,@23,@33,@43,@53,@63,@73,@83)"
+                                                    + ",(@14,@24,@34,@44,@54,@64,@74,@84),(@15,@25,@35,@45,@55,@65,@75,@85),(@16,@26,@36,@46,@56,@66,@76,@86),(@17,@27,@37,@47,@57,@67,@77,@87),(@18,@28,@38,@48,@58,@68,@78,@88)";
+                                                SqlCommand cmdparameter = new SqlCommand(strParameter, con);
+                                                cmdparameter.Parameters.AddWithValue("@11", "CI2");
+                                                cmdparameter.Parameters.AddWithValue("@12", "BCI3");
+                                                cmdparameter.Parameters.AddWithValue("@13", "SF6");
+                                                cmdparameter.Parameters.AddWithValue("@14", "CHF3");
+                                                cmdparameter.Parameters.AddWithValue("@15", "Oxygen");
+                                                cmdparameter.Parameters.AddWithValue("@16", "Oxygen");
+                                                cmdparameter.Parameters.AddWithValue("@17", "Nitrogen");
+                                                cmdparameter.Parameters.AddWithValue("@18", "Argon");
+                                                cmdparameter.Parameters.AddWithValue("@21", CI2);
+                                                cmdparameter.Parameters.AddWithValue("@22", BCI3);
+                                                cmdparameter.Parameters.AddWithValue("@23", SF6);
+                                                cmdparameter.Parameters.AddWithValue("@24", CHF3);
+                                                cmdparameter.Parameters.AddWithValue("@25", Oxygen);
+                                                cmdparameter.Parameters.AddWithValue("@26", Oxygen1);
+                                                cmdparameter.Parameters.AddWithValue("@27", Nitrogen);
+                                                cmdparameter.Parameters.AddWithValue("@28", Argon);
+                                                cmdparameter.Parameters.AddWithValue("@31", CI2);
+                                                cmdparameter.Parameters.AddWithValue("@32", BCI3);
+                                                cmdparameter.Parameters.AddWithValue("@33", SF6);
+                                                cmdparameter.Parameters.AddWithValue("@34", CHF3);
+                                                cmdparameter.Parameters.AddWithValue("@35", Oxygen);
+                                                cmdparameter.Parameters.AddWithValue("@36", Oxygen1);
+                                                cmdparameter.Parameters.AddWithValue("@37", Nitrogen);
+                                                cmdparameter.Parameters.AddWithValue("@38", Argon);
+                                                cmdparameter.Parameters.AddWithValue("@41", CI2);
+                                                cmdparameter.Parameters.AddWithValue("@42", BCI3);
+                                                cmdparameter.Parameters.AddWithValue("@43", SF6);
+                                                cmdparameter.Parameters.AddWithValue("@44", CHF3);
+                                                cmdparameter.Parameters.AddWithValue("@45", Oxygen);
+                                                cmdparameter.Parameters.AddWithValue("@46", Oxygen1);
+                                                cmdparameter.Parameters.AddWithValue("@47", Nitrogen);
+                                                cmdparameter.Parameters.AddWithValue("@48", Argon);
+                                                cmdparameter.Parameters.AddWithValue("@51", "sccm");
+                                                cmdparameter.Parameters.AddWithValue("@52", "sccm");
+                                                cmdparameter.Parameters.AddWithValue("@53", "sccm");
+                                                cmdparameter.Parameters.AddWithValue("@54", "sccm");
+                                                cmdparameter.Parameters.AddWithValue("@55", "sccm");
+                                                cmdparameter.Parameters.AddWithValue("@56", "sccm");
+                                                cmdparameter.Parameters.AddWithValue("@57", "sccm");
+                                                cmdparameter.Parameters.AddWithValue("@58", "sccm");
+                                                cmdparameter.Parameters.AddWithValue("@61", lblRecipe.Text);
+                                                cmdparameter.Parameters.AddWithValue("@62", lblRecipe.Text);
+                                                cmdparameter.Parameters.AddWithValue("@63", lblRecipe.Text);
+                                                cmdparameter.Parameters.AddWithValue("@64", lblRecipe.Text);
+                                                cmdparameter.Parameters.AddWithValue("@65", lblRecipe.Text);
+                                                cmdparameter.Parameters.AddWithValue("@66", lblRecipe.Text);
+                                                cmdparameter.Parameters.AddWithValue("@67", lblRecipe.Text);
+                                                cmdparameter.Parameters.AddWithValue("@68", lblRecipe.Text);
+                                                cmdparameter.Parameters.AddWithValue("@71", strStepname1[j]);
+                                                cmdparameter.Parameters.AddWithValue("@72", strStepname1[j]);
+                                                cmdparameter.Parameters.AddWithValue("@73", strStepname1[j]);
+                                                cmdparameter.Parameters.AddWithValue("@74", strStepname1[j]);
+                                                cmdparameter.Parameters.AddWithValue("@75", strStepname1[j]);
+                                                cmdparameter.Parameters.AddWithValue("@76", strStepname1[j]);
+                                                cmdparameter.Parameters.AddWithValue("@77", strStepname1[j]);
+                                                cmdparameter.Parameters.AddWithValue("@78", strStepname1[j]);
+                                                cmdparameter.Parameters.AddWithValue("@81", DateTime.Now);
+                                                cmdparameter.Parameters.AddWithValue("@82", DateTime.Now);
+                                                cmdparameter.Parameters.AddWithValue("@83", DateTime.Now);
+                                                cmdparameter.Parameters.AddWithValue("@84", DateTime.Now);
+                                                cmdparameter.Parameters.AddWithValue("@85", DateTime.Now);
+                                                cmdparameter.Parameters.AddWithValue("@86", DateTime.Now);
+                                                cmdparameter.Parameters.AddWithValue("@87", DateTime.Now);
+                                                cmdparameter.Parameters.AddWithValue("@88", DateTime.Now);
+
+
+                                                cmdparameter.ExecuteNonQuery();
+                                                con.Close();
+
+                                            }
+                                            ///////////////////////////////////////////////
+
+
+                                            strStepname1.Clear();
+                                            ListStepStartTime.Clear();
+                                            ListStepEndTime.Clear();
+
+                                            // }
+
+
+
+
+
+
+                                            picMain.Image.Tag = "finishchamberA16";
+
+
+
+
+                                            /////////////////////////////////////////////////////////////////////////////////////////////////// 
+                                        }
+
+
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "finishchamberA16" && picSV.Visible == true)
+                                        {
+
+                                            await Task.Delay(1000);
+                                            picChamber.Image = Properties.Resources.ChamberWithA1;
+                                            //picMain.Image = Properties.Resources.robotintochamberwithA1;
+                                            picSV.Visible = false;
+                                        }
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "finishchamberA16" && picSV.Visible == false)
+                                        {
+                                            await Task.Delay(1000);
+
+                                            picChamber.Image = Properties.Resources.robot_into_chamberA11;
+                                            picMain.Image = Properties.Resources.picrobotintochamber;
+                                            picMain.Image = Properties.Resources.picrobotintoAPMWafer;
+                                            picMain.Image.Tag = "picrobotintoAPMWaferA16-2";
+
+                                            ovalShape1.Left += 1;
+                                            ovalShape1.Left -= 1;
+                                            picChamber.Width += 140;
+                                            picChamber.Left -= 150;
+                                            picChamber.Height += 10;
+                                        }
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotintoAPMWaferA16-2")
+                                        {
+                                            await Task.Delay(1000);
+                                            label2.BackColor = Color.Blue;
+                                            lblProcess.BackColor = Color.Blue;
+                                            lblProcessStep.BackColor = Color.Blue;
+                                            lblRecipe.BackColor = Color.Blue;
+                                            lblStepName.BackColor = Color.Blue;
+                                            lblData.BackColor = Color.Blue;
+                                            lblnum.BackColor = Color.Blue;
+
+                                            lblProcess.Text = "Idle";
+                                            lblProcessStep.Text = "";
+                                            lblRecipe.Text = "";
+                                            lblStepName.Text = "";
+                                            lblnum.Text = "";
+                                            lblData.Text = "";
+
+
+                                            // pictRobot.Visible = true;
+
+                                            picChamber.Image = Properties.Resources.new_chamber1;
+                                            picMain.Image = Properties.Resources.picrobotbotton;
+                                            picMain.Image = Properties.Resources.picrobotAPMWafer;
+
+                                            picMain.Image.Tag = "picrobotAPMWaferA16-2";
+
+                                            lblwaferAPM.Visible = false;
+                                            lblwaferup.Visible = true;
+
+                                            ovalShape1.Top += 145;
+                                            ovalShape1.Left -= 3;
+                                            lblwafer.Top += 145;
+                                            lblwafer.Left -= 3;
+
+                                            lblChamber.BackColor = Color.Blue;
+                                            chamberload = "Blue";
+                                            picChamber.Width -= 140;
+                                            picChamber.Left += 150;
+                                            picChamber.Height -= 10;
+                                        }
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotAPMWaferA16-2" && picSV.Visible == false)
+                                        {
+                                            await Task.Delay(2000);
+                                            picChamber.Image = Properties.Resources.new_chamber;//close chamber
+
+                                            // picMain.Image = Properties.Resources.robotrightA1;
+                                            picSV.Visible = true;
+
+
+                                        }
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotAPMWaferA16-2" && picSV.Visible == true)
+                                        {
+                                            await Task.Delay(2000);
+
+                                            // pictRobot.Height += 20;
+
+                                            // picMain.Image = Properties.Resources.robotgetwaferA1cassetteclose;
+                                            picMain.Image = Properties.Resources.mainpicture;
+                                            picMain.Image = Properties.Resources.picrobotArmWafer;
+                                            picMain.Image.Tag = "picrobotArmWaferA16-2";
+                                            lblwaferup.Visible = false;
+                                            lblwafer.Visible = true;
+                                            ovalShape1.Top += 162;
+                                            lblwafer.Top += 162;
+                                            ovalShape1.Left += 12;
+                                            lblwafer.Left += 12;
+                                            await Task.Delay(2000);
+
+                                            await Task.Delay(1000);
+                                            picCassette.Image = Properties.Resources.cassette3;//open cassette
+                                                                                               // picMain.Image = Properties.Resources.robotgetwaferA1;
+                                        }
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotArmWaferA16-2")
+                                        {
+                                            await Task.Delay(1000);
+
+                                            lblCassette.BackColor = Color.LimeGreen;
+
+                                            picCassette.Image = Properties.Resources.robot_into_cassetteA1;
+                                            picMain.Image = Properties.Resources.picrobotintocassette;
+                                            picMain.Image.Tag = "picrobotintocassettA16-2";
+                                            lblwafer.Visible = false;
+                                            lblwafer.Visible = false;
+                                            ovalShape1.Visible = false;
+                                            picCassette.Height += 220;
+                                            picCassette.Width += 25;
+                                            picCassette.Top -= 205;
+                                        }
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotintocassettA16-2")
+                                        {
+                                            await Task.Delay(2000);
+                                            lblCassette.BackColor = Color.Blue;
+                                            //  pictRobot.Visible = true;
+
+                                            picMain.Image = Properties.Resources.mainpicture;
+                                            picCassette.Image = Properties.Resources.cassette3;
+                                            picCassette.Width -= 25;
+                                            picCassette.Height -= 220;
+                                            picCassette.Top += 205;
+                                            await Task.Delay(2000);
+                                            //  picMain.Image = Properties.Resources.mainpic;
+                                            picCassette.Image = Properties.Resources.cassette;
+                                            // picwafer.Image = Properties.Resources.waferfull;
+                                            if (NoOfwafer[i] == "1")
+                                            {
+                                                //  picwafer.Image = Properties.Resources.waferA1full;
+                                                picWafer1.Visible = true;
+                                            }
+                                            if (NoOfwafer[i] == "2")
+                                            {
+                                                //  picwafer.Image = Properties.Resources.waferA2full;
+                                                picWafer1.Visible = true;
+                                                picWafer2.Visible = true;
+                                            }
+                                            if (NoOfwafer[i] == "3")
+                                            {
+                                                //  picwafer.Image = Properties.Resources.waferA3full;
+                                                picWafer1.Visible = true;
+                                                picWafer2.Visible = true;
+                                                picWafer3.Visible = true;
+                                            }
+                                            if (NoOfwafer[i] == "4")
+                                            {
+                                                // picwafer.Image = Properties.Resources.waferA4full;
+                                                picWafer1.Visible = true;
+                                                picWafer2.Visible = true;
+                                                picWafer3.Visible = true;
+                                                picWafer4.Visible = true;
+                                                picWafer2.Image = Properties.Resources.picWaferGreen;
+                                                picWafer1.Image = Properties.Resources.picWaferGreen;
+                                                picWafer3.Image = Properties.Resources.picWaferGreen;
+                                                picWafer4.Image = Properties.Resources.picWaferGreen;
+                                            }
+
+                                            if (NoOfwafer[i] == "5")
+                                            {
+                                                //  picwafer.Image = Properties.Resources.waferA5full;
+                                                picWafer1.Visible = true;
+                                                picWafer2.Visible = true;
+                                                picWafer3.Visible = true;
+                                                picWafer4.Visible = true;
+                                                picWafer5.Visible = true;
+                                                picWafer2.Image = Properties.Resources.picWaferGreen;
+                                                picWafer1.Image = Properties.Resources.picWaferGreen;
+                                                picWafer3.Image = Properties.Resources.picWaferGreen;
+                                                picWafer4.Image = Properties.Resources.picWaferGreen;
+                                                picWafer5.Image = Properties.Resources.picWaferGreen;
+                                            }
+
+                                            if (NoOfwafer[i] == "6")
+                                            {
+                                                //  picwafer.Image = Properties.Resources.waferA5full;
+                                                picWafer1.Visible = true;
+                                                picWafer2.Visible = true;
+                                                picWafer3.Visible = true;
+                                                picWafer4.Visible = true;
+                                                picWafer5.Visible = true;
+                                                picWafer6.Visible = true;
+                                                picWafer2.Image = Properties.Resources.picWaferGreen;
+                                                picWafer1.Image = Properties.Resources.picWaferGreen;
+                                                picWafer3.Image = Properties.Resources.picWaferGreen;
+                                                picWafer4.Image = Properties.Resources.picWaferGreen;
+                                                picWafer5.Image = Properties.Resources.picWaferGreen;
+                                                picWafer6.Image = Properties.Resources.picWaferGreen;
+                                            }
+
+                                            if (NoOfwafer[i] == "7")
+                                            {
+                                                //  picwafer.Image = Properties.Resources.waferA5full;
+                                                picWafer1.Visible = true;
+                                                picWafer2.Visible = true;
+                                                picWafer3.Visible = true;
+                                                picWafer4.Visible = true;
+                                                picWafer5.Visible = true;
+                                                picWafer6.Visible = true;
+                                                picWafer7.Visible = true;
+                                                picWafer2.Image = Properties.Resources.picWaferGreen;
+                                                picWafer1.Image = Properties.Resources.picWaferGreen;
+                                                picWafer3.Image = Properties.Resources.picWaferGreen;
+                                                picWafer4.Image = Properties.Resources.picWaferGreen;
+                                                picWafer5.Image = Properties.Resources.picWaferGreen;
+                                                picWafer6.Image = Properties.Resources.picWaferGreen;
+                                                picWafer7.Image = Properties.Resources.picWaferGreen;
+                                            }
+                                            if (NoOfwafer[i] == "8")
+                                            {
+                                                //  picwafer.Image = Properties.Resources.waferA5full;
+                                                picWafer1.Visible = true;
+                                                picWafer2.Visible = true;
+                                                picWafer3.Visible = true;
+                                                picWafer4.Visible = true;
+                                                picWafer5.Visible = true;
+                                                picWafer6.Visible = true;
+                                                picWafer7.Visible = true;
+                                                picWafer8.Visible = true;
+                                                picWafer2.Image = Properties.Resources.picWaferGreen;
+                                                picWafer1.Image = Properties.Resources.picWaferGreen;
+                                                picWafer3.Image = Properties.Resources.picWaferGreen;
+                                                picWafer4.Image = Properties.Resources.picWaferGreen;
+                                                picWafer5.Image = Properties.Resources.picWaferGreen;
+                                                picWafer6.Image = Properties.Resources.picWaferGreen;
+                                                picWafer7.Image = Properties.Resources.picWaferGreen;
+                                                picWafer8.Image = Properties.Resources.picWaferGreen;
+                                            }
+                                            if (NoOfwafer[i] == "9")
+                                            {
+                                                //  picwafer.Image = Properties.Resources.waferA5full;
+                                                picWafer1.Visible = true;
+                                                picWafer2.Visible = true;
+                                                picWafer3.Visible = true;
+                                                picWafer4.Visible = true;
+                                                picWafer5.Visible = true;
+                                                picWafer6.Visible = true;
+                                                picWafer7.Visible = true;
+                                                picWafer8.Visible = true;
+                                                picWafer9.Visible = true;
+                                                picWafer2.Image = Properties.Resources.picWaferGreen;
+                                                picWafer1.Image = Properties.Resources.picWaferGreen;
+                                                picWafer3.Image = Properties.Resources.picWaferGreen;
+                                                picWafer4.Image = Properties.Resources.picWaferGreen;
+                                                picWafer5.Image = Properties.Resources.picWaferGreen;
+                                                picWafer6.Image = Properties.Resources.picWaferGreen;
+                                                picWafer7.Image = Properties.Resources.picWaferGreen;
+                                                picWafer8.Image = Properties.Resources.picWaferGreen;
+                                                picWafer9.Image = Properties.Resources.picWaferGreen;
+                                            }
+                                            if (NoOfwafer[i] == "10")
+                                            {
+                                                //  picwafer.Image = Properties.Resources.waferA5full;
+                                                picWafer1.Visible = true;
+                                                picWafer2.Visible = true;
+                                                picWafer3.Visible = true;
+                                                picWafer4.Visible = true;
+                                                picWafer5.Visible = true;
+                                                picWafer6.Visible = true;
+                                                picWafer7.Visible = true;
+                                                picWafer8.Visible = true;
+                                                picWafer9.Visible = true;
+                                                picWafer10.Visible = true;
+                                                picWafer2.Image = Properties.Resources.picWaferGreen;
+                                                picWafer1.Image = Properties.Resources.picWaferGreen;
+                                                picWafer3.Image = Properties.Resources.picWaferGreen;
+                                                picWafer4.Image = Properties.Resources.picWaferGreen;
+                                                picWafer5.Image = Properties.Resources.picWaferGreen;
+                                                picWafer6.Image = Properties.Resources.picWaferGreen;
+                                                picWafer7.Image = Properties.Resources.picWaferGreen;
+                                                picWafer8.Image = Properties.Resources.picWaferGreen;
+                                                picWafer9.Image = Properties.Resources.picWaferGreen;
+                                                picWafer10.Image = Properties.Resources.picWaferGreen;
+                                            }
+                                            if (NoOfwafer[i] == "11")
+                                            {
+                                                //  picwafer.Image = Properties.Resources.waferA5full;
+                                                picWafer1.Visible = true;
+                                                picWafer2.Visible = true;
+                                                picWafer3.Visible = true;
+                                                picWafer4.Visible = true;
+                                                picWafer5.Visible = true;
+                                                picWafer6.Visible = true;
+                                                picWafer7.Visible = true;
+                                                picWafer8.Visible = true;
+                                                picWafer9.Visible = true;
+                                                picWafer10.Visible = true;
+                                                picWafer2.Image = Properties.Resources.picWaferGreen;
+                                                picWafer1.Image = Properties.Resources.picWaferGreen;
+                                                picWafer3.Image = Properties.Resources.picWaferGreen;
+                                                picWafer4.Image = Properties.Resources.picWaferGreen;
+                                                picWafer5.Image = Properties.Resources.picWaferGreen;
+                                                picWafer6.Image = Properties.Resources.picWaferGreen;
+                                                picWafer7.Image = Properties.Resources.picWaferGreen;
+                                                picWafer8.Image = Properties.Resources.picWaferGreen;
+                                                picWafer9.Image = Properties.Resources.picWaferGreen;
+                                                picWafer10.Image = Properties.Resources.picWaferGreen;
+                                            }
+                                            if (NoOfwafer[i] == "12")
+                                            {
+                                                //  picwafer.Image = Properties.Resources.waferA5full;
+                                                picWafer1.Visible = true;
+                                                picWafer2.Visible = true;
+                                                picWafer3.Visible = true;
+                                                picWafer4.Visible = true;
+                                                picWafer5.Visible = true;
+                                                picWafer6.Visible = true;
+                                                picWafer7.Visible = true;
+                                                picWafer8.Visible = true;
+                                                picWafer9.Visible = true;
+                                                picWafer10.Visible = true;
+                                                picWafer2.Image = Properties.Resources.picWaferGreen;
+                                                picWafer1.Image = Properties.Resources.picWaferGreen;
+                                                picWafer3.Image = Properties.Resources.picWaferGreen;
+                                                picWafer4.Image = Properties.Resources.picWaferGreen;
+                                                picWafer5.Image = Properties.Resources.picWaferGreen;
+                                                picWafer6.Image = Properties.Resources.picWaferGreen;
+                                                picWafer7.Image = Properties.Resources.picWaferGreen;
+                                                picWafer8.Image = Properties.Resources.picWaferGreen;
+                                                picWafer9.Image = Properties.Resources.picWaferGreen;
+                                                picWafer10.Image = Properties.Resources.picWaferGreen;
+                                            }
+                                            if (NoOfwafer[i] == "13")
+                                            {
+                                                //  picwafer.Image = Properties.Resources.waferA5full;
+                                                picWafer1.Visible = true;
+                                                picWafer2.Visible = true;
+                                                picWafer3.Visible = true;
+                                                picWafer4.Visible = true;
+                                                picWafer5.Visible = true;
+                                                picWafer6.Visible = true;
+                                                picWafer7.Visible = true;
+                                                picWafer8.Visible = true;
+                                                picWafer9.Visible = true;
+                                                picWafer10.Visible = true;
+                                                picWafer2.Image = Properties.Resources.picWaferGreen;
+                                                picWafer1.Image = Properties.Resources.picWaferGreen;
+                                                picWafer3.Image = Properties.Resources.picWaferGreen;
+                                                picWafer4.Image = Properties.Resources.picWaferGreen;
+                                                picWafer5.Image = Properties.Resources.picWaferGreen;
+                                                picWafer6.Image = Properties.Resources.picWaferGreen;
+                                                picWafer7.Image = Properties.Resources.picWaferGreen;
+                                                picWafer8.Image = Properties.Resources.picWaferGreen;
+                                                picWafer9.Image = Properties.Resources.picWaferGreen;
+                                                picWafer10.Image = Properties.Resources.picWaferGreen;
+                                            }
+                                            if (NoOfwafer[i] == "14")
+                                            {
+                                                //  picwafer.Image = Properties.Resources.waferA5full;
+                                                picWafer1.Visible = true;
+                                                picWafer2.Visible = true;
+                                                picWafer3.Visible = true;
+                                                picWafer4.Visible = true;
+                                                picWafer5.Visible = true;
+                                                picWafer6.Visible = true;
+                                                picWafer7.Visible = true;
+                                                picWafer8.Visible = true;
+                                                picWafer9.Visible = true;
+                                                picWafer10.Visible = true;
+                                                picWafer11.Visible = true;
+                                                picWafer12.Visible = true;
+                                                picWafer13.Visible = true;
+                                                picWafer14.Visible = true;
+                                                picWafer2.Image = Properties.Resources.picWaferGreen;
+                                                picWafer1.Image = Properties.Resources.picWaferGreen;
+                                                picWafer3.Image = Properties.Resources.picWaferGreen;
+                                                picWafer4.Image = Properties.Resources.picWaferGreen;
+                                                picWafer5.Image = Properties.Resources.picWaferGreen;
+                                                picWafer6.Image = Properties.Resources.picWaferGreen;
+                                                picWafer7.Image = Properties.Resources.picWaferGreen;
+                                                picWafer8.Image = Properties.Resources.picWaferGreen;
+                                                picWafer9.Image = Properties.Resources.picWaferGreen;
+                                                picWafer10.Image = Properties.Resources.picWaferGreen;
+                                                picWafer11.Image = Properties.Resources.picWaferGreen;
+                                                picWafer12.Image = Properties.Resources.picWaferGreen;
+                                                picWafer13.Image = Properties.Resources.picWaferGreen;
+                                                picWafer14.Image = Properties.Resources.picWaferGreen;
+
+                                            }
+                                            if (NoOfwafer[i] == "15")
+                                            {
+                                                //  picwafer.Image = Properties.Resources.waferA5full;
+                                                picWafer1.Visible = true;
+                                                picWafer2.Visible = true;
+                                                picWafer3.Visible = true;
+                                                picWafer4.Visible = true;
+                                                picWafer5.Visible = true;
+                                                picWafer6.Visible = true;
+                                                picWafer7.Visible = true;
+                                                picWafer8.Visible = true;
+                                                picWafer9.Visible = true;
+                                                picWafer10.Visible = true;
+                                                picWafer11.Visible = true;
+                                                picWafer12.Visible = true;
+                                                picWafer13.Visible = true;
+                                                picWafer14.Visible = true;
+                                                picWafer15.Visible = true;
+                                                picWafer2.Image = Properties.Resources.picWaferGreen;
+                                                picWafer1.Image = Properties.Resources.picWaferGreen;
+                                                picWafer3.Image = Properties.Resources.picWaferGreen;
+                                                picWafer4.Image = Properties.Resources.picWaferGreen;
+                                                picWafer5.Image = Properties.Resources.picWaferGreen;
+                                                picWafer6.Image = Properties.Resources.picWaferGreen;
+                                                picWafer7.Image = Properties.Resources.picWaferGreen;
+                                                picWafer8.Image = Properties.Resources.picWaferGreen;
+                                                picWafer9.Image = Properties.Resources.picWaferGreen;
+                                                picWafer10.Image = Properties.Resources.picWaferGreen;
+                                                picWafer11.Image = Properties.Resources.picWaferGreen;
+                                                picWafer12.Image = Properties.Resources.picWaferGreen;
+                                                picWafer13.Image = Properties.Resources.picWaferGreen;
+                                                picWafer14.Image = Properties.Resources.picWaferGreen;
+                                                picWafer15.Image = Properties.Resources.picWaferGreen;
+                                            }
+                                            if (NoOfwafer[i] == "16")
+                                            {
+                                                //  picwafer.Image = Properties.Resources.waferA5full;
+                                                picWafer1.Visible = true;
+                                                picWafer2.Visible = true;
+                                                picWafer3.Visible = true;
+                                                picWafer4.Visible = true;
+                                                picWafer5.Visible = true;
+                                                picWafer6.Visible = true;
+                                                picWafer7.Visible = true;
+                                                picWafer8.Visible = true;
+                                                picWafer9.Visible = true;
+                                                picWafer10.Visible = true;
+                                                picWafer11.Visible = true;
+                                                picWafer12.Visible = true;
+                                                picWafer13.Visible = true;
+                                                picWafer14.Visible = true;
+                                                picWafer15.Visible = true;
+                                                picWafer16.Visible = true;
+                                                picWafer2.Image = Properties.Resources.picWaferGreen;
+                                                picWafer1.Image = Properties.Resources.picWaferGreen;
+                                                picWafer3.Image = Properties.Resources.picWaferGreen;
+                                                picWafer4.Image = Properties.Resources.picWaferGreen;
+                                                picWafer5.Image = Properties.Resources.picWaferGreen;
+                                                picWafer6.Image = Properties.Resources.picWaferGreen;
+                                                picWafer7.Image = Properties.Resources.picWaferGreen;
+                                                picWafer8.Image = Properties.Resources.picWaferGreen;
+                                                picWafer9.Image = Properties.Resources.picWaferGreen;
+                                                picWafer10.Image = Properties.Resources.picWaferGreen;
+                                                picWafer11.Image = Properties.Resources.picWaferGreen;
+                                                picWafer12.Image = Properties.Resources.picWaferGreen;
+                                                picWafer13.Image = Properties.Resources.picWaferGreen;
+                                                picWafer14.Image = Properties.Resources.picWaferGreen;
+                                                picWafer15.Image = Properties.Resources.picWaferGreen;
+                                                picWafer16.Image = Properties.Resources.picWaferGreen;
+                                            }
+
+
+
+
+                                            //////////////////////////////////////////////////////////////////Save DataLog
+                                            if (int.Parse(NoOfwafer[i]) == 16)
+                                            {
+                                                EndTime = DateTime.Now;
+
+
+                                                con.Open();
+
+                                                string strinsertdatalog = "insert into DataLogger(logname,cassetterecipename,starttime) values(@1,@2,@3) ";
+                                                SqlCommand cmdinsertdatalog = new SqlCommand(strinsertdatalog, con);
+
+                                                cmdinsertdatalog.Parameters.AddWithValue("@1", lbl123.Text);
+                                                cmdinsertdatalog.Parameters.AddWithValue("@2", form2Msg);
+                                                cmdinsertdatalog.Parameters.AddWithValue("@3", StartTime);
+
+                                                cmdinsertdatalog.ExecuteNonQuery();
+
+                                                con.Close();
+
+                                                lblState.Text = "Finished";
+
+
+
+                                            }
+                                            picMain.Image.Tag = "finishwaferA16";
+                                            if (isStopRobot == true)
+                                            {
+                                                button2.Enabled = true;
+                                                lblState.Text = "Stopping";
+                                            }
+
+
+                                        }
+                                        /////////////////////////////////////////////////////////finish waferA16
+                                    }
+
+                                    if (int.Parse(NoOfwafer[i]) >= 17)
+                                    {
+                                        //////////////////////////////////////////////////////////////////////////start waferA17
+                                        nooftherecipe = "17";
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "finishWaferA17" && isStopRobot == false && iscancelrecipe == false)
+                                        {
+                                            await Task.Delay(2000);
+
+                                            picCassette.Image = Properties.Resources.cassette1;
+
+                                            if (NoOfwafer[i] == "1")
+                                            {
+                                                picwafer.Image = Properties.Resources.wafer;
+                                                picwafer.Image.Tag = "wafer";
+                                            }
+                                            else if (NoOfwafer[i] == "2")
+                                            {
+                                                picwafer.Image = Properties.Resources.waferA1full;
+                                            }
+                                            else if (NoOfwafer[i] == "3")
+                                            {
+                                                picwafer.Image = Properties.Resources.waferA2full;
+
+                                            }
+                                            else if (NoOfwafer[i] == "4")
+                                            {
+                                                picwafer.Image = Properties.Resources.waferA3full;
+                                            }
+                                            else if (NoOfwafer[i] == "5")
+                                            {
+                                                picwafer.Image = Properties.Resources.waferA4full;
+                                            }
+                                            else if (NoOfwafer[i] == "6")
+                                            {
+                                                picwafer.Image = Properties.Resources.waferA5full;
+
+                                            }
+                                            else if (NoOfwafer[i] == "7")
+                                            {
+                                                picwafer.Image = Properties.Resources.waferA6full;
+
+                                            }
+                                            else if (NoOfwafer[i] == "8")
+                                            {
+                                                picwafer.Image = Properties.Resources.waferA7full;
+
+                                            }
+                                            else if (NoOfwafer[i] == "9")
+                                            {
+                                                picwafer.Image = Properties.Resources.waferA8full;
+
+                                            }
+                                            else if (NoOfwafer[i] == "10")
+                                            {
+                                                picwafer.Image = Properties.Resources.waferA9full;
+
+                                            }
+                                            else if (NoOfwafer[i] == "11")
+                                            {
+                                                picwafer.Image = Properties.Resources.waferA9full;
+
+                                            }
+
+                                            else if (NoOfwafer[i] == "12")
+                                            {
+                                                picwafer.Image = Properties.Resources.waferA9full;
+
+                                            }
+
+                                            else if (NoOfwafer[i] == "13")
+                                            {
+                                                picwafer.Image = Properties.Resources.waferA9full;
+
+                                            }
+
+                                            else if (NoOfwafer[i] == "14")
+                                            {
+                                                //  picwafer.Image = Properties.Resources.waferA9full;
+                                                picWafer14.Visible = false;
+                                            }
+
+                                            else if (NoOfwafer[i] == "15")
+                                            {
+                                                //  picwafer.Image = Properties.Resources.waferA9full;
+                                                picWafer15.Visible = false;
+                                            }
+                                            else if (NoOfwafer[i] == "16")
+                                            {
+                                                //  picwafer.Image = Properties.Resources.waferA9full;
+                                                picWafer15.Visible = false;
+                                            }
+                                            else if (NoOfwafer[i] == "17")
+                                            {
+                                                //  picwafer.Image = Properties.Resources.waferA9full;
+                                                picWafer17.Visible = false;
+                                            }
+
+
+
+                                            StartTime = DateTime.Now;
+
+
+
+
+                                            await Task.Delay(2000);
+                                            con.Open();
+
+                                            string strWaferSelection = "insert into WaferSelection(NoOfWafers,StartTime,CassetteRecipeName,Logname) values(@NoOfWafer,@StartTime,@CassetteRecipeName,@Logname)";
+                                            SqlCommand cmdwaferselection = new SqlCommand(strWaferSelection, con);
+                                            cmdwaferselection.Parameters.AddWithValue("@NoOfWafer", "17");
+                                            cmdwaferselection.Parameters.AddWithValue("@StartTime", StartTime);
+                                            cmdwaferselection.Parameters.AddWithValue("@CassetteRecipeName", form2Msg);
+                                            cmdwaferselection.Parameters.AddWithValue("@Logname", lbl123.Text);
+
+                                            cmdwaferselection.ExecuteNonQuery();
+
+                                            con.Close();
+
+                                            await Task.Delay(1000);
+
+                                            picMain.Image = Properties.Resources.mainpicture;
+                                            picMain.Image.Tag = "waferA17mainpicture";
+
+                                            await Task.Delay(1000);
+                                        }
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "waferA17mainpicture")
+                                        {
+                                            // lblCassette.BackColor = Color.LimeGreen;
+                                            await Task.Delay(1000);
+
+                                            picMain.Image = Properties.Resources.picrobotintocassette;
+                                            picMain.Image.Tag = "picrobotintocassetteA17";
+                                            label1.BackColor = Color.Blue;
+                                            lblLoad.Text = "";
+                                            lblLoad.BackColor = Color.Blue;
+                                            lbl123.BackColor = Color.Blue;
+                                            lblState.BackColor = Color.Blue;
+                                            lblCassetteRecipename.BackColor = Color.Blue;
+                                            lblmTorr.BackColor = Color.Blue;
+
+
+                                            lblCassette.BackColor = Color.LimeGreen;
+
+                                        }
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotintocassetteA17")
+                                        {
+                                            await Task.Delay(1000);
+                                            picMain.Image = Properties.Resources.picrobotArmWafer;
+                                            picMain.Image.Tag = "picrobotArmWaferA17";
+
+                                            lblwafer.Visible = true;
+                                            lblwafer.Text = "A17";
+
+                                            lblCassette.BackColor = Color.Blue;
+                                        }
+
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotArmWaferA17")
+                                        {
+                                            await Task.Delay(1000);
+                                            picMain.Image = Properties.Resources.picrobotAlignerWafer;
+                                            picMain.Image.Tag = "picrobotAlignerWaferA17";
+
+                                            ovalShape1.Left += 70;
+                                            ovalShape1.Top -= 85;
+                                            lblwafer.Visible = false;
+                                            lblwaferright.Visible = true;
+                                            lblwaferright.Text = "A17";
+                                            lblwafer.Left += 70;
+                                            lblwafer.Top -= 85;
+
+                                        }
+
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotAlignerWaferA17")
+                                        {
+                                            await Task.Delay(1000);
+
+                                            picMain.Image = Properties.Resources.picrobotintoAlignerWafer;
+                                            picMain.Image.Tag = "picrobotintoAlignerWaferA17";
+                                            lblCentralize.BackColor = Color.LimeGreen;
+                                            ovalShape1.Left += 155;
+                                            ovalShape1.Top += 0;
+                                            lblwaferright.Visible = false;
+                                            lblwaferaligner.Visible = true;
+                                            lblwaferaligner.Text = "A17";
+                                            lblwafer.Left += 155;
+                                            lblwafer.Top += 0;
+
+                                        }
+
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotintoAlignerWaferA17")
+                                        {
+                                            await Task.Delay(1000);
+                                            picMain.Image = Properties.Resources.picrobotAlignerWafer;
+                                            picMain.Image.Tag = "picrobotAlignerWaferA17-2";
+
+                                            lblwaferaligner.Visible = false;
+                                            lblwaferright.Visible = true;
+                                            lblwaferright.Text = "A17";
+                                            ovalShape1.Left -= 155;
+                                            ovalShape1.Top -= 0;
+                                            lblwafer.Left -= 155;
+                                            lblwafer.Top -= 0;
+                                            lblCentralize.BackColor = Color.Blue;
+                                        }
+
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotAlignerWaferA17-2")
+                                        {
+                                            await Task.Delay(1000);
+
+                                            picMain.Image = Properties.Resources.picrobotAPMWafer;
+                                            picMain.Image.Tag = "picrobotAPMWaferA17";
+                                            lblwaferright.Visible = false;
+                                            lblwaferup.Visible = true;
+                                            lblwaferup.Text = "A17";
+                                            ovalShape1.Left -= 82;
+                                            ovalShape1.Top -= 76;
+                                            lblwafer.Left -= 82;
+                                            lblwafer.Top -= 76;
+                                        }
+
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotAPMWaferA17" && picSV.Visible == true)
+                                        {
+                                            await Task.Delay(1000);
+
+
+                                            picSV.Visible = false;  // open sv of chamber
+                                        }
+
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotAPMWaferA17" && picSV.Visible == false)
+                                        {
+                                            await Task.Delay(1000);
+
+                                            picMain.Image = Properties.Resources.picrobotintoAPMWafer;
+                                            picMain.Image.Tag = "picrobotintoAPMWaferA17";
+
+                                            lblwaferup.Visible = false;
+                                            lblwaferAPM.Visible = true;
+                                            lblwaferAPM.Text = "A17";
+                                            ovalShape1.Top -= 145;
+                                            ovalShape1.Left += 3;
+                                            lblwafer.Top -= 145;
+                                            lblwafer.Left += 3;
+
+
+
+                                            lblChamber.BackColor = Color.LimeGreen;
+
+                                            chamberload = "LimeGreen";
+                                        }
+
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotintoAPMWaferA17")
+                                        {
+                                            await Task.Delay(1000);
+                                            picChamber.Image = Properties.Resources.ChamberWithA1;
+
+                                            //   picMain.Image = Properties.Resources.robotintochamberwithA1;
+                                            picMain.Image = Properties.Resources.picrobotbotton;
+                                            picMain.Image = Properties.Resources.picwaferinAPM;
+                                            picMain.Image.Tag = "picwaferinAPMA17";
+                                            ovalShape1.Left -= 1;
+                                            ovalShape1.Left += 1;
+                                            //  picMain.SendToBack();
+                                            // ovalShape1.BringToFront();
+                                            picChamber.Width -= 140;
+                                            picChamber.Left += 150;
+                                            picChamber.Height -= 10;
+
+
+                                            //  pictRobot.Visible = true;
+                                        }
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picwaferinAPMA17")
+
+                                        {
+                                            await Task.Delay(1000);
+
+                                            picChamber.Image = Properties.Resources.ChamberWithA1Close;
+                                            //picMain.Image = Properties.Resources.robotintochamberwithA1close;
+                                            picSV.Visible = true;
+
+                                            ///////////////////////////////////////////////////////////////////////////////////////////////////////WaferA17 into Chamber
+                                            Chamber1 chamber1 = new Chamber1();
+                                            chamber1.ShowDialog();
+
+                                            lblRecipe.BackColor = Color.LimeGreen;
+                                            lblStepName.BackColor = Color.LimeGreen;
+
+                                            lblnum.BackColor = Color.LimeGreen;
+
+                                            lblData.BackColor = Color.LimeGreen;
+                                            lblData.Text = "";
+                                            label2.BackColor = Color.LimeGreen;
+
+                                            lblProcess.Text = "Processing";
+                                            lblProcess.BackColor = Color.LimeGreen;
+                                            lblProcessStep.Text = "Process Step";
+                                            lblProcessStep.BackColor = Color.LimeGreen;
+
+
+
+                                            con.Open();
+                                            string strSQL = "select WaferRecipe from CassetteWafer  where CassetterecipeName = @NewWaferRecipe";
+
+                                            SqlCommand cmd = new SqlCommand(strSQL, con);
+                                            cmd.Parameters.AddWithValue("@NewWaferRecipe", Form1.form2Msg);
+                                            SqlDataReader reader = cmd.ExecuteReader();
+                                            while (reader.Read())
+                                            {
+
+                                                lblRecipe.Text = string.Format("{0}", reader["WaferRecipe"]);
+
+
+
+                                            }
+
+                                            con.Close();
+                                            con.Open();
+                                            string strSQL1 = "select stepname from newrecipe where recipename = @Myrecipename";
+
+                                            SqlCommand cmd1 = new SqlCommand(strSQL1, con);
+                                            cmd1.Parameters.AddWithValue("@Myrecipename", lblRecipe.Text);
+                                            SqlDataReader reader1 = cmd1.ExecuteReader();
+                                            while (reader1.Read())
+                                            {
+
+                                                strStepname1.Add(string.Format("{0}", reader1["StepName"]));
+
+
+                                            }
+
+                                            con.Close();
+
+                                            con.Open();
+                                            string strSQL2 = "select StepName from newrecipe inner join CassetteWafer on newrecipe.recipename = cassettewafer.waferRecipe where cassettewafer.waferRecipe = @Newrecipename";
+                                            SqlCommand cmd2 = new SqlCommand(strSQL2, con);
+                                            cmd2.Parameters.AddWithValue("@Newrecipename", lblRecipe.Text);
+
+                                            cmd2.ExecuteNonQuery();
+
+
+
+                                            for (int j = 0; j < strStepname1.Count(); j += 1)
+
+                                            {
+
+                                                //  await Task.Delay(1000);
+
+                                                ListStepStartTime.Add(DateTime.Now);
+
+
+                                                int count = j + 1;
+
+
+                                                lblStepName.Text = strStepname1[j];
+                                                lblnum.Text = "," + count + "/" + strStepname1.Count();
+
+
+                                                con.Close();
+
+                                                con.Open();
+                                                string strSQLStepSec = "select * from newrecipe where stepname = @NewSec";
+
+                                                SqlCommand cmdSec = new SqlCommand(strSQLStepSec, con);
+                                                cmdSec.Parameters.AddWithValue("@NewSec", lblStepName.Text);
+
+                                                SqlDataReader readerSec = cmdSec.ExecuteReader();
+
+
+                                                while (readerSec.Read())
+                                                {
+                                                    mySec1 = readerSec["ProcessTime"].ToString();
+
+                                                    Int32.TryParse(mySec1, out Sec1);
+
+                                                }
+
+                                                for (int k = 1; k <= Sec1; k++)
+                                                {
+                                                    lblData.Text = k.ToString() + "/" + mySec1.ToString() + " Sec";
+                                                    // await Task.Delay(1000);
+
+
+                                                }
+                                                ListStepEndTime.Add(DateTime.Now);
+
+                                                con.Close();
+
+                                                con.Open();
+
+                                                string strModuleRecipe = "insert into ModuleRecipe(RecipeName,StepName,StartTime,EndTime,noofrecipe,logname) values(@recipename,@stepname,@starttime,@endtime,@noofrecipe,@Logname)";
+
+                                                SqlCommand cmdmodulerecipe = new SqlCommand(strModuleRecipe, con);
+
+                                                cmdmodulerecipe.Parameters.AddWithValue("@recipename", lblRecipe.Text);
+                                                cmdmodulerecipe.Parameters.AddWithValue("@stepname", strStepname1[j]);
+                                                cmdmodulerecipe.Parameters.AddWithValue("@starttime", ListStepStartTime[j]);
+                                                cmdmodulerecipe.Parameters.AddWithValue("@endtime", ListStepEndTime[j]);
+                                                cmdmodulerecipe.Parameters.AddWithValue("@noofrecipe", "17");
+                                                cmdmodulerecipe.Parameters.AddWithValue("@Logname", lbl123.Text);
+
+                                                // cmdmodulerecipe.ExecuteNonQuery();
+
+                                                con.Close();
+                                                //////////////////////////////////////////////////////////////////////////////////////////////////////get parameter value
+
+                                                con.Open();
+
+                                                string strSQL3 = "select * from newrecipe where stepname = @Newstepname and recipename = @Newrecipename";
+
+                                                SqlCommand cmd3 = new SqlCommand(strSQL3, con);
+                                                cmd3.Parameters.AddWithValue("@Newstepname", lblStepName.Text);
+                                                cmd3.Parameters.AddWithValue("@Newrecipename", lblRecipe.Text);
+                                                SqlDataReader reader2 = cmd3.ExecuteReader();
+
+                                                while (reader2.Read())
+                                                {
+                                                    CI2 = reader2["CI2"].ToString();
+                                                    BCI3 = reader2["BCI3"].ToString();
+                                                    SF6 = reader2["SF6"].ToString();
+                                                    CHF3 = reader2["CHF3"].ToString();
+                                                    Oxygen = reader2["Oxygen"].ToString();
+                                                    Oxygen1 = reader2["Oxygen1"].ToString();
+                                                    Nitrogen = reader2["Nitrogen"].ToString();
+                                                    Argon = reader2["Argon"].ToString();
+
+
+
+                                                }
+
+                                                con.Close();
+
+                                                ///////////////////////////////////////////////////////////////////////////////////////////////////
+                                                con.Open();
+                                                //  Chamber1 chamber1 = new Chamber1();
+
+                                                string strParameter = "insert into valueselection(parameter,Minimum,Maximum,Average,Units,recipename,stepname,valuedate) values(@11,@21,@31,@41,@51,@61,@71,@81),(@12,@22,@32,@42,@52,@62,@72,@82),(@13,@23,@33,@43,@53,@63,@73,@83)"
+                                                    + ",(@14,@24,@34,@44,@54,@64,@74,@84),(@15,@25,@35,@45,@55,@65,@75,@85),(@16,@26,@36,@46,@56,@66,@76,@86),(@17,@27,@37,@47,@57,@67,@77,@87),(@18,@28,@38,@48,@58,@68,@78,@88)";
+                                                SqlCommand cmdparameter = new SqlCommand(strParameter, con);
+                                                cmdparameter.Parameters.AddWithValue("@11", "CI2");
+                                                cmdparameter.Parameters.AddWithValue("@12", "BCI3");
+                                                cmdparameter.Parameters.AddWithValue("@13", "SF6");
+                                                cmdparameter.Parameters.AddWithValue("@14", "CHF3");
+                                                cmdparameter.Parameters.AddWithValue("@15", "Oxygen");
+                                                cmdparameter.Parameters.AddWithValue("@16", "Oxygen");
+                                                cmdparameter.Parameters.AddWithValue("@17", "Nitrogen");
+                                                cmdparameter.Parameters.AddWithValue("@18", "Argon");
+                                                cmdparameter.Parameters.AddWithValue("@21", CI2);
+                                                cmdparameter.Parameters.AddWithValue("@22", BCI3);
+                                                cmdparameter.Parameters.AddWithValue("@23", SF6);
+                                                cmdparameter.Parameters.AddWithValue("@24", CHF3);
+                                                cmdparameter.Parameters.AddWithValue("@25", Oxygen);
+                                                cmdparameter.Parameters.AddWithValue("@26", Oxygen1);
+                                                cmdparameter.Parameters.AddWithValue("@27", Nitrogen);
+                                                cmdparameter.Parameters.AddWithValue("@28", Argon);
+                                                cmdparameter.Parameters.AddWithValue("@31", CI2);
+                                                cmdparameter.Parameters.AddWithValue("@32", BCI3);
+                                                cmdparameter.Parameters.AddWithValue("@33", SF6);
+                                                cmdparameter.Parameters.AddWithValue("@34", CHF3);
+                                                cmdparameter.Parameters.AddWithValue("@35", Oxygen);
+                                                cmdparameter.Parameters.AddWithValue("@36", Oxygen1);
+                                                cmdparameter.Parameters.AddWithValue("@37", Nitrogen);
+                                                cmdparameter.Parameters.AddWithValue("@38", Argon);
+                                                cmdparameter.Parameters.AddWithValue("@41", CI2);
+                                                cmdparameter.Parameters.AddWithValue("@42", BCI3);
+                                                cmdparameter.Parameters.AddWithValue("@43", SF6);
+                                                cmdparameter.Parameters.AddWithValue("@44", CHF3);
+                                                cmdparameter.Parameters.AddWithValue("@45", Oxygen);
+                                                cmdparameter.Parameters.AddWithValue("@46", Oxygen1);
+                                                cmdparameter.Parameters.AddWithValue("@47", Nitrogen);
+                                                cmdparameter.Parameters.AddWithValue("@48", Argon);
+                                                cmdparameter.Parameters.AddWithValue("@51", "sccm");
+                                                cmdparameter.Parameters.AddWithValue("@52", "sccm");
+                                                cmdparameter.Parameters.AddWithValue("@53", "sccm");
+                                                cmdparameter.Parameters.AddWithValue("@54", "sccm");
+                                                cmdparameter.Parameters.AddWithValue("@55", "sccm");
+                                                cmdparameter.Parameters.AddWithValue("@56", "sccm");
+                                                cmdparameter.Parameters.AddWithValue("@57", "sccm");
+                                                cmdparameter.Parameters.AddWithValue("@58", "sccm");
+                                                cmdparameter.Parameters.AddWithValue("@61", lblRecipe.Text);
+                                                cmdparameter.Parameters.AddWithValue("@62", lblRecipe.Text);
+                                                cmdparameter.Parameters.AddWithValue("@63", lblRecipe.Text);
+                                                cmdparameter.Parameters.AddWithValue("@64", lblRecipe.Text);
+                                                cmdparameter.Parameters.AddWithValue("@65", lblRecipe.Text);
+                                                cmdparameter.Parameters.AddWithValue("@66", lblRecipe.Text);
+                                                cmdparameter.Parameters.AddWithValue("@67", lblRecipe.Text);
+                                                cmdparameter.Parameters.AddWithValue("@68", lblRecipe.Text);
+                                                cmdparameter.Parameters.AddWithValue("@71", strStepname1[j]);
+                                                cmdparameter.Parameters.AddWithValue("@72", strStepname1[j]);
+                                                cmdparameter.Parameters.AddWithValue("@73", strStepname1[j]);
+                                                cmdparameter.Parameters.AddWithValue("@74", strStepname1[j]);
+                                                cmdparameter.Parameters.AddWithValue("@75", strStepname1[j]);
+                                                cmdparameter.Parameters.AddWithValue("@76", strStepname1[j]);
+                                                cmdparameter.Parameters.AddWithValue("@77", strStepname1[j]);
+                                                cmdparameter.Parameters.AddWithValue("@78", strStepname1[j]);
+                                                cmdparameter.Parameters.AddWithValue("@81", DateTime.Now);
+                                                cmdparameter.Parameters.AddWithValue("@82", DateTime.Now);
+                                                cmdparameter.Parameters.AddWithValue("@83", DateTime.Now);
+                                                cmdparameter.Parameters.AddWithValue("@84", DateTime.Now);
+                                                cmdparameter.Parameters.AddWithValue("@85", DateTime.Now);
+                                                cmdparameter.Parameters.AddWithValue("@86", DateTime.Now);
+                                                cmdparameter.Parameters.AddWithValue("@87", DateTime.Now);
+                                                cmdparameter.Parameters.AddWithValue("@88", DateTime.Now);
+
+
+                                                cmdparameter.ExecuteNonQuery();
+                                                con.Close();
+
+                                            }
+                                            ///////////////////////////////////////////////
+
+
+                                            strStepname1.Clear();
+                                            ListStepStartTime.Clear();
+                                            ListStepEndTime.Clear();
+
+                                            // }
+
+
+
+
+
+
+                                            picMain.Image.Tag = "finishchamberA17";
+
+
+
+
+                                            /////////////////////////////////////////////////////////////////////////////////////////////////// 
+                                        }
+
+
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "finishchamberA17" && picSV.Visible == true)
+                                        {
+
+                                            await Task.Delay(1000);
+                                            picChamber.Image = Properties.Resources.ChamberWithA1;
+                                            //picMain.Image = Properties.Resources.robotintochamberwithA1;
+                                            picSV.Visible = false;
+                                        }
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "finishchamberA17" && picSV.Visible == false)
+                                        {
+                                            await Task.Delay(1000);
+
+                                            picChamber.Image = Properties.Resources.robot_into_chamberA11;
+                                            picMain.Image = Properties.Resources.picrobotintochamber;
+                                            picMain.Image = Properties.Resources.picrobotintoAPMWafer;
+                                            picMain.Image.Tag = "picrobotintoAPMWaferA17-2";
+
+                                            ovalShape1.Left += 1;
+                                            ovalShape1.Left -= 1;
+                                            picChamber.Width += 140;
+                                            picChamber.Left -= 150;
+                                            picChamber.Height += 10;
+                                        }
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotintoAPMWaferA17-2")
+                                        {
+                                            await Task.Delay(1000);
+                                            label2.BackColor = Color.Blue;
+                                            lblProcess.BackColor = Color.Blue;
+                                            lblProcessStep.BackColor = Color.Blue;
+                                            lblRecipe.BackColor = Color.Blue;
+                                            lblStepName.BackColor = Color.Blue;
+                                            lblData.BackColor = Color.Blue;
+                                            lblnum.BackColor = Color.Blue;
+
+                                            lblProcess.Text = "Idle";
+                                            lblProcessStep.Text = "";
+                                            lblRecipe.Text = "";
+                                            lblStepName.Text = "";
+                                            lblnum.Text = "";
+                                            lblData.Text = "";
+
+
+                                            // pictRobot.Visible = true;
+
+                                            picChamber.Image = Properties.Resources.new_chamber1;
+                                            picMain.Image = Properties.Resources.picrobotbotton;
+                                            picMain.Image = Properties.Resources.picrobotAPMWafer;
+
+                                            picMain.Image.Tag = "picrobotAPMWaferA17-2";
+
+                                            lblwaferAPM.Visible = false;
+                                            lblwaferup.Visible = true;
+
+                                            ovalShape1.Top += 145;
+                                            ovalShape1.Left -= 3;
+                                            lblwafer.Top += 145;
+                                            lblwafer.Left -= 3;
+
+                                            lblChamber.BackColor = Color.Blue;
+                                            chamberload = "Blue";
+                                            picChamber.Width -= 140;
+                                            picChamber.Left += 150;
+                                            picChamber.Height -= 10;
+                                        }
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotAPMWaferA17-2" && picSV.Visible == false)
+                                        {
+                                            await Task.Delay(2000);
+                                            picChamber.Image = Properties.Resources.new_chamber;//close chamber
+
+                                            // picMain.Image = Properties.Resources.robotrightA1;
+                                            picSV.Visible = true;
+
+
+                                        }
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotAPMWaferA17-2" && picSV.Visible == true)
+                                        {
+                                            await Task.Delay(2000);
+
+                                            // pictRobot.Height += 20;
+
+                                            // picMain.Image = Properties.Resources.robotgetwaferA1cassetteclose;
+                                            picMain.Image = Properties.Resources.mainpicture;
+                                            picMain.Image = Properties.Resources.picrobotArmWafer;
+                                            picMain.Image.Tag = "picrobotArmWaferA17-2";
+                                            lblwaferup.Visible = false;
+                                            lblwafer.Visible = true;
+                                            ovalShape1.Top += 162;
+                                            lblwafer.Top += 162;
+                                            ovalShape1.Left += 12;
+                                            lblwafer.Left += 12;
+                                            await Task.Delay(2000);
+
+                                            await Task.Delay(1000);
+                                            picCassette.Image = Properties.Resources.cassette3;//open cassette
+                                                                                               // picMain.Image = Properties.Resources.robotgetwaferA1;
+                                        }
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotArmWaferA17-2")
+                                        {
+                                            await Task.Delay(1000);
+
+                                            lblCassette.BackColor = Color.LimeGreen;
+
+                                            picCassette.Image = Properties.Resources.robot_into_cassetteA1;
+                                            picMain.Image = Properties.Resources.picrobotintocassette;
+                                            picMain.Image.Tag = "picrobotintocassettA17-2";
+                                            lblwafer.Visible = false;
+                                            lblwafer.Visible = false;
+                                            ovalShape1.Visible = false;
+                                            picCassette.Height += 220;
+                                            picCassette.Width += 25;
+                                            picCassette.Top -= 205;
+                                        }
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotintocassettA17-2")
+                                        {
+                                            await Task.Delay(2000);
+                                            lblCassette.BackColor = Color.Blue;
+                                            //  pictRobot.Visible = true;
+
+                                            picMain.Image = Properties.Resources.mainpicture;
+                                            picCassette.Image = Properties.Resources.cassette3;
+                                            picCassette.Width -= 25;
+                                            picCassette.Height -= 220;
+                                            picCassette.Top += 205;
+                                            await Task.Delay(2000);
+                                            //  picMain.Image = Properties.Resources.mainpic;
+                                            picCassette.Image = Properties.Resources.cassette;
+                                            // picwafer.Image = Properties.Resources.waferfull;
+                                            if (NoOfwafer[i] == "1")
+                                            {
+                                                //  picwafer.Image = Properties.Resources.waferA1full;
+                                                picWafer1.Visible = true;
+                                            }
+                                            if (NoOfwafer[i] == "2")
+                                            {
+                                                //  picwafer.Image = Properties.Resources.waferA2full;
+                                                picWafer1.Visible = true;
+                                                picWafer2.Visible = true;
+                                            }
+                                            if (NoOfwafer[i] == "3")
+                                            {
+                                                //  picwafer.Image = Properties.Resources.waferA3full;
+                                                picWafer1.Visible = true;
+                                                picWafer2.Visible = true;
+                                                picWafer3.Visible = true;
+                                            }
+                                            if (NoOfwafer[i] == "4")
+                                            {
+                                                // picwafer.Image = Properties.Resources.waferA4full;
+                                                picWafer1.Visible = true;
+                                                picWafer2.Visible = true;
+                                                picWafer3.Visible = true;
+                                                picWafer4.Visible = true;
+                                                picWafer2.Image = Properties.Resources.picWaferGreen;
+                                                picWafer1.Image = Properties.Resources.picWaferGreen;
+                                                picWafer3.Image = Properties.Resources.picWaferGreen;
+                                                picWafer4.Image = Properties.Resources.picWaferGreen;
+                                            }
+
+                                            if (NoOfwafer[i] == "5")
+                                            {
+                                                //  picwafer.Image = Properties.Resources.waferA5full;
+                                                picWafer1.Visible = true;
+                                                picWafer2.Visible = true;
+                                                picWafer3.Visible = true;
+                                                picWafer4.Visible = true;
+                                                picWafer5.Visible = true;
+                                                picWafer2.Image = Properties.Resources.picWaferGreen;
+                                                picWafer1.Image = Properties.Resources.picWaferGreen;
+                                                picWafer3.Image = Properties.Resources.picWaferGreen;
+                                                picWafer4.Image = Properties.Resources.picWaferGreen;
+                                                picWafer5.Image = Properties.Resources.picWaferGreen;
+                                            }
+
+                                            if (NoOfwafer[i] == "6")
+                                            {
+                                                //  picwafer.Image = Properties.Resources.waferA5full;
+                                                picWafer1.Visible = true;
+                                                picWafer2.Visible = true;
+                                                picWafer3.Visible = true;
+                                                picWafer4.Visible = true;
+                                                picWafer5.Visible = true;
+                                                picWafer6.Visible = true;
+                                                picWafer2.Image = Properties.Resources.picWaferGreen;
+                                                picWafer1.Image = Properties.Resources.picWaferGreen;
+                                                picWafer3.Image = Properties.Resources.picWaferGreen;
+                                                picWafer4.Image = Properties.Resources.picWaferGreen;
+                                                picWafer5.Image = Properties.Resources.picWaferGreen;
+                                                picWafer6.Image = Properties.Resources.picWaferGreen;
+                                            }
+
+                                            if (NoOfwafer[i] == "7")
+                                            {
+                                                //  picwafer.Image = Properties.Resources.waferA5full;
+                                                picWafer1.Visible = true;
+                                                picWafer2.Visible = true;
+                                                picWafer3.Visible = true;
+                                                picWafer4.Visible = true;
+                                                picWafer5.Visible = true;
+                                                picWafer6.Visible = true;
+                                                picWafer7.Visible = true;
+                                                picWafer2.Image = Properties.Resources.picWaferGreen;
+                                                picWafer1.Image = Properties.Resources.picWaferGreen;
+                                                picWafer3.Image = Properties.Resources.picWaferGreen;
+                                                picWafer4.Image = Properties.Resources.picWaferGreen;
+                                                picWafer5.Image = Properties.Resources.picWaferGreen;
+                                                picWafer6.Image = Properties.Resources.picWaferGreen;
+                                                picWafer7.Image = Properties.Resources.picWaferGreen;
+                                            }
+                                            if (NoOfwafer[i] == "8")
+                                            {
+                                                //  picwafer.Image = Properties.Resources.waferA5full;
+                                                picWafer1.Visible = true;
+                                                picWafer2.Visible = true;
+                                                picWafer3.Visible = true;
+                                                picWafer4.Visible = true;
+                                                picWafer5.Visible = true;
+                                                picWafer6.Visible = true;
+                                                picWafer7.Visible = true;
+                                                picWafer8.Visible = true;
+                                                picWafer2.Image = Properties.Resources.picWaferGreen;
+                                                picWafer1.Image = Properties.Resources.picWaferGreen;
+                                                picWafer3.Image = Properties.Resources.picWaferGreen;
+                                                picWafer4.Image = Properties.Resources.picWaferGreen;
+                                                picWafer5.Image = Properties.Resources.picWaferGreen;
+                                                picWafer6.Image = Properties.Resources.picWaferGreen;
+                                                picWafer7.Image = Properties.Resources.picWaferGreen;
+                                                picWafer8.Image = Properties.Resources.picWaferGreen;
+                                            }
+                                            if (NoOfwafer[i] == "9")
+                                            {
+                                                //  picwafer.Image = Properties.Resources.waferA5full;
+                                                picWafer1.Visible = true;
+                                                picWafer2.Visible = true;
+                                                picWafer3.Visible = true;
+                                                picWafer4.Visible = true;
+                                                picWafer5.Visible = true;
+                                                picWafer6.Visible = true;
+                                                picWafer7.Visible = true;
+                                                picWafer8.Visible = true;
+                                                picWafer9.Visible = true;
+                                                picWafer2.Image = Properties.Resources.picWaferGreen;
+                                                picWafer1.Image = Properties.Resources.picWaferGreen;
+                                                picWafer3.Image = Properties.Resources.picWaferGreen;
+                                                picWafer4.Image = Properties.Resources.picWaferGreen;
+                                                picWafer5.Image = Properties.Resources.picWaferGreen;
+                                                picWafer6.Image = Properties.Resources.picWaferGreen;
+                                                picWafer7.Image = Properties.Resources.picWaferGreen;
+                                                picWafer8.Image = Properties.Resources.picWaferGreen;
+                                                picWafer9.Image = Properties.Resources.picWaferGreen;
+                                            }
+                                            if (NoOfwafer[i] == "10")
+                                            {
+                                                //  picwafer.Image = Properties.Resources.waferA5full;
+                                                picWafer1.Visible = true;
+                                                picWafer2.Visible = true;
+                                                picWafer3.Visible = true;
+                                                picWafer4.Visible = true;
+                                                picWafer5.Visible = true;
+                                                picWafer6.Visible = true;
+                                                picWafer7.Visible = true;
+                                                picWafer8.Visible = true;
+                                                picWafer9.Visible = true;
+                                                picWafer10.Visible = true;
+                                                picWafer2.Image = Properties.Resources.picWaferGreen;
+                                                picWafer1.Image = Properties.Resources.picWaferGreen;
+                                                picWafer3.Image = Properties.Resources.picWaferGreen;
+                                                picWafer4.Image = Properties.Resources.picWaferGreen;
+                                                picWafer5.Image = Properties.Resources.picWaferGreen;
+                                                picWafer6.Image = Properties.Resources.picWaferGreen;
+                                                picWafer7.Image = Properties.Resources.picWaferGreen;
+                                                picWafer8.Image = Properties.Resources.picWaferGreen;
+                                                picWafer9.Image = Properties.Resources.picWaferGreen;
+                                                picWafer10.Image = Properties.Resources.picWaferGreen;
+                                            }
+                                            if (NoOfwafer[i] == "11")
+                                            {
+                                                //  picwafer.Image = Properties.Resources.waferA5full;
+                                                picWafer1.Visible = true;
+                                                picWafer2.Visible = true;
+                                                picWafer3.Visible = true;
+                                                picWafer4.Visible = true;
+                                                picWafer5.Visible = true;
+                                                picWafer6.Visible = true;
+                                                picWafer7.Visible = true;
+                                                picWafer8.Visible = true;
+                                                picWafer9.Visible = true;
+                                                picWafer10.Visible = true;
+                                                picWafer2.Image = Properties.Resources.picWaferGreen;
+                                                picWafer1.Image = Properties.Resources.picWaferGreen;
+                                                picWafer3.Image = Properties.Resources.picWaferGreen;
+                                                picWafer4.Image = Properties.Resources.picWaferGreen;
+                                                picWafer5.Image = Properties.Resources.picWaferGreen;
+                                                picWafer6.Image = Properties.Resources.picWaferGreen;
+                                                picWafer7.Image = Properties.Resources.picWaferGreen;
+                                                picWafer8.Image = Properties.Resources.picWaferGreen;
+                                                picWafer9.Image = Properties.Resources.picWaferGreen;
+                                                picWafer10.Image = Properties.Resources.picWaferGreen;
+                                            }
+                                            if (NoOfwafer[i] == "12")
+                                            {
+                                                //  picwafer.Image = Properties.Resources.waferA5full;
+                                                picWafer1.Visible = true;
+                                                picWafer2.Visible = true;
+                                                picWafer3.Visible = true;
+                                                picWafer4.Visible = true;
+                                                picWafer5.Visible = true;
+                                                picWafer6.Visible = true;
+                                                picWafer7.Visible = true;
+                                                picWafer8.Visible = true;
+                                                picWafer9.Visible = true;
+                                                picWafer10.Visible = true;
+                                                picWafer2.Image = Properties.Resources.picWaferGreen;
+                                                picWafer1.Image = Properties.Resources.picWaferGreen;
+                                                picWafer3.Image = Properties.Resources.picWaferGreen;
+                                                picWafer4.Image = Properties.Resources.picWaferGreen;
+                                                picWafer5.Image = Properties.Resources.picWaferGreen;
+                                                picWafer6.Image = Properties.Resources.picWaferGreen;
+                                                picWafer7.Image = Properties.Resources.picWaferGreen;
+                                                picWafer8.Image = Properties.Resources.picWaferGreen;
+                                                picWafer9.Image = Properties.Resources.picWaferGreen;
+                                                picWafer10.Image = Properties.Resources.picWaferGreen;
+                                            }
+                                            if (NoOfwafer[i] == "13")
+                                            {
+                                                //  picwafer.Image = Properties.Resources.waferA5full;
+                                                picWafer1.Visible = true;
+                                                picWafer2.Visible = true;
+                                                picWafer3.Visible = true;
+                                                picWafer4.Visible = true;
+                                                picWafer5.Visible = true;
+                                                picWafer6.Visible = true;
+                                                picWafer7.Visible = true;
+                                                picWafer8.Visible = true;
+                                                picWafer9.Visible = true;
+                                                picWafer10.Visible = true;
+                                                picWafer2.Image = Properties.Resources.picWaferGreen;
+                                                picWafer1.Image = Properties.Resources.picWaferGreen;
+                                                picWafer3.Image = Properties.Resources.picWaferGreen;
+                                                picWafer4.Image = Properties.Resources.picWaferGreen;
+                                                picWafer5.Image = Properties.Resources.picWaferGreen;
+                                                picWafer6.Image = Properties.Resources.picWaferGreen;
+                                                picWafer7.Image = Properties.Resources.picWaferGreen;
+                                                picWafer8.Image = Properties.Resources.picWaferGreen;
+                                                picWafer9.Image = Properties.Resources.picWaferGreen;
+                                                picWafer10.Image = Properties.Resources.picWaferGreen;
+                                            }
+                                            if (NoOfwafer[i] == "14")
+                                            {
+                                                //  picwafer.Image = Properties.Resources.waferA5full;
+                                                picWafer1.Visible = true;
+                                                picWafer2.Visible = true;
+                                                picWafer3.Visible = true;
+                                                picWafer4.Visible = true;
+                                                picWafer5.Visible = true;
+                                                picWafer6.Visible = true;
+                                                picWafer7.Visible = true;
+                                                picWafer8.Visible = true;
+                                                picWafer9.Visible = true;
+                                                picWafer10.Visible = true;
+                                                picWafer11.Visible = true;
+                                                picWafer12.Visible = true;
+                                                picWafer13.Visible = true;
+                                                picWafer14.Visible = true;
+                                                picWafer2.Image = Properties.Resources.picWaferGreen;
+                                                picWafer1.Image = Properties.Resources.picWaferGreen;
+                                                picWafer3.Image = Properties.Resources.picWaferGreen;
+                                                picWafer4.Image = Properties.Resources.picWaferGreen;
+                                                picWafer5.Image = Properties.Resources.picWaferGreen;
+                                                picWafer6.Image = Properties.Resources.picWaferGreen;
+                                                picWafer7.Image = Properties.Resources.picWaferGreen;
+                                                picWafer8.Image = Properties.Resources.picWaferGreen;
+                                                picWafer9.Image = Properties.Resources.picWaferGreen;
+                                                picWafer10.Image = Properties.Resources.picWaferGreen;
+                                                picWafer11.Image = Properties.Resources.picWaferGreen;
+                                                picWafer12.Image = Properties.Resources.picWaferGreen;
+                                                picWafer13.Image = Properties.Resources.picWaferGreen;
+                                                picWafer14.Image = Properties.Resources.picWaferGreen;
+
+                                            }
+                                            if (NoOfwafer[i] == "15")
+                                            {
+                                                //  picwafer.Image = Properties.Resources.waferA5full;
+                                                picWafer1.Visible = true;
+                                                picWafer2.Visible = true;
+                                                picWafer3.Visible = true;
+                                                picWafer4.Visible = true;
+                                                picWafer5.Visible = true;
+                                                picWafer6.Visible = true;
+                                                picWafer7.Visible = true;
+                                                picWafer8.Visible = true;
+                                                picWafer9.Visible = true;
+                                                picWafer10.Visible = true;
+                                                picWafer11.Visible = true;
+                                                picWafer12.Visible = true;
+                                                picWafer13.Visible = true;
+                                                picWafer14.Visible = true;
+                                                picWafer15.Visible = true;
+                                                picWafer2.Image = Properties.Resources.picWaferGreen;
+                                                picWafer1.Image = Properties.Resources.picWaferGreen;
+                                                picWafer3.Image = Properties.Resources.picWaferGreen;
+                                                picWafer4.Image = Properties.Resources.picWaferGreen;
+                                                picWafer5.Image = Properties.Resources.picWaferGreen;
+                                                picWafer6.Image = Properties.Resources.picWaferGreen;
+                                                picWafer7.Image = Properties.Resources.picWaferGreen;
+                                                picWafer8.Image = Properties.Resources.picWaferGreen;
+                                                picWafer9.Image = Properties.Resources.picWaferGreen;
+                                                picWafer10.Image = Properties.Resources.picWaferGreen;
+                                                picWafer11.Image = Properties.Resources.picWaferGreen;
+                                                picWafer12.Image = Properties.Resources.picWaferGreen;
+                                                picWafer13.Image = Properties.Resources.picWaferGreen;
+                                                picWafer14.Image = Properties.Resources.picWaferGreen;
+                                                picWafer15.Image = Properties.Resources.picWaferGreen;
+                                            }
+                                            if (NoOfwafer[i] == "16")
+                                            {
+                                                //  picwafer.Image = Properties.Resources.waferA5full;
+                                                picWafer1.Visible = true;
+                                                picWafer2.Visible = true;
+                                                picWafer3.Visible = true;
+                                                picWafer4.Visible = true;
+                                                picWafer5.Visible = true;
+                                                picWafer6.Visible = true;
+                                                picWafer7.Visible = true;
+                                                picWafer8.Visible = true;
+                                                picWafer9.Visible = true;
+                                                picWafer10.Visible = true;
+                                                picWafer11.Visible = true;
+                                                picWafer12.Visible = true;
+                                                picWafer13.Visible = true;
+                                                picWafer14.Visible = true;
+                                                picWafer15.Visible = true;
+                                                picWafer16.Visible = true;
+                                                picWafer2.Image = Properties.Resources.picWaferGreen;
+                                                picWafer1.Image = Properties.Resources.picWaferGreen;
+                                                picWafer3.Image = Properties.Resources.picWaferGreen;
+                                                picWafer4.Image = Properties.Resources.picWaferGreen;
+                                                picWafer5.Image = Properties.Resources.picWaferGreen;
+                                                picWafer6.Image = Properties.Resources.picWaferGreen;
+                                                picWafer7.Image = Properties.Resources.picWaferGreen;
+                                                picWafer8.Image = Properties.Resources.picWaferGreen;
+                                                picWafer9.Image = Properties.Resources.picWaferGreen;
+                                                picWafer10.Image = Properties.Resources.picWaferGreen;
+                                                picWafer11.Image = Properties.Resources.picWaferGreen;
+                                                picWafer12.Image = Properties.Resources.picWaferGreen;
+                                                picWafer13.Image = Properties.Resources.picWaferGreen;
+                                                picWafer14.Image = Properties.Resources.picWaferGreen;
+                                                picWafer15.Image = Properties.Resources.picWaferGreen;
+                                                picWafer16.Image = Properties.Resources.picWaferGreen;
+                                            }
+                                            if (NoOfwafer[i] == "17")
+                                            {
+                                                //  picwafer.Image = Properties.Resources.waferA5full;
+                                                picWafer1.Visible = true;
+                                                picWafer2.Visible = true;
+                                                picWafer3.Visible = true;
+                                                picWafer4.Visible = true;
+                                                picWafer5.Visible = true;
+                                                picWafer6.Visible = true;
+                                                picWafer7.Visible = true;
+                                                picWafer8.Visible = true;
+                                                picWafer9.Visible = true;
+                                                picWafer10.Visible = true;
+                                                picWafer11.Visible = true;
+                                                picWafer12.Visible = true;
+                                                picWafer13.Visible = true;
+                                                picWafer14.Visible = true;
+                                                picWafer15.Visible = true;
+                                                picWafer16.Visible = true;
+                                                picWafer17.Visible = true;
+                                                picWafer2.Image = Properties.Resources.picWaferGreen;
+                                                picWafer1.Image = Properties.Resources.picWaferGreen;
+                                                picWafer3.Image = Properties.Resources.picWaferGreen;
+                                                picWafer4.Image = Properties.Resources.picWaferGreen;
+                                                picWafer5.Image = Properties.Resources.picWaferGreen;
+                                                picWafer6.Image = Properties.Resources.picWaferGreen;
+                                                picWafer7.Image = Properties.Resources.picWaferGreen;
+                                                picWafer8.Image = Properties.Resources.picWaferGreen;
+                                                picWafer9.Image = Properties.Resources.picWaferGreen;
+                                                picWafer10.Image = Properties.Resources.picWaferGreen;
+                                                picWafer11.Image = Properties.Resources.picWaferGreen;
+                                                picWafer12.Image = Properties.Resources.picWaferGreen;
+                                                picWafer13.Image = Properties.Resources.picWaferGreen;
+                                                picWafer14.Image = Properties.Resources.picWaferGreen;
+                                                picWafer15.Image = Properties.Resources.picWaferGreen;
+                                                picWafer16.Image = Properties.Resources.picWaferGreen;
+                                                picWafer17.Image = Properties.Resources.picWaferGreen;
+                                            }
+
+
+
+
+                                            //////////////////////////////////////////////////////////////////Save DataLog
+                                            if (int.Parse(NoOfwafer[i]) == 17)
+                                            {
+                                                EndTime = DateTime.Now;
+
+
+                                                con.Open();
+
+                                                string strinsertdatalog = "insert into DataLogger(logname,cassetterecipename,starttime) values(@1,@2,@3) ";
+                                                SqlCommand cmdinsertdatalog = new SqlCommand(strinsertdatalog, con);
+
+                                                cmdinsertdatalog.Parameters.AddWithValue("@1", lbl123.Text);
+                                                cmdinsertdatalog.Parameters.AddWithValue("@2", form2Msg);
+                                                cmdinsertdatalog.Parameters.AddWithValue("@3", StartTime);
+
+                                                cmdinsertdatalog.ExecuteNonQuery();
+
+                                                con.Close();
+
+                                                lblState.Text = "Finished";
+
+
+
+                                            }
+                                            picMain.Image.Tag = "finishwaferA17";
+                                            if (isStopRobot == true)
+                                            {
+                                                button2.Enabled = true;
+                                                lblState.Text = "Stopping";
+                                            }
+
+
+                                        }
+                                        /////////////////////////////////////////////////////////finish waferA17
+                                    }
+
+                                    if (int.Parse(NoOfwafer[i]) >= 18)
+                                    {
+                                        //////////////////////////////////////////////////////////////////////////start waferA18
+                                        nooftherecipe = "18";
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "finishWaferA18" && isStopRobot == false && iscancelrecipe == false)
+                                        {
+                                            await Task.Delay(2000);
+
+                                            picCassette.Image = Properties.Resources.cassette1;
+
+                                            if (NoOfwafer[i] == "1")
+                                            {
+                                                picwafer.Image = Properties.Resources.wafer;
+                                                picwafer.Image.Tag = "wafer";
+                                            }
+                                            else if (NoOfwafer[i] == "2")
+                                            {
+                                                picwafer.Image = Properties.Resources.waferA1full;
+                                            }
+                                            else if (NoOfwafer[i] == "3")
+                                            {
+                                                picwafer.Image = Properties.Resources.waferA2full;
+
+                                            }
+                                            else if (NoOfwafer[i] == "4")
+                                            {
+                                                picwafer.Image = Properties.Resources.waferA3full;
+                                            }
+                                            else if (NoOfwafer[i] == "5")
+                                            {
+                                                picwafer.Image = Properties.Resources.waferA4full;
+                                            }
+                                            else if (NoOfwafer[i] == "6")
+                                            {
+                                                picwafer.Image = Properties.Resources.waferA5full;
+
+                                            }
+                                            else if (NoOfwafer[i] == "7")
+                                            {
+                                                picwafer.Image = Properties.Resources.waferA6full;
+
+                                            }
+                                            else if (NoOfwafer[i] == "8")
+                                            {
+                                                picwafer.Image = Properties.Resources.waferA7full;
+
+                                            }
+                                            else if (NoOfwafer[i] == "9")
+                                            {
+                                                picwafer.Image = Properties.Resources.waferA8full;
+
+                                            }
+                                            else if (NoOfwafer[i] == "10")
+                                            {
+                                                picwafer.Image = Properties.Resources.waferA9full;
+
+                                            }
+                                            else if (NoOfwafer[i] == "11")
+                                            {
+                                                picwafer.Image = Properties.Resources.waferA9full;
+
+                                            }
+
+                                            else if (NoOfwafer[i] == "12")
+                                            {
+                                                picwafer.Image = Properties.Resources.waferA9full;
+
+                                            }
+
+                                            else if (NoOfwafer[i] == "13")
+                                            {
+                                                picwafer.Image = Properties.Resources.waferA9full;
+
+                                            }
+
+                                            else if (NoOfwafer[i] == "14")
+                                            {
+                                                //  picwafer.Image = Properties.Resources.waferA9full;
+                                                picWafer14.Visible = false;
+                                            }
+
+                                            else if (NoOfwafer[i] == "15")
+                                            {
+                                                //  picwafer.Image = Properties.Resources.waferA9full;
+                                                picWafer15.Visible = false;
+                                            }
+                                            else if (NoOfwafer[i] == "16")
+                                            {
+                                                //  picwafer.Image = Properties.Resources.waferA9full;
+                                                picWafer15.Visible = false;
+                                            }
+                                            else if (NoOfwafer[i] == "17")
+                                            {
+                                                //  picwafer.Image = Properties.Resources.waferA9full;
+                                                picWafer17.Visible = false;
+                                            }
+                                            else if (NoOfwafer[i] == "18")
+                                            {
+                                                //  picwafer.Image = Properties.Resources.waferA9full;
+                                                picWafer18.Visible = false;
+                                            }
+
+
+
+                                            StartTime = DateTime.Now;
+
+
+
+
+                                            await Task.Delay(2000);
+                                            con.Open();
+
+                                            string strWaferSelection = "insert into WaferSelection(NoOfWafers,StartTime,CassetteRecipeName,Logname) values(@NoOfWafer,@StartTime,@CassetteRecipeName,@Logname)";
+                                            SqlCommand cmdwaferselection = new SqlCommand(strWaferSelection, con);
+                                            cmdwaferselection.Parameters.AddWithValue("@NoOfWafer", "18");
+                                            cmdwaferselection.Parameters.AddWithValue("@StartTime", StartTime);
+                                            cmdwaferselection.Parameters.AddWithValue("@CassetteRecipeName", form2Msg);
+                                            cmdwaferselection.Parameters.AddWithValue("@Logname", lbl123.Text);
+
+                                            cmdwaferselection.ExecuteNonQuery();
+
+                                            con.Close();
+
+                                            await Task.Delay(1000);
+
+                                            picMain.Image = Properties.Resources.mainpicture;
+                                            picMain.Image.Tag = "waferA18mainpicture";
+
+                                            await Task.Delay(1000);
+                                        }
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "waferA18mainpicture")
+                                        {
+                                            // lblCassette.BackColor = Color.LimeGreen;
+                                            await Task.Delay(1000);
+
+                                            picMain.Image = Properties.Resources.picrobotintocassette;
+                                            picMain.Image.Tag = "picrobotintocassetteA18";
+                                            label1.BackColor = Color.Blue;
+                                            lblLoad.Text = "";
+                                            lblLoad.BackColor = Color.Blue;
+                                            lbl123.BackColor = Color.Blue;
+                                            lblState.BackColor = Color.Blue;
+                                            lblCassetteRecipename.BackColor = Color.Blue;
+                                            lblmTorr.BackColor = Color.Blue;
+
+
+                                            lblCassette.BackColor = Color.LimeGreen;
+
+                                        }
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotintocassetteA18")
+                                        {
+                                            await Task.Delay(1000);
+                                            picMain.Image = Properties.Resources.picrobotArmWafer;
+                                            picMain.Image.Tag = "picrobotArmWaferA18";
+
+                                            lblwafer.Visible = true;
+                                            lblwafer.Text = "A18";
+
+                                            lblCassette.BackColor = Color.Blue;
+                                        }
+
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotArmWaferA18")
+                                        {
+                                            await Task.Delay(1000);
+                                            picMain.Image = Properties.Resources.picrobotAlignerWafer;
+                                            picMain.Image.Tag = "picrobotAlignerWaferA18";
+
+                                            ovalShape1.Left += 70;
+                                            ovalShape1.Top -= 85;
+                                            lblwafer.Visible = false;
+                                            lblwaferright.Visible = true;
+                                            lblwaferright.Text = "A18";
+                                            lblwafer.Left += 70;
+                                            lblwafer.Top -= 85;
+
+                                        }
+
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotAlignerWaferA18")
+                                        {
+                                            await Task.Delay(1000);
+
+                                            picMain.Image = Properties.Resources.picrobotintoAlignerWafer;
+                                            picMain.Image.Tag = "picrobotintoAlignerWaferA18";
+                                            lblCentralize.BackColor = Color.LimeGreen;
+                                            ovalShape1.Left += 155;
+                                            ovalShape1.Top += 0;
+                                            lblwaferright.Visible = false;
+                                            lblwaferaligner.Visible = true;
+                                            lblwaferaligner.Text = "A18";
+                                            lblwafer.Left += 155;
+                                            lblwafer.Top += 0;
+
+                                        }
+
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotintoAlignerWaferA18")
+                                        {
+                                            await Task.Delay(1000);
+                                            picMain.Image = Properties.Resources.picrobotAlignerWafer;
+                                            picMain.Image.Tag = "picrobotAlignerWaferA18-2";
+
+                                            lblwaferaligner.Visible = false;
+                                            lblwaferright.Visible = true;
+                                            lblwaferright.Text = "A18";
+                                            ovalShape1.Left -= 155;
+                                            ovalShape1.Top -= 0;
+                                            lblwafer.Left -= 155;
+                                            lblwafer.Top -= 0;
+                                            lblCentralize.BackColor = Color.Blue;
+                                        }
+
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotAlignerWaferA18-2")
+                                        {
+                                            await Task.Delay(1000);
+
+                                            picMain.Image = Properties.Resources.picrobotAPMWafer;
+                                            picMain.Image.Tag = "picrobotAPMWaferA18";
+                                            lblwaferright.Visible = false;
+                                            lblwaferup.Visible = true;
+                                            lblwaferup.Text = "A18";
+                                            ovalShape1.Left -= 82;
+                                            ovalShape1.Top -= 76;
+                                            lblwafer.Left -= 82;
+                                            lblwafer.Top -= 76;
+                                        }
+
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotAPMWaferA18" && picSV.Visible == true)
+                                        {
+                                            await Task.Delay(1000);
+
+
+                                            picSV.Visible = false;  // open sv of chamber
+                                        }
+
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotAPMWaferA18" && picSV.Visible == false)
+                                        {
+                                            await Task.Delay(1000);
+
+                                            picMain.Image = Properties.Resources.picrobotintoAPMWafer;
+                                            picMain.Image.Tag = "picrobotintoAPMWaferA18";
+
+                                            lblwaferup.Visible = false;
+                                            lblwaferAPM.Visible = true;
+                                            lblwaferAPM.Text = "A18";
+                                            ovalShape1.Top -= 145;
+                                            ovalShape1.Left += 3;
+                                            lblwafer.Top -= 145;
+                                            lblwafer.Left += 3;
+
+
+
+                                            lblChamber.BackColor = Color.LimeGreen;
+
+                                            chamberload = "LimeGreen";
+                                        }
+
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotintoAPMWaferA18")
+                                        {
+                                            await Task.Delay(1000);
+                                            picChamber.Image = Properties.Resources.ChamberWithA1;
+
+                                            //   picMain.Image = Properties.Resources.robotintochamberwithA1;
+                                            picMain.Image = Properties.Resources.picrobotbotton;
+                                            picMain.Image = Properties.Resources.picwaferinAPM;
+                                            picMain.Image.Tag = "picwaferinAPMA18";
+                                            ovalShape1.Left -= 1;
+                                            ovalShape1.Left += 1;
+                                            //  picMain.SendToBack();
+                                            // ovalShape1.BringToFront();
+                                            picChamber.Width -= 140;
+                                            picChamber.Left += 150;
+                                            picChamber.Height -= 10;
+
+
+                                            //  pictRobot.Visible = true;
+                                        }
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picwaferinAPMA18")
+
+                                        {
+                                            await Task.Delay(1000);
+
+                                            picChamber.Image = Properties.Resources.ChamberWithA1Close;
+                                            //picMain.Image = Properties.Resources.robotintochamberwithA1close;
+                                            picSV.Visible = true;
+
+                                            ///////////////////////////////////////////////////////////////////////////////////////////////////////WaferA18 into Chamber
+                                            Chamber1 chamber1 = new Chamber1();
+                                            chamber1.ShowDialog();
+
+                                            lblRecipe.BackColor = Color.LimeGreen;
+                                            lblStepName.BackColor = Color.LimeGreen;
+
+                                            lblnum.BackColor = Color.LimeGreen;
+
+                                            lblData.BackColor = Color.LimeGreen;
+                                            lblData.Text = "";
+                                            label2.BackColor = Color.LimeGreen;
+
+                                            lblProcess.Text = "Processing";
+                                            lblProcess.BackColor = Color.LimeGreen;
+                                            lblProcessStep.Text = "Process Step";
+                                            lblProcessStep.BackColor = Color.LimeGreen;
+
+
+
+                                            con.Open();
+                                            string strSQL = "select WaferRecipe from CassetteWafer  where CassetterecipeName = @NewWaferRecipe";
+
+                                            SqlCommand cmd = new SqlCommand(strSQL, con);
+                                            cmd.Parameters.AddWithValue("@NewWaferRecipe", Form1.form2Msg);
+                                            SqlDataReader reader = cmd.ExecuteReader();
+                                            while (reader.Read())
+                                            {
+
+                                                lblRecipe.Text = string.Format("{0}", reader["WaferRecipe"]);
+
+
+
+                                            }
+
+                                            con.Close();
+                                            con.Open();
+                                            string strSQL1 = "select stepname from newrecipe where recipename = @Myrecipename";
+
+                                            SqlCommand cmd1 = new SqlCommand(strSQL1, con);
+                                            cmd1.Parameters.AddWithValue("@Myrecipename", lblRecipe.Text);
+                                            SqlDataReader reader1 = cmd1.ExecuteReader();
+                                            while (reader1.Read())
+                                            {
+
+                                                strStepname1.Add(string.Format("{0}", reader1["StepName"]));
+
+
+                                            }
+
+                                            con.Close();
+
+                                            con.Open();
+                                            string strSQL2 = "select StepName from newrecipe inner join CassetteWafer on newrecipe.recipename = cassettewafer.waferRecipe where cassettewafer.waferRecipe = @Newrecipename";
+                                            SqlCommand cmd2 = new SqlCommand(strSQL2, con);
+                                            cmd2.Parameters.AddWithValue("@Newrecipename", lblRecipe.Text);
+
+                                            cmd2.ExecuteNonQuery();
+
+
+
+                                            for (int j = 0; j < strStepname1.Count(); j += 1)
+
+                                            {
+
+                                                //  await Task.Delay(1000);
+
+                                                ListStepStartTime.Add(DateTime.Now);
+
+
+                                                int count = j + 1;
+
+
+                                                lblStepName.Text = strStepname1[j];
+                                                lblnum.Text = "," + count + "/" + strStepname1.Count();
+
+
+                                                con.Close();
+
+                                                con.Open();
+                                                string strSQLStepSec = "select * from newrecipe where stepname = @NewSec";
+
+                                                SqlCommand cmdSec = new SqlCommand(strSQLStepSec, con);
+                                                cmdSec.Parameters.AddWithValue("@NewSec", lblStepName.Text);
+
+                                                SqlDataReader readerSec = cmdSec.ExecuteReader();
+
+
+                                                while (readerSec.Read())
+                                                {
+                                                    mySec1 = readerSec["ProcessTime"].ToString();
+
+                                                    Int32.TryParse(mySec1, out Sec1);
+
+                                                }
+
+                                                for (int k = 1; k <= Sec1; k++)
+                                                {
+                                                    lblData.Text = k.ToString() + "/" + mySec1.ToString() + " Sec";
+                                                    // await Task.Delay(1000);
+
+
+                                                }
+                                                ListStepEndTime.Add(DateTime.Now);
+
+                                                con.Close();
+
+                                                con.Open();
+
+                                                string strModuleRecipe = "insert into ModuleRecipe(RecipeName,StepName,StartTime,EndTime,noofrecipe,logname) values(@recipename,@stepname,@starttime,@endtime,@noofrecipe,@Logname)";
+
+                                                SqlCommand cmdmodulerecipe = new SqlCommand(strModuleRecipe, con);
+
+                                                cmdmodulerecipe.Parameters.AddWithValue("@recipename", lblRecipe.Text);
+                                                cmdmodulerecipe.Parameters.AddWithValue("@stepname", strStepname1[j]);
+                                                cmdmodulerecipe.Parameters.AddWithValue("@starttime", ListStepStartTime[j]);
+                                                cmdmodulerecipe.Parameters.AddWithValue("@endtime", ListStepEndTime[j]);
+                                                cmdmodulerecipe.Parameters.AddWithValue("@noofrecipe", "18");
+                                                cmdmodulerecipe.Parameters.AddWithValue("@Logname", lbl123.Text);
+
+                                                // cmdmodulerecipe.ExecuteNonQuery();
+
+                                                con.Close();
+                                                //////////////////////////////////////////////////////////////////////////////////////////////////////get parameter value
+
+                                                con.Open();
+
+                                                string strSQL3 = "select * from newrecipe where stepname = @Newstepname and recipename = @Newrecipename";
+
+                                                SqlCommand cmd3 = new SqlCommand(strSQL3, con);
+                                                cmd3.Parameters.AddWithValue("@Newstepname", lblStepName.Text);
+                                                cmd3.Parameters.AddWithValue("@Newrecipename", lblRecipe.Text);
+                                                SqlDataReader reader2 = cmd3.ExecuteReader();
+
+                                                while (reader2.Read())
+                                                {
+                                                    CI2 = reader2["CI2"].ToString();
+                                                    BCI3 = reader2["BCI3"].ToString();
+                                                    SF6 = reader2["SF6"].ToString();
+                                                    CHF3 = reader2["CHF3"].ToString();
+                                                    Oxygen = reader2["Oxygen"].ToString();
+                                                    Oxygen1 = reader2["Oxygen1"].ToString();
+                                                    Nitrogen = reader2["Nitrogen"].ToString();
+                                                    Argon = reader2["Argon"].ToString();
+
+
+
+                                                }
+
+                                                con.Close();
+
+                                                ///////////////////////////////////////////////////////////////////////////////////////////////////
+                                                con.Open();
+                                                //  Chamber1 chamber1 = new Chamber1();
+
+                                                string strParameter = "insert into valueselection(parameter,Minimum,Maximum,Average,Units,recipename,stepname,valuedate) values(@11,@21,@31,@41,@51,@61,@71,@81),(@12,@22,@32,@42,@52,@62,@72,@82),(@13,@23,@33,@43,@53,@63,@73,@83)"
+                                                    + ",(@14,@24,@34,@44,@54,@64,@74,@84),(@15,@25,@35,@45,@55,@65,@75,@85),(@16,@26,@36,@46,@56,@66,@76,@86),(@17,@27,@37,@47,@57,@67,@77,@87),(@18,@28,@38,@48,@58,@68,@78,@88)";
+                                                SqlCommand cmdparameter = new SqlCommand(strParameter, con);
+                                                cmdparameter.Parameters.AddWithValue("@11", "CI2");
+                                                cmdparameter.Parameters.AddWithValue("@12", "BCI3");
+                                                cmdparameter.Parameters.AddWithValue("@13", "SF6");
+                                                cmdparameter.Parameters.AddWithValue("@14", "CHF3");
+                                                cmdparameter.Parameters.AddWithValue("@15", "Oxygen");
+                                                cmdparameter.Parameters.AddWithValue("@16", "Oxygen");
+                                                cmdparameter.Parameters.AddWithValue("@17", "Nitrogen");
+                                                cmdparameter.Parameters.AddWithValue("@18", "Argon");
+                                                cmdparameter.Parameters.AddWithValue("@21", CI2);
+                                                cmdparameter.Parameters.AddWithValue("@22", BCI3);
+                                                cmdparameter.Parameters.AddWithValue("@23", SF6);
+                                                cmdparameter.Parameters.AddWithValue("@24", CHF3);
+                                                cmdparameter.Parameters.AddWithValue("@25", Oxygen);
+                                                cmdparameter.Parameters.AddWithValue("@26", Oxygen1);
+                                                cmdparameter.Parameters.AddWithValue("@27", Nitrogen);
+                                                cmdparameter.Parameters.AddWithValue("@28", Argon);
+                                                cmdparameter.Parameters.AddWithValue("@31", CI2);
+                                                cmdparameter.Parameters.AddWithValue("@32", BCI3);
+                                                cmdparameter.Parameters.AddWithValue("@33", SF6);
+                                                cmdparameter.Parameters.AddWithValue("@34", CHF3);
+                                                cmdparameter.Parameters.AddWithValue("@35", Oxygen);
+                                                cmdparameter.Parameters.AddWithValue("@36", Oxygen1);
+                                                cmdparameter.Parameters.AddWithValue("@37", Nitrogen);
+                                                cmdparameter.Parameters.AddWithValue("@38", Argon);
+                                                cmdparameter.Parameters.AddWithValue("@41", CI2);
+                                                cmdparameter.Parameters.AddWithValue("@42", BCI3);
+                                                cmdparameter.Parameters.AddWithValue("@43", SF6);
+                                                cmdparameter.Parameters.AddWithValue("@44", CHF3);
+                                                cmdparameter.Parameters.AddWithValue("@45", Oxygen);
+                                                cmdparameter.Parameters.AddWithValue("@46", Oxygen1);
+                                                cmdparameter.Parameters.AddWithValue("@47", Nitrogen);
+                                                cmdparameter.Parameters.AddWithValue("@48", Argon);
+                                                cmdparameter.Parameters.AddWithValue("@51", "sccm");
+                                                cmdparameter.Parameters.AddWithValue("@52", "sccm");
+                                                cmdparameter.Parameters.AddWithValue("@53", "sccm");
+                                                cmdparameter.Parameters.AddWithValue("@54", "sccm");
+                                                cmdparameter.Parameters.AddWithValue("@55", "sccm");
+                                                cmdparameter.Parameters.AddWithValue("@56", "sccm");
+                                                cmdparameter.Parameters.AddWithValue("@57", "sccm");
+                                                cmdparameter.Parameters.AddWithValue("@58", "sccm");
+                                                cmdparameter.Parameters.AddWithValue("@61", lblRecipe.Text);
+                                                cmdparameter.Parameters.AddWithValue("@62", lblRecipe.Text);
+                                                cmdparameter.Parameters.AddWithValue("@63", lblRecipe.Text);
+                                                cmdparameter.Parameters.AddWithValue("@64", lblRecipe.Text);
+                                                cmdparameter.Parameters.AddWithValue("@65", lblRecipe.Text);
+                                                cmdparameter.Parameters.AddWithValue("@66", lblRecipe.Text);
+                                                cmdparameter.Parameters.AddWithValue("@67", lblRecipe.Text);
+                                                cmdparameter.Parameters.AddWithValue("@68", lblRecipe.Text);
+                                                cmdparameter.Parameters.AddWithValue("@71", strStepname1[j]);
+                                                cmdparameter.Parameters.AddWithValue("@72", strStepname1[j]);
+                                                cmdparameter.Parameters.AddWithValue("@73", strStepname1[j]);
+                                                cmdparameter.Parameters.AddWithValue("@74", strStepname1[j]);
+                                                cmdparameter.Parameters.AddWithValue("@75", strStepname1[j]);
+                                                cmdparameter.Parameters.AddWithValue("@76", strStepname1[j]);
+                                                cmdparameter.Parameters.AddWithValue("@77", strStepname1[j]);
+                                                cmdparameter.Parameters.AddWithValue("@78", strStepname1[j]);
+                                                cmdparameter.Parameters.AddWithValue("@81", DateTime.Now);
+                                                cmdparameter.Parameters.AddWithValue("@82", DateTime.Now);
+                                                cmdparameter.Parameters.AddWithValue("@83", DateTime.Now);
+                                                cmdparameter.Parameters.AddWithValue("@84", DateTime.Now);
+                                                cmdparameter.Parameters.AddWithValue("@85", DateTime.Now);
+                                                cmdparameter.Parameters.AddWithValue("@86", DateTime.Now);
+                                                cmdparameter.Parameters.AddWithValue("@87", DateTime.Now);
+                                                cmdparameter.Parameters.AddWithValue("@88", DateTime.Now);
+
+
+                                                cmdparameter.ExecuteNonQuery();
+                                                con.Close();
+
+                                            }
+                                            ///////////////////////////////////////////////
+
+
+                                            strStepname1.Clear();
+                                            ListStepStartTime.Clear();
+                                            ListStepEndTime.Clear();
+
+                                            // }
+
+
+
+
+
+
+                                            picMain.Image.Tag = "finishchamberA18";
+
+
+
+
+                                            /////////////////////////////////////////////////////////////////////////////////////////////////// 
+                                        }
+
+
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "finishchamberA18" && picSV.Visible == true)
+                                        {
+
+                                            await Task.Delay(1000);
+                                            picChamber.Image = Properties.Resources.ChamberWithA1;
+                                            //picMain.Image = Properties.Resources.robotintochamberwithA1;
+                                            picSV.Visible = false;
+                                        }
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "finishchamberA18" && picSV.Visible == false)
+                                        {
+                                            await Task.Delay(1000);
+
+                                            picChamber.Image = Properties.Resources.robot_into_chamberA11;
+                                            picMain.Image = Properties.Resources.picrobotintochamber;
+                                            picMain.Image = Properties.Resources.picrobotintoAPMWafer;
+                                            picMain.Image.Tag = "picrobotintoAPMWaferA18-2";
+
+                                            ovalShape1.Left += 1;
+                                            ovalShape1.Left -= 1;
+                                            picChamber.Width += 140;
+                                            picChamber.Left -= 150;
+                                            picChamber.Height += 10;
+                                        }
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotintoAPMWaferA18-2")
+                                        {
+                                            await Task.Delay(1000);
+                                            label2.BackColor = Color.Blue;
+                                            lblProcess.BackColor = Color.Blue;
+                                            lblProcessStep.BackColor = Color.Blue;
+                                            lblRecipe.BackColor = Color.Blue;
+                                            lblStepName.BackColor = Color.Blue;
+                                            lblData.BackColor = Color.Blue;
+                                            lblnum.BackColor = Color.Blue;
+
+                                            lblProcess.Text = "Idle";
+                                            lblProcessStep.Text = "";
+                                            lblRecipe.Text = "";
+                                            lblStepName.Text = "";
+                                            lblnum.Text = "";
+                                            lblData.Text = "";
+
+
+                                            // pictRobot.Visible = true;
+
+                                            picChamber.Image = Properties.Resources.new_chamber1;
+                                            picMain.Image = Properties.Resources.picrobotbotton;
+                                            picMain.Image = Properties.Resources.picrobotAPMWafer;
+
+                                            picMain.Image.Tag = "picrobotAPMWaferA18-2";
+
+                                            lblwaferAPM.Visible = false;
+                                            lblwaferup.Visible = true;
+
+                                            ovalShape1.Top += 145;
+                                            ovalShape1.Left -= 3;
+                                            lblwafer.Top += 145;
+                                            lblwafer.Left -= 3;
+
+                                            lblChamber.BackColor = Color.Blue;
+                                            chamberload = "Blue";
+                                            picChamber.Width -= 140;
+                                            picChamber.Left += 150;
+                                            picChamber.Height -= 10;
+                                        }
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotAPMWaferA18-2" && picSV.Visible == false)
+                                        {
+                                            await Task.Delay(2000);
+                                            picChamber.Image = Properties.Resources.new_chamber;//close chamber
+
+                                            // picMain.Image = Properties.Resources.robotrightA1;
+                                            picSV.Visible = true;
+
+
+                                        }
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotAPMWaferA18-2" && picSV.Visible == true)
+                                        {
+                                            await Task.Delay(2000);
+
+                                            // pictRobot.Height += 20;
+
+                                            // picMain.Image = Properties.Resources.robotgetwaferA1cassetteclose;
+                                            picMain.Image = Properties.Resources.mainpicture;
+                                            picMain.Image = Properties.Resources.picrobotArmWafer;
+                                            picMain.Image.Tag = "picrobotArmWaferA18-2";
+                                            lblwaferup.Visible = false;
+                                            lblwafer.Visible = true;
+                                            ovalShape1.Top += 162;
+                                            lblwafer.Top += 162;
+                                            ovalShape1.Left += 12;
+                                            lblwafer.Left += 12;
+                                            await Task.Delay(2000);
+
+                                            await Task.Delay(1000);
+                                            picCassette.Image = Properties.Resources.cassette3;//open cassette
+                                                                                               // picMain.Image = Properties.Resources.robotgetwaferA1;
+                                        }
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotArmWaferA18-2")
+                                        {
+                                            await Task.Delay(1000);
+
+                                            lblCassette.BackColor = Color.LimeGreen;
+
+                                            picCassette.Image = Properties.Resources.robot_into_cassetteA1;
+                                            picMain.Image = Properties.Resources.picrobotintocassette;
+                                            picMain.Image.Tag = "picrobotintocassettA18-2";
+                                            lblwafer.Visible = false;
+                                            lblwafer.Visible = false;
+                                            ovalShape1.Visible = false;
+                                            picCassette.Height += 220;
+                                            picCassette.Width += 25;
+                                            picCassette.Top -= 205;
+                                        }
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotintocassettA18-2")
+                                        {
+                                            await Task.Delay(2000);
+                                            lblCassette.BackColor = Color.Blue;
+                                            //  pictRobot.Visible = true;
+
+                                            picMain.Image = Properties.Resources.mainpicture;
+                                            picCassette.Image = Properties.Resources.cassette3;
+                                            picCassette.Width -= 25;
+                                            picCassette.Height -= 220;
+                                            picCassette.Top += 205;
+                                            await Task.Delay(2000);
+                                            //  picMain.Image = Properties.Resources.mainpic;
+                                            picCassette.Image = Properties.Resources.cassette;
+                                            // picwafer.Image = Properties.Resources.waferfull;
+                                            if (NoOfwafer[i] == "1")
+                                            {
+                                                //  picwafer.Image = Properties.Resources.waferA1full;
+                                                picWafer1.Visible = true;
+                                            }
+                                            if (NoOfwafer[i] == "2")
+                                            {
+                                                //  picwafer.Image = Properties.Resources.waferA2full;
+                                                picWafer1.Visible = true;
+                                                picWafer2.Visible = true;
+                                            }
+                                            if (NoOfwafer[i] == "3")
+                                            {
+                                                //  picwafer.Image = Properties.Resources.waferA3full;
+                                                picWafer1.Visible = true;
+                                                picWafer2.Visible = true;
+                                                picWafer3.Visible = true;
+                                            }
+                                            if (NoOfwafer[i] == "4")
+                                            {
+                                                // picwafer.Image = Properties.Resources.waferA4full;
+                                                picWafer1.Visible = true;
+                                                picWafer2.Visible = true;
+                                                picWafer3.Visible = true;
+                                                picWafer4.Visible = true;
+                                                picWafer2.Image = Properties.Resources.picWaferGreen;
+                                                picWafer1.Image = Properties.Resources.picWaferGreen;
+                                                picWafer3.Image = Properties.Resources.picWaferGreen;
+                                                picWafer4.Image = Properties.Resources.picWaferGreen;
+                                            }
+
+                                            if (NoOfwafer[i] == "5")
+                                            {
+                                                //  picwafer.Image = Properties.Resources.waferA5full;
+                                                picWafer1.Visible = true;
+                                                picWafer2.Visible = true;
+                                                picWafer3.Visible = true;
+                                                picWafer4.Visible = true;
+                                                picWafer5.Visible = true;
+                                                picWafer2.Image = Properties.Resources.picWaferGreen;
+                                                picWafer1.Image = Properties.Resources.picWaferGreen;
+                                                picWafer3.Image = Properties.Resources.picWaferGreen;
+                                                picWafer4.Image = Properties.Resources.picWaferGreen;
+                                                picWafer5.Image = Properties.Resources.picWaferGreen;
+                                            }
+
+                                            if (NoOfwafer[i] == "6")
+                                            {
+                                                //  picwafer.Image = Properties.Resources.waferA5full;
+                                                picWafer1.Visible = true;
+                                                picWafer2.Visible = true;
+                                                picWafer3.Visible = true;
+                                                picWafer4.Visible = true;
+                                                picWafer5.Visible = true;
+                                                picWafer6.Visible = true;
+                                                picWafer2.Image = Properties.Resources.picWaferGreen;
+                                                picWafer1.Image = Properties.Resources.picWaferGreen;
+                                                picWafer3.Image = Properties.Resources.picWaferGreen;
+                                                picWafer4.Image = Properties.Resources.picWaferGreen;
+                                                picWafer5.Image = Properties.Resources.picWaferGreen;
+                                                picWafer6.Image = Properties.Resources.picWaferGreen;
+                                            }
+
+                                            if (NoOfwafer[i] == "7")
+                                            {
+                                                //  picwafer.Image = Properties.Resources.waferA5full;
+                                                picWafer1.Visible = true;
+                                                picWafer2.Visible = true;
+                                                picWafer3.Visible = true;
+                                                picWafer4.Visible = true;
+                                                picWafer5.Visible = true;
+                                                picWafer6.Visible = true;
+                                                picWafer7.Visible = true;
+                                                picWafer2.Image = Properties.Resources.picWaferGreen;
+                                                picWafer1.Image = Properties.Resources.picWaferGreen;
+                                                picWafer3.Image = Properties.Resources.picWaferGreen;
+                                                picWafer4.Image = Properties.Resources.picWaferGreen;
+                                                picWafer5.Image = Properties.Resources.picWaferGreen;
+                                                picWafer6.Image = Properties.Resources.picWaferGreen;
+                                                picWafer7.Image = Properties.Resources.picWaferGreen;
+                                            }
+                                            if (NoOfwafer[i] == "8")
+                                            {
+                                                //  picwafer.Image = Properties.Resources.waferA5full;
+                                                picWafer1.Visible = true;
+                                                picWafer2.Visible = true;
+                                                picWafer3.Visible = true;
+                                                picWafer4.Visible = true;
+                                                picWafer5.Visible = true;
+                                                picWafer6.Visible = true;
+                                                picWafer7.Visible = true;
+                                                picWafer8.Visible = true;
+                                                picWafer2.Image = Properties.Resources.picWaferGreen;
+                                                picWafer1.Image = Properties.Resources.picWaferGreen;
+                                                picWafer3.Image = Properties.Resources.picWaferGreen;
+                                                picWafer4.Image = Properties.Resources.picWaferGreen;
+                                                picWafer5.Image = Properties.Resources.picWaferGreen;
+                                                picWafer6.Image = Properties.Resources.picWaferGreen;
+                                                picWafer7.Image = Properties.Resources.picWaferGreen;
+                                                picWafer8.Image = Properties.Resources.picWaferGreen;
+                                            }
+                                            if (NoOfwafer[i] == "9")
+                                            {
+                                                //  picwafer.Image = Properties.Resources.waferA5full;
+                                                picWafer1.Visible = true;
+                                                picWafer2.Visible = true;
+                                                picWafer3.Visible = true;
+                                                picWafer4.Visible = true;
+                                                picWafer5.Visible = true;
+                                                picWafer6.Visible = true;
+                                                picWafer7.Visible = true;
+                                                picWafer8.Visible = true;
+                                                picWafer9.Visible = true;
+                                                picWafer2.Image = Properties.Resources.picWaferGreen;
+                                                picWafer1.Image = Properties.Resources.picWaferGreen;
+                                                picWafer3.Image = Properties.Resources.picWaferGreen;
+                                                picWafer4.Image = Properties.Resources.picWaferGreen;
+                                                picWafer5.Image = Properties.Resources.picWaferGreen;
+                                                picWafer6.Image = Properties.Resources.picWaferGreen;
+                                                picWafer7.Image = Properties.Resources.picWaferGreen;
+                                                picWafer8.Image = Properties.Resources.picWaferGreen;
+                                                picWafer9.Image = Properties.Resources.picWaferGreen;
+                                            }
+                                            if (NoOfwafer[i] == "10")
+                                            {
+                                                //  picwafer.Image = Properties.Resources.waferA5full;
+                                                picWafer1.Visible = true;
+                                                picWafer2.Visible = true;
+                                                picWafer3.Visible = true;
+                                                picWafer4.Visible = true;
+                                                picWafer5.Visible = true;
+                                                picWafer6.Visible = true;
+                                                picWafer7.Visible = true;
+                                                picWafer8.Visible = true;
+                                                picWafer9.Visible = true;
+                                                picWafer10.Visible = true;
+                                                picWafer2.Image = Properties.Resources.picWaferGreen;
+                                                picWafer1.Image = Properties.Resources.picWaferGreen;
+                                                picWafer3.Image = Properties.Resources.picWaferGreen;
+                                                picWafer4.Image = Properties.Resources.picWaferGreen;
+                                                picWafer5.Image = Properties.Resources.picWaferGreen;
+                                                picWafer6.Image = Properties.Resources.picWaferGreen;
+                                                picWafer7.Image = Properties.Resources.picWaferGreen;
+                                                picWafer8.Image = Properties.Resources.picWaferGreen;
+                                                picWafer9.Image = Properties.Resources.picWaferGreen;
+                                                picWafer10.Image = Properties.Resources.picWaferGreen;
+                                            }
+                                            if (NoOfwafer[i] == "11")
+                                            {
+                                                //  picwafer.Image = Properties.Resources.waferA5full;
+                                                picWafer1.Visible = true;
+                                                picWafer2.Visible = true;
+                                                picWafer3.Visible = true;
+                                                picWafer4.Visible = true;
+                                                picWafer5.Visible = true;
+                                                picWafer6.Visible = true;
+                                                picWafer7.Visible = true;
+                                                picWafer8.Visible = true;
+                                                picWafer9.Visible = true;
+                                                picWafer10.Visible = true;
+                                                picWafer2.Image = Properties.Resources.picWaferGreen;
+                                                picWafer1.Image = Properties.Resources.picWaferGreen;
+                                                picWafer3.Image = Properties.Resources.picWaferGreen;
+                                                picWafer4.Image = Properties.Resources.picWaferGreen;
+                                                picWafer5.Image = Properties.Resources.picWaferGreen;
+                                                picWafer6.Image = Properties.Resources.picWaferGreen;
+                                                picWafer7.Image = Properties.Resources.picWaferGreen;
+                                                picWafer8.Image = Properties.Resources.picWaferGreen;
+                                                picWafer9.Image = Properties.Resources.picWaferGreen;
+                                                picWafer10.Image = Properties.Resources.picWaferGreen;
+                                            }
+                                            if (NoOfwafer[i] == "12")
+                                            {
+                                                //  picwafer.Image = Properties.Resources.waferA5full;
+                                                picWafer1.Visible = true;
+                                                picWafer2.Visible = true;
+                                                picWafer3.Visible = true;
+                                                picWafer4.Visible = true;
+                                                picWafer5.Visible = true;
+                                                picWafer6.Visible = true;
+                                                picWafer7.Visible = true;
+                                                picWafer8.Visible = true;
+                                                picWafer9.Visible = true;
+                                                picWafer10.Visible = true;
+                                                picWafer2.Image = Properties.Resources.picWaferGreen;
+                                                picWafer1.Image = Properties.Resources.picWaferGreen;
+                                                picWafer3.Image = Properties.Resources.picWaferGreen;
+                                                picWafer4.Image = Properties.Resources.picWaferGreen;
+                                                picWafer5.Image = Properties.Resources.picWaferGreen;
+                                                picWafer6.Image = Properties.Resources.picWaferGreen;
+                                                picWafer7.Image = Properties.Resources.picWaferGreen;
+                                                picWafer8.Image = Properties.Resources.picWaferGreen;
+                                                picWafer9.Image = Properties.Resources.picWaferGreen;
+                                                picWafer10.Image = Properties.Resources.picWaferGreen;
+                                            }
+                                            if (NoOfwafer[i] == "13")
+                                            {
+                                                //  picwafer.Image = Properties.Resources.waferA5full;
+                                                picWafer1.Visible = true;
+                                                picWafer2.Visible = true;
+                                                picWafer3.Visible = true;
+                                                picWafer4.Visible = true;
+                                                picWafer5.Visible = true;
+                                                picWafer6.Visible = true;
+                                                picWafer7.Visible = true;
+                                                picWafer8.Visible = true;
+                                                picWafer9.Visible = true;
+                                                picWafer10.Visible = true;
+                                                picWafer2.Image = Properties.Resources.picWaferGreen;
+                                                picWafer1.Image = Properties.Resources.picWaferGreen;
+                                                picWafer3.Image = Properties.Resources.picWaferGreen;
+                                                picWafer4.Image = Properties.Resources.picWaferGreen;
+                                                picWafer5.Image = Properties.Resources.picWaferGreen;
+                                                picWafer6.Image = Properties.Resources.picWaferGreen;
+                                                picWafer7.Image = Properties.Resources.picWaferGreen;
+                                                picWafer8.Image = Properties.Resources.picWaferGreen;
+                                                picWafer9.Image = Properties.Resources.picWaferGreen;
+                                                picWafer10.Image = Properties.Resources.picWaferGreen;
+                                            }
+                                            if (NoOfwafer[i] == "14")
+                                            {
+                                                //  picwafer.Image = Properties.Resources.waferA5full;
+                                                picWafer1.Visible = true;
+                                                picWafer2.Visible = true;
+                                                picWafer3.Visible = true;
+                                                picWafer4.Visible = true;
+                                                picWafer5.Visible = true;
+                                                picWafer6.Visible = true;
+                                                picWafer7.Visible = true;
+                                                picWafer8.Visible = true;
+                                                picWafer9.Visible = true;
+                                                picWafer10.Visible = true;
+                                                picWafer11.Visible = true;
+                                                picWafer12.Visible = true;
+                                                picWafer13.Visible = true;
+                                                picWafer14.Visible = true;
+                                                picWafer2.Image = Properties.Resources.picWaferGreen;
+                                                picWafer1.Image = Properties.Resources.picWaferGreen;
+                                                picWafer3.Image = Properties.Resources.picWaferGreen;
+                                                picWafer4.Image = Properties.Resources.picWaferGreen;
+                                                picWafer5.Image = Properties.Resources.picWaferGreen;
+                                                picWafer6.Image = Properties.Resources.picWaferGreen;
+                                                picWafer7.Image = Properties.Resources.picWaferGreen;
+                                                picWafer8.Image = Properties.Resources.picWaferGreen;
+                                                picWafer9.Image = Properties.Resources.picWaferGreen;
+                                                picWafer10.Image = Properties.Resources.picWaferGreen;
+                                                picWafer11.Image = Properties.Resources.picWaferGreen;
+                                                picWafer12.Image = Properties.Resources.picWaferGreen;
+                                                picWafer13.Image = Properties.Resources.picWaferGreen;
+                                                picWafer14.Image = Properties.Resources.picWaferGreen;
+
+                                            }
+                                            if (NoOfwafer[i] == "15")
+                                            {
+                                                //  picwafer.Image = Properties.Resources.waferA5full;
+                                                picWafer1.Visible = true;
+                                                picWafer2.Visible = true;
+                                                picWafer3.Visible = true;
+                                                picWafer4.Visible = true;
+                                                picWafer5.Visible = true;
+                                                picWafer6.Visible = true;
+                                                picWafer7.Visible = true;
+                                                picWafer8.Visible = true;
+                                                picWafer9.Visible = true;
+                                                picWafer10.Visible = true;
+                                                picWafer11.Visible = true;
+                                                picWafer12.Visible = true;
+                                                picWafer13.Visible = true;
+                                                picWafer14.Visible = true;
+                                                picWafer15.Visible = true;
+                                                picWafer2.Image = Properties.Resources.picWaferGreen;
+                                                picWafer1.Image = Properties.Resources.picWaferGreen;
+                                                picWafer3.Image = Properties.Resources.picWaferGreen;
+                                                picWafer4.Image = Properties.Resources.picWaferGreen;
+                                                picWafer5.Image = Properties.Resources.picWaferGreen;
+                                                picWafer6.Image = Properties.Resources.picWaferGreen;
+                                                picWafer7.Image = Properties.Resources.picWaferGreen;
+                                                picWafer8.Image = Properties.Resources.picWaferGreen;
+                                                picWafer9.Image = Properties.Resources.picWaferGreen;
+                                                picWafer10.Image = Properties.Resources.picWaferGreen;
+                                                picWafer11.Image = Properties.Resources.picWaferGreen;
+                                                picWafer12.Image = Properties.Resources.picWaferGreen;
+                                                picWafer13.Image = Properties.Resources.picWaferGreen;
+                                                picWafer14.Image = Properties.Resources.picWaferGreen;
+                                                picWafer15.Image = Properties.Resources.picWaferGreen;
+                                            }
+                                            if (NoOfwafer[i] == "16")
+                                            {
+                                                //  picwafer.Image = Properties.Resources.waferA5full;
+                                                picWafer1.Visible = true;
+                                                picWafer2.Visible = true;
+                                                picWafer3.Visible = true;
+                                                picWafer4.Visible = true;
+                                                picWafer5.Visible = true;
+                                                picWafer6.Visible = true;
+                                                picWafer7.Visible = true;
+                                                picWafer8.Visible = true;
+                                                picWafer9.Visible = true;
+                                                picWafer10.Visible = true;
+                                                picWafer11.Visible = true;
+                                                picWafer12.Visible = true;
+                                                picWafer13.Visible = true;
+                                                picWafer14.Visible = true;
+                                                picWafer15.Visible = true;
+                                                picWafer16.Visible = true;
+                                                picWafer2.Image = Properties.Resources.picWaferGreen;
+                                                picWafer1.Image = Properties.Resources.picWaferGreen;
+                                                picWafer3.Image = Properties.Resources.picWaferGreen;
+                                                picWafer4.Image = Properties.Resources.picWaferGreen;
+                                                picWafer5.Image = Properties.Resources.picWaferGreen;
+                                                picWafer6.Image = Properties.Resources.picWaferGreen;
+                                                picWafer7.Image = Properties.Resources.picWaferGreen;
+                                                picWafer8.Image = Properties.Resources.picWaferGreen;
+                                                picWafer9.Image = Properties.Resources.picWaferGreen;
+                                                picWafer10.Image = Properties.Resources.picWaferGreen;
+                                                picWafer11.Image = Properties.Resources.picWaferGreen;
+                                                picWafer12.Image = Properties.Resources.picWaferGreen;
+                                                picWafer13.Image = Properties.Resources.picWaferGreen;
+                                                picWafer14.Image = Properties.Resources.picWaferGreen;
+                                                picWafer15.Image = Properties.Resources.picWaferGreen;
+                                                picWafer16.Image = Properties.Resources.picWaferGreen;
+                                            }
+                                            if (NoOfwafer[i] == "17")
+                                            {
+                                                //  picwafer.Image = Properties.Resources.waferA5full;
+                                                picWafer1.Visible = true;
+                                                picWafer2.Visible = true;
+                                                picWafer3.Visible = true;
+                                                picWafer4.Visible = true;
+                                                picWafer5.Visible = true;
+                                                picWafer6.Visible = true;
+                                                picWafer7.Visible = true;
+                                                picWafer8.Visible = true;
+                                                picWafer9.Visible = true;
+                                                picWafer10.Visible = true;
+                                                picWafer11.Visible = true;
+                                                picWafer12.Visible = true;
+                                                picWafer13.Visible = true;
+                                                picWafer14.Visible = true;
+                                                picWafer15.Visible = true;
+                                                picWafer16.Visible = true;
+                                                picWafer17.Visible = true;
+                                                picWafer2.Image = Properties.Resources.picWaferGreen;
+                                                picWafer1.Image = Properties.Resources.picWaferGreen;
+                                                picWafer3.Image = Properties.Resources.picWaferGreen;
+                                                picWafer4.Image = Properties.Resources.picWaferGreen;
+                                                picWafer5.Image = Properties.Resources.picWaferGreen;
+                                                picWafer6.Image = Properties.Resources.picWaferGreen;
+                                                picWafer7.Image = Properties.Resources.picWaferGreen;
+                                                picWafer8.Image = Properties.Resources.picWaferGreen;
+                                                picWafer9.Image = Properties.Resources.picWaferGreen;
+                                                picWafer10.Image = Properties.Resources.picWaferGreen;
+                                                picWafer11.Image = Properties.Resources.picWaferGreen;
+                                                picWafer12.Image = Properties.Resources.picWaferGreen;
+                                                picWafer13.Image = Properties.Resources.picWaferGreen;
+                                                picWafer14.Image = Properties.Resources.picWaferGreen;
+                                                picWafer15.Image = Properties.Resources.picWaferGreen;
+                                                picWafer16.Image = Properties.Resources.picWaferGreen;
+                                                picWafer17.Image = Properties.Resources.picWaferGreen;
+                                            }
+                                            if (NoOfwafer[i] == "18")
+                                            {
+                                                //  picwafer.Image = Properties.Resources.waferA5full;
+                                                picWafer1.Visible = true;
+                                                picWafer2.Visible = true;
+                                                picWafer3.Visible = true;
+                                                picWafer4.Visible = true;
+                                                picWafer5.Visible = true;
+                                                picWafer6.Visible = true;
+                                                picWafer7.Visible = true;
+                                                picWafer8.Visible = true;
+                                                picWafer9.Visible = true;
+                                                picWafer10.Visible = true;
+                                                picWafer11.Visible = true;
+                                                picWafer12.Visible = true;
+                                                picWafer13.Visible = true;
+                                                picWafer14.Visible = true;
+                                                picWafer15.Visible = true;
+                                                picWafer16.Visible = true;
+                                                picWafer17.Visible = true;
+                                                picWafer18.Visible = true;
+                                                picWafer2.Image = Properties.Resources.picWaferGreen;
+                                                picWafer1.Image = Properties.Resources.picWaferGreen;
+                                                picWafer3.Image = Properties.Resources.picWaferGreen;
+                                                picWafer4.Image = Properties.Resources.picWaferGreen;
+                                                picWafer5.Image = Properties.Resources.picWaferGreen;
+                                                picWafer6.Image = Properties.Resources.picWaferGreen;
+                                                picWafer7.Image = Properties.Resources.picWaferGreen;
+                                                picWafer8.Image = Properties.Resources.picWaferGreen;
+                                                picWafer9.Image = Properties.Resources.picWaferGreen;
+                                                picWafer10.Image = Properties.Resources.picWaferGreen;
+                                                picWafer11.Image = Properties.Resources.picWaferGreen;
+                                                picWafer12.Image = Properties.Resources.picWaferGreen;
+                                                picWafer13.Image = Properties.Resources.picWaferGreen;
+                                                picWafer14.Image = Properties.Resources.picWaferGreen;
+                                                picWafer15.Image = Properties.Resources.picWaferGreen;
+                                                picWafer16.Image = Properties.Resources.picWaferGreen;
+                                                picWafer17.Image = Properties.Resources.picWaferGreen;
+                                                picWafer18.Image = Properties.Resources.picWaferGreen;
+                                            }
+
+
+
+                                            //////////////////////////////////////////////////////////////////Save DataLog
+                                            if (int.Parse(NoOfwafer[i]) == 18)
+                                            {
+                                                EndTime = DateTime.Now;
+
+
+                                                con.Open();
+
+                                                string strinsertdatalog = "insert into DataLogger(logname,cassetterecipename,starttime) values(@1,@2,@3) ";
+                                                SqlCommand cmdinsertdatalog = new SqlCommand(strinsertdatalog, con);
+
+                                                cmdinsertdatalog.Parameters.AddWithValue("@1", lbl123.Text);
+                                                cmdinsertdatalog.Parameters.AddWithValue("@2", form2Msg);
+                                                cmdinsertdatalog.Parameters.AddWithValue("@3", StartTime);
+
+                                                cmdinsertdatalog.ExecuteNonQuery();
+
+                                                con.Close();
+
+                                                lblState.Text = "Finished";
+
+
+
+                                            }
+                                            picMain.Image.Tag = "finishwaferA18";
+                                            if (isStopRobot == true)
+                                            {
+                                                button2.Enabled = true;
+                                                lblState.Text = "Stopping";
+                                            }
+
+
+                                        }
+                                        /////////////////////////////////////////////////////////finish waferA18
+                                    }
+
+
+                                    if (int.Parse(NoOfwafer[i]) >= 19)
+                                    {
+                                        //////////////////////////////////////////////////////////////////////////start waferA19
+                                        nooftherecipe = "19";
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "finishWaferA19" && isStopRobot == false && iscancelrecipe == false)
+                                        {
+                                            await Task.Delay(2000);
+
+                                            picCassette.Image = Properties.Resources.cassette1;
+
+                                            if (NoOfwafer[i] == "1")
+                                            {
+                                                picwafer.Image = Properties.Resources.wafer;
+                                                picwafer.Image.Tag = "wafer";
+                                            }
+                                            else if (NoOfwafer[i] == "2")
+                                            {
+                                                picwafer.Image = Properties.Resources.waferA1full;
+                                            }
+                                            else if (NoOfwafer[i] == "3")
+                                            {
+                                                picwafer.Image = Properties.Resources.waferA2full;
+
+                                            }
+                                            else if (NoOfwafer[i] == "4")
+                                            {
+                                                picwafer.Image = Properties.Resources.waferA3full;
+                                            }
+                                            else if (NoOfwafer[i] == "5")
+                                            {
+                                                picwafer.Image = Properties.Resources.waferA4full;
+                                            }
+                                            else if (NoOfwafer[i] == "6")
+                                            {
+                                                picwafer.Image = Properties.Resources.waferA5full;
+
+                                            }
+                                            else if (NoOfwafer[i] == "7")
+                                            {
+                                                picwafer.Image = Properties.Resources.waferA6full;
+
+                                            }
+                                            else if (NoOfwafer[i] == "8")
+                                            {
+                                                picwafer.Image = Properties.Resources.waferA7full;
+
+                                            }
+                                            else if (NoOfwafer[i] == "9")
+                                            {
+                                                picwafer.Image = Properties.Resources.waferA8full;
+
+                                            }
+                                            else if (NoOfwafer[i] == "10")
+                                            {
+                                                picwafer.Image = Properties.Resources.waferA9full;
+
+                                            }
+                                            else if (NoOfwafer[i] == "11")
+                                            {
+                                                picwafer.Image = Properties.Resources.waferA9full;
+
+                                            }
+
+                                            else if (NoOfwafer[i] == "12")
+                                            {
+                                                picwafer.Image = Properties.Resources.waferA9full;
+
+                                            }
+
+                                            else if (NoOfwafer[i] == "13")
+                                            {
+                                                picwafer.Image = Properties.Resources.waferA9full;
+
+                                            }
+
+                                            else if (NoOfwafer[i] == "14")
+                                            {
+                                                //  picwafer.Image = Properties.Resources.waferA9full;
+                                                picWafer14.Visible = false;
+                                            }
+
+                                            else if (NoOfwafer[i] == "15")
+                                            {
+                                                //  picwafer.Image = Properties.Resources.waferA9full;
+                                                picWafer15.Visible = false;
+                                            }
+                                            else if (NoOfwafer[i] == "16")
+                                            {
+                                                //  picwafer.Image = Properties.Resources.waferA9full;
+                                                picWafer15.Visible = false;
+                                            }
+                                            else if (NoOfwafer[i] == "17")
+                                            {
+                                                //  picwafer.Image = Properties.Resources.waferA9full;
+                                                picWafer17.Visible = false;
+                                            }
+                                            else if (NoOfwafer[i] == "18")
+                                            {
+                                                //  picwafer.Image = Properties.Resources.waferA9full;
+                                                picWafer18.Visible = false;
+                                            }
+                                            else if (NoOfwafer[i] == "19")
+                                            {
+                                                //  picwafer.Image = Properties.Resources.waferA9full;
+                                                picWafer19.Visible = false;
+                                            }
+
+
+                                            StartTime = DateTime.Now;
+
+
+
+
+                                            await Task.Delay(2000);
+                                            con.Open();
+
+                                            string strWaferSelection = "insert into WaferSelection(NoOfWafers,StartTime,CassetteRecipeName,Logname) values(@NoOfWafer,@StartTime,@CassetteRecipeName,@Logname)";
+                                            SqlCommand cmdwaferselection = new SqlCommand(strWaferSelection, con);
+                                            cmdwaferselection.Parameters.AddWithValue("@NoOfWafer", "19");
+                                            cmdwaferselection.Parameters.AddWithValue("@StartTime", StartTime);
+                                            cmdwaferselection.Parameters.AddWithValue("@CassetteRecipeName", form2Msg);
+                                            cmdwaferselection.Parameters.AddWithValue("@Logname", lbl123.Text);
+
+                                            cmdwaferselection.ExecuteNonQuery();
+
+                                            con.Close();
+
+                                            await Task.Delay(1000);
+
+                                            picMain.Image = Properties.Resources.mainpicture;
+                                            picMain.Image.Tag = "waferA19mainpicture";
+
+                                            await Task.Delay(1000);
+                                        }
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "waferA19mainpicture")
+                                        {
+                                            // lblCassette.BackColor = Color.LimeGreen;
+                                            await Task.Delay(1000);
+
+                                            picMain.Image = Properties.Resources.picrobotintocassette;
+                                            picMain.Image.Tag = "picrobotintocassetteA19";
+                                            label1.BackColor = Color.Blue;
+                                            lblLoad.Text = "";
+                                            lblLoad.BackColor = Color.Blue;
+                                            lbl123.BackColor = Color.Blue;
+                                            lblState.BackColor = Color.Blue;
+                                            lblCassetteRecipename.BackColor = Color.Blue;
+                                            lblmTorr.BackColor = Color.Blue;
+
+
+                                            lblCassette.BackColor = Color.LimeGreen;
+
+                                        }
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotintocassetteA19")
+                                        {
+                                            await Task.Delay(1000);
+                                            picMain.Image = Properties.Resources.picrobotArmWafer;
+                                            picMain.Image.Tag = "picrobotArmWaferA19";
+
+                                            lblwafer.Visible = true;
+                                            lblwafer.Text = "A19";
+
+                                            lblCassette.BackColor = Color.Blue;
+                                        }
+
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotArmWaferA19")
+                                        {
+                                            await Task.Delay(1000);
+                                            picMain.Image = Properties.Resources.picrobotAlignerWafer;
+                                            picMain.Image.Tag = "picrobotAlignerWaferA19";
+
+                                            ovalShape1.Left += 70;
+                                            ovalShape1.Top -= 85;
+                                            lblwafer.Visible = false;
+                                            lblwaferright.Visible = true;
+                                            lblwaferright.Text = "A19";
+                                            lblwafer.Left += 70;
+                                            lblwafer.Top -= 85;
+
+                                        }
+
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotAlignerWaferA19")
+                                        {
+                                            await Task.Delay(1000);
+
+                                            picMain.Image = Properties.Resources.picrobotintoAlignerWafer;
+                                            picMain.Image.Tag = "picrobotintoAlignerWaferA19";
+                                            lblCentralize.BackColor = Color.LimeGreen;
+                                            ovalShape1.Left += 155;
+                                            ovalShape1.Top += 0;
+                                            lblwaferright.Visible = false;
+                                            lblwaferaligner.Visible = true;
+                                            lblwaferaligner.Text = "A19";
+                                            lblwafer.Left += 155;
+                                            lblwafer.Top += 0;
+
+                                        }
+
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotintoAlignerWaferA19")
+                                        {
+                                            await Task.Delay(1000);
+                                            picMain.Image = Properties.Resources.picrobotAlignerWafer;
+                                            picMain.Image.Tag = "picrobotAlignerWaferA19-2";
+
+                                            lblwaferaligner.Visible = false;
+                                            lblwaferright.Visible = true;
+                                            lblwaferright.Text = "A19";
+                                            ovalShape1.Left -= 155;
+                                            ovalShape1.Top -= 0;
+                                            lblwafer.Left -= 155;
+                                            lblwafer.Top -= 0;
+                                            lblCentralize.BackColor = Color.Blue;
+                                        }
+
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotAlignerWaferA19-2")
+                                        {
+                                            await Task.Delay(1000);
+
+                                            picMain.Image = Properties.Resources.picrobotAPMWafer;
+                                            picMain.Image.Tag = "picrobotAPMWaferA19";
+                                            lblwaferright.Visible = false;
+                                            lblwaferup.Visible = true;
+                                            lblwaferup.Text = "A19";
+                                            ovalShape1.Left -= 82;
+                                            ovalShape1.Top -= 76;
+                                            lblwafer.Left -= 82;
+                                            lblwafer.Top -= 76;
+                                        }
+
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotAPMWaferA19" && picSV.Visible == true)
+                                        {
+                                            await Task.Delay(1000);
+
+
+                                            picSV.Visible = false;  // open sv of chamber
+                                        }
+
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotAPMWaferA19" && picSV.Visible == false)
+                                        {
+                                            await Task.Delay(1000);
+
+                                            picMain.Image = Properties.Resources.picrobotintoAPMWafer;
+                                            picMain.Image.Tag = "picrobotintoAPMWaferA19";
+
+                                            lblwaferup.Visible = false;
+                                            lblwaferAPM.Visible = true;
+                                            lblwaferAPM.Text = "A19";
+                                            ovalShape1.Top -= 145;
+                                            ovalShape1.Left += 3;
+                                            lblwafer.Top -= 145;
+                                            lblwafer.Left += 3;
+
+
+
+                                            lblChamber.BackColor = Color.LimeGreen;
+
+                                            chamberload = "LimeGreen";
+                                        }
+
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotintoAPMWaferA19")
+                                        {
+                                            await Task.Delay(1000);
+                                            picChamber.Image = Properties.Resources.ChamberWithA1;
+
+                                            //   picMain.Image = Properties.Resources.robotintochamberwithA1;
+                                            picMain.Image = Properties.Resources.picrobotbotton;
+                                            picMain.Image = Properties.Resources.picwaferinAPM;
+                                            picMain.Image.Tag = "picwaferinAPMA19";
+                                            ovalShape1.Left -= 1;
+                                            ovalShape1.Left += 1;
+                                            //  picMain.SendToBack();
+                                            // ovalShape1.BringToFront();
+                                            picChamber.Width -= 140;
+                                            picChamber.Left += 150;
+                                            picChamber.Height -= 10;
+
+
+                                            //  pictRobot.Visible = true;
+                                        }
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picwaferinAPMA19")
+
+                                        {
+                                            await Task.Delay(1000);
+
+                                            picChamber.Image = Properties.Resources.ChamberWithA1Close;
+                                            //picMain.Image = Properties.Resources.robotintochamberwithA1close;
+                                            picSV.Visible = true;
+
+                                            ///////////////////////////////////////////////////////////////////////////////////////////////////////WaferA19 into Chamber
+                                            Chamber1 chamber1 = new Chamber1();
+                                            chamber1.ShowDialog();
+
+                                            lblRecipe.BackColor = Color.LimeGreen;
+                                            lblStepName.BackColor = Color.LimeGreen;
+
+                                            lblnum.BackColor = Color.LimeGreen;
+
+                                            lblData.BackColor = Color.LimeGreen;
+                                            lblData.Text = "";
+                                            label2.BackColor = Color.LimeGreen;
+
+                                            lblProcess.Text = "Processing";
+                                            lblProcess.BackColor = Color.LimeGreen;
+                                            lblProcessStep.Text = "Process Step";
+                                            lblProcessStep.BackColor = Color.LimeGreen;
+
+
+
+                                            con.Open();
+                                            string strSQL = "select WaferRecipe from CassetteWafer  where CassetterecipeName = @NewWaferRecipe";
+
+                                            SqlCommand cmd = new SqlCommand(strSQL, con);
+                                            cmd.Parameters.AddWithValue("@NewWaferRecipe", Form1.form2Msg);
+                                            SqlDataReader reader = cmd.ExecuteReader();
+                                            while (reader.Read())
+                                            {
+
+                                                lblRecipe.Text = string.Format("{0}", reader["WaferRecipe"]);
+
+
+
+                                            }
+
+                                            con.Close();
+                                            con.Open();
+                                            string strSQL1 = "select stepname from newrecipe where recipename = @Myrecipename";
+
+                                            SqlCommand cmd1 = new SqlCommand(strSQL1, con);
+                                            cmd1.Parameters.AddWithValue("@Myrecipename", lblRecipe.Text);
+                                            SqlDataReader reader1 = cmd1.ExecuteReader();
+                                            while (reader1.Read())
+                                            {
+
+                                                strStepname1.Add(string.Format("{0}", reader1["StepName"]));
+
+
+                                            }
+
+                                            con.Close();
+
+                                            con.Open();
+                                            string strSQL2 = "select StepName from newrecipe inner join CassetteWafer on newrecipe.recipename = cassettewafer.waferRecipe where cassettewafer.waferRecipe = @Newrecipename";
+                                            SqlCommand cmd2 = new SqlCommand(strSQL2, con);
+                                            cmd2.Parameters.AddWithValue("@Newrecipename", lblRecipe.Text);
+
+                                            cmd2.ExecuteNonQuery();
+
+
+
+                                            for (int j = 0; j < strStepname1.Count(); j += 1)
+
+                                            {
+
+                                                //  await Task.Delay(1000);
+
+                                                ListStepStartTime.Add(DateTime.Now);
+
+
+                                                int count = j + 1;
+
+
+                                                lblStepName.Text = strStepname1[j];
+                                                lblnum.Text = "," + count + "/" + strStepname1.Count();
+
+
+                                                con.Close();
+
+                                                con.Open();
+                                                string strSQLStepSec = "select * from newrecipe where stepname = @NewSec";
+
+                                                SqlCommand cmdSec = new SqlCommand(strSQLStepSec, con);
+                                                cmdSec.Parameters.AddWithValue("@NewSec", lblStepName.Text);
+
+                                                SqlDataReader readerSec = cmdSec.ExecuteReader();
+
+
+                                                while (readerSec.Read())
+                                                {
+                                                    mySec1 = readerSec["ProcessTime"].ToString();
+
+                                                    Int32.TryParse(mySec1, out Sec1);
+
+                                                }
+
+                                                for (int k = 1; k <= Sec1; k++)
+                                                {
+                                                    lblData.Text = k.ToString() + "/" + mySec1.ToString() + " Sec";
+                                                    // await Task.Delay(1000);
+
+
+                                                }
+                                                ListStepEndTime.Add(DateTime.Now);
+
+                                                con.Close();
+
+                                                con.Open();
+
+                                                string strModuleRecipe = "insert into ModuleRecipe(RecipeName,StepName,StartTime,EndTime,noofrecipe,logname) values(@recipename,@stepname,@starttime,@endtime,@noofrecipe,@Logname)";
+
+                                                SqlCommand cmdmodulerecipe = new SqlCommand(strModuleRecipe, con);
+
+                                                cmdmodulerecipe.Parameters.AddWithValue("@recipename", lblRecipe.Text);
+                                                cmdmodulerecipe.Parameters.AddWithValue("@stepname", strStepname1[j]);
+                                                cmdmodulerecipe.Parameters.AddWithValue("@starttime", ListStepStartTime[j]);
+                                                cmdmodulerecipe.Parameters.AddWithValue("@endtime", ListStepEndTime[j]);
+                                                cmdmodulerecipe.Parameters.AddWithValue("@noofrecipe", "19");
+                                                cmdmodulerecipe.Parameters.AddWithValue("@Logname", lbl123.Text);
+
+                                                // cmdmodulerecipe.ExecuteNonQuery();
+
+                                                con.Close();
+                                                //////////////////////////////////////////////////////////////////////////////////////////////////////get parameter value
+
+                                                con.Open();
+
+                                                string strSQL3 = "select * from newrecipe where stepname = @Newstepname and recipename = @Newrecipename";
+
+                                                SqlCommand cmd3 = new SqlCommand(strSQL3, con);
+                                                cmd3.Parameters.AddWithValue("@Newstepname", lblStepName.Text);
+                                                cmd3.Parameters.AddWithValue("@Newrecipename", lblRecipe.Text);
+                                                SqlDataReader reader2 = cmd3.ExecuteReader();
+
+                                                while (reader2.Read())
+                                                {
+                                                    CI2 = reader2["CI2"].ToString();
+                                                    BCI3 = reader2["BCI3"].ToString();
+                                                    SF6 = reader2["SF6"].ToString();
+                                                    CHF3 = reader2["CHF3"].ToString();
+                                                    Oxygen = reader2["Oxygen"].ToString();
+                                                    Oxygen1 = reader2["Oxygen1"].ToString();
+                                                    Nitrogen = reader2["Nitrogen"].ToString();
+                                                    Argon = reader2["Argon"].ToString();
+
+
+
+                                                }
+
+                                                con.Close();
+
+                                                ///////////////////////////////////////////////////////////////////////////////////////////////////
+                                                con.Open();
+                                                //  Chamber1 chamber1 = new Chamber1();
+
+                                                string strParameter = "insert into valueselection(parameter,Minimum,Maximum,Average,Units,recipename,stepname,valuedate) values(@11,@21,@31,@41,@51,@61,@71,@81),(@12,@22,@32,@42,@52,@62,@72,@82),(@13,@23,@33,@43,@53,@63,@73,@83)"
+                                                    + ",(@14,@24,@34,@44,@54,@64,@74,@84),(@15,@25,@35,@45,@55,@65,@75,@85),(@16,@26,@36,@46,@56,@66,@76,@86),(@17,@27,@37,@47,@57,@67,@77,@87),(@18,@28,@38,@48,@58,@68,@78,@88)";
+                                                SqlCommand cmdparameter = new SqlCommand(strParameter, con);
+                                                cmdparameter.Parameters.AddWithValue("@11", "CI2");
+                                                cmdparameter.Parameters.AddWithValue("@12", "BCI3");
+                                                cmdparameter.Parameters.AddWithValue("@13", "SF6");
+                                                cmdparameter.Parameters.AddWithValue("@14", "CHF3");
+                                                cmdparameter.Parameters.AddWithValue("@15", "Oxygen");
+                                                cmdparameter.Parameters.AddWithValue("@16", "Oxygen");
+                                                cmdparameter.Parameters.AddWithValue("@17", "Nitrogen");
+                                                cmdparameter.Parameters.AddWithValue("@18", "Argon");
+                                                cmdparameter.Parameters.AddWithValue("@21", CI2);
+                                                cmdparameter.Parameters.AddWithValue("@22", BCI3);
+                                                cmdparameter.Parameters.AddWithValue("@23", SF6);
+                                                cmdparameter.Parameters.AddWithValue("@24", CHF3);
+                                                cmdparameter.Parameters.AddWithValue("@25", Oxygen);
+                                                cmdparameter.Parameters.AddWithValue("@26", Oxygen1);
+                                                cmdparameter.Parameters.AddWithValue("@27", Nitrogen);
+                                                cmdparameter.Parameters.AddWithValue("@28", Argon);
+                                                cmdparameter.Parameters.AddWithValue("@31", CI2);
+                                                cmdparameter.Parameters.AddWithValue("@32", BCI3);
+                                                cmdparameter.Parameters.AddWithValue("@33", SF6);
+                                                cmdparameter.Parameters.AddWithValue("@34", CHF3);
+                                                cmdparameter.Parameters.AddWithValue("@35", Oxygen);
+                                                cmdparameter.Parameters.AddWithValue("@36", Oxygen1);
+                                                cmdparameter.Parameters.AddWithValue("@37", Nitrogen);
+                                                cmdparameter.Parameters.AddWithValue("@38", Argon);
+                                                cmdparameter.Parameters.AddWithValue("@41", CI2);
+                                                cmdparameter.Parameters.AddWithValue("@42", BCI3);
+                                                cmdparameter.Parameters.AddWithValue("@43", SF6);
+                                                cmdparameter.Parameters.AddWithValue("@44", CHF3);
+                                                cmdparameter.Parameters.AddWithValue("@45", Oxygen);
+                                                cmdparameter.Parameters.AddWithValue("@46", Oxygen1);
+                                                cmdparameter.Parameters.AddWithValue("@47", Nitrogen);
+                                                cmdparameter.Parameters.AddWithValue("@48", Argon);
+                                                cmdparameter.Parameters.AddWithValue("@51", "sccm");
+                                                cmdparameter.Parameters.AddWithValue("@52", "sccm");
+                                                cmdparameter.Parameters.AddWithValue("@53", "sccm");
+                                                cmdparameter.Parameters.AddWithValue("@54", "sccm");
+                                                cmdparameter.Parameters.AddWithValue("@55", "sccm");
+                                                cmdparameter.Parameters.AddWithValue("@56", "sccm");
+                                                cmdparameter.Parameters.AddWithValue("@57", "sccm");
+                                                cmdparameter.Parameters.AddWithValue("@58", "sccm");
+                                                cmdparameter.Parameters.AddWithValue("@61", lblRecipe.Text);
+                                                cmdparameter.Parameters.AddWithValue("@62", lblRecipe.Text);
+                                                cmdparameter.Parameters.AddWithValue("@63", lblRecipe.Text);
+                                                cmdparameter.Parameters.AddWithValue("@64", lblRecipe.Text);
+                                                cmdparameter.Parameters.AddWithValue("@65", lblRecipe.Text);
+                                                cmdparameter.Parameters.AddWithValue("@66", lblRecipe.Text);
+                                                cmdparameter.Parameters.AddWithValue("@67", lblRecipe.Text);
+                                                cmdparameter.Parameters.AddWithValue("@68", lblRecipe.Text);
+                                                cmdparameter.Parameters.AddWithValue("@71", strStepname1[j]);
+                                                cmdparameter.Parameters.AddWithValue("@72", strStepname1[j]);
+                                                cmdparameter.Parameters.AddWithValue("@73", strStepname1[j]);
+                                                cmdparameter.Parameters.AddWithValue("@74", strStepname1[j]);
+                                                cmdparameter.Parameters.AddWithValue("@75", strStepname1[j]);
+                                                cmdparameter.Parameters.AddWithValue("@76", strStepname1[j]);
+                                                cmdparameter.Parameters.AddWithValue("@77", strStepname1[j]);
+                                                cmdparameter.Parameters.AddWithValue("@78", strStepname1[j]);
+                                                cmdparameter.Parameters.AddWithValue("@81", DateTime.Now);
+                                                cmdparameter.Parameters.AddWithValue("@82", DateTime.Now);
+                                                cmdparameter.Parameters.AddWithValue("@83", DateTime.Now);
+                                                cmdparameter.Parameters.AddWithValue("@84", DateTime.Now);
+                                                cmdparameter.Parameters.AddWithValue("@85", DateTime.Now);
+                                                cmdparameter.Parameters.AddWithValue("@86", DateTime.Now);
+                                                cmdparameter.Parameters.AddWithValue("@87", DateTime.Now);
+                                                cmdparameter.Parameters.AddWithValue("@88", DateTime.Now);
+
+
+                                                cmdparameter.ExecuteNonQuery();
+                                                con.Close();
+
+                                            }
+                                            ///////////////////////////////////////////////
+
+
+                                            strStepname1.Clear();
+                                            ListStepStartTime.Clear();
+                                            ListStepEndTime.Clear();
+
+                                            // }
+
+
+
+
+
+
+                                            picMain.Image.Tag = "finishchamberA19";
+
+
+
+
+                                            /////////////////////////////////////////////////////////////////////////////////////////////////// 
+                                        }
+
+
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "finishchamberA19" && picSV.Visible == true)
+                                        {
+
+                                            await Task.Delay(1000);
+                                            picChamber.Image = Properties.Resources.ChamberWithA1;
+                                            //picMain.Image = Properties.Resources.robotintochamberwithA1;
+                                            picSV.Visible = false;
+                                        }
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "finishchamberA19" && picSV.Visible == false)
+                                        {
+                                            await Task.Delay(1000);
+
+                                            picChamber.Image = Properties.Resources.robot_into_chamberA11;
+                                            picMain.Image = Properties.Resources.picrobotintochamber;
+                                            picMain.Image = Properties.Resources.picrobotintoAPMWafer;
+                                            picMain.Image.Tag = "picrobotintoAPMWaferA19-2";
+
+                                            ovalShape1.Left += 1;
+                                            ovalShape1.Left -= 1;
+                                            picChamber.Width += 140;
+                                            picChamber.Left -= 150;
+                                            picChamber.Height += 10;
+                                        }
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotintoAPMWaferA19-2")
+                                        {
+                                            await Task.Delay(1000);
+                                            label2.BackColor = Color.Blue;
+                                            lblProcess.BackColor = Color.Blue;
+                                            lblProcessStep.BackColor = Color.Blue;
+                                            lblRecipe.BackColor = Color.Blue;
+                                            lblStepName.BackColor = Color.Blue;
+                                            lblData.BackColor = Color.Blue;
+                                            lblnum.BackColor = Color.Blue;
+
+                                            lblProcess.Text = "Idle";
+                                            lblProcessStep.Text = "";
+                                            lblRecipe.Text = "";
+                                            lblStepName.Text = "";
+                                            lblnum.Text = "";
+                                            lblData.Text = "";
+
+
+                                            // pictRobot.Visible = true;
+
+                                            picChamber.Image = Properties.Resources.new_chamber1;
+                                            picMain.Image = Properties.Resources.picrobotbotton;
+                                            picMain.Image = Properties.Resources.picrobotAPMWafer;
+
+                                            picMain.Image.Tag = "picrobotAPMWaferA19-2";
+
+                                            lblwaferAPM.Visible = false;
+                                            lblwaferup.Visible = true;
+
+                                            ovalShape1.Top += 145;
+                                            ovalShape1.Left -= 3;
+                                            lblwafer.Top += 145;
+                                            lblwafer.Left -= 3;
+
+                                            lblChamber.BackColor = Color.Blue;
+                                            chamberload = "Blue";
+                                            picChamber.Width -= 140;
+                                            picChamber.Left += 150;
+                                            picChamber.Height -= 10;
+                                        }
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotAPMWaferA19-2" && picSV.Visible == false)
+                                        {
+                                            await Task.Delay(2000);
+                                            picChamber.Image = Properties.Resources.new_chamber;//close chamber
+
+                                            // picMain.Image = Properties.Resources.robotrightA1;
+                                            picSV.Visible = true;
+
+
+                                        }
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotAPMWaferA19-2" && picSV.Visible == true)
+                                        {
+                                            await Task.Delay(2000);
+
+                                            // pictRobot.Height += 20;
+
+                                            // picMain.Image = Properties.Resources.robotgetwaferA1cassetteclose;
+                                            picMain.Image = Properties.Resources.mainpicture;
+                                            picMain.Image = Properties.Resources.picrobotArmWafer;
+                                            picMain.Image.Tag = "picrobotArmWaferA19-2";
+                                            lblwaferup.Visible = false;
+                                            lblwafer.Visible = true;
+                                            ovalShape1.Top += 162;
+                                            lblwafer.Top += 162;
+                                            ovalShape1.Left += 12;
+                                            lblwafer.Left += 12;
+                                            await Task.Delay(2000);
+
+                                            await Task.Delay(1000);
+                                            picCassette.Image = Properties.Resources.cassette3;//open cassette
+                                                                                               // picMain.Image = Properties.Resources.robotgetwaferA1;
+                                        }
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotArmWaferA19-2")
+                                        {
+                                            await Task.Delay(1000);
+
+                                            lblCassette.BackColor = Color.LimeGreen;
+
+                                            picCassette.Image = Properties.Resources.robot_into_cassetteA1;
+                                            picMain.Image = Properties.Resources.picrobotintocassette;
+                                            picMain.Image.Tag = "picrobotintocassettA19-2";
+                                            lblwafer.Visible = false;
+                                            lblwafer.Visible = false;
+                                            ovalShape1.Visible = false;
+                                            picCassette.Height += 220;
+                                            picCassette.Width += 25;
+                                            picCassette.Top -= 205;
+                                        }
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotintocassettA19-2")
+                                        {
+                                            await Task.Delay(2000);
+                                            lblCassette.BackColor = Color.Blue;
+                                            //  pictRobot.Visible = true;
+
+                                            picMain.Image = Properties.Resources.mainpicture;
+                                            picCassette.Image = Properties.Resources.cassette3;
+                                            picCassette.Width -= 25;
+                                            picCassette.Height -= 220;
+                                            picCassette.Top += 205;
+                                            await Task.Delay(2000);
+                                            //  picMain.Image = Properties.Resources.mainpic;
+                                            picCassette.Image = Properties.Resources.cassette;
+                                            // picwafer.Image = Properties.Resources.waferfull;
+                                            if (NoOfwafer[i] == "1")
+                                            {
+                                                //  picwafer.Image = Properties.Resources.waferA1full;
+                                                picWafer1.Visible = true;
+                                            }
+                                            if (NoOfwafer[i] == "2")
+                                            {
+                                                //  picwafer.Image = Properties.Resources.waferA2full;
+                                                picWafer1.Visible = true;
+                                                picWafer2.Visible = true;
+                                            }
+                                            if (NoOfwafer[i] == "3")
+                                            {
+                                                //  picwafer.Image = Properties.Resources.waferA3full;
+                                                picWafer1.Visible = true;
+                                                picWafer2.Visible = true;
+                                                picWafer3.Visible = true;
+                                            }
+                                            if (NoOfwafer[i] == "4")
+                                            {
+                                                // picwafer.Image = Properties.Resources.waferA4full;
+                                                picWafer1.Visible = true;
+                                                picWafer2.Visible = true;
+                                                picWafer3.Visible = true;
+                                                picWafer4.Visible = true;
+                                                picWafer2.Image = Properties.Resources.picWaferGreen;
+                                                picWafer1.Image = Properties.Resources.picWaferGreen;
+                                                picWafer3.Image = Properties.Resources.picWaferGreen;
+                                                picWafer4.Image = Properties.Resources.picWaferGreen;
+                                            }
+
+                                            if (NoOfwafer[i] == "5")
+                                            {
+                                                //  picwafer.Image = Properties.Resources.waferA5full;
+                                                picWafer1.Visible = true;
+                                                picWafer2.Visible = true;
+                                                picWafer3.Visible = true;
+                                                picWafer4.Visible = true;
+                                                picWafer5.Visible = true;
+                                                picWafer2.Image = Properties.Resources.picWaferGreen;
+                                                picWafer1.Image = Properties.Resources.picWaferGreen;
+                                                picWafer3.Image = Properties.Resources.picWaferGreen;
+                                                picWafer4.Image = Properties.Resources.picWaferGreen;
+                                                picWafer5.Image = Properties.Resources.picWaferGreen;
+                                            }
+
+                                            if (NoOfwafer[i] == "6")
+                                            {
+                                                //  picwafer.Image = Properties.Resources.waferA5full;
+                                                picWafer1.Visible = true;
+                                                picWafer2.Visible = true;
+                                                picWafer3.Visible = true;
+                                                picWafer4.Visible = true;
+                                                picWafer5.Visible = true;
+                                                picWafer6.Visible = true;
+                                                picWafer2.Image = Properties.Resources.picWaferGreen;
+                                                picWafer1.Image = Properties.Resources.picWaferGreen;
+                                                picWafer3.Image = Properties.Resources.picWaferGreen;
+                                                picWafer4.Image = Properties.Resources.picWaferGreen;
+                                                picWafer5.Image = Properties.Resources.picWaferGreen;
+                                                picWafer6.Image = Properties.Resources.picWaferGreen;
+                                            }
+
+                                            if (NoOfwafer[i] == "7")
+                                            {
+                                                //  picwafer.Image = Properties.Resources.waferA5full;
+                                                picWafer1.Visible = true;
+                                                picWafer2.Visible = true;
+                                                picWafer3.Visible = true;
+                                                picWafer4.Visible = true;
+                                                picWafer5.Visible = true;
+                                                picWafer6.Visible = true;
+                                                picWafer7.Visible = true;
+                                                picWafer2.Image = Properties.Resources.picWaferGreen;
+                                                picWafer1.Image = Properties.Resources.picWaferGreen;
+                                                picWafer3.Image = Properties.Resources.picWaferGreen;
+                                                picWafer4.Image = Properties.Resources.picWaferGreen;
+                                                picWafer5.Image = Properties.Resources.picWaferGreen;
+                                                picWafer6.Image = Properties.Resources.picWaferGreen;
+                                                picWafer7.Image = Properties.Resources.picWaferGreen;
+                                            }
+                                            if (NoOfwafer[i] == "8")
+                                            {
+                                                //  picwafer.Image = Properties.Resources.waferA5full;
+                                                picWafer1.Visible = true;
+                                                picWafer2.Visible = true;
+                                                picWafer3.Visible = true;
+                                                picWafer4.Visible = true;
+                                                picWafer5.Visible = true;
+                                                picWafer6.Visible = true;
+                                                picWafer7.Visible = true;
+                                                picWafer8.Visible = true;
+                                                picWafer2.Image = Properties.Resources.picWaferGreen;
+                                                picWafer1.Image = Properties.Resources.picWaferGreen;
+                                                picWafer3.Image = Properties.Resources.picWaferGreen;
+                                                picWafer4.Image = Properties.Resources.picWaferGreen;
+                                                picWafer5.Image = Properties.Resources.picWaferGreen;
+                                                picWafer6.Image = Properties.Resources.picWaferGreen;
+                                                picWafer7.Image = Properties.Resources.picWaferGreen;
+                                                picWafer8.Image = Properties.Resources.picWaferGreen;
+                                            }
+                                            if (NoOfwafer[i] == "9")
+                                            {
+                                                //  picwafer.Image = Properties.Resources.waferA5full;
+                                                picWafer1.Visible = true;
+                                                picWafer2.Visible = true;
+                                                picWafer3.Visible = true;
+                                                picWafer4.Visible = true;
+                                                picWafer5.Visible = true;
+                                                picWafer6.Visible = true;
+                                                picWafer7.Visible = true;
+                                                picWafer8.Visible = true;
+                                                picWafer9.Visible = true;
+                                                picWafer2.Image = Properties.Resources.picWaferGreen;
+                                                picWafer1.Image = Properties.Resources.picWaferGreen;
+                                                picWafer3.Image = Properties.Resources.picWaferGreen;
+                                                picWafer4.Image = Properties.Resources.picWaferGreen;
+                                                picWafer5.Image = Properties.Resources.picWaferGreen;
+                                                picWafer6.Image = Properties.Resources.picWaferGreen;
+                                                picWafer7.Image = Properties.Resources.picWaferGreen;
+                                                picWafer8.Image = Properties.Resources.picWaferGreen;
+                                                picWafer9.Image = Properties.Resources.picWaferGreen;
+                                            }
+                                            if (NoOfwafer[i] == "10")
+                                            {
+                                                //  picwafer.Image = Properties.Resources.waferA5full;
+                                                picWafer1.Visible = true;
+                                                picWafer2.Visible = true;
+                                                picWafer3.Visible = true;
+                                                picWafer4.Visible = true;
+                                                picWafer5.Visible = true;
+                                                picWafer6.Visible = true;
+                                                picWafer7.Visible = true;
+                                                picWafer8.Visible = true;
+                                                picWafer9.Visible = true;
+                                                picWafer10.Visible = true;
+                                                picWafer2.Image = Properties.Resources.picWaferGreen;
+                                                picWafer1.Image = Properties.Resources.picWaferGreen;
+                                                picWafer3.Image = Properties.Resources.picWaferGreen;
+                                                picWafer4.Image = Properties.Resources.picWaferGreen;
+                                                picWafer5.Image = Properties.Resources.picWaferGreen;
+                                                picWafer6.Image = Properties.Resources.picWaferGreen;
+                                                picWafer7.Image = Properties.Resources.picWaferGreen;
+                                                picWafer8.Image = Properties.Resources.picWaferGreen;
+                                                picWafer9.Image = Properties.Resources.picWaferGreen;
+                                                picWafer10.Image = Properties.Resources.picWaferGreen;
+                                            }
+                                            if (NoOfwafer[i] == "11")
+                                            {
+                                                //  picwafer.Image = Properties.Resources.waferA5full;
+                                                picWafer1.Visible = true;
+                                                picWafer2.Visible = true;
+                                                picWafer3.Visible = true;
+                                                picWafer4.Visible = true;
+                                                picWafer5.Visible = true;
+                                                picWafer6.Visible = true;
+                                                picWafer7.Visible = true;
+                                                picWafer8.Visible = true;
+                                                picWafer9.Visible = true;
+                                                picWafer10.Visible = true;
+                                                picWafer2.Image = Properties.Resources.picWaferGreen;
+                                                picWafer1.Image = Properties.Resources.picWaferGreen;
+                                                picWafer3.Image = Properties.Resources.picWaferGreen;
+                                                picWafer4.Image = Properties.Resources.picWaferGreen;
+                                                picWafer5.Image = Properties.Resources.picWaferGreen;
+                                                picWafer6.Image = Properties.Resources.picWaferGreen;
+                                                picWafer7.Image = Properties.Resources.picWaferGreen;
+                                                picWafer8.Image = Properties.Resources.picWaferGreen;
+                                                picWafer9.Image = Properties.Resources.picWaferGreen;
+                                                picWafer10.Image = Properties.Resources.picWaferGreen;
+                                            }
+                                            if (NoOfwafer[i] == "12")
+                                            {
+                                                //  picwafer.Image = Properties.Resources.waferA5full;
+                                                picWafer1.Visible = true;
+                                                picWafer2.Visible = true;
+                                                picWafer3.Visible = true;
+                                                picWafer4.Visible = true;
+                                                picWafer5.Visible = true;
+                                                picWafer6.Visible = true;
+                                                picWafer7.Visible = true;
+                                                picWafer8.Visible = true;
+                                                picWafer9.Visible = true;
+                                                picWafer10.Visible = true;
+                                                picWafer2.Image = Properties.Resources.picWaferGreen;
+                                                picWafer1.Image = Properties.Resources.picWaferGreen;
+                                                picWafer3.Image = Properties.Resources.picWaferGreen;
+                                                picWafer4.Image = Properties.Resources.picWaferGreen;
+                                                picWafer5.Image = Properties.Resources.picWaferGreen;
+                                                picWafer6.Image = Properties.Resources.picWaferGreen;
+                                                picWafer7.Image = Properties.Resources.picWaferGreen;
+                                                picWafer8.Image = Properties.Resources.picWaferGreen;
+                                                picWafer9.Image = Properties.Resources.picWaferGreen;
+                                                picWafer10.Image = Properties.Resources.picWaferGreen;
+                                            }
+                                            if (NoOfwafer[i] == "13")
+                                            {
+                                                //  picwafer.Image = Properties.Resources.waferA5full;
+                                                picWafer1.Visible = true;
+                                                picWafer2.Visible = true;
+                                                picWafer3.Visible = true;
+                                                picWafer4.Visible = true;
+                                                picWafer5.Visible = true;
+                                                picWafer6.Visible = true;
+                                                picWafer7.Visible = true;
+                                                picWafer8.Visible = true;
+                                                picWafer9.Visible = true;
+                                                picWafer10.Visible = true;
+                                                picWafer2.Image = Properties.Resources.picWaferGreen;
+                                                picWafer1.Image = Properties.Resources.picWaferGreen;
+                                                picWafer3.Image = Properties.Resources.picWaferGreen;
+                                                picWafer4.Image = Properties.Resources.picWaferGreen;
+                                                picWafer5.Image = Properties.Resources.picWaferGreen;
+                                                picWafer6.Image = Properties.Resources.picWaferGreen;
+                                                picWafer7.Image = Properties.Resources.picWaferGreen;
+                                                picWafer8.Image = Properties.Resources.picWaferGreen;
+                                                picWafer9.Image = Properties.Resources.picWaferGreen;
+                                                picWafer10.Image = Properties.Resources.picWaferGreen;
+                                            }
+                                            if (NoOfwafer[i] == "14")
+                                            {
+                                                //  picwafer.Image = Properties.Resources.waferA5full;
+                                                picWafer1.Visible = true;
+                                                picWafer2.Visible = true;
+                                                picWafer3.Visible = true;
+                                                picWafer4.Visible = true;
+                                                picWafer5.Visible = true;
+                                                picWafer6.Visible = true;
+                                                picWafer7.Visible = true;
+                                                picWafer8.Visible = true;
+                                                picWafer9.Visible = true;
+                                                picWafer10.Visible = true;
+                                                picWafer11.Visible = true;
+                                                picWafer12.Visible = true;
+                                                picWafer13.Visible = true;
+                                                picWafer14.Visible = true;
+                                                picWafer2.Image = Properties.Resources.picWaferGreen;
+                                                picWafer1.Image = Properties.Resources.picWaferGreen;
+                                                picWafer3.Image = Properties.Resources.picWaferGreen;
+                                                picWafer4.Image = Properties.Resources.picWaferGreen;
+                                                picWafer5.Image = Properties.Resources.picWaferGreen;
+                                                picWafer6.Image = Properties.Resources.picWaferGreen;
+                                                picWafer7.Image = Properties.Resources.picWaferGreen;
+                                                picWafer8.Image = Properties.Resources.picWaferGreen;
+                                                picWafer9.Image = Properties.Resources.picWaferGreen;
+                                                picWafer10.Image = Properties.Resources.picWaferGreen;
+                                                picWafer11.Image = Properties.Resources.picWaferGreen;
+                                                picWafer12.Image = Properties.Resources.picWaferGreen;
+                                                picWafer13.Image = Properties.Resources.picWaferGreen;
+                                                picWafer14.Image = Properties.Resources.picWaferGreen;
+
+                                            }
+                                            if (NoOfwafer[i] == "15")
+                                            {
+                                                //  picwafer.Image = Properties.Resources.waferA5full;
+                                                picWafer1.Visible = true;
+                                                picWafer2.Visible = true;
+                                                picWafer3.Visible = true;
+                                                picWafer4.Visible = true;
+                                                picWafer5.Visible = true;
+                                                picWafer6.Visible = true;
+                                                picWafer7.Visible = true;
+                                                picWafer8.Visible = true;
+                                                picWafer9.Visible = true;
+                                                picWafer10.Visible = true;
+                                                picWafer11.Visible = true;
+                                                picWafer12.Visible = true;
+                                                picWafer13.Visible = true;
+                                                picWafer14.Visible = true;
+                                                picWafer15.Visible = true;
+                                                picWafer2.Image = Properties.Resources.picWaferGreen;
+                                                picWafer1.Image = Properties.Resources.picWaferGreen;
+                                                picWafer3.Image = Properties.Resources.picWaferGreen;
+                                                picWafer4.Image = Properties.Resources.picWaferGreen;
+                                                picWafer5.Image = Properties.Resources.picWaferGreen;
+                                                picWafer6.Image = Properties.Resources.picWaferGreen;
+                                                picWafer7.Image = Properties.Resources.picWaferGreen;
+                                                picWafer8.Image = Properties.Resources.picWaferGreen;
+                                                picWafer9.Image = Properties.Resources.picWaferGreen;
+                                                picWafer10.Image = Properties.Resources.picWaferGreen;
+                                                picWafer11.Image = Properties.Resources.picWaferGreen;
+                                                picWafer12.Image = Properties.Resources.picWaferGreen;
+                                                picWafer13.Image = Properties.Resources.picWaferGreen;
+                                                picWafer14.Image = Properties.Resources.picWaferGreen;
+                                                picWafer15.Image = Properties.Resources.picWaferGreen;
+                                            }
+                                            if (NoOfwafer[i] == "16")
+                                            {
+                                                //  picwafer.Image = Properties.Resources.waferA5full;
+                                                picWafer1.Visible = true;
+                                                picWafer2.Visible = true;
+                                                picWafer3.Visible = true;
+                                                picWafer4.Visible = true;
+                                                picWafer5.Visible = true;
+                                                picWafer6.Visible = true;
+                                                picWafer7.Visible = true;
+                                                picWafer8.Visible = true;
+                                                picWafer9.Visible = true;
+                                                picWafer10.Visible = true;
+                                                picWafer11.Visible = true;
+                                                picWafer12.Visible = true;
+                                                picWafer13.Visible = true;
+                                                picWafer14.Visible = true;
+                                                picWafer15.Visible = true;
+                                                picWafer16.Visible = true;
+                                                picWafer2.Image = Properties.Resources.picWaferGreen;
+                                                picWafer1.Image = Properties.Resources.picWaferGreen;
+                                                picWafer3.Image = Properties.Resources.picWaferGreen;
+                                                picWafer4.Image = Properties.Resources.picWaferGreen;
+                                                picWafer5.Image = Properties.Resources.picWaferGreen;
+                                                picWafer6.Image = Properties.Resources.picWaferGreen;
+                                                picWafer7.Image = Properties.Resources.picWaferGreen;
+                                                picWafer8.Image = Properties.Resources.picWaferGreen;
+                                                picWafer9.Image = Properties.Resources.picWaferGreen;
+                                                picWafer10.Image = Properties.Resources.picWaferGreen;
+                                                picWafer11.Image = Properties.Resources.picWaferGreen;
+                                                picWafer12.Image = Properties.Resources.picWaferGreen;
+                                                picWafer13.Image = Properties.Resources.picWaferGreen;
+                                                picWafer14.Image = Properties.Resources.picWaferGreen;
+                                                picWafer15.Image = Properties.Resources.picWaferGreen;
+                                                picWafer16.Image = Properties.Resources.picWaferGreen;
+                                            }
+                                            if (NoOfwafer[i] == "17")
+                                            {
+                                                //  picwafer.Image = Properties.Resources.waferA5full;
+                                                picWafer1.Visible = true;
+                                                picWafer2.Visible = true;
+                                                picWafer3.Visible = true;
+                                                picWafer4.Visible = true;
+                                                picWafer5.Visible = true;
+                                                picWafer6.Visible = true;
+                                                picWafer7.Visible = true;
+                                                picWafer8.Visible = true;
+                                                picWafer9.Visible = true;
+                                                picWafer10.Visible = true;
+                                                picWafer11.Visible = true;
+                                                picWafer12.Visible = true;
+                                                picWafer13.Visible = true;
+                                                picWafer14.Visible = true;
+                                                picWafer15.Visible = true;
+                                                picWafer16.Visible = true;
+                                                picWafer17.Visible = true;
+                                                picWafer2.Image = Properties.Resources.picWaferGreen;
+                                                picWafer1.Image = Properties.Resources.picWaferGreen;
+                                                picWafer3.Image = Properties.Resources.picWaferGreen;
+                                                picWafer4.Image = Properties.Resources.picWaferGreen;
+                                                picWafer5.Image = Properties.Resources.picWaferGreen;
+                                                picWafer6.Image = Properties.Resources.picWaferGreen;
+                                                picWafer7.Image = Properties.Resources.picWaferGreen;
+                                                picWafer8.Image = Properties.Resources.picWaferGreen;
+                                                picWafer9.Image = Properties.Resources.picWaferGreen;
+                                                picWafer10.Image = Properties.Resources.picWaferGreen;
+                                                picWafer11.Image = Properties.Resources.picWaferGreen;
+                                                picWafer12.Image = Properties.Resources.picWaferGreen;
+                                                picWafer13.Image = Properties.Resources.picWaferGreen;
+                                                picWafer14.Image = Properties.Resources.picWaferGreen;
+                                                picWafer15.Image = Properties.Resources.picWaferGreen;
+                                                picWafer16.Image = Properties.Resources.picWaferGreen;
+                                                picWafer17.Image = Properties.Resources.picWaferGreen;
+                                            }
+                                            if (NoOfwafer[i] == "18")
+                                            {
+                                                //  picwafer.Image = Properties.Resources.waferA5full;
+                                                picWafer1.Visible = true;
+                                                picWafer2.Visible = true;
+                                                picWafer3.Visible = true;
+                                                picWafer4.Visible = true;
+                                                picWafer5.Visible = true;
+                                                picWafer6.Visible = true;
+                                                picWafer7.Visible = true;
+                                                picWafer8.Visible = true;
+                                                picWafer9.Visible = true;
+                                                picWafer10.Visible = true;
+                                                picWafer11.Visible = true;
+                                                picWafer12.Visible = true;
+                                                picWafer13.Visible = true;
+                                                picWafer14.Visible = true;
+                                                picWafer15.Visible = true;
+                                                picWafer16.Visible = true;
+                                                picWafer17.Visible = true;
+                                                picWafer18.Visible = true;
+                                                picWafer2.Image = Properties.Resources.picWaferGreen;
+                                                picWafer1.Image = Properties.Resources.picWaferGreen;
+                                                picWafer3.Image = Properties.Resources.picWaferGreen;
+                                                picWafer4.Image = Properties.Resources.picWaferGreen;
+                                                picWafer5.Image = Properties.Resources.picWaferGreen;
+                                                picWafer6.Image = Properties.Resources.picWaferGreen;
+                                                picWafer7.Image = Properties.Resources.picWaferGreen;
+                                                picWafer8.Image = Properties.Resources.picWaferGreen;
+                                                picWafer9.Image = Properties.Resources.picWaferGreen;
+                                                picWafer10.Image = Properties.Resources.picWaferGreen;
+                                                picWafer11.Image = Properties.Resources.picWaferGreen;
+                                                picWafer12.Image = Properties.Resources.picWaferGreen;
+                                                picWafer13.Image = Properties.Resources.picWaferGreen;
+                                                picWafer14.Image = Properties.Resources.picWaferGreen;
+                                                picWafer15.Image = Properties.Resources.picWaferGreen;
+                                                picWafer16.Image = Properties.Resources.picWaferGreen;
+                                                picWafer17.Image = Properties.Resources.picWaferGreen;
+                                                picWafer18.Image = Properties.Resources.picWaferGreen;
+                                            }
+                                            if (NoOfwafer[i] == "19")
+                                            {
+                                                //  picwafer.Image = Properties.Resources.waferA5full;
+                                                picWafer1.Visible = true;
+                                                picWafer2.Visible = true;
+                                                picWafer3.Visible = true;
+                                                picWafer4.Visible = true;
+                                                picWafer5.Visible = true;
+                                                picWafer6.Visible = true;
+                                                picWafer7.Visible = true;
+                                                picWafer8.Visible = true;
+                                                picWafer9.Visible = true;
+                                                picWafer10.Visible = true;
+                                                picWafer11.Visible = true;
+                                                picWafer12.Visible = true;
+                                                picWafer13.Visible = true;
+                                                picWafer14.Visible = true;
+                                                picWafer15.Visible = true;
+                                                picWafer16.Visible = true;
+                                                picWafer17.Visible = true;
+                                                picWafer18.Visible = true;
+                                                picWafer19.Visible = true;
+                                                picWafer2.Image = Properties.Resources.picWaferGreen;
+                                                picWafer1.Image = Properties.Resources.picWaferGreen;
+                                                picWafer3.Image = Properties.Resources.picWaferGreen;
+                                                picWafer4.Image = Properties.Resources.picWaferGreen;
+                                                picWafer5.Image = Properties.Resources.picWaferGreen;
+                                                picWafer6.Image = Properties.Resources.picWaferGreen;
+                                                picWafer7.Image = Properties.Resources.picWaferGreen;
+                                                picWafer8.Image = Properties.Resources.picWaferGreen;
+                                                picWafer9.Image = Properties.Resources.picWaferGreen;
+                                                picWafer10.Image = Properties.Resources.picWaferGreen;
+                                                picWafer11.Image = Properties.Resources.picWaferGreen;
+                                                picWafer12.Image = Properties.Resources.picWaferGreen;
+                                                picWafer13.Image = Properties.Resources.picWaferGreen;
+                                                picWafer14.Image = Properties.Resources.picWaferGreen;
+                                                picWafer15.Image = Properties.Resources.picWaferGreen;
+                                                picWafer16.Image = Properties.Resources.picWaferGreen;
+                                                picWafer17.Image = Properties.Resources.picWaferGreen;
+                                                picWafer18.Image = Properties.Resources.picWaferGreen;
+                                                picWafer19.Image = Properties.Resources.picWaferGreen;
+                                            }
+
+
+                                            //////////////////////////////////////////////////////////////////Save DataLog
+                                            if (int.Parse(NoOfwafer[i]) == 19)
+                                            {
+                                                EndTime = DateTime.Now;
+
+
+                                                con.Open();
+
+                                                string strinsertdatalog = "insert into DataLogger(logname,cassetterecipename,starttime) values(@1,@2,@3) ";
+                                                SqlCommand cmdinsertdatalog = new SqlCommand(strinsertdatalog, con);
+
+                                                cmdinsertdatalog.Parameters.AddWithValue("@1", lbl123.Text);
+                                                cmdinsertdatalog.Parameters.AddWithValue("@2", form2Msg);
+                                                cmdinsertdatalog.Parameters.AddWithValue("@3", StartTime);
+
+                                                cmdinsertdatalog.ExecuteNonQuery();
+
+                                                con.Close();
+
+                                                lblState.Text = "Finished";
+
+
+
+                                            }
+                                            picMain.Image.Tag = "finishwaferA19";
+                                            if (isStopRobot == true)
+                                            {
+                                                button2.Enabled = true;
+                                                lblState.Text = "Stopping";
+                                            }
+
+
+                                        }
+                                        /////////////////////////////////////////////////////////finish waferA19
+                                    }
+
+                                    if (int.Parse(NoOfwafer[i]) >= 20)
+                                    {
+                                        //////////////////////////////////////////////////////////////////////////start waferA20
+                                        nooftherecipe = "20";
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "finishWaferA20" && isStopRobot == false && iscancelrecipe == false)
+                                        {
+                                            await Task.Delay(2000);
+
+                                            picCassette.Image = Properties.Resources.cassette1;
+
+                                            if (NoOfwafer[i] == "1")
+                                            {
+                                                picwafer.Image = Properties.Resources.wafer;
+                                                picwafer.Image.Tag = "wafer";
+                                            }
+                                            else if (NoOfwafer[i] == "2")
+                                            {
+                                                picwafer.Image = Properties.Resources.waferA1full;
+                                            }
+                                            else if (NoOfwafer[i] == "3")
+                                            {
+                                                picwafer.Image = Properties.Resources.waferA2full;
+
+                                            }
+                                            else if (NoOfwafer[i] == "4")
+                                            {
+                                                picwafer.Image = Properties.Resources.waferA3full;
+                                            }
+                                            else if (NoOfwafer[i] == "5")
+                                            {
+                                                picwafer.Image = Properties.Resources.waferA4full;
+                                            }
+                                            else if (NoOfwafer[i] == "6")
+                                            {
+                                                picwafer.Image = Properties.Resources.waferA5full;
+
+                                            }
+                                            else if (NoOfwafer[i] == "7")
+                                            {
+                                                picwafer.Image = Properties.Resources.waferA6full;
+
+                                            }
+                                            else if (NoOfwafer[i] == "8")
+                                            {
+                                                picwafer.Image = Properties.Resources.waferA7full;
+
+                                            }
+                                            else if (NoOfwafer[i] == "9")
+                                            {
+                                                picwafer.Image = Properties.Resources.waferA8full;
+
+                                            }
+                                            else if (NoOfwafer[i] == "10")
+                                            {
+                                                picwafer.Image = Properties.Resources.waferA9full;
+
+                                            }
+                                            else if (NoOfwafer[i] == "11")
+                                            {
+                                                picwafer.Image = Properties.Resources.waferA9full;
+
+                                            }
+
+                                            else if (NoOfwafer[i] == "12")
+                                            {
+                                                picwafer.Image = Properties.Resources.waferA9full;
+
+                                            }
+
+                                            else if (NoOfwafer[i] == "13")
+                                            {
+                                                picwafer.Image = Properties.Resources.waferA9full;
+
+                                            }
+
+                                            else if (NoOfwafer[i] == "14")
+                                            {
+                                                //  picwafer.Image = Properties.Resources.waferA9full;
+                                                picWafer14.Visible = false;
+                                            }
+
+                                            else if (NoOfwafer[i] == "15")
+                                            {
+                                                //  picwafer.Image = Properties.Resources.waferA9full;
+                                                picWafer15.Visible = false;
+                                            }
+                                            else if (NoOfwafer[i] == "16")
+                                            {
+                                                //  picwafer.Image = Properties.Resources.waferA9full;
+                                                picWafer15.Visible = false;
+                                            }
+                                            else if (NoOfwafer[i] == "17")
+                                            {
+                                                //  picwafer.Image = Properties.Resources.waferA9full;
+                                                picWafer17.Visible = false;
+                                            }
+                                            else if (NoOfwafer[i] == "18")
+                                            {
+                                                //  picwafer.Image = Properties.Resources.waferA9full;
+                                                picWafer18.Visible = false;
+                                            }
+                                            else if (NoOfwafer[i] == "19")
+                                            {
+                                                //  picwafer.Image = Properties.Resources.waferA9full;
+                                                picWafer19.Visible = false;
+                                            }
+                                            else if (NoOfwafer[i] == "20")
+                                            {
+                                                //  picwafer.Image = Properties.Resources.waferA9full;
+                                                picWafer20.Visible = false;
+                                            }
+
+                                            StartTime = DateTime.Now;
+
+
+
+
+                                            await Task.Delay(2000);
+                                            con.Open();
+
+                                            string strWaferSelection = "insert into WaferSelection(NoOfWafers,StartTime,CassetteRecipeName,Logname) values(@NoOfWafer,@StartTime,@CassetteRecipeName,@Logname)";
+                                            SqlCommand cmdwaferselection = new SqlCommand(strWaferSelection, con);
+                                            cmdwaferselection.Parameters.AddWithValue("@NoOfWafer", "20");
+                                            cmdwaferselection.Parameters.AddWithValue("@StartTime", StartTime);
+                                            cmdwaferselection.Parameters.AddWithValue("@CassetteRecipeName", form2Msg);
+                                            cmdwaferselection.Parameters.AddWithValue("@Logname", lbl123.Text);
+
+                                            cmdwaferselection.ExecuteNonQuery();
+
+                                            con.Close();
+
+                                            await Task.Delay(1000);
+
+                                            picMain.Image = Properties.Resources.mainpicture;
+                                            picMain.Image.Tag = "waferA20mainpicture";
+
+                                            await Task.Delay(1000);
+                                        }
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "waferA20mainpicture")
+                                        {
+                                            // lblCassette.BackColor = Color.LimeGreen;
+                                            await Task.Delay(1000);
+
+                                            picMain.Image = Properties.Resources.picrobotintocassette;
+                                            picMain.Image.Tag = "picrobotintocassetteA20";
+                                            label1.BackColor = Color.Blue;
+                                            lblLoad.Text = "";
+                                            lblLoad.BackColor = Color.Blue;
+                                            lbl123.BackColor = Color.Blue;
+                                            lblState.BackColor = Color.Blue;
+                                            lblCassetteRecipename.BackColor = Color.Blue;
+                                            lblmTorr.BackColor = Color.Blue;
+
+
+                                            lblCassette.BackColor = Color.LimeGreen;
+
+                                        }
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotintocassetteA20")
+                                        {
+                                            await Task.Delay(1000);
+                                            picMain.Image = Properties.Resources.picrobotArmWafer;
+                                            picMain.Image.Tag = "picrobotArmWaferA20";
+
+                                            lblwafer.Visible = true;
+                                            lblwafer.Text = "A20";
+
+                                            lblCassette.BackColor = Color.Blue;
+                                        }
+
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotArmWaferA20")
+                                        {
+                                            await Task.Delay(1000);
+                                            picMain.Image = Properties.Resources.picrobotAlignerWafer;
+                                            picMain.Image.Tag = "picrobotAlignerWaferA20";
+
+                                            ovalShape1.Left += 70;
+                                            ovalShape1.Top -= 85;
+                                            lblwafer.Visible = false;
+                                            lblwaferright.Visible = true;
+                                            lblwaferright.Text = "A20";
+                                            lblwafer.Left += 70;
+                                            lblwafer.Top -= 85;
+
+                                        }
+
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotAlignerWaferA20")
+                                        {
+                                            await Task.Delay(1000);
+
+                                            picMain.Image = Properties.Resources.picrobotintoAlignerWafer;
+                                            picMain.Image.Tag = "picrobotintoAlignerWaferA20";
+                                            lblCentralize.BackColor = Color.LimeGreen;
+                                            ovalShape1.Left += 155;
+                                            ovalShape1.Top += 0;
+                                            lblwaferright.Visible = false;
+                                            lblwaferaligner.Visible = true;
+                                            lblwaferaligner.Text = "A20";
+                                            lblwafer.Left += 155;
+                                            lblwafer.Top += 0;
+
+                                        }
+
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotintoAlignerWaferA20")
+                                        {
+                                            await Task.Delay(1000);
+                                            picMain.Image = Properties.Resources.picrobotAlignerWafer;
+                                            picMain.Image.Tag = "picrobotAlignerWaferA20-2";
+
+                                            lblwaferaligner.Visible = false;
+                                            lblwaferright.Visible = true;
+                                            lblwaferright.Text = "A20";
+                                            ovalShape1.Left -= 155;
+                                            ovalShape1.Top -= 0;
+                                            lblwafer.Left -= 155;
+                                            lblwafer.Top -= 0;
+                                            lblCentralize.BackColor = Color.Blue;
+                                        }
+
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotAlignerWaferA20-2")
+                                        {
+                                            await Task.Delay(1000);
+
+                                            picMain.Image = Properties.Resources.picrobotAPMWafer;
+                                            picMain.Image.Tag = "picrobotAPMWaferA20";
+                                            lblwaferright.Visible = false;
+                                            lblwaferup.Visible = true;
+                                            lblwaferup.Text = "A20";
+                                            ovalShape1.Left -= 82;
+                                            ovalShape1.Top -= 76;
+                                            lblwafer.Left -= 82;
+                                            lblwafer.Top -= 76;
+                                        }
+
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotAPMWaferA20" && picSV.Visible == true)
+                                        {
+                                            await Task.Delay(1000);
+
+
+                                            picSV.Visible = false;  // open sv of chamber
+                                        }
+
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotAPMWaferA20" && picSV.Visible == false)
+                                        {
+                                            await Task.Delay(1000);
+
+                                            picMain.Image = Properties.Resources.picrobotintoAPMWafer;
+                                            picMain.Image.Tag = "picrobotintoAPMWaferA20";
+
+                                            lblwaferup.Visible = false;
+                                            lblwaferAPM.Visible = true;
+                                            lblwaferAPM.Text = "A20";
+                                            ovalShape1.Top -= 145;
+                                            ovalShape1.Left += 3;
+                                            lblwafer.Top -= 145;
+                                            lblwafer.Left += 3;
+
+
+
+                                            lblChamber.BackColor = Color.LimeGreen;
+
+                                            chamberload = "LimeGreen";
+                                        }
+
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotintoAPMWaferA20")
+                                        {
+                                            await Task.Delay(1000);
+                                            picChamber.Image = Properties.Resources.ChamberWithA1;
+
+                                            //   picMain.Image = Properties.Resources.robotintochamberwithA1;
+                                            picMain.Image = Properties.Resources.picrobotbotton;
+                                            picMain.Image = Properties.Resources.picwaferinAPM;
+                                            picMain.Image.Tag = "picwaferinAPMA20";
+                                            ovalShape1.Left -= 1;
+                                            ovalShape1.Left += 1;
+                                            //  picMain.SendToBack();
+                                            // ovalShape1.BringToFront();
+                                            picChamber.Width -= 140;
+                                            picChamber.Left += 150;
+                                            picChamber.Height -= 10;
+
+
+                                            //  pictRobot.Visible = true;
+                                        }
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picwaferinAPMA20")
+
+                                        {
+                                            await Task.Delay(1000);
+
+                                            picChamber.Image = Properties.Resources.ChamberWithA1Close;
+                                            //picMain.Image = Properties.Resources.robotintochamberwithA1close;
+                                            picSV.Visible = true;
+
+                                            ///////////////////////////////////////////////////////////////////////////////////////////////////////WaferA20 into Chamber
+                                            Chamber1 chamber1 = new Chamber1();
+                                            chamber1.ShowDialog();
+
+                                            lblRecipe.BackColor = Color.LimeGreen;
+                                            lblStepName.BackColor = Color.LimeGreen;
+
+                                            lblnum.BackColor = Color.LimeGreen;
+
+                                            lblData.BackColor = Color.LimeGreen;
+                                            lblData.Text = "";
+                                            label2.BackColor = Color.LimeGreen;
+
+                                            lblProcess.Text = "Processing";
+                                            lblProcess.BackColor = Color.LimeGreen;
+                                            lblProcessStep.Text = "Process Step";
+                                            lblProcessStep.BackColor = Color.LimeGreen;
+
+
+
+                                            con.Open();
+                                            string strSQL = "select WaferRecipe from CassetteWafer  where CassetterecipeName = @NewWaferRecipe";
+
+                                            SqlCommand cmd = new SqlCommand(strSQL, con);
+                                            cmd.Parameters.AddWithValue("@NewWaferRecipe", Form1.form2Msg);
+                                            SqlDataReader reader = cmd.ExecuteReader();
+                                            while (reader.Read())
+                                            {
+
+                                                lblRecipe.Text = string.Format("{0}", reader["WaferRecipe"]);
+
+
+
+                                            }
+
+                                            con.Close();
+                                            con.Open();
+                                            string strSQL1 = "select stepname from newrecipe where recipename = @Myrecipename";
+
+                                            SqlCommand cmd1 = new SqlCommand(strSQL1, con);
+                                            cmd1.Parameters.AddWithValue("@Myrecipename", lblRecipe.Text);
+                                            SqlDataReader reader1 = cmd1.ExecuteReader();
+                                            while (reader1.Read())
+                                            {
+
+                                                strStepname1.Add(string.Format("{0}", reader1["StepName"]));
+
+
+                                            }
+
+                                            con.Close();
+
+                                            con.Open();
+                                            string strSQL2 = "select StepName from newrecipe inner join CassetteWafer on newrecipe.recipename = cassettewafer.waferRecipe where cassettewafer.waferRecipe = @Newrecipename";
+                                            SqlCommand cmd2 = new SqlCommand(strSQL2, con);
+                                            cmd2.Parameters.AddWithValue("@Newrecipename", lblRecipe.Text);
+
+                                            cmd2.ExecuteNonQuery();
+
+
+
+                                            for (int j = 0; j < strStepname1.Count(); j += 1)
+
+                                            {
+
+                                                //  await Task.Delay(1000);
+
+                                                ListStepStartTime.Add(DateTime.Now);
+
+
+                                                int count = j + 1;
+
+
+                                                lblStepName.Text = strStepname1[j];
+                                                lblnum.Text = "," + count + "/" + strStepname1.Count();
+
+
+                                                con.Close();
+
+                                                con.Open();
+                                                string strSQLStepSec = "select * from newrecipe where stepname = @NewSec";
+
+                                                SqlCommand cmdSec = new SqlCommand(strSQLStepSec, con);
+                                                cmdSec.Parameters.AddWithValue("@NewSec", lblStepName.Text);
+
+                                                SqlDataReader readerSec = cmdSec.ExecuteReader();
+
+
+                                                while (readerSec.Read())
+                                                {
+                                                    mySec1 = readerSec["ProcessTime"].ToString();
+
+                                                    Int32.TryParse(mySec1, out Sec1);
+
+                                                }
+
+                                                for (int k = 1; k <= Sec1; k++)
+                                                {
+                                                    lblData.Text = k.ToString() + "/" + mySec1.ToString() + " Sec";
+                                                    // await Task.Delay(1000);
+
+
+                                                }
+                                                ListStepEndTime.Add(DateTime.Now);
+
+                                                con.Close();
+
+                                                con.Open();
+
+                                                string strModuleRecipe = "insert into ModuleRecipe(RecipeName,StepName,StartTime,EndTime,noofrecipe,logname) values(@recipename,@stepname,@starttime,@endtime,@noofrecipe,@Logname)";
+
+                                                SqlCommand cmdmodulerecipe = new SqlCommand(strModuleRecipe, con);
+
+                                                cmdmodulerecipe.Parameters.AddWithValue("@recipename", lblRecipe.Text);
+                                                cmdmodulerecipe.Parameters.AddWithValue("@stepname", strStepname1[j]);
+                                                cmdmodulerecipe.Parameters.AddWithValue("@starttime", ListStepStartTime[j]);
+                                                cmdmodulerecipe.Parameters.AddWithValue("@endtime", ListStepEndTime[j]);
+                                                cmdmodulerecipe.Parameters.AddWithValue("@noofrecipe", "20");
+                                                cmdmodulerecipe.Parameters.AddWithValue("@Logname", lbl123.Text);
+
+                                                // cmdmodulerecipe.ExecuteNonQuery();
+
+                                                con.Close();
+                                                //////////////////////////////////////////////////////////////////////////////////////////////////////get parameter value
+
+                                                con.Open();
+
+                                                string strSQL3 = "select * from newrecipe where stepname = @Newstepname and recipename = @Newrecipename";
+
+                                                SqlCommand cmd3 = new SqlCommand(strSQL3, con);
+                                                cmd3.Parameters.AddWithValue("@Newstepname", lblStepName.Text);
+                                                cmd3.Parameters.AddWithValue("@Newrecipename", lblRecipe.Text);
+                                                SqlDataReader reader2 = cmd3.ExecuteReader();
+
+                                                while (reader2.Read())
+                                                {
+                                                    CI2 = reader2["CI2"].ToString();
+                                                    BCI3 = reader2["BCI3"].ToString();
+                                                    SF6 = reader2["SF6"].ToString();
+                                                    CHF3 = reader2["CHF3"].ToString();
+                                                    Oxygen = reader2["Oxygen"].ToString();
+                                                    Oxygen1 = reader2["Oxygen1"].ToString();
+                                                    Nitrogen = reader2["Nitrogen"].ToString();
+                                                    Argon = reader2["Argon"].ToString();
+
+
+
+                                                }
+
+                                                con.Close();
+
+                                                ///////////////////////////////////////////////////////////////////////////////////////////////////
+                                                con.Open();
+                                                //  Chamber1 chamber1 = new Chamber1();
+
+                                                string strParameter = "insert into valueselection(parameter,Minimum,Maximum,Average,Units,recipename,stepname,valuedate) values(@11,@21,@31,@41,@51,@61,@71,@81),(@12,@22,@32,@42,@52,@62,@72,@82),(@13,@23,@33,@43,@53,@63,@73,@83)"
+                                                    + ",(@14,@24,@34,@44,@54,@64,@74,@84),(@15,@25,@35,@45,@55,@65,@75,@85),(@16,@26,@36,@46,@56,@66,@76,@86),(@17,@27,@37,@47,@57,@67,@77,@87),(@18,@28,@38,@48,@58,@68,@78,@88)";
+                                                SqlCommand cmdparameter = new SqlCommand(strParameter, con);
+                                                cmdparameter.Parameters.AddWithValue("@11", "CI2");
+                                                cmdparameter.Parameters.AddWithValue("@12", "BCI3");
+                                                cmdparameter.Parameters.AddWithValue("@13", "SF6");
+                                                cmdparameter.Parameters.AddWithValue("@14", "CHF3");
+                                                cmdparameter.Parameters.AddWithValue("@15", "Oxygen");
+                                                cmdparameter.Parameters.AddWithValue("@16", "Oxygen");
+                                                cmdparameter.Parameters.AddWithValue("@17", "Nitrogen");
+                                                cmdparameter.Parameters.AddWithValue("@18", "Argon");
+                                                cmdparameter.Parameters.AddWithValue("@21", CI2);
+                                                cmdparameter.Parameters.AddWithValue("@22", BCI3);
+                                                cmdparameter.Parameters.AddWithValue("@23", SF6);
+                                                cmdparameter.Parameters.AddWithValue("@24", CHF3);
+                                                cmdparameter.Parameters.AddWithValue("@25", Oxygen);
+                                                cmdparameter.Parameters.AddWithValue("@26", Oxygen1);
+                                                cmdparameter.Parameters.AddWithValue("@27", Nitrogen);
+                                                cmdparameter.Parameters.AddWithValue("@28", Argon);
+                                                cmdparameter.Parameters.AddWithValue("@31", CI2);
+                                                cmdparameter.Parameters.AddWithValue("@32", BCI3);
+                                                cmdparameter.Parameters.AddWithValue("@33", SF6);
+                                                cmdparameter.Parameters.AddWithValue("@34", CHF3);
+                                                cmdparameter.Parameters.AddWithValue("@35", Oxygen);
+                                                cmdparameter.Parameters.AddWithValue("@36", Oxygen1);
+                                                cmdparameter.Parameters.AddWithValue("@37", Nitrogen);
+                                                cmdparameter.Parameters.AddWithValue("@38", Argon);
+                                                cmdparameter.Parameters.AddWithValue("@41", CI2);
+                                                cmdparameter.Parameters.AddWithValue("@42", BCI3);
+                                                cmdparameter.Parameters.AddWithValue("@43", SF6);
+                                                cmdparameter.Parameters.AddWithValue("@44", CHF3);
+                                                cmdparameter.Parameters.AddWithValue("@45", Oxygen);
+                                                cmdparameter.Parameters.AddWithValue("@46", Oxygen1);
+                                                cmdparameter.Parameters.AddWithValue("@47", Nitrogen);
+                                                cmdparameter.Parameters.AddWithValue("@48", Argon);
+                                                cmdparameter.Parameters.AddWithValue("@51", "sccm");
+                                                cmdparameter.Parameters.AddWithValue("@52", "sccm");
+                                                cmdparameter.Parameters.AddWithValue("@53", "sccm");
+                                                cmdparameter.Parameters.AddWithValue("@54", "sccm");
+                                                cmdparameter.Parameters.AddWithValue("@55", "sccm");
+                                                cmdparameter.Parameters.AddWithValue("@56", "sccm");
+                                                cmdparameter.Parameters.AddWithValue("@57", "sccm");
+                                                cmdparameter.Parameters.AddWithValue("@58", "sccm");
+                                                cmdparameter.Parameters.AddWithValue("@61", lblRecipe.Text);
+                                                cmdparameter.Parameters.AddWithValue("@62", lblRecipe.Text);
+                                                cmdparameter.Parameters.AddWithValue("@63", lblRecipe.Text);
+                                                cmdparameter.Parameters.AddWithValue("@64", lblRecipe.Text);
+                                                cmdparameter.Parameters.AddWithValue("@65", lblRecipe.Text);
+                                                cmdparameter.Parameters.AddWithValue("@66", lblRecipe.Text);
+                                                cmdparameter.Parameters.AddWithValue("@67", lblRecipe.Text);
+                                                cmdparameter.Parameters.AddWithValue("@68", lblRecipe.Text);
+                                                cmdparameter.Parameters.AddWithValue("@71", strStepname1[j]);
+                                                cmdparameter.Parameters.AddWithValue("@72", strStepname1[j]);
+                                                cmdparameter.Parameters.AddWithValue("@73", strStepname1[j]);
+                                                cmdparameter.Parameters.AddWithValue("@74", strStepname1[j]);
+                                                cmdparameter.Parameters.AddWithValue("@75", strStepname1[j]);
+                                                cmdparameter.Parameters.AddWithValue("@76", strStepname1[j]);
+                                                cmdparameter.Parameters.AddWithValue("@77", strStepname1[j]);
+                                                cmdparameter.Parameters.AddWithValue("@78", strStepname1[j]);
+                                                cmdparameter.Parameters.AddWithValue("@81", DateTime.Now);
+                                                cmdparameter.Parameters.AddWithValue("@82", DateTime.Now);
+                                                cmdparameter.Parameters.AddWithValue("@83", DateTime.Now);
+                                                cmdparameter.Parameters.AddWithValue("@84", DateTime.Now);
+                                                cmdparameter.Parameters.AddWithValue("@85", DateTime.Now);
+                                                cmdparameter.Parameters.AddWithValue("@86", DateTime.Now);
+                                                cmdparameter.Parameters.AddWithValue("@87", DateTime.Now);
+                                                cmdparameter.Parameters.AddWithValue("@88", DateTime.Now);
+
+
+                                                cmdparameter.ExecuteNonQuery();
+                                                con.Close();
+
+                                            }
+                                            ///////////////////////////////////////////////
+
+
+                                            strStepname1.Clear();
+                                            ListStepStartTime.Clear();
+                                            ListStepEndTime.Clear();
+
+                                            // }
+
+
+
+
+
+
+                                            picMain.Image.Tag = "finishchamberA20";
+
+
+
+
+                                            /////////////////////////////////////////////////////////////////////////////////////////////////// 
+                                        }
+
+
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "finishchamberA20" && picSV.Visible == true)
+                                        {
+
+                                            await Task.Delay(1000);
+                                            picChamber.Image = Properties.Resources.ChamberWithA1;
+                                            //picMain.Image = Properties.Resources.robotintochamberwithA1;
+                                            picSV.Visible = false;
+                                        }
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "finishchamberA20" && picSV.Visible == false)
+                                        {
+                                            await Task.Delay(1000);
+
+                                            picChamber.Image = Properties.Resources.robot_into_chamberA11;
+                                            picMain.Image = Properties.Resources.picrobotintochamber;
+                                            picMain.Image = Properties.Resources.picrobotintoAPMWafer;
+                                            picMain.Image.Tag = "picrobotintoAPMWaferA20-2";
+
+                                            ovalShape1.Left += 1;
+                                            ovalShape1.Left -= 1;
+                                            picChamber.Width += 140;
+                                            picChamber.Left -= 150;
+                                            picChamber.Height += 10;
+                                        }
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotintoAPMWaferA20-2")
+                                        {
+                                            await Task.Delay(1000);
+                                            label2.BackColor = Color.Blue;
+                                            lblProcess.BackColor = Color.Blue;
+                                            lblProcessStep.BackColor = Color.Blue;
+                                            lblRecipe.BackColor = Color.Blue;
+                                            lblStepName.BackColor = Color.Blue;
+                                            lblData.BackColor = Color.Blue;
+                                            lblnum.BackColor = Color.Blue;
+
+                                            lblProcess.Text = "Idle";
+                                            lblProcessStep.Text = "";
+                                            lblRecipe.Text = "";
+                                            lblStepName.Text = "";
+                                            lblnum.Text = "";
+                                            lblData.Text = "";
+
+
+                                            // pictRobot.Visible = true;
+
+                                            picChamber.Image = Properties.Resources.new_chamber1;
+                                            picMain.Image = Properties.Resources.picrobotbotton;
+                                            picMain.Image = Properties.Resources.picrobotAPMWafer;
+
+                                            picMain.Image.Tag = "picrobotAPMWaferA20-2";
+
+                                            lblwaferAPM.Visible = false;
+                                            lblwaferup.Visible = true;
+
+                                            ovalShape1.Top += 145;
+                                            ovalShape1.Left -= 3;
+                                            lblwafer.Top += 145;
+                                            lblwafer.Left -= 3;
+
+                                            lblChamber.BackColor = Color.Blue;
+                                            chamberload = "Blue";
+                                            picChamber.Width -= 140;
+                                            picChamber.Left += 150;
+                                            picChamber.Height -= 10;
+                                        }
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotAPMWaferA20-2" && picSV.Visible == false)
+                                        {
+                                            await Task.Delay(2000);
+                                            picChamber.Image = Properties.Resources.new_chamber;//close chamber
+
+                                            // picMain.Image = Properties.Resources.robotrightA1;
+                                            picSV.Visible = true;
+
+
+                                        }
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotAPMWaferA20-2" && picSV.Visible == true)
+                                        {
+                                            await Task.Delay(2000);
+
+                                            // pictRobot.Height += 20;
+
+                                            // picMain.Image = Properties.Resources.robotgetwaferA1cassetteclose;
+                                            picMain.Image = Properties.Resources.mainpicture;
+                                            picMain.Image = Properties.Resources.picrobotArmWafer;
+                                            picMain.Image.Tag = "picrobotArmWaferA20-2";
+                                            lblwaferup.Visible = false;
+                                            lblwafer.Visible = true;
+                                            ovalShape1.Top += 162;
+                                            lblwafer.Top += 162;
+                                            ovalShape1.Left += 12;
+                                            lblwafer.Left += 12;
+                                            await Task.Delay(2000);
+
+                                            await Task.Delay(1000);
+                                            picCassette.Image = Properties.Resources.cassette3;//open cassette
+                                                                                               // picMain.Image = Properties.Resources.robotgetwaferA1;
+                                        }
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotArmWaferA20-2")
+                                        {
+                                            await Task.Delay(1000);
+
+                                            lblCassette.BackColor = Color.LimeGreen;
+
+                                            picCassette.Image = Properties.Resources.robot_into_cassetteA1;
+                                            picMain.Image = Properties.Resources.picrobotintocassette;
+                                            picMain.Image.Tag = "picrobotintocassettA20-2";
+                                            lblwafer.Visible = false;
+                                            lblwafer.Visible = false;
+                                            ovalShape1.Visible = false;
+                                            picCassette.Height += 220;
+                                            picCassette.Width += 25;
+                                            picCassette.Top -= 205;
+                                        }
+                                        if (ispauserobot == false && picMain.Image.Tag.ToString() == "picrobotintocassettA20-2")
+                                        {
+                                            await Task.Delay(2000);
+                                            lblCassette.BackColor = Color.Blue;
+                                            //  pictRobot.Visible = true;
+
+                                            picMain.Image = Properties.Resources.mainpicture;
+                                            picCassette.Image = Properties.Resources.cassette3;
+                                            picCassette.Width -= 25;
+                                            picCassette.Height -= 220;
+                                            picCassette.Top += 205;
+                                            await Task.Delay(2000);
+                                            //  picMain.Image = Properties.Resources.mainpic;
+                                            picCassette.Image = Properties.Resources.cassette;
+                                            // picwafer.Image = Properties.Resources.waferfull;
+                                            if (NoOfwafer[i] == "1")
+                                            {
+                                                //  picwafer.Image = Properties.Resources.waferA1full;
+                                                picWafer1.Visible = true;
+                                            }
+                                            if (NoOfwafer[i] == "2")
+                                            {
+                                                //  picwafer.Image = Properties.Resources.waferA2full;
+                                                picWafer1.Visible = true;
+                                                picWafer2.Visible = true;
+                                            }
+                                            if (NoOfwafer[i] == "3")
+                                            {
+                                                //  picwafer.Image = Properties.Resources.waferA3full;
+                                                picWafer1.Visible = true;
+                                                picWafer2.Visible = true;
+                                                picWafer3.Visible = true;
+                                            }
+                                            if (NoOfwafer[i] == "4")
+                                            {
+                                                // picwafer.Image = Properties.Resources.waferA4full;
+                                                picWafer1.Visible = true;
+                                                picWafer2.Visible = true;
+                                                picWafer3.Visible = true;
+                                                picWafer4.Visible = true;
+                                                picWafer2.Image = Properties.Resources.picWaferGreen;
+                                                picWafer1.Image = Properties.Resources.picWaferGreen;
+                                                picWafer3.Image = Properties.Resources.picWaferGreen;
+                                                picWafer4.Image = Properties.Resources.picWaferGreen;
+                                            }
+
+                                            if (NoOfwafer[i] == "5")
+                                            {
+                                                //  picwafer.Image = Properties.Resources.waferA5full;
+                                                picWafer1.Visible = true;
+                                                picWafer2.Visible = true;
+                                                picWafer3.Visible = true;
+                                                picWafer4.Visible = true;
+                                                picWafer5.Visible = true;
+                                                picWafer2.Image = Properties.Resources.picWaferGreen;
+                                                picWafer1.Image = Properties.Resources.picWaferGreen;
+                                                picWafer3.Image = Properties.Resources.picWaferGreen;
+                                                picWafer4.Image = Properties.Resources.picWaferGreen;
+                                                picWafer5.Image = Properties.Resources.picWaferGreen;
+                                            }
+
+                                            if (NoOfwafer[i] == "6")
+                                            {
+                                                //  picwafer.Image = Properties.Resources.waferA5full;
+                                                picWafer1.Visible = true;
+                                                picWafer2.Visible = true;
+                                                picWafer3.Visible = true;
+                                                picWafer4.Visible = true;
+                                                picWafer5.Visible = true;
+                                                picWafer6.Visible = true;
+                                                picWafer2.Image = Properties.Resources.picWaferGreen;
+                                                picWafer1.Image = Properties.Resources.picWaferGreen;
+                                                picWafer3.Image = Properties.Resources.picWaferGreen;
+                                                picWafer4.Image = Properties.Resources.picWaferGreen;
+                                                picWafer5.Image = Properties.Resources.picWaferGreen;
+                                                picWafer6.Image = Properties.Resources.picWaferGreen;
+                                            }
+
+                                            if (NoOfwafer[i] == "7")
+                                            {
+                                                //  picwafer.Image = Properties.Resources.waferA5full;
+                                                picWafer1.Visible = true;
+                                                picWafer2.Visible = true;
+                                                picWafer3.Visible = true;
+                                                picWafer4.Visible = true;
+                                                picWafer5.Visible = true;
+                                                picWafer6.Visible = true;
+                                                picWafer7.Visible = true;
+                                                picWafer2.Image = Properties.Resources.picWaferGreen;
+                                                picWafer1.Image = Properties.Resources.picWaferGreen;
+                                                picWafer3.Image = Properties.Resources.picWaferGreen;
+                                                picWafer4.Image = Properties.Resources.picWaferGreen;
+                                                picWafer5.Image = Properties.Resources.picWaferGreen;
+                                                picWafer6.Image = Properties.Resources.picWaferGreen;
+                                                picWafer7.Image = Properties.Resources.picWaferGreen;
+                                            }
+                                            if (NoOfwafer[i] == "8")
+                                            {
+                                                //  picwafer.Image = Properties.Resources.waferA5full;
+                                                picWafer1.Visible = true;
+                                                picWafer2.Visible = true;
+                                                picWafer3.Visible = true;
+                                                picWafer4.Visible = true;
+                                                picWafer5.Visible = true;
+                                                picWafer6.Visible = true;
+                                                picWafer7.Visible = true;
+                                                picWafer8.Visible = true;
+                                                picWafer2.Image = Properties.Resources.picWaferGreen;
+                                                picWafer1.Image = Properties.Resources.picWaferGreen;
+                                                picWafer3.Image = Properties.Resources.picWaferGreen;
+                                                picWafer4.Image = Properties.Resources.picWaferGreen;
+                                                picWafer5.Image = Properties.Resources.picWaferGreen;
+                                                picWafer6.Image = Properties.Resources.picWaferGreen;
+                                                picWafer7.Image = Properties.Resources.picWaferGreen;
+                                                picWafer8.Image = Properties.Resources.picWaferGreen;
+                                            }
+                                            if (NoOfwafer[i] == "9")
+                                            {
+                                                //  picwafer.Image = Properties.Resources.waferA5full;
+                                                picWafer1.Visible = true;
+                                                picWafer2.Visible = true;
+                                                picWafer3.Visible = true;
+                                                picWafer4.Visible = true;
+                                                picWafer5.Visible = true;
+                                                picWafer6.Visible = true;
+                                                picWafer7.Visible = true;
+                                                picWafer8.Visible = true;
+                                                picWafer9.Visible = true;
+                                                picWafer2.Image = Properties.Resources.picWaferGreen;
+                                                picWafer1.Image = Properties.Resources.picWaferGreen;
+                                                picWafer3.Image = Properties.Resources.picWaferGreen;
+                                                picWafer4.Image = Properties.Resources.picWaferGreen;
+                                                picWafer5.Image = Properties.Resources.picWaferGreen;
+                                                picWafer6.Image = Properties.Resources.picWaferGreen;
+                                                picWafer7.Image = Properties.Resources.picWaferGreen;
+                                                picWafer8.Image = Properties.Resources.picWaferGreen;
+                                                picWafer9.Image = Properties.Resources.picWaferGreen;
+                                            }
+                                            if (NoOfwafer[i] == "10")
+                                            {
+                                                //  picwafer.Image = Properties.Resources.waferA5full;
+                                                picWafer1.Visible = true;
+                                                picWafer2.Visible = true;
+                                                picWafer3.Visible = true;
+                                                picWafer4.Visible = true;
+                                                picWafer5.Visible = true;
+                                                picWafer6.Visible = true;
+                                                picWafer7.Visible = true;
+                                                picWafer8.Visible = true;
+                                                picWafer9.Visible = true;
+                                                picWafer10.Visible = true;
+                                                picWafer2.Image = Properties.Resources.picWaferGreen;
+                                                picWafer1.Image = Properties.Resources.picWaferGreen;
+                                                picWafer3.Image = Properties.Resources.picWaferGreen;
+                                                picWafer4.Image = Properties.Resources.picWaferGreen;
+                                                picWafer5.Image = Properties.Resources.picWaferGreen;
+                                                picWafer6.Image = Properties.Resources.picWaferGreen;
+                                                picWafer7.Image = Properties.Resources.picWaferGreen;
+                                                picWafer8.Image = Properties.Resources.picWaferGreen;
+                                                picWafer9.Image = Properties.Resources.picWaferGreen;
+                                                picWafer10.Image = Properties.Resources.picWaferGreen;
+                                            }
+                                            if (NoOfwafer[i] == "11")
+                                            {
+                                                //  picwafer.Image = Properties.Resources.waferA5full;
+                                                picWafer1.Visible = true;
+                                                picWafer2.Visible = true;
+                                                picWafer3.Visible = true;
+                                                picWafer4.Visible = true;
+                                                picWafer5.Visible = true;
+                                                picWafer6.Visible = true;
+                                                picWafer7.Visible = true;
+                                                picWafer8.Visible = true;
+                                                picWafer9.Visible = true;
+                                                picWafer10.Visible = true;
+                                                picWafer2.Image = Properties.Resources.picWaferGreen;
+                                                picWafer1.Image = Properties.Resources.picWaferGreen;
+                                                picWafer3.Image = Properties.Resources.picWaferGreen;
+                                                picWafer4.Image = Properties.Resources.picWaferGreen;
+                                                picWafer5.Image = Properties.Resources.picWaferGreen;
+                                                picWafer6.Image = Properties.Resources.picWaferGreen;
+                                                picWafer7.Image = Properties.Resources.picWaferGreen;
+                                                picWafer8.Image = Properties.Resources.picWaferGreen;
+                                                picWafer9.Image = Properties.Resources.picWaferGreen;
+                                                picWafer10.Image = Properties.Resources.picWaferGreen;
+                                            }
+                                            if (NoOfwafer[i] == "12")
+                                            {
+                                                //  picwafer.Image = Properties.Resources.waferA5full;
+                                                picWafer1.Visible = true;
+                                                picWafer2.Visible = true;
+                                                picWafer3.Visible = true;
+                                                picWafer4.Visible = true;
+                                                picWafer5.Visible = true;
+                                                picWafer6.Visible = true;
+                                                picWafer7.Visible = true;
+                                                picWafer8.Visible = true;
+                                                picWafer9.Visible = true;
+                                                picWafer10.Visible = true;
+                                                picWafer2.Image = Properties.Resources.picWaferGreen;
+                                                picWafer1.Image = Properties.Resources.picWaferGreen;
+                                                picWafer3.Image = Properties.Resources.picWaferGreen;
+                                                picWafer4.Image = Properties.Resources.picWaferGreen;
+                                                picWafer5.Image = Properties.Resources.picWaferGreen;
+                                                picWafer6.Image = Properties.Resources.picWaferGreen;
+                                                picWafer7.Image = Properties.Resources.picWaferGreen;
+                                                picWafer8.Image = Properties.Resources.picWaferGreen;
+                                                picWafer9.Image = Properties.Resources.picWaferGreen;
+                                                picWafer10.Image = Properties.Resources.picWaferGreen;
+                                            }
+                                            if (NoOfwafer[i] == "13")
+                                            {
+                                                //  picwafer.Image = Properties.Resources.waferA5full;
+                                                picWafer1.Visible = true;
+                                                picWafer2.Visible = true;
+                                                picWafer3.Visible = true;
+                                                picWafer4.Visible = true;
+                                                picWafer5.Visible = true;
+                                                picWafer6.Visible = true;
+                                                picWafer7.Visible = true;
+                                                picWafer8.Visible = true;
+                                                picWafer9.Visible = true;
+                                                picWafer10.Visible = true;
+                                                picWafer2.Image = Properties.Resources.picWaferGreen;
+                                                picWafer1.Image = Properties.Resources.picWaferGreen;
+                                                picWafer3.Image = Properties.Resources.picWaferGreen;
+                                                picWafer4.Image = Properties.Resources.picWaferGreen;
+                                                picWafer5.Image = Properties.Resources.picWaferGreen;
+                                                picWafer6.Image = Properties.Resources.picWaferGreen;
+                                                picWafer7.Image = Properties.Resources.picWaferGreen;
+                                                picWafer8.Image = Properties.Resources.picWaferGreen;
+                                                picWafer9.Image = Properties.Resources.picWaferGreen;
+                                                picWafer10.Image = Properties.Resources.picWaferGreen;
+                                            }
+                                            if (NoOfwafer[i] == "14")
+                                            {
+                                                //  picwafer.Image = Properties.Resources.waferA5full;
+                                                picWafer1.Visible = true;
+                                                picWafer2.Visible = true;
+                                                picWafer3.Visible = true;
+                                                picWafer4.Visible = true;
+                                                picWafer5.Visible = true;
+                                                picWafer6.Visible = true;
+                                                picWafer7.Visible = true;
+                                                picWafer8.Visible = true;
+                                                picWafer9.Visible = true;
+                                                picWafer10.Visible = true;
+                                                picWafer11.Visible = true;
+                                                picWafer12.Visible = true;
+                                                picWafer13.Visible = true;
+                                                picWafer14.Visible = true;
+                                                picWafer2.Image = Properties.Resources.picWaferGreen;
+                                                picWafer1.Image = Properties.Resources.picWaferGreen;
+                                                picWafer3.Image = Properties.Resources.picWaferGreen;
+                                                picWafer4.Image = Properties.Resources.picWaferGreen;
+                                                picWafer5.Image = Properties.Resources.picWaferGreen;
+                                                picWafer6.Image = Properties.Resources.picWaferGreen;
+                                                picWafer7.Image = Properties.Resources.picWaferGreen;
+                                                picWafer8.Image = Properties.Resources.picWaferGreen;
+                                                picWafer9.Image = Properties.Resources.picWaferGreen;
+                                                picWafer10.Image = Properties.Resources.picWaferGreen;
+                                                picWafer11.Image = Properties.Resources.picWaferGreen;
+                                                picWafer12.Image = Properties.Resources.picWaferGreen;
+                                                picWafer13.Image = Properties.Resources.picWaferGreen;
+                                                picWafer14.Image = Properties.Resources.picWaferGreen;
+
+                                            }
+                                            if (NoOfwafer[i] == "15")
+                                            {
+                                                //  picwafer.Image = Properties.Resources.waferA5full;
+                                                picWafer1.Visible = true;
+                                                picWafer2.Visible = true;
+                                                picWafer3.Visible = true;
+                                                picWafer4.Visible = true;
+                                                picWafer5.Visible = true;
+                                                picWafer6.Visible = true;
+                                                picWafer7.Visible = true;
+                                                picWafer8.Visible = true;
+                                                picWafer9.Visible = true;
+                                                picWafer10.Visible = true;
+                                                picWafer11.Visible = true;
+                                                picWafer12.Visible = true;
+                                                picWafer13.Visible = true;
+                                                picWafer14.Visible = true;
+                                                picWafer15.Visible = true;
+                                                picWafer2.Image = Properties.Resources.picWaferGreen;
+                                                picWafer1.Image = Properties.Resources.picWaferGreen;
+                                                picWafer3.Image = Properties.Resources.picWaferGreen;
+                                                picWafer4.Image = Properties.Resources.picWaferGreen;
+                                                picWafer5.Image = Properties.Resources.picWaferGreen;
+                                                picWafer6.Image = Properties.Resources.picWaferGreen;
+                                                picWafer7.Image = Properties.Resources.picWaferGreen;
+                                                picWafer8.Image = Properties.Resources.picWaferGreen;
+                                                picWafer9.Image = Properties.Resources.picWaferGreen;
+                                                picWafer10.Image = Properties.Resources.picWaferGreen;
+                                                picWafer11.Image = Properties.Resources.picWaferGreen;
+                                                picWafer12.Image = Properties.Resources.picWaferGreen;
+                                                picWafer13.Image = Properties.Resources.picWaferGreen;
+                                                picWafer14.Image = Properties.Resources.picWaferGreen;
+                                                picWafer15.Image = Properties.Resources.picWaferGreen;
+                                            }
+                                            if (NoOfwafer[i] == "16")
+                                            {
+                                                //  picwafer.Image = Properties.Resources.waferA5full;
+                                                picWafer1.Visible = true;
+                                                picWafer2.Visible = true;
+                                                picWafer3.Visible = true;
+                                                picWafer4.Visible = true;
+                                                picWafer5.Visible = true;
+                                                picWafer6.Visible = true;
+                                                picWafer7.Visible = true;
+                                                picWafer8.Visible = true;
+                                                picWafer9.Visible = true;
+                                                picWafer10.Visible = true;
+                                                picWafer11.Visible = true;
+                                                picWafer12.Visible = true;
+                                                picWafer13.Visible = true;
+                                                picWafer14.Visible = true;
+                                                picWafer15.Visible = true;
+                                                picWafer16.Visible = true;
+                                                picWafer2.Image = Properties.Resources.picWaferGreen;
+                                                picWafer1.Image = Properties.Resources.picWaferGreen;
+                                                picWafer3.Image = Properties.Resources.picWaferGreen;
+                                                picWafer4.Image = Properties.Resources.picWaferGreen;
+                                                picWafer5.Image = Properties.Resources.picWaferGreen;
+                                                picWafer6.Image = Properties.Resources.picWaferGreen;
+                                                picWafer7.Image = Properties.Resources.picWaferGreen;
+                                                picWafer8.Image = Properties.Resources.picWaferGreen;
+                                                picWafer9.Image = Properties.Resources.picWaferGreen;
+                                                picWafer10.Image = Properties.Resources.picWaferGreen;
+                                                picWafer11.Image = Properties.Resources.picWaferGreen;
+                                                picWafer12.Image = Properties.Resources.picWaferGreen;
+                                                picWafer13.Image = Properties.Resources.picWaferGreen;
+                                                picWafer14.Image = Properties.Resources.picWaferGreen;
+                                                picWafer15.Image = Properties.Resources.picWaferGreen;
+                                                picWafer16.Image = Properties.Resources.picWaferGreen;
+                                            }
+                                            if (NoOfwafer[i] == "17")
+                                            {
+                                                //  picwafer.Image = Properties.Resources.waferA5full;
+                                                picWafer1.Visible = true;
+                                                picWafer2.Visible = true;
+                                                picWafer3.Visible = true;
+                                                picWafer4.Visible = true;
+                                                picWafer5.Visible = true;
+                                                picWafer6.Visible = true;
+                                                picWafer7.Visible = true;
+                                                picWafer8.Visible = true;
+                                                picWafer9.Visible = true;
+                                                picWafer10.Visible = true;
+                                                picWafer11.Visible = true;
+                                                picWafer12.Visible = true;
+                                                picWafer13.Visible = true;
+                                                picWafer14.Visible = true;
+                                                picWafer15.Visible = true;
+                                                picWafer16.Visible = true;
+                                                picWafer17.Visible = true;
+                                                picWafer2.Image = Properties.Resources.picWaferGreen;
+                                                picWafer1.Image = Properties.Resources.picWaferGreen;
+                                                picWafer3.Image = Properties.Resources.picWaferGreen;
+                                                picWafer4.Image = Properties.Resources.picWaferGreen;
+                                                picWafer5.Image = Properties.Resources.picWaferGreen;
+                                                picWafer6.Image = Properties.Resources.picWaferGreen;
+                                                picWafer7.Image = Properties.Resources.picWaferGreen;
+                                                picWafer8.Image = Properties.Resources.picWaferGreen;
+                                                picWafer9.Image = Properties.Resources.picWaferGreen;
+                                                picWafer10.Image = Properties.Resources.picWaferGreen;
+                                                picWafer11.Image = Properties.Resources.picWaferGreen;
+                                                picWafer12.Image = Properties.Resources.picWaferGreen;
+                                                picWafer13.Image = Properties.Resources.picWaferGreen;
+                                                picWafer14.Image = Properties.Resources.picWaferGreen;
+                                                picWafer15.Image = Properties.Resources.picWaferGreen;
+                                                picWafer16.Image = Properties.Resources.picWaferGreen;
+                                                picWafer17.Image = Properties.Resources.picWaferGreen;
+                                            }
+                                            if (NoOfwafer[i] == "18")
+                                            {
+                                                //  picwafer.Image = Properties.Resources.waferA5full;
+                                                picWafer1.Visible = true;
+                                                picWafer2.Visible = true;
+                                                picWafer3.Visible = true;
+                                                picWafer4.Visible = true;
+                                                picWafer5.Visible = true;
+                                                picWafer6.Visible = true;
+                                                picWafer7.Visible = true;
+                                                picWafer8.Visible = true;
+                                                picWafer9.Visible = true;
+                                                picWafer10.Visible = true;
+                                                picWafer11.Visible = true;
+                                                picWafer12.Visible = true;
+                                                picWafer13.Visible = true;
+                                                picWafer14.Visible = true;
+                                                picWafer15.Visible = true;
+                                                picWafer16.Visible = true;
+                                                picWafer17.Visible = true;
+                                                picWafer18.Visible = true;
+                                                picWafer2.Image = Properties.Resources.picWaferGreen;
+                                                picWafer1.Image = Properties.Resources.picWaferGreen;
+                                                picWafer3.Image = Properties.Resources.picWaferGreen;
+                                                picWafer4.Image = Properties.Resources.picWaferGreen;
+                                                picWafer5.Image = Properties.Resources.picWaferGreen;
+                                                picWafer6.Image = Properties.Resources.picWaferGreen;
+                                                picWafer7.Image = Properties.Resources.picWaferGreen;
+                                                picWafer8.Image = Properties.Resources.picWaferGreen;
+                                                picWafer9.Image = Properties.Resources.picWaferGreen;
+                                                picWafer10.Image = Properties.Resources.picWaferGreen;
+                                                picWafer11.Image = Properties.Resources.picWaferGreen;
+                                                picWafer12.Image = Properties.Resources.picWaferGreen;
+                                                picWafer13.Image = Properties.Resources.picWaferGreen;
+                                                picWafer14.Image = Properties.Resources.picWaferGreen;
+                                                picWafer15.Image = Properties.Resources.picWaferGreen;
+                                                picWafer16.Image = Properties.Resources.picWaferGreen;
+                                                picWafer17.Image = Properties.Resources.picWaferGreen;
+                                                picWafer18.Image = Properties.Resources.picWaferGreen;
+                                            }
+                                            if (NoOfwafer[i] == "19")
+                                            {
+                                                //  picwafer.Image = Properties.Resources.waferA5full;
+                                                picWafer1.Visible = true;
+                                                picWafer2.Visible = true;
+                                                picWafer3.Visible = true;
+                                                picWafer4.Visible = true;
+                                                picWafer5.Visible = true;
+                                                picWafer6.Visible = true;
+                                                picWafer7.Visible = true;
+                                                picWafer8.Visible = true;
+                                                picWafer9.Visible = true;
+                                                picWafer10.Visible = true;
+                                                picWafer11.Visible = true;
+                                                picWafer12.Visible = true;
+                                                picWafer13.Visible = true;
+                                                picWafer14.Visible = true;
+                                                picWafer15.Visible = true;
+                                                picWafer16.Visible = true;
+                                                picWafer17.Visible = true;
+                                                picWafer18.Visible = true;
+                                                picWafer19.Visible = true;
+                                                picWafer2.Image = Properties.Resources.picWaferGreen;
+                                                picWafer1.Image = Properties.Resources.picWaferGreen;
+                                                picWafer3.Image = Properties.Resources.picWaferGreen;
+                                                picWafer4.Image = Properties.Resources.picWaferGreen;
+                                                picWafer5.Image = Properties.Resources.picWaferGreen;
+                                                picWafer6.Image = Properties.Resources.picWaferGreen;
+                                                picWafer7.Image = Properties.Resources.picWaferGreen;
+                                                picWafer8.Image = Properties.Resources.picWaferGreen;
+                                                picWafer9.Image = Properties.Resources.picWaferGreen;
+                                                picWafer10.Image = Properties.Resources.picWaferGreen;
+                                                picWafer11.Image = Properties.Resources.picWaferGreen;
+                                                picWafer12.Image = Properties.Resources.picWaferGreen;
+                                                picWafer13.Image = Properties.Resources.picWaferGreen;
+                                                picWafer14.Image = Properties.Resources.picWaferGreen;
+                                                picWafer15.Image = Properties.Resources.picWaferGreen;
+                                                picWafer16.Image = Properties.Resources.picWaferGreen;
+                                                picWafer17.Image = Properties.Resources.picWaferGreen;
+                                                picWafer18.Image = Properties.Resources.picWaferGreen;
+                                                picWafer19.Image = Properties.Resources.picWaferGreen;
+                                            }
+                                            if (NoOfwafer[i] == "20")
+                                            {
+                                                //  picwafer.Image = Properties.Resources.waferA5full;
+                                                picWafer1.Visible = true;
+                                                picWafer2.Visible = true;
+                                                picWafer3.Visible = true;
+                                                picWafer4.Visible = true;
+                                                picWafer5.Visible = true;
+                                                picWafer6.Visible = true;
+                                                picWafer7.Visible = true;
+                                                picWafer8.Visible = true;
+                                                picWafer9.Visible = true;
+                                                picWafer10.Visible = true;
+                                                picWafer11.Visible = true;
+                                                picWafer12.Visible = true;
+                                                picWafer13.Visible = true;
+                                                picWafer14.Visible = true;
+                                                picWafer15.Visible = true;
+                                                picWafer16.Visible = true;
+                                                picWafer17.Visible = true;
+                                                picWafer18.Visible = true;
+                                                picWafer19.Visible = true;
+                                                picWafer20.Visible = true;
+                                                picWafer2.Image = Properties.Resources.picWaferGreen;
+                                                picWafer1.Image = Properties.Resources.picWaferGreen;
+                                                picWafer3.Image = Properties.Resources.picWaferGreen;
+                                                picWafer4.Image = Properties.Resources.picWaferGreen;
+                                                picWafer5.Image = Properties.Resources.picWaferGreen;
+                                                picWafer6.Image = Properties.Resources.picWaferGreen;
+                                                picWafer7.Image = Properties.Resources.picWaferGreen;
+                                                picWafer8.Image = Properties.Resources.picWaferGreen;
+                                                picWafer9.Image = Properties.Resources.picWaferGreen;
+                                                picWafer10.Image = Properties.Resources.picWaferGreen;
+                                                picWafer11.Image = Properties.Resources.picWaferGreen;
+                                                picWafer12.Image = Properties.Resources.picWaferGreen;
+                                                picWafer13.Image = Properties.Resources.picWaferGreen;
+                                                picWafer14.Image = Properties.Resources.picWaferGreen;
+                                                picWafer15.Image = Properties.Resources.picWaferGreen;
+                                                picWafer16.Image = Properties.Resources.picWaferGreen;
+                                                picWafer17.Image = Properties.Resources.picWaferGreen;
+                                                picWafer18.Image = Properties.Resources.picWaferGreen;
+                                                picWafer19.Image = Properties.Resources.picWaferGreen;
+                                                picWafer20.Image = Properties.Resources.picWaferGreen;
+                                            }
+
+                                            //////////////////////////////////////////////////////////////////Save DataLog
+                                            if (int.Parse(NoOfwafer[i]) == 20)
+                                            {
+                                                EndTime = DateTime.Now;
+
+
+                                                con.Open();
+
+                                                string strinsertdatalog = "insert into DataLogger(logname,cassetterecipename,starttime) values(@1,@2,@3) ";
+                                                SqlCommand cmdinsertdatalog = new SqlCommand(strinsertdatalog, con);
+
+                                                cmdinsertdatalog.Parameters.AddWithValue("@1", lbl123.Text);
+                                                cmdinsertdatalog.Parameters.AddWithValue("@2", form2Msg);
+                                                cmdinsertdatalog.Parameters.AddWithValue("@3", StartTime);
+
+                                                cmdinsertdatalog.ExecuteNonQuery();
+
+                                                con.Close();
+
+                                                lblState.Text = "Finished";
+
+
+
+                                            }
+                                            picMain.Image.Tag = "finishwaferA20";
+                                            if (isStopRobot == true)
+                                            {
+                                                button2.Enabled = true;
+                                                lblState.Text = "Stopping";
+                                            }
+
+
+                                        }
+                                        /////////////////////////////////////////////////////////finish waferA20
+                                    }
                                 }
                             }
                             if(ispauserobot==true)
