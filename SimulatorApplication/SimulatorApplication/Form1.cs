@@ -50935,11 +50935,12 @@ namespace SimulatorApplication
                                     //////////////////////////////////////////////////////////////////Save DataLog
                                     if (int.Parse(NoOfwafer[i]) == 25)
                                     {
+
                                         EndTime = DateTime.Now;
 
 
                                         con.Open();
-
+                                        
                                         string strinsertdatalog = "insert into DataLogger(logname,cassetterecipename,starttime) values(@1,@2,@3) ";
                                         SqlCommand cmdinsertdatalog = new SqlCommand(strinsertdatalog, con);
 
@@ -50979,6 +50980,7 @@ namespace SimulatorApplication
                         if (ispauserobot == true)
 
                     {
+
                         button3.Enabled = false;
                         button4.Enabled = false;
                         button5.Enabled = false;
