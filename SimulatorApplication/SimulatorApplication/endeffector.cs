@@ -158,12 +158,23 @@ namespace SimulatorApplication
                   //  form1.ovalShape1.Visible = true;
                     form1.lblwafer.Visible = true;
                     form1.lblwafer.Text = "A" + no;
+                    if (no == "1")
+                    {
+                        form1.picWafer1.Visible = false;
+                    }
+                    if (no == "2")
+                    {
+                        form1.picWafer2.Visible = false;
+                    }
+
+
+
                     //  form1.ovalShapeAPM.Left += 0;
                     //  form1.ovalShapeAPM.BackStyle = Microsoft.VisualBasic.PowerPacks.BackStyle.Transparent;
                     // form1.ovalShapeAPM.SendToBack();
                     //   form1.ovalShapeAPM.Visible = false;
                     //  form1.lblwaferAPM.Visible = false;
-                 
+
 
                 }
 
