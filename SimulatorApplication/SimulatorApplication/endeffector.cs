@@ -166,8 +166,98 @@ namespace SimulatorApplication
                     {
                         form1.picWafer2.Visible = false;
                     }
-
-
+                    if (no == "3")
+                    {
+                        form1.picWafer3.Visible = false;
+                    }
+                    if (no == "4")
+                    {
+                        form1.picWafer4.Visible = false;
+                    }
+                    if (no == "5")
+                    {
+                        form1.picWafer5.Visible = false;
+                    }
+                    if (no == "6")
+                    {
+                        form1.picWafer6.Visible = false;
+                    }
+                    if (no == "7")
+                    {
+                        form1.picWafer7.Visible = false;
+                    }
+                    if (no == "8")
+                    {
+                        form1.picWafer8.Visible = false;
+                    }
+                    if (no == "9")
+                    {
+                        form1.picWafer9.Visible = false;
+                    }
+                    if (no == "10")
+                    {
+                        form1.picWafer10.Visible = false;
+                    }
+                    if (no == "11")
+                    {
+                        form1.picWafer11.Visible = false;
+                    }
+                    if (no == "12")
+                    {
+                        form1.picWafer12.Visible = false;
+                    }
+                    if (no == "13")
+                    {
+                        form1.picWafer13.Visible = false;
+                    }
+                    if (no == "14")
+                    {
+                        form1.picWafer14.Visible = false;
+                    }
+                    if (no == "15")
+                    {
+                        form1.picWafer15.Visible = false;
+                    }
+                    if (no == "16")
+                    {
+                        form1.picWafer16.Visible = false;
+                    }
+                    if (no == "17")
+                    {
+                        form1.picWafer17.Visible = false;
+                    }
+                    if (no == "18")
+                    {
+                        form1.picWafer18.Visible = false;
+                    }
+                    if (no == "19")
+                    {
+                        form1.picWafer19.Visible = false;
+                    }
+                    if (no == "20")
+                    {
+                        form1.picWafer20.Visible = false;
+                    }
+                    if (no == "21")
+                    {
+                        form1.picWafer21.Visible = false;
+                    }
+                    if (no == "22")
+                    {
+                        form1.picWafer22.Visible = false;
+                    }
+                    if (no == "23")
+                    {
+                        form1.picWafer23.Visible = false;
+                    }
+                    if (no == "24")
+                    {
+                        form1.picWafer24.Visible = false;
+                    }
+                    if (no == "25")
+                    {
+                        form1.picWafer25.Visible = false;
+                    }
 
                     //  form1.ovalShapeAPM.Left += 0;
                     //  form1.ovalShapeAPM.BackStyle = Microsoft.VisualBasic.PowerPacks.BackStyle.Transparent;
@@ -201,6 +291,109 @@ namespace SimulatorApplication
                     form1.lblwaferAPM.Text = "A" + no;
                     form1.lblwafer.Text = "A" + no;
 
+                    if (no == "1")
+                    {
+                        form1.picWafer1.Visible = false;
+                    }
+                    if (no == "2")
+                    {
+                        form1.picWafer2.Visible = false;
+                    }
+                    if (no == "3")
+                    {
+                        form1.picWafer3.Visible = false;
+                    }
+                    if (no == "4")
+                    {
+                        form1.picWafer4.Visible = false;
+                    }
+                    if (no == "5")
+                    {
+                        form1.picWafer5.Visible = false;
+                    }
+                    if (no == "6")
+                    {
+                        form1.picWafer6.Visible = false;
+                    }
+                    if (no == "7")
+                    {
+                        form1.picWafer7.Visible = false;
+                    }
+                    if (no == "8")
+                    {
+                        form1.picWafer8.Visible = false;
+                    }
+                    if (no == "9")
+                    {
+                        form1.picWafer9.Visible = false;
+                    }
+                    if (no == "10")
+                    {
+                        form1.picWafer10.Visible = false;
+                    }
+                    if (no == "11")
+                    {
+                        form1.picWafer11.Visible = false;
+                    }
+                    if (no == "12")
+                    {
+                        form1.picWafer12.Visible = false;
+                    }
+                    if (no == "13")
+                    {
+                        form1.picWafer13.Visible = false;
+                    }
+                    if (no == "14")
+                    {
+                        form1.picWafer14.Visible = false;
+                    }
+                    if (no == "15")
+                    {
+                        form1.picWafer15.Visible = false;
+                    }
+                    if (no == "16")
+                    {
+                        form1.picWafer16.Visible = false;
+                    }
+                    if (no == "17")
+                    {
+                        form1.picWafer17.Visible = false;
+                    }
+                    if (no == "18")
+                    {
+                        form1.picWafer18.Visible = false;
+                    }
+                    if (no == "19")
+                    {
+                        form1.picWafer19.Visible = false;
+                    }
+                    if (no == "20")
+                    {
+                        form1.picWafer20.Visible = false;
+                    }
+                    if (no == "21")
+                    {
+                        form1.picWafer21.Visible = false;
+                    }
+                    if (no == "22")
+                    {
+                        form1.picWafer22.Visible = false;
+                    }
+                    if (no == "23")
+                    {
+                        form1.picWafer23.Visible = false;
+                    }
+                    if (no == "24")
+                    {
+                        form1.picWafer24.Visible = false;
+                    }
+                    if (no == "25")
+                    {
+                        form1.picWafer25.Visible = false;
+                    }
+
+
+
                 }
                 if (str == "Aligner")
                 {
@@ -218,6 +411,109 @@ namespace SimulatorApplication
                     form1.lblwaferaligner.Visible = true;
                     form1.lblwaferaligner.Text = "A" + no;
                     form1.lblwafer.Text = "A" + no;
+                    if (no == "1")
+                    {
+                        form1.picWafer1.Visible = false;
+                    }
+                    if (no == "2")
+                    {
+                        form1.picWafer2.Visible = false;
+                    }
+                    if (no == "3")
+                    {
+                        form1.picWafer3.Visible = false;
+                    }
+                    if (no == "4")
+                    {
+                        form1.picWafer4.Visible = false;
+                    }
+                    if (no == "5")
+                    {
+                        form1.picWafer5.Visible = false;
+                    }
+                    if (no == "6")
+                    {
+                        form1.picWafer6.Visible = false;
+                    }
+                    if (no == "7")
+                    {
+                        form1.picWafer7.Visible = false;
+                    }
+                    if (no == "8")
+                    {
+                        form1.picWafer8.Visible = false;
+                    }
+                    if (no == "9")
+                    {
+                        form1.picWafer9.Visible = false;
+                    }
+                    if (no == "10")
+                    {
+                        form1.picWafer10.Visible = false;
+                    }
+                    if (no == "11")
+                    {
+                        form1.picWafer11.Visible = false;
+                    }
+                    if (no == "12")
+                    {
+                        form1.picWafer12.Visible = false;
+                    }
+                    if (no == "13")
+                    {
+                        form1.picWafer13.Visible = false;
+                    }
+                    if (no == "14")
+                    {
+                        form1.picWafer14.Visible = false;
+                    }
+                    if (no == "15")
+                    {
+                        form1.picWafer15.Visible = false;
+                    }
+                    if (no == "16")
+                    {
+                        form1.picWafer16.Visible = false;
+                    }
+                    if (no == "17")
+                    {
+                        form1.picWafer17.Visible = false;
+                    }
+                    if (no == "18")
+                    {
+                        form1.picWafer18.Visible = false;
+                    }
+                    if (no == "19")
+                    {
+                        form1.picWafer19.Visible = false;
+                    }
+                    if (no == "20")
+                    {
+                        form1.picWafer20.Visible = false;
+                    }
+                    if (no == "21")
+                    {
+                        form1.picWafer21.Visible = false;
+                    }
+                    if (no == "22")
+                    {
+                        form1.picWafer22.Visible = false;
+                    }
+                    if (no == "23")
+                    {
+                        form1.picWafer23.Visible = false;
+                    }
+                    if (no == "24")
+                    {
+                        form1.picWafer24.Visible = false;
+                    }
+                    if (no == "25")
+                    {
+                        form1.picWafer25.Visible = false;
+                    }
+
+
+
                 }
                 if (str == "CSA")
                 {
@@ -226,130 +522,155 @@ namespace SimulatorApplication
                     switch (no)
                     {
                         case "1":
-                            form1.picwafer.Image = Properties.Resources.wafermapA1;
+                            //  form1.picwafer.Image = Properties.Resources.wafermapA1;
+                            form1.picWafer1.Visible = true;
                             form1.picwafer.Image.Tag = "1";
                             form1.lblwafer.Text = "A" + "1";
                             break;
 
                         case "2":
-                            form1.picwafer.Image = Properties.Resources.wafermapA2;
+                            //  form1.picwafer.Image = Properties.Resources.wafermapA2;
+                            form1.picWafer2.Visible = true;
                             form1.picwafer.Image.Tag = "2";
                             form1.lblwafer.Text = "A" + "2";
 
                             break;
 
                         case "3":
-                            form1.picwafer.Image = Properties.Resources.wafermapA3;
+                            //  form1.picwafer.Image = Properties.Resources.wafermapA3;
+                            form1.picWafer3.Visible = true;
                             form1.picwafer.Image.Tag = "3";
                             form1.lblwafer.Text = "A" + "3";
                             break;
                         case "4":
-                            form1.picwafer.Image = Properties.Resources.wafermapA4;
+                            //   form1.picwafer.Image = Properties.Resources.wafermapA4;
+                            form1.picWafer4.Visible = true;
                             form1.picwafer.Image.Tag = "4";
                             form1.lblwafer.Text = "A" + "4";
                             break;
                         case "5":
-                            form1.picwafer.Image = Properties.Resources.wafermapA5;
+                            //  form1.picwafer.Image = Properties.Resources.wafermapA5;
+                            form1.picWafer5.Visible = true;
                             form1.picwafer.Image.Tag = "5";
                             form1.lblwafer.Text = "A" + "5";
                             break;
                         case "6":
-                            form1.picwafer.Image = Properties.Resources.wafermapA6;
+                            //  form1.picwafer.Image = Properties.Resources.wafermapA6;
+                            form1.picWafer6.Visible = true;
                             form1.picwafer.Image.Tag = "6";
                             form1.lblwafer.Text = "A" + "6";
                             break;
                         case "7":
-                            form1.picwafer.Image = Properties.Resources.wafermapA7;
+                            //  form1.picwafer.Image = Properties.Resources.wafermapA7;
+                            form1.picWafer7.Visible = true;
                             form1.picwafer.Image.Tag = "7";
                             form1.lblwafer.Text = "A" + "7";
                             break;
                         case "8":
-                            form1.picwafer.Image = Properties.Resources.wafermapA8;
+                            //  form1.picwafer.Image = Properties.Resources.wafermapA8;
+                            form1.picWafer8.Visible = true;
                             form1.picwafer.Image.Tag = "8";
                             form1.lblwafer.Text = "A" + "8";
                             break;
                         case "9":
-                            form1.picwafer.Image = Properties.Resources.wafermapA9;
+                            //   form1.picwafer.Image = Properties.Resources.wafermapA9;
+                            form1.picWafer9.Visible = true;
                             form1.picwafer.Image.Tag = "9";
                             form1.lblwafer.Text = "A" + "9";
                             break;
                         case "10":
-                            form1.picwafer.Image = Properties.Resources.wafermapA10;
+                            //  form1.picwafer.Image = Properties.Resources.wafermapA10;
+                            form1.picWafer10.Visible = true;
                             form1.picwafer.Image.Tag = "10";
                             form1.lblwafer.Text = "A" + "10";
                             break;
                         case "11":
-                            form1.picwafer.Image = Properties.Resources.wafermapA11;
+                            //   form1.picwafer.Image = Properties.Resources.wafermapA11;
+                            form1.picWafer11.Visible = true;
                             form1.picwafer.Image.Tag = "11";
                             form1.lblwafer.Text = "A" + "11";
                             break;
                         case "12":
-                            form1.picwafer.Image = Properties.Resources.wafermapA12;
+                            //  form1.picwafer.Image = Properties.Resources.wafermapA12;
+                            form1.picWafer12.Visible = true;
                             form1.picwafer.Image.Tag = "12";
                             form1.lblwafer.Text = "A" + "12";
                             break;
                         case "13":
-                            form1.picwafer.Image = Properties.Resources.wafermapA13;
+                            //   form1.picwafer.Image = Properties.Resources.wafermapA13;
+                            form1.picWafer13.Visible = true;
                             form1.picwafer.Image.Tag = "13";
                             form1.lblwafer.Text = "A" + "13";
                             break;
                         case "14":
-                            form1.picwafer.Image = Properties.Resources.wafermapA14;
+                            //   form1.picwafer.Image = Properties.Resources.wafermapA14;
+                            form1.picWafer14.Visible = true;
                             form1.picwafer.Image.Tag = "14";
                             form1.lblwafer.Text = "A" + "14";
                             break;
                         case "15":
-                            form1.picwafer.Image = Properties.Resources.wafermapA15;
+                            //  form1.picwafer.Image = Properties.Resources.wafermapA15;
+                            form1.picWafer15.Visible = true;
                             form1.picwafer.Image.Tag = "15";
                             form1.lblwafer.Text = "A" + "15";
                             break;
                         case "16":
-                            form1.picwafer.Image = Properties.Resources.wafermapA16;
+                            //  form1.picwafer.Image = Properties.Resources.wafermapA16;
+                            form1.picWafer16.Visible = true;
                             form1.picwafer.Image.Tag = "16";
                             form1.lblwafer.Text = "A" + "16";
                             break;
                         case "17":
-                            form1.picwafer.Image = Properties.Resources.wafermapA17;
+                            //   form1.picwafer.Image = Properties.Resources.wafermapA17;
+                            form1.picWafer17.Visible = true;
                             form1.picwafer.Image.Tag = "17";
                             form1.lblwafer.Text = "A" + "17";
                             break;
                         case "18":
-                            form1.picwafer.Image = Properties.Resources.wafermapA18;
+                            //   form1.picwafer.Image = Properties.Resources.wafermapA18;
+                            form1.picWafer18.Visible = true;
                             form1.picwafer.Image.Tag = "18";
                             form1.lblwafer.Text = "A" + "18";
                             break;
                         case "19":
-                            form1.picwafer.Image = Properties.Resources.wafermapA19;
+                            //   form1.picwafer.Image = Properties.Resources.wafermapA19;
+                            form1.picWafer19.Visible = true;
                             form1.picwafer.Image.Tag = "19";
                             form1.lblwafer.Text = "A" + "19";
                             break;
                         case "20":
-                            form1.picwafer.Image = Properties.Resources.wafermapA20;
+                            //  form1.picwafer.Image = Properties.Resources.wafermapA20;
+                            form1.picWafer20.Visible = true;
                             form1.picwafer.Image.Tag = "20";
                             form1.lblwafer.Text = "A" + "20";
                             break;
                         case "21":
-                            form1.picwafer.Image = Properties.Resources.wafermapA21;
+                            //   form1.picwafer.Image = Properties.Resources.wafermapA21;
+                            form1.picWafer21.Visible = true;
                             form1.picwafer.Image.Tag = "21";
                             form1.lblwafer.Text = "A" + "21";
                             break;
                         case "22":
-                            form1.picwafer.Image = Properties.Resources.wafermapA22;
+                            //  form1.picwafer.Image = Properties.Resources.wafermapA22;
+                            form1.picWafer22.Visible = true;
                             form1.picwafer.Image.Tag = "22";
                             form1.lblwafer.Text = "A" + "22";
                             break;
                         case "23":
-                            form1.picwafer.Image = Properties.Resources.wafermapA23;
+                            //  form1.picwafer.Image = Properties.Resources.wafermapA23;
+                            form1.picWafer23.Visible = true;
                             form1.picwafer.Image.Tag = "23";
                             form1.lblwafer.Text = "A" + "23";
                             break;
                         case "24":
-                            form1.picwafer.Image = Properties.Resources.wafermapA24;
+                            //    form1.picwafer.Image = Properties.Resources.wafermapA24;
+                            form1.picWafer24.Visible = true;
                             form1.picwafer.Image.Tag = "24";
                             form1.lblwafer.Text = "A" + "24";
                             break;
                         case "25":
-                            form1.picwafer.Image = Properties.Resources.wafermapA25;
+                            //   form1.picwafer.Image = Properties.Resources.wafermapA25;
+                            form1.picWafer25.Visible = true;
                             form1.picwafer.Image.Tag = "25";
                             form1.lblwafer.Text = "A" + "25";
                             break;
@@ -487,127 +808,153 @@ namespace SimulatorApplication
                             switch (tbDestinationSlotno.Text)
                             {
                                 case "1":
-                                    form1.picwafer.Image = Properties.Resources.wafermapA1;
+                                    //form1.picwafer.Image = Properties.Resources.wafermapA1;
+                                    form1.picWafer1.Visible = true;
                                     form1.picwafer.Image.Tag = "1";
                                     form1.lblwafer.Text = "A" +"1";
                                     break;
                                 case "2":
-                                    form1.picwafer.Image = Properties.Resources.wafermapA2;
+                                  //  form1.picwafer.Image = Properties.Resources.wafermapA2;
+                                    form1.picWafer2.Visible = true;
                                     form1.picwafer.Image.Tag = "2";
                                     form1.lblwafer.Text = "A" + "2";
                                     break;
                                 case "3":
-                                    form1.picwafer.Image = Properties.Resources.wafermapA3;
+                                 //   form1.picwafer.Image = Properties.Resources.wafermapA3;
+                                    form1.picWafer3.Visible = true;
                                     form1.picwafer.Image.Tag = "3";
                                     form1.lblwafer.Text = "A" + "3";
                                     break;
                                 case "4":
-                                    form1.picwafer.Image = Properties.Resources.wafermapA4;
+                                  //  form1.picwafer.Image = Properties.Resources.wafermapA4;
+                                    form1.picWafer4.Visible = true;
                                     form1.picwafer.Image.Tag = "4";
                                     form1.lblwafer.Text = "A" + "4";
                                     break;
                                 case "5":
-                                    form1.picwafer.Image = Properties.Resources.wafermapA5;
+                                    //  form1.picwafer.Image = Properties.Resources.wafermapA5;
+                                    form1.picWafer5.Visible = true;
+                                    form1.picWafer5.Visible = true;
                                     form1.picwafer.Image.Tag = "5";
                                     form1.lblwafer.Text = "A" + "5";
                                     break;
                                 case "6":
-                                    form1.picwafer.Image = Properties.Resources.wafermapA6;
+                                    //  form1.picwafer.Image = Properties.Resources.wafermapA6;
+                                    form1.picWafer6.Visible = true;
                                     form1.picwafer.Image.Tag = "6";
                                     form1.lblwafer.Text = "A" + "6";
                                     break;
                                 case "7":
-                                    form1.picwafer.Image = Properties.Resources.wafermapA7;
+                                    //   form1.picwafer.Image = Properties.Resources.wafermapA7;
+                                    form1.picWafer7.Visible = true;
                                     form1.picwafer.Image.Tag = "7";
                                     form1.lblwafer.Text = "A" + "7";
                                     break;
                                 case "8":
-                                    form1.picwafer.Image = Properties.Resources.wafermapA8;
+                                    //  form1.picwafer.Image = Properties.Resources.wafermapA8;
+                                    form1.picWafer8.Visible = true;
                                     form1.picwafer.Image.Tag = "8";
                                     form1.lblwafer.Text = "A" + "8";
                                     break;
                                 case "9":
-                                    form1.picwafer.Image = Properties.Resources.wafermapA9;
+                                    //    form1.picwafer.Image = Properties.Resources.wafermapA9;
+                                    form1.picWafer9.Visible = true;
                                     form1.picwafer.Image.Tag = "9";
                                     form1.lblwafer.Text = "A" + "9";
                                     break;
                                 case "10":
-                                    form1.picwafer.Image = Properties.Resources.wafermapA10;
+                                    //  form1.picwafer.Image = Properties.Resources.wafermapA10;
+                                    form1.picWafer10.Visible = true;
                                     form1.picwafer.Image.Tag = "10";
                                     form1.lblwafer.Text = "A" + "10";
                                     break;
                                 case "11":
-                                    form1.picwafer.Image = Properties.Resources.wafermapA11;
+                                   // form1.picwafer.Image = Properties.Resources.wafermapA11;
+                                    form1.picWafer11.Visible = true;
                                     form1.picwafer.Image.Tag = "11";
                                     form1.lblwafer.Text = "A" + "11";
                                     break;
                                 case "12":
-                                    form1.picwafer.Image = Properties.Resources.wafermapA12;
+                                    //   form1.picwafer.Image = Properties.Resources.wafermapA12;
+                                    form1.picWafer12.Visible = true;
                                     form1.picwafer.Image.Tag = "12";
                                     form1.lblwafer.Text = "A" + "12";
                                     break;
                                 case "13":
-                                    form1.picwafer.Image = Properties.Resources.wafermapA13;
+                                    //   form1.picwafer.Image = Properties.Resources.wafermapA13;
+                                    form1.picWafer13.Visible = true;
                                     form1.picwafer.Image.Tag = "13";
                                     form1.lblwafer.Text = "A" + "13";
                                     break;
                                 case "14":
-                                    form1.picwafer.Image = Properties.Resources.wafermapA14;
+                                    // form1.picwafer.Image = Properties.Resources.wafermapA14;
+                                    form1.picWafer14.Visible = true;
                                     form1.picwafer.Image.Tag = "14";
                                     form1.lblwafer.Text = "A" + "14";
                                     break;
                                 case "15":
-                                    form1.picwafer.Image = Properties.Resources.wafermapA15;
+                                    //  form1.picwafer.Image = Properties.Resources.wafermapA15;
+                                    form1.picWafer15.Visible = true;
                                     form1.picwafer.Image.Tag = "15";
                                     form1.lblwafer.Text = "A" + "15";
                                     break;
                                 case "16":
-                                    form1.picwafer.Image = Properties.Resources.wafermapA16;
+                                    //   form1.picwafer.Image = Properties.Resources.wafermapA16;
+                                    form1.picWafer16.Visible = true;
                                     form1.picwafer.Image.Tag = "16";
                                     form1.lblwafer.Text = "A" + "16";
                                     break;
                                 case "17":
-                                    form1.picwafer.Image = Properties.Resources.wafermapA17;
+                                    //   form1.picwafer.Image = Properties.Resources.wafermapA17;
+                                    form1.picWafer17.Visible = true;
                                     form1.picwafer.Image.Tag = "17";
                                     form1.lblwafer.Text = "A" + "17";
                                     break;
                                 case "18":
-                                    form1.picwafer.Image = Properties.Resources.wafermapA18;
+                                    //form1.picwafer.Image = Properties.Resources.wafermapA18;
+                                    form1.picWafer18.Visible = true;
                                     form1.picwafer.Image.Tag = "18";
                                     form1.lblwafer.Text = "A" + "18";
                                     break;
                                 case "19":
-                                    form1.picwafer.Image = Properties.Resources.wafermapA19;
+                                    //form1.picwafer.Image = Properties.Resources.wafermapA19;
+                                    form1.picWafer19.Visible = true;
                                     form1.picwafer.Image.Tag = "19";
                                     form1.lblwafer.Text = "A" + "19";
                                     break;
                                 case "20":
-                                    form1.picwafer.Image = Properties.Resources.wafermapA20;
+                                    //    form1.picwafer.Image = Properties.Resources.wafermapA20;
+                                    form1.picWafer20.Visible = true;
                                     form1.picwafer.Image.Tag = "20";
                                     form1.lblwafer.Text = "A" + "20";
                                     break;
                                 case "21":
-                                    form1.picwafer.Image = Properties.Resources.wafermapA21;
+                                    //   form1.picwafer.Image = Properties.Resources.wafermapA21;
+                                    form1.picWafer21.Visible = true;
                                     form1.picwafer.Image.Tag = "21";
                                     form1.lblwafer.Text = "A" + "21";
                                     break;
                                 case "22":
-                                    form1.picwafer.Image = Properties.Resources.wafermapA22;
+                                    //   form1.picwafer.Image = Properties.Resources.wafermapA22;
+                                    form1.picWafer22.Visible = true;
                                     form1.picwafer.Image.Tag = "22";
                                     form1.lblwafer.Text = "A" + "22";
                                     break;
                                 case "23":
-                                    form1.picwafer.Image = Properties.Resources.wafermapA23;
+                                    //   form1.picwafer.Image = Properties.Resources.wafermapA23;
+                                    form1.picWafer23.Visible = true;
                                     form1.picwafer.Image.Tag = "23";
                                     form1.lblwafer.Text = "A" + "23";
                                     break;
                                 case "24":
-                                    form1.picwafer.Image = Properties.Resources.wafermapA24;
+                                    //   form1.picwafer.Image = Properties.Resources.wafermapA24;
+                                    form1.picWafer24.Visible = true;
                                     form1.picwafer.Image.Tag = "24";
                                     form1.lblwafer.Text = "A" + "24";
                                     break;
                                 case "25":
-                                    form1.picwafer.Image = Properties.Resources.wafermapA25;
+                                    //  form1.picwafer.Image = Properties.Resources.wafermapA25;
+                                    form1.picWafer25.Visible = true;
                                     form1.picwafer.Image.Tag = "25";
                                     form1.lblwafer.Text = "A" + "25";
                                     break;
@@ -2033,7 +2380,7 @@ namespace SimulatorApplication
 
             }
 
-            else if (radioclearwafer.Checked == true)
+            else if (radioclearwafer.Checked == true) ////////////////////////clear wafer
             {
                 form1.lblwafer.Visible = false;
                 form1.lblwaferup.Visible = false;
@@ -2042,6 +2389,10 @@ namespace SimulatorApplication
 
                 form1.picwafer.Image = Properties.Resources.wafer;
               //  form1.picwafer.Image.Tag = "wafer";
+
+                
+
+
 
                 switch (form1.picMain.Image.Tag)
                 {
