@@ -1774,12 +1774,808 @@ namespace SimulatorApplication
              "@NewplatenRFcontrolMode,@NewHeliumpressure,@NewHeliumpressurepercent,@NewHeliumFlowWarninglevel,@NewHeliumFlowFaultlevel,@NewGasLineConfig,@NewArgon,@NewArgonpercent,@NewNitrogen,@NewNitrogenpercent,@NewOxygen," +
              "@NewOxygenpercent,@NewOxygen1,@NewOxygen1Percent,@NewCHF3,@NewCHF3percent,@NewSF6,@NewSF6percent,@NewBCI3,@NewBCI3percent,@NewCI2,@NewCI2percent)";
 
-            string strDelete = "delete from newrecipe where moduleicpid = @id";
+            //    string strDelete = "delete from newrecipe where moduleicpid = @id";
+
+           
+
+
+            SqlCommand cmd1 = new SqlCommand(strSQL, con);
+
+            CustomMessageBox messgebox = new CustomMessageBox();
+            DialogResult dr = messgebox.ShowDialog();
+
+
+            if(dr==DialogResult.OK&&tbStepName.Text.Length>0)
+            {
+                cmd1.Parameters.AddWithValue("@1", messgebox.GetMsg());
+                cmd1.Parameters.AddWithValue("@2", DateTime.Now);
+                cmd1.ExecuteNonQuery();
+
+                con.Close();
+
+                con.Open();
+
+                if (strtag == "panel1")
+                {
+                    if (tbStepName.Text.Length > 0)
+                    {
+                        SqlCommand cmd2 = new SqlCommand(strSQL1, con);
+                        // cmd.Parameters.AddWithValue("@NewrecipeName", messgebox.GetMsg().ToString());
+                        cmd2.Parameters.AddWithValue("@Newrecipename", RecipeType.strSearchName);
+                        cmd2.Parameters.AddWithValue("@NewstepName", tbStepName.Text);
+                        cmd2.Parameters.AddWithValue("@NewTimeDependentStep", tbTimeDependentStep.Text);
+                        cmd2.Parameters.AddWithValue("@NewProcessTime", tbProcessTime.Text);
+                        cmd2.Parameters.AddWithValue("@NewProcessPressure", tbProcessPressure.Text);
+                        cmd2.Parameters.AddWithValue("@NewProcessPressurePercent", tbProcessPressurePercent.Text);
+                        cmd2.Parameters.AddWithValue("@NewAPCSetpointPosition", tbApcSetpointPosition.Text);
+                        cmd2.Parameters.AddWithValue("@NewAPCMode", cmbApcMode.Text);
+                        cmd2.Parameters.AddWithValue("@NewActivePressureSensor", cmbActivePressureSensor.Text);
+                        cmd2.Parameters.AddWithValue("@NewSoursePower", tbSourcePower.Text);
+                        cmd2.Parameters.AddWithValue("@NewSoursePowerPercent", tbSoursePowerPercent.Text);
+                        cmd2.Parameters.AddWithValue("@NewSourseMUtunecapacitor", cmbSourceMUTuneCapacitor.Text);
+                        cmd2.Parameters.AddWithValue("@NewSourseMUloadcapacitor", cmbSourceMULoadCapacitor.Text);
+                        cmd2.Parameters.AddWithValue("@NewSourseRFcontrolMode", cmbSourceRFControlMode.Text);
+                        cmd2.Parameters.AddWithValue("@NewPlatenPower", tbPlatenPower.Text);
+                        cmd2.Parameters.AddWithValue("@NewPlatenPowerpercent", tbPlatenPowerPercent.Text);
+                        cmd2.Parameters.AddWithValue("@NewplatenCapacitorAdjust", cmbPlatenCapacitorAdjust.Text);
+                        cmd2.Parameters.AddWithValue("@NewPlatenRFTuningCapacitor", tbPlatenRFTuningCapacitor.Text);
+                        cmd2.Parameters.AddWithValue("@NewPlatenRFTuningCapacitorpercent", tbPlatenRFTuningCapacitorPercent.Text);
+                        cmd2.Parameters.AddWithValue("@NewPlatenRFloadCapacitor", tbPlatenRFLoadCapacitor.Text);
+                        cmd2.Parameters.AddWithValue("@NewPlatenRFloadCapacitorpercent", tbPlatenRFLoadCapacitorPercent.Text);
+                        cmd2.Parameters.AddWithValue("@NewPlatenRFpaddingCapacitor", cmbPlatenRFPaddingCapacitor.Text);
+                        cmd2.Parameters.AddWithValue("@NewplatenRFcontrolMode", cmbPlatenRFControlMode.Text);
+                        cmd2.Parameters.AddWithValue("@NewHeliumpressure", tbHeliumPressure.Text);
+                        cmd2.Parameters.AddWithValue("@NewHeliumpressurepercent", tbHeliumPressurePercent.Text);
+                        cmd2.Parameters.AddWithValue("@NewHeliumFlowWarninglevel", tbHeliumFlowWarningLevel.Text);
+                        cmd2.Parameters.AddWithValue("@NewHeliumFlowFaultlevel", tbHeliumFlowFaultLevel.Text);
+                        cmd2.Parameters.AddWithValue("@NewGasLineConfig", cmbGasLineConfig.Text);
+                        cmd2.Parameters.AddWithValue("@NewArgon", tbArgon.Text);
+                        cmd2.Parameters.AddWithValue("@NewArgonpercent", tbArgonPercent.Text);
+                        cmd2.Parameters.AddWithValue("@NewNitrogen", tbNitrogen.Text);
+                        cmd2.Parameters.AddWithValue("@NewNitrogenpercent", tbNitrogenPercent.Text);
+                        cmd2.Parameters.AddWithValue("@NewOxygen", tbOxygen.Text);
+                        cmd2.Parameters.AddWithValue("@NewOxygenpercent", tbOxygenPercent.Text);
+                        cmd2.Parameters.AddWithValue("@NewOxygen1", tbOxygen1.Text);
+                        cmd2.Parameters.AddWithValue("@NewOxygen1percent", tbOxygen1Percent.Text);
+                        cmd2.Parameters.AddWithValue("@NewCHF3", tbCHF3_2.Text);
+                        cmd2.Parameters.AddWithValue("@NewCHF3percent", tbCHF3Percent.Text);
+                        cmd2.Parameters.AddWithValue("@NewSF6", tbSF6.Text);
+                        cmd2.Parameters.AddWithValue("@NewSF6percent", tbSF6Percent.Text);
+                        cmd2.Parameters.AddWithValue("@NewBCI3", tbBCI3_2.Text);
+                        cmd2.Parameters.AddWithValue("@NewBCI3percent", tbBCI3Percent.Text);
+                        cmd2.Parameters.AddWithValue("@NewCI2", _tbCI2.Text);
+                        cmd2.Parameters.AddWithValue("@NewCI2percent", _tbCI2Percent.Text);
+
+                        cmd2.ExecuteNonQuery();
+                    }
+                    else
+                    {
+                        MessageBox.Show("123");
+                    }
+                }
+
+                else if(strtag=="panel2")
+                {
+                    SqlCommand cmdinsertnewrecipe = new SqlCommand(strSQL1, con);
+
+
+                    cmdinsertnewrecipe.Parameters.AddWithValue("@Newrecipename", RecipeType.strSearchName);
+                    cmdinsertnewrecipe.Parameters.AddWithValue("@NewstepName", tbStepName.Text);
+                    cmdinsertnewrecipe.Parameters.AddWithValue("@NewTimeDependentStep", tbTimeDependentStep.Text);
+                    cmdinsertnewrecipe.Parameters.AddWithValue("@NewProcessTime", tbProcessTime.Text);
+                    cmdinsertnewrecipe.Parameters.AddWithValue("@NewProcessPressure", tbProcessPressure.Text);
+                    cmdinsertnewrecipe.Parameters.AddWithValue("@NewProcessPressurePercent", tbProcessPressurePercent.Text);
+                    cmdinsertnewrecipe.Parameters.AddWithValue("@NewAPCSetpointPosition", tbApcSetpointPosition.Text);
+                    cmdinsertnewrecipe.Parameters.AddWithValue("@NewAPCMode", cmbApcMode.Text);
+                    cmdinsertnewrecipe.Parameters.AddWithValue("@NewActivePressureSensor", cmbActivePressureSensor.Text);
+                    cmdinsertnewrecipe.Parameters.AddWithValue("@NewSoursePower", tbSourcePower.Text);
+                    cmdinsertnewrecipe.Parameters.AddWithValue("@NewSoursePowerPercent", tbSoursePowerPercent.Text);
+                    cmdinsertnewrecipe.Parameters.AddWithValue("@NewSourseMUtunecapacitor", cmbSourceMUTuneCapacitor.Text);
+                    cmdinsertnewrecipe.Parameters.AddWithValue("@NewSourseMUloadcapacitor", cmbSourceMULoadCapacitor.Text);
+                    cmdinsertnewrecipe.Parameters.AddWithValue("@NewSourseRFcontrolMode", cmbSourceRFControlMode.Text);
+                    cmdinsertnewrecipe.Parameters.AddWithValue("@NewPlatenPower", tbPlatenPower.Text);
+                    cmdinsertnewrecipe.Parameters.AddWithValue("@NewPlatenPowerpercent", tbPlatenPowerPercent.Text);
+                    cmdinsertnewrecipe.Parameters.AddWithValue("@NewplatenCapacitorAdjust", cmbPlatenCapacitorAdjust.Text);
+                    cmdinsertnewrecipe.Parameters.AddWithValue("@NewPlatenRFTuningCapacitor", tbPlatenRFTuningCapacitor.Text);
+                    cmdinsertnewrecipe.Parameters.AddWithValue("@NewPlatenRFTuningCapacitorpercent", tbPlatenRFTuningCapacitorPercent.Text);
+                    cmdinsertnewrecipe.Parameters.AddWithValue("@NewPlatenRFloadCapacitor", tbPlatenRFLoadCapacitor.Text);
+                    cmdinsertnewrecipe.Parameters.AddWithValue("@NewPlatenRFloadCapacitorpercent", tbPlatenRFLoadCapacitorPercent.Text);
+                    cmdinsertnewrecipe.Parameters.AddWithValue("@NewPlatenRFpaddingCapacitor", cmbPlatenRFPaddingCapacitor2.Text);
+                    cmdinsertnewrecipe.Parameters.AddWithValue("@NewplatenRFcontrolMode", cmbPlatenRFControlMode.Text);
+                    cmdinsertnewrecipe.Parameters.AddWithValue("@NewHeliumpressure", tbHeliumPressure.Text);
+                    cmdinsertnewrecipe.Parameters.AddWithValue("@NewHeliumpressurepercent", tbHeliumPressurePercent.Text);
+                    cmdinsertnewrecipe.Parameters.AddWithValue("@NewHeliumFlowWarninglevel", tbHeliumFlowWarningLevel.Text);
+                    cmdinsertnewrecipe.Parameters.AddWithValue("@NewHeliumFlowFaultlevel", tbHeliumFlowFaultLevel.Text);
+                    cmdinsertnewrecipe.Parameters.AddWithValue("@NewGasLineConfig", cmbGasLineConfig.Text);
+                    cmdinsertnewrecipe.Parameters.AddWithValue("@NewArgon", tbArgon.Text);
+                    cmdinsertnewrecipe.Parameters.AddWithValue("@NewArgonpercent", tbArgonPercent.Text);
+                    cmdinsertnewrecipe.Parameters.AddWithValue("@NewNitrogen", tbNitrogen.Text);
+                    cmdinsertnewrecipe.Parameters.AddWithValue("@NewNitrogenpercent", tbNitrogenPercent.Text);
+                    cmdinsertnewrecipe.Parameters.AddWithValue("@NewOxygen", tbOxygen.Text);
+                    cmdinsertnewrecipe.Parameters.AddWithValue("@NewOxygenpercent", tbOxygenPercent.Text);
+                    cmdinsertnewrecipe.Parameters.AddWithValue("@NewOxygen1", tbOxygen1.Text);
+                    cmdinsertnewrecipe.Parameters.AddWithValue("@NewOxygen1percent", tbOxygen1Percent.Text);
+                    cmdinsertnewrecipe.Parameters.AddWithValue("@NewCHF3", tbCHF3.Text);
+                    cmdinsertnewrecipe.Parameters.AddWithValue("@NewCHF3percent", tbCHF3Percent.Text);
+                    cmdinsertnewrecipe.Parameters.AddWithValue("@NewSF6", tbSF6.Text);
+                    cmdinsertnewrecipe.Parameters.AddWithValue("@NewSF6percent", tbSF6Percent.Text);
+                    cmdinsertnewrecipe.Parameters.AddWithValue("@NewBCI3", tbBCI3.Text);
+                    cmdinsertnewrecipe.Parameters.AddWithValue("@NewBCI3percent", tbBCI3Percent.Text);
+                    cmdinsertnewrecipe.Parameters.AddWithValue("@NewCI2", _tbCI2.Text);
+                    cmdinsertnewrecipe.Parameters.AddWithValue("@NewCI2percent", _tbCI2Percent.Text);
+
+                    cmdinsertnewrecipe.ExecuteNonQuery();
+
+                    SqlCommand cmdinsertnewrecipe1 = new SqlCommand(strSQL1, con);
+
+                    cmdinsertnewrecipe1.Parameters.AddWithValue("@Newrecipename", RecipeType.strSearchName);
+                    cmdinsertnewrecipe1.Parameters.AddWithValue("@NewstepName", tbStepName2.Text);
+                    cmdinsertnewrecipe1.Parameters.AddWithValue("@NewTimeDependentStep", tbTimeDependentStep2.Text);
+                    cmdinsertnewrecipe1.Parameters.AddWithValue("@NewProcessTime", tbProcessTime2.Text);
+                    cmdinsertnewrecipe1.Parameters.AddWithValue("@NewProcessPressure", tbProcessPressure2.Text);
+                    cmdinsertnewrecipe1.Parameters.AddWithValue("@NewProcessPressurePercent", tbProcessPressurePercent2.Text);
+                    cmdinsertnewrecipe1.Parameters.AddWithValue("@NewAPCSetpointPosition", tbApcSetpointPosition2.Text);
+                    cmdinsertnewrecipe1.Parameters.AddWithValue("@NewAPCMode", cmbApcMode2.Text);
+                    cmdinsertnewrecipe1.Parameters.AddWithValue("@NewActivePressureSensor", cmbActivePressureSensor2.Text);
+                    cmdinsertnewrecipe1.Parameters.AddWithValue("@NewSoursePower", tbSourcePower2.Text);
+                    cmdinsertnewrecipe1.Parameters.AddWithValue("@NewSoursePowerPercent", tbSoursePowerPercent2.Text);
+                    cmdinsertnewrecipe1.Parameters.AddWithValue("@NewSourseMUtunecapacitor", cmbSourceMUTuneCapacitor2.Text);
+                    cmdinsertnewrecipe1.Parameters.AddWithValue("@NewSourseMUloadcapacitor", cmbSourceMULoadCapacitor2.Text);
+                    cmdinsertnewrecipe1.Parameters.AddWithValue("@NewSourseRFcontrolMode", cmbSourceRFControlMode2.Text);
+                    cmdinsertnewrecipe1.Parameters.AddWithValue("@NewPlatenPower", tbPlatenPower2.Text);
+                    cmdinsertnewrecipe1.Parameters.AddWithValue("@NewPlatenPowerpercent", tbPlatenPowerPercent2.Text);
+                    cmdinsertnewrecipe1.Parameters.AddWithValue("@NewplatenCapacitorAdjust", cmbPlatenCapacitorAdjust2.Text);
+                    cmdinsertnewrecipe1.Parameters.AddWithValue("@NewPlatenRFTuningCapacitor", tbPlatenRFTuningCapacitor2.Text);
+                    cmdinsertnewrecipe1.Parameters.AddWithValue("@NewPlatenRFTuningCapacitorpercent", tbPlatenRFTuningCapacitorPercent2.Text);
+                    cmdinsertnewrecipe1.Parameters.AddWithValue("@NewPlatenRFloadCapacitor", tbPlatenRFLoadCapacitor2.Text);
+                    cmdinsertnewrecipe1.Parameters.AddWithValue("@NewPlatenRFloadCapacitorpercent", tbPlatenRFLoadCapacitorPercent2.Text);
+                    cmdinsertnewrecipe1.Parameters.AddWithValue("@NewPlatenRFpaddingCapacitor", cmbPlatenRFPaddingCapacitor2.Text);
+                    cmdinsertnewrecipe1.Parameters.AddWithValue("@NewplatenRFcontrolMode", cmbPlatenRFControlMode2.Text);
+                    cmdinsertnewrecipe1.Parameters.AddWithValue("@NewHeliumpressure", tbHeliumPressure2.Text);
+                    cmdinsertnewrecipe1.Parameters.AddWithValue("@NewHeliumpressurepercent", tbHeliumPressurePercent2.Text);
+                    cmdinsertnewrecipe1.Parameters.AddWithValue("@NewHeliumFlowWarninglevel", tbHeliumFlowWarningLevel2.Text);
+                    cmdinsertnewrecipe1.Parameters.AddWithValue("@NewHeliumFlowFaultlevel", tbHeliumFlowFaultLevel2.Text);
+                    cmdinsertnewrecipe1.Parameters.AddWithValue("@NewGasLineConfig", cmbGasLineConfig2.Text);
+                    cmdinsertnewrecipe1.Parameters.AddWithValue("@NewArgon", tbArgon2.Text);
+                    cmdinsertnewrecipe1.Parameters.AddWithValue("@NewArgonpercent", tbArgonPercent2.Text);
+                    cmdinsertnewrecipe1.Parameters.AddWithValue("@NewNitrogen", tbNitrogen2.Text);
+                    cmdinsertnewrecipe1.Parameters.AddWithValue("@NewNitrogenpercent", tbNitrogenPercent2.Text);
+                    cmdinsertnewrecipe1.Parameters.AddWithValue("@NewOxygen", tbOxygen2.Text);
+                    cmdinsertnewrecipe1.Parameters.AddWithValue("@NewOxygenpercent", tbOxygenPercent2.Text);
+                    cmdinsertnewrecipe1.Parameters.AddWithValue("@NewOxygen1", tbOxygen1_2.Text);
+                    cmdinsertnewrecipe1.Parameters.AddWithValue("@NewOxygen1percent", tbOxygen1Percent2.Text);
+                    cmdinsertnewrecipe1.Parameters.AddWithValue("@NewCHF3", tbCHF3_2.Text);
+                    cmdinsertnewrecipe1.Parameters.AddWithValue("@NewCHF3percent", tbCHF3Percent2.Text);
+                    cmdinsertnewrecipe1.Parameters.AddWithValue("@NewSF6", tbSF6_2.Text);
+                    cmdinsertnewrecipe1.Parameters.AddWithValue("@NewSF6percent", tbSF6Percent2.Text);
+                    cmdinsertnewrecipe1.Parameters.AddWithValue("@NewBCI3", tbBCI3_2.Text);
+                    cmdinsertnewrecipe1.Parameters.AddWithValue("@NewBCI3percent", tbBCI3Percent2.Text);
+                    cmdinsertnewrecipe1.Parameters.AddWithValue("@NewCI2", _tbCI2_2.Text);
+                    cmdinsertnewrecipe1.Parameters.AddWithValue("@NewCI2percent", _tbCI2Percent2.Text);
+
+                    cmdinsertnewrecipe1.ExecuteNonQuery();
+
+
+
+
+
+
+                }
+
+                else if(strtag == "panel3")
+                {
+                    SqlCommand cmdinsertnewrecipe = new SqlCommand(strSQL1, con);
+
+
+                    cmdinsertnewrecipe.Parameters.AddWithValue("@Newrecipename", RecipeType.strSearchName);
+                    cmdinsertnewrecipe.Parameters.AddWithValue("@NewstepName", tbStepName.Text);
+                    cmdinsertnewrecipe.Parameters.AddWithValue("@NewTimeDependentStep", tbTimeDependentStep.Text);
+                    cmdinsertnewrecipe.Parameters.AddWithValue("@NewProcessTime", tbProcessTime.Text);
+                    cmdinsertnewrecipe.Parameters.AddWithValue("@NewProcessPressure", tbProcessPressure.Text);
+                    cmdinsertnewrecipe.Parameters.AddWithValue("@NewProcessPressurePercent", tbProcessPressurePercent.Text);
+                    cmdinsertnewrecipe.Parameters.AddWithValue("@NewAPCSetpointPosition", tbApcSetpointPosition.Text);
+                    cmdinsertnewrecipe.Parameters.AddWithValue("@NewAPCMode", cmbApcMode.Text);
+                    cmdinsertnewrecipe.Parameters.AddWithValue("@NewActivePressureSensor", cmbActivePressureSensor.Text);
+                    cmdinsertnewrecipe.Parameters.AddWithValue("@NewSoursePower", tbSourcePower.Text);
+                    cmdinsertnewrecipe.Parameters.AddWithValue("@NewSoursePowerPercent", tbSoursePowerPercent.Text);
+                    cmdinsertnewrecipe.Parameters.AddWithValue("@NewSourseMUtunecapacitor", cmbSourceMUTuneCapacitor.Text);
+                    cmdinsertnewrecipe.Parameters.AddWithValue("@NewSourseMUloadcapacitor", cmbSourceMULoadCapacitor.Text);
+                    cmdinsertnewrecipe.Parameters.AddWithValue("@NewSourseRFcontrolMode", cmbSourceRFControlMode.Text);
+                    cmdinsertnewrecipe.Parameters.AddWithValue("@NewPlatenPower", tbPlatenPower.Text);
+                    cmdinsertnewrecipe.Parameters.AddWithValue("@NewPlatenPowerpercent", tbPlatenPowerPercent.Text);
+                    cmdinsertnewrecipe.Parameters.AddWithValue("@NewplatenCapacitorAdjust", cmbPlatenCapacitorAdjust.Text);
+                    cmdinsertnewrecipe.Parameters.AddWithValue("@NewPlatenRFTuningCapacitor", tbPlatenRFTuningCapacitor.Text);
+                    cmdinsertnewrecipe.Parameters.AddWithValue("@NewPlatenRFTuningCapacitorpercent", tbPlatenRFTuningCapacitorPercent.Text);
+                    cmdinsertnewrecipe.Parameters.AddWithValue("@NewPlatenRFloadCapacitor", tbPlatenRFLoadCapacitor.Text);
+                    cmdinsertnewrecipe.Parameters.AddWithValue("@NewPlatenRFloadCapacitorpercent", tbPlatenRFLoadCapacitorPercent.Text);
+                    cmdinsertnewrecipe.Parameters.AddWithValue("@NewPlatenRFpaddingCapacitor", cmbPlatenRFPaddingCapacitor2.Text);
+                    cmdinsertnewrecipe.Parameters.AddWithValue("@NewplatenRFcontrolMode", cmbPlatenRFControlMode.Text);
+                    cmdinsertnewrecipe.Parameters.AddWithValue("@NewHeliumpressure", tbHeliumPressure.Text);
+                    cmdinsertnewrecipe.Parameters.AddWithValue("@NewHeliumpressurepercent", tbHeliumPressurePercent.Text);
+                    cmdinsertnewrecipe.Parameters.AddWithValue("@NewHeliumFlowWarninglevel", tbHeliumFlowWarningLevel.Text);
+                    cmdinsertnewrecipe.Parameters.AddWithValue("@NewHeliumFlowFaultlevel", tbHeliumFlowFaultLevel.Text);
+                    cmdinsertnewrecipe.Parameters.AddWithValue("@NewGasLineConfig", cmbGasLineConfig.Text);
+                    cmdinsertnewrecipe.Parameters.AddWithValue("@NewArgon", tbArgon.Text);
+                    cmdinsertnewrecipe.Parameters.AddWithValue("@NewArgonpercent", tbArgonPercent.Text);
+                    cmdinsertnewrecipe.Parameters.AddWithValue("@NewNitrogen", tbNitrogen.Text);
+                    cmdinsertnewrecipe.Parameters.AddWithValue("@NewNitrogenpercent", tbNitrogenPercent.Text);
+                    cmdinsertnewrecipe.Parameters.AddWithValue("@NewOxygen", tbOxygen.Text);
+                    cmdinsertnewrecipe.Parameters.AddWithValue("@NewOxygenpercent", tbOxygenPercent.Text);
+                    cmdinsertnewrecipe.Parameters.AddWithValue("@NewOxygen1", tbOxygen1.Text);
+                    cmdinsertnewrecipe.Parameters.AddWithValue("@NewOxygen1percent", tbOxygen1Percent.Text);
+                    cmdinsertnewrecipe.Parameters.AddWithValue("@NewCHF3", tbCHF3.Text);
+                    cmdinsertnewrecipe.Parameters.AddWithValue("@NewCHF3percent", tbCHF3Percent.Text);
+                    cmdinsertnewrecipe.Parameters.AddWithValue("@NewSF6", tbSF6.Text);
+                    cmdinsertnewrecipe.Parameters.AddWithValue("@NewSF6percent", tbSF6Percent.Text);
+                    cmdinsertnewrecipe.Parameters.AddWithValue("@NewBCI3", tbBCI3.Text);
+                    cmdinsertnewrecipe.Parameters.AddWithValue("@NewBCI3percent", tbBCI3Percent.Text);
+                    cmdinsertnewrecipe.Parameters.AddWithValue("@NewCI2", _tbCI2.Text);
+                    cmdinsertnewrecipe.Parameters.AddWithValue("@NewCI2percent", _tbCI2Percent.Text);
+
+                    cmdinsertnewrecipe.ExecuteNonQuery();
+
+                    SqlCommand cmdinsertnewrecipe1 = new SqlCommand(strSQL1, con);
+
+                    cmdinsertnewrecipe1.Parameters.AddWithValue("@Newrecipename", RecipeType.strSearchName);
+                    cmdinsertnewrecipe1.Parameters.AddWithValue("@NewstepName", tbStepName2.Text);
+                    cmdinsertnewrecipe1.Parameters.AddWithValue("@NewTimeDependentStep", tbTimeDependentStep2.Text);
+                    cmdinsertnewrecipe1.Parameters.AddWithValue("@NewProcessTime", tbProcessTime2.Text);
+                    cmdinsertnewrecipe1.Parameters.AddWithValue("@NewProcessPressure", tbProcessPressure2.Text);
+                    cmdinsertnewrecipe1.Parameters.AddWithValue("@NewProcessPressurePercent", tbProcessPressurePercent2.Text);
+                    cmdinsertnewrecipe1.Parameters.AddWithValue("@NewAPCSetpointPosition", tbApcSetpointPosition2.Text);
+                    cmdinsertnewrecipe1.Parameters.AddWithValue("@NewAPCMode", cmbApcMode2.Text);
+                    cmdinsertnewrecipe1.Parameters.AddWithValue("@NewActivePressureSensor", cmbActivePressureSensor2.Text);
+                    cmdinsertnewrecipe1.Parameters.AddWithValue("@NewSoursePower", tbSourcePower2.Text);
+                    cmdinsertnewrecipe1.Parameters.AddWithValue("@NewSoursePowerPercent", tbSoursePowerPercent2.Text);
+                    cmdinsertnewrecipe1.Parameters.AddWithValue("@NewSourseMUtunecapacitor", cmbSourceMUTuneCapacitor2.Text);
+                    cmdinsertnewrecipe1.Parameters.AddWithValue("@NewSourseMUloadcapacitor", cmbSourceMULoadCapacitor2.Text);
+                    cmdinsertnewrecipe1.Parameters.AddWithValue("@NewSourseRFcontrolMode", cmbSourceRFControlMode2.Text);
+                    cmdinsertnewrecipe1.Parameters.AddWithValue("@NewPlatenPower", tbPlatenPower2.Text);
+                    cmdinsertnewrecipe1.Parameters.AddWithValue("@NewPlatenPowerpercent", tbPlatenPowerPercent2.Text);
+                    cmdinsertnewrecipe1.Parameters.AddWithValue("@NewplatenCapacitorAdjust", cmbPlatenCapacitorAdjust2.Text);
+                    cmdinsertnewrecipe1.Parameters.AddWithValue("@NewPlatenRFTuningCapacitor", tbPlatenRFTuningCapacitor2.Text);
+                    cmdinsertnewrecipe1.Parameters.AddWithValue("@NewPlatenRFTuningCapacitorpercent", tbPlatenRFTuningCapacitorPercent2.Text);
+                    cmdinsertnewrecipe1.Parameters.AddWithValue("@NewPlatenRFloadCapacitor", tbPlatenRFLoadCapacitor2.Text);
+                    cmdinsertnewrecipe1.Parameters.AddWithValue("@NewPlatenRFloadCapacitorpercent", tbPlatenRFLoadCapacitorPercent2.Text);
+                    cmdinsertnewrecipe1.Parameters.AddWithValue("@NewPlatenRFpaddingCapacitor", cmbPlatenRFPaddingCapacitor2.Text);
+                    cmdinsertnewrecipe1.Parameters.AddWithValue("@NewplatenRFcontrolMode", cmbPlatenRFControlMode2.Text);
+                    cmdinsertnewrecipe1.Parameters.AddWithValue("@NewHeliumpressure", tbHeliumPressure2.Text);
+                    cmdinsertnewrecipe1.Parameters.AddWithValue("@NewHeliumpressurepercent", tbHeliumPressurePercent2.Text);
+                    cmdinsertnewrecipe1.Parameters.AddWithValue("@NewHeliumFlowWarninglevel", tbHeliumFlowWarningLevel2.Text);
+                    cmdinsertnewrecipe1.Parameters.AddWithValue("@NewHeliumFlowFaultlevel", tbHeliumFlowFaultLevel2.Text);
+                    cmdinsertnewrecipe1.Parameters.AddWithValue("@NewGasLineConfig", cmbGasLineConfig2.Text);
+                    cmdinsertnewrecipe1.Parameters.AddWithValue("@NewArgon", tbArgon2.Text);
+                    cmdinsertnewrecipe1.Parameters.AddWithValue("@NewArgonpercent", tbArgonPercent2.Text);
+                    cmdinsertnewrecipe1.Parameters.AddWithValue("@NewNitrogen", tbNitrogen2.Text);
+                    cmdinsertnewrecipe1.Parameters.AddWithValue("@NewNitrogenpercent", tbNitrogenPercent2.Text);
+                    cmdinsertnewrecipe1.Parameters.AddWithValue("@NewOxygen", tbOxygen2.Text);
+                    cmdinsertnewrecipe1.Parameters.AddWithValue("@NewOxygenpercent", tbOxygenPercent2.Text);
+                    cmdinsertnewrecipe1.Parameters.AddWithValue("@NewOxygen1", tbOxygen1_2.Text);
+                    cmdinsertnewrecipe1.Parameters.AddWithValue("@NewOxygen1percent", tbOxygen1Percent2.Text);
+                    cmdinsertnewrecipe1.Parameters.AddWithValue("@NewCHF3", tbCHF3_2.Text);
+                    cmdinsertnewrecipe1.Parameters.AddWithValue("@NewCHF3percent", tbCHF3Percent2.Text);
+                    cmdinsertnewrecipe1.Parameters.AddWithValue("@NewSF6", tbSF6_2.Text);
+                    cmdinsertnewrecipe1.Parameters.AddWithValue("@NewSF6percent", tbSF6Percent2.Text);
+                    cmdinsertnewrecipe1.Parameters.AddWithValue("@NewBCI3", tbBCI3_2.Text);
+                    cmdinsertnewrecipe1.Parameters.AddWithValue("@NewBCI3percent", tbBCI3Percent2.Text);
+                    cmdinsertnewrecipe1.Parameters.AddWithValue("@NewCI2", _tbCI2_2.Text);
+                    cmdinsertnewrecipe1.Parameters.AddWithValue("@NewCI2percent", _tbCI2Percent2.Text);
+
+                    cmdinsertnewrecipe1.ExecuteNonQuery();
+
+                    SqlCommand cmdinsertnewrecipe2 = new SqlCommand(strSQL1, con);
+
+                    cmdinsertnewrecipe2.Parameters.AddWithValue("@Newrecipename", RecipeType.strSearchName);
+                    cmdinsertnewrecipe2.Parameters.AddWithValue("@NewstepName", tbStepName3.Text);
+                    cmdinsertnewrecipe2.Parameters.AddWithValue("@NewTimeDependentStep", tbTimeDependentStep3.Text);
+                    cmdinsertnewrecipe2.Parameters.AddWithValue("@NewProcessTime", tbProcessTime3.Text);
+                    cmdinsertnewrecipe2.Parameters.AddWithValue("@NewProcessPressure", tbProcessPressure3.Text);
+                    cmdinsertnewrecipe2.Parameters.AddWithValue("@NewProcessPressurePercent", tbProcessPressurePercent3.Text);
+                    cmdinsertnewrecipe2.Parameters.AddWithValue("@NewAPCSetpointPosition", tbApcSetpointPosition3.Text);
+                    cmdinsertnewrecipe2.Parameters.AddWithValue("@NewAPCMode", cmbApcMode3.Text);
+                    cmdinsertnewrecipe2.Parameters.AddWithValue("@NewActivePressureSensor", cmbActivePressureSensor3.Text);
+                    cmdinsertnewrecipe2.Parameters.AddWithValue("@NewSoursePower", tbSourcePower3.Text);
+                    cmdinsertnewrecipe2.Parameters.AddWithValue("@NewSoursePowerPercent", tbSoursePowerPercent3.Text);
+                    cmdinsertnewrecipe2.Parameters.AddWithValue("@NewSourseMUtunecapacitor", cmbSourceMUTuneCapacitor3.Text);
+                    cmdinsertnewrecipe2.Parameters.AddWithValue("@NewSourseMUloadcapacitor", cmbSourceMULoadCapacitor3.Text);
+                    cmdinsertnewrecipe2.Parameters.AddWithValue("@NewSourseRFcontrolMode", cmbSourceRFControlMode3.Text);
+                    cmdinsertnewrecipe2.Parameters.AddWithValue("@NewPlatenPower", tbPlatenPower3.Text);
+                    cmdinsertnewrecipe2.Parameters.AddWithValue("@NewPlatenPowerpercent", tbPlatenPowerPercent3.Text);
+                    cmdinsertnewrecipe2.Parameters.AddWithValue("@NewplatenCapacitorAdjust", cmbPlatenCapacitorAdjust3.Text);
+                    cmdinsertnewrecipe2.Parameters.AddWithValue("@NewPlatenRFTuningCapacitor", tbPlatenRFTuningCapacitor3.Text);
+                    cmdinsertnewrecipe2.Parameters.AddWithValue("@NewPlatenRFTuningCapacitorpercent", tbPlatenRFTuningCapacitorPercent3.Text);
+                    cmdinsertnewrecipe2.Parameters.AddWithValue("@NewPlatenRFloadCapacitor", tbPlatenRFLoadCapacitor3.Text);
+                    cmdinsertnewrecipe2.Parameters.AddWithValue("@NewPlatenRFloadCapacitorpercent", tbPlatenRFLoadCapacitorPercent3.Text);
+                    cmdinsertnewrecipe2.Parameters.AddWithValue("@NewPlatenRFpaddingCapacitor", cmbPlatenRFPaddingCapacitor3.Text);
+                    cmdinsertnewrecipe2.Parameters.AddWithValue("@NewplatenRFcontrolMode", cmbPlatenRFControlMode3.Text);
+                    cmdinsertnewrecipe2.Parameters.AddWithValue("@NewHeliumpressure", tbHeliumPressure3.Text);
+                    cmdinsertnewrecipe2.Parameters.AddWithValue("@NewHeliumpressurepercent", tbHeliumPressurePercent3.Text);
+                    cmdinsertnewrecipe2.Parameters.AddWithValue("@NewHeliumFlowWarninglevel", tbHeliumFlowWarningLevel3.Text);
+                    cmdinsertnewrecipe2.Parameters.AddWithValue("@NewHeliumFlowFaultlevel", tbHeliumFlowFaultLevel3.Text);
+                    cmdinsertnewrecipe2.Parameters.AddWithValue("@NewGasLineConfig", cmbGasLineConfig3.Text);
+                    cmdinsertnewrecipe2.Parameters.AddWithValue("@NewArgon", tbArgon3.Text);
+                    cmdinsertnewrecipe2.Parameters.AddWithValue("@NewArgonpercent", tbArgonPercent3.Text);
+                    cmdinsertnewrecipe2.Parameters.AddWithValue("@NewNitrogen", tbNitrogen3.Text);
+                    cmdinsertnewrecipe2.Parameters.AddWithValue("@NewNitrogenpercent", tbNitrogenPercent3.Text);
+                    cmdinsertnewrecipe2.Parameters.AddWithValue("@NewOxygen", tbOxygen3.Text);
+                    cmdinsertnewrecipe2.Parameters.AddWithValue("@NewOxygenpercent", tbOxygenPercent3.Text);
+                    cmdinsertnewrecipe2.Parameters.AddWithValue("@NewOxygen1", tbOxygen1_3.Text);
+                    cmdinsertnewrecipe2.Parameters.AddWithValue("@NewOxygen1percent", tbOxygen1Percent3.Text);
+                    cmdinsertnewrecipe2.Parameters.AddWithValue("@NewCHF3", tbCHF3_3.Text);
+                    cmdinsertnewrecipe2.Parameters.AddWithValue("@NewCHF3percent", tbCHF3Percent3.Text);
+                    cmdinsertnewrecipe2.Parameters.AddWithValue("@NewSF6", tbSF6_3.Text);
+                    cmdinsertnewrecipe2.Parameters.AddWithValue("@NewSF6percent", tbSF6Percent3.Text);
+                    cmdinsertnewrecipe2.Parameters.AddWithValue("@NewBCI3", tbBCI3_3.Text);
+                    cmdinsertnewrecipe2.Parameters.AddWithValue("@NewBCI3percent", tbBCI3Percent3.Text);
+                    cmdinsertnewrecipe2.Parameters.AddWithValue("@NewCI2", _tbCI2_3.Text);
+                    cmdinsertnewrecipe2.Parameters.AddWithValue("@NewCI2percent", _tbCI2Percent3.Text);
+
+                    cmdinsertnewrecipe2.ExecuteNonQuery();
+
+
+                }
+
+                else if(strtag == "panel4")
+                {
+                    SqlCommand cmdinsertnewrecipe = new SqlCommand(strSQL1, con);
+
+
+                    cmdinsertnewrecipe.Parameters.AddWithValue("@Newrecipename", RecipeType.strSearchName);
+                    cmdinsertnewrecipe.Parameters.AddWithValue("@NewstepName", tbStepName.Text);
+                    cmdinsertnewrecipe.Parameters.AddWithValue("@NewTimeDependentStep", tbTimeDependentStep.Text);
+                    cmdinsertnewrecipe.Parameters.AddWithValue("@NewProcessTime", tbProcessTime.Text);
+                    cmdinsertnewrecipe.Parameters.AddWithValue("@NewProcessPressure", tbProcessPressure.Text);
+                    cmdinsertnewrecipe.Parameters.AddWithValue("@NewProcessPressurePercent", tbProcessPressurePercent.Text);
+                    cmdinsertnewrecipe.Parameters.AddWithValue("@NewAPCSetpointPosition", tbApcSetpointPosition.Text);
+                    cmdinsertnewrecipe.Parameters.AddWithValue("@NewAPCMode", cmbApcMode.Text);
+                    cmdinsertnewrecipe.Parameters.AddWithValue("@NewActivePressureSensor", cmbActivePressureSensor.Text);
+                    cmdinsertnewrecipe.Parameters.AddWithValue("@NewSoursePower", tbSourcePower.Text);
+                    cmdinsertnewrecipe.Parameters.AddWithValue("@NewSoursePowerPercent", tbSoursePowerPercent.Text);
+                    cmdinsertnewrecipe.Parameters.AddWithValue("@NewSourseMUtunecapacitor", cmbSourceMUTuneCapacitor.Text);
+                    cmdinsertnewrecipe.Parameters.AddWithValue("@NewSourseMUloadcapacitor", cmbSourceMULoadCapacitor.Text);
+                    cmdinsertnewrecipe.Parameters.AddWithValue("@NewSourseRFcontrolMode", cmbSourceRFControlMode.Text);
+                    cmdinsertnewrecipe.Parameters.AddWithValue("@NewPlatenPower", tbPlatenPower.Text);
+                    cmdinsertnewrecipe.Parameters.AddWithValue("@NewPlatenPowerpercent", tbPlatenPowerPercent.Text);
+                    cmdinsertnewrecipe.Parameters.AddWithValue("@NewplatenCapacitorAdjust", cmbPlatenCapacitorAdjust.Text);
+                    cmdinsertnewrecipe.Parameters.AddWithValue("@NewPlatenRFTuningCapacitor", tbPlatenRFTuningCapacitor.Text);
+                    cmdinsertnewrecipe.Parameters.AddWithValue("@NewPlatenRFTuningCapacitorpercent", tbPlatenRFTuningCapacitorPercent.Text);
+                    cmdinsertnewrecipe.Parameters.AddWithValue("@NewPlatenRFloadCapacitor", tbPlatenRFLoadCapacitor.Text);
+                    cmdinsertnewrecipe.Parameters.AddWithValue("@NewPlatenRFloadCapacitorpercent", tbPlatenRFLoadCapacitorPercent.Text);
+                    cmdinsertnewrecipe.Parameters.AddWithValue("@NewPlatenRFpaddingCapacitor", cmbPlatenRFPaddingCapacitor2.Text);
+                    cmdinsertnewrecipe.Parameters.AddWithValue("@NewplatenRFcontrolMode", cmbPlatenRFControlMode.Text);
+                    cmdinsertnewrecipe.Parameters.AddWithValue("@NewHeliumpressure", tbHeliumPressure.Text);
+                    cmdinsertnewrecipe.Parameters.AddWithValue("@NewHeliumpressurepercent", tbHeliumPressurePercent.Text);
+                    cmdinsertnewrecipe.Parameters.AddWithValue("@NewHeliumFlowWarninglevel", tbHeliumFlowWarningLevel.Text);
+                    cmdinsertnewrecipe.Parameters.AddWithValue("@NewHeliumFlowFaultlevel", tbHeliumFlowFaultLevel.Text);
+                    cmdinsertnewrecipe.Parameters.AddWithValue("@NewGasLineConfig", cmbGasLineConfig.Text);
+                    cmdinsertnewrecipe.Parameters.AddWithValue("@NewArgon", tbArgon.Text);
+                    cmdinsertnewrecipe.Parameters.AddWithValue("@NewArgonpercent", tbArgonPercent.Text);
+                    cmdinsertnewrecipe.Parameters.AddWithValue("@NewNitrogen", tbNitrogen.Text);
+                    cmdinsertnewrecipe.Parameters.AddWithValue("@NewNitrogenpercent", tbNitrogenPercent.Text);
+                    cmdinsertnewrecipe.Parameters.AddWithValue("@NewOxygen", tbOxygen.Text);
+                    cmdinsertnewrecipe.Parameters.AddWithValue("@NewOxygenpercent", tbOxygenPercent.Text);
+                    cmdinsertnewrecipe.Parameters.AddWithValue("@NewOxygen1", tbOxygen1.Text);
+                    cmdinsertnewrecipe.Parameters.AddWithValue("@NewOxygen1percent", tbOxygen1Percent.Text);
+                    cmdinsertnewrecipe.Parameters.AddWithValue("@NewCHF3", tbCHF3.Text);
+                    cmdinsertnewrecipe.Parameters.AddWithValue("@NewCHF3percent", tbCHF3Percent.Text);
+                    cmdinsertnewrecipe.Parameters.AddWithValue("@NewSF6", tbSF6.Text);
+                    cmdinsertnewrecipe.Parameters.AddWithValue("@NewSF6percent", tbSF6Percent.Text);
+                    cmdinsertnewrecipe.Parameters.AddWithValue("@NewBCI3", tbBCI3.Text);
+                    cmdinsertnewrecipe.Parameters.AddWithValue("@NewBCI3percent", tbBCI3Percent.Text);
+                    cmdinsertnewrecipe.Parameters.AddWithValue("@NewCI2", _tbCI2.Text);
+                    cmdinsertnewrecipe.Parameters.AddWithValue("@NewCI2percent", _tbCI2Percent.Text);
+
+                    cmdinsertnewrecipe.ExecuteNonQuery();
+
+                    SqlCommand cmdinsertnewrecipe1 = new SqlCommand(strSQL1, con);
+
+                    cmdinsertnewrecipe1.Parameters.AddWithValue("@Newrecipename", RecipeType.strSearchName);
+                    cmdinsertnewrecipe1.Parameters.AddWithValue("@NewstepName", tbStepName2.Text);
+                    cmdinsertnewrecipe1.Parameters.AddWithValue("@NewTimeDependentStep", tbTimeDependentStep2.Text);
+                    cmdinsertnewrecipe1.Parameters.AddWithValue("@NewProcessTime", tbProcessTime2.Text);
+                    cmdinsertnewrecipe1.Parameters.AddWithValue("@NewProcessPressure", tbProcessPressure2.Text);
+                    cmdinsertnewrecipe1.Parameters.AddWithValue("@NewProcessPressurePercent", tbProcessPressurePercent2.Text);
+                    cmdinsertnewrecipe1.Parameters.AddWithValue("@NewAPCSetpointPosition", tbApcSetpointPosition2.Text);
+                    cmdinsertnewrecipe1.Parameters.AddWithValue("@NewAPCMode", cmbApcMode2.Text);
+                    cmdinsertnewrecipe1.Parameters.AddWithValue("@NewActivePressureSensor", cmbActivePressureSensor2.Text);
+                    cmdinsertnewrecipe1.Parameters.AddWithValue("@NewSoursePower", tbSourcePower2.Text);
+                    cmdinsertnewrecipe1.Parameters.AddWithValue("@NewSoursePowerPercent", tbSoursePowerPercent2.Text);
+                    cmdinsertnewrecipe1.Parameters.AddWithValue("@NewSourseMUtunecapacitor", cmbSourceMUTuneCapacitor2.Text);
+                    cmdinsertnewrecipe1.Parameters.AddWithValue("@NewSourseMUloadcapacitor", cmbSourceMULoadCapacitor2.Text);
+                    cmdinsertnewrecipe1.Parameters.AddWithValue("@NewSourseRFcontrolMode", cmbSourceRFControlMode2.Text);
+                    cmdinsertnewrecipe1.Parameters.AddWithValue("@NewPlatenPower", tbPlatenPower2.Text);
+                    cmdinsertnewrecipe1.Parameters.AddWithValue("@NewPlatenPowerpercent", tbPlatenPowerPercent2.Text);
+                    cmdinsertnewrecipe1.Parameters.AddWithValue("@NewplatenCapacitorAdjust", cmbPlatenCapacitorAdjust2.Text);
+                    cmdinsertnewrecipe1.Parameters.AddWithValue("@NewPlatenRFTuningCapacitor", tbPlatenRFTuningCapacitor2.Text);
+                    cmdinsertnewrecipe1.Parameters.AddWithValue("@NewPlatenRFTuningCapacitorpercent", tbPlatenRFTuningCapacitorPercent2.Text);
+                    cmdinsertnewrecipe1.Parameters.AddWithValue("@NewPlatenRFloadCapacitor", tbPlatenRFLoadCapacitor2.Text);
+                    cmdinsertnewrecipe1.Parameters.AddWithValue("@NewPlatenRFloadCapacitorpercent", tbPlatenRFLoadCapacitorPercent2.Text);
+                    cmdinsertnewrecipe1.Parameters.AddWithValue("@NewPlatenRFpaddingCapacitor", cmbPlatenRFPaddingCapacitor2.Text);
+                    cmdinsertnewrecipe1.Parameters.AddWithValue("@NewplatenRFcontrolMode", cmbPlatenRFControlMode2.Text);
+                    cmdinsertnewrecipe1.Parameters.AddWithValue("@NewHeliumpressure", tbHeliumPressure2.Text);
+                    cmdinsertnewrecipe1.Parameters.AddWithValue("@NewHeliumpressurepercent", tbHeliumPressurePercent2.Text);
+                    cmdinsertnewrecipe1.Parameters.AddWithValue("@NewHeliumFlowWarninglevel", tbHeliumFlowWarningLevel2.Text);
+                    cmdinsertnewrecipe1.Parameters.AddWithValue("@NewHeliumFlowFaultlevel", tbHeliumFlowFaultLevel2.Text);
+                    cmdinsertnewrecipe1.Parameters.AddWithValue("@NewGasLineConfig", cmbGasLineConfig2.Text);
+                    cmdinsertnewrecipe1.Parameters.AddWithValue("@NewArgon", tbArgon2.Text);
+                    cmdinsertnewrecipe1.Parameters.AddWithValue("@NewArgonpercent", tbArgonPercent2.Text);
+                    cmdinsertnewrecipe1.Parameters.AddWithValue("@NewNitrogen", tbNitrogen2.Text);
+                    cmdinsertnewrecipe1.Parameters.AddWithValue("@NewNitrogenpercent", tbNitrogenPercent2.Text);
+                    cmdinsertnewrecipe1.Parameters.AddWithValue("@NewOxygen", tbOxygen2.Text);
+                    cmdinsertnewrecipe1.Parameters.AddWithValue("@NewOxygenpercent", tbOxygenPercent2.Text);
+                    cmdinsertnewrecipe1.Parameters.AddWithValue("@NewOxygen1", tbOxygen1_2.Text);
+                    cmdinsertnewrecipe1.Parameters.AddWithValue("@NewOxygen1percent", tbOxygen1Percent2.Text);
+                    cmdinsertnewrecipe1.Parameters.AddWithValue("@NewCHF3", tbCHF3_2.Text);
+                    cmdinsertnewrecipe1.Parameters.AddWithValue("@NewCHF3percent", tbCHF3Percent2.Text);
+                    cmdinsertnewrecipe1.Parameters.AddWithValue("@NewSF6", tbSF6_2.Text);
+                    cmdinsertnewrecipe1.Parameters.AddWithValue("@NewSF6percent", tbSF6Percent2.Text);
+                    cmdinsertnewrecipe1.Parameters.AddWithValue("@NewBCI3", tbBCI3_2.Text);
+                    cmdinsertnewrecipe1.Parameters.AddWithValue("@NewBCI3percent", tbBCI3Percent2.Text);
+                    cmdinsertnewrecipe1.Parameters.AddWithValue("@NewCI2", _tbCI2_2.Text);
+                    cmdinsertnewrecipe1.Parameters.AddWithValue("@NewCI2percent", _tbCI2Percent2.Text);
+
+                    cmdinsertnewrecipe1.ExecuteNonQuery();
+
+                    SqlCommand cmdinsertnewrecipe2 = new SqlCommand(strSQL1, con);
+
+                    cmdinsertnewrecipe2.Parameters.AddWithValue("@Newrecipename", RecipeType.strSearchName);
+                    cmdinsertnewrecipe2.Parameters.AddWithValue("@NewstepName", tbStepName3.Text);
+                    cmdinsertnewrecipe2.Parameters.AddWithValue("@NewTimeDependentStep", tbTimeDependentStep3.Text);
+                    cmdinsertnewrecipe2.Parameters.AddWithValue("@NewProcessTime", tbProcessTime3.Text);
+                    cmdinsertnewrecipe2.Parameters.AddWithValue("@NewProcessPressure", tbProcessPressure3.Text);
+                    cmdinsertnewrecipe2.Parameters.AddWithValue("@NewProcessPressurePercent", tbProcessPressurePercent3.Text);
+                    cmdinsertnewrecipe2.Parameters.AddWithValue("@NewAPCSetpointPosition", tbApcSetpointPosition3.Text);
+                    cmdinsertnewrecipe2.Parameters.AddWithValue("@NewAPCMode", cmbApcMode3.Text);
+                    cmdinsertnewrecipe2.Parameters.AddWithValue("@NewActivePressureSensor", cmbActivePressureSensor3.Text);
+                    cmdinsertnewrecipe2.Parameters.AddWithValue("@NewSoursePower", tbSourcePower3.Text);
+                    cmdinsertnewrecipe2.Parameters.AddWithValue("@NewSoursePowerPercent", tbSoursePowerPercent3.Text);
+                    cmdinsertnewrecipe2.Parameters.AddWithValue("@NewSourseMUtunecapacitor", cmbSourceMUTuneCapacitor3.Text);
+                    cmdinsertnewrecipe2.Parameters.AddWithValue("@NewSourseMUloadcapacitor", cmbSourceMULoadCapacitor3.Text);
+                    cmdinsertnewrecipe2.Parameters.AddWithValue("@NewSourseRFcontrolMode", cmbSourceRFControlMode3.Text);
+                    cmdinsertnewrecipe2.Parameters.AddWithValue("@NewPlatenPower", tbPlatenPower3.Text);
+                    cmdinsertnewrecipe2.Parameters.AddWithValue("@NewPlatenPowerpercent", tbPlatenPowerPercent3.Text);
+                    cmdinsertnewrecipe2.Parameters.AddWithValue("@NewplatenCapacitorAdjust", cmbPlatenCapacitorAdjust3.Text);
+                    cmdinsertnewrecipe2.Parameters.AddWithValue("@NewPlatenRFTuningCapacitor", tbPlatenRFTuningCapacitor3.Text);
+                    cmdinsertnewrecipe2.Parameters.AddWithValue("@NewPlatenRFTuningCapacitorpercent", tbPlatenRFTuningCapacitorPercent3.Text);
+                    cmdinsertnewrecipe2.Parameters.AddWithValue("@NewPlatenRFloadCapacitor", tbPlatenRFLoadCapacitor3.Text);
+                    cmdinsertnewrecipe2.Parameters.AddWithValue("@NewPlatenRFloadCapacitorpercent", tbPlatenRFLoadCapacitorPercent3.Text);
+                    cmdinsertnewrecipe2.Parameters.AddWithValue("@NewPlatenRFpaddingCapacitor", cmbPlatenRFPaddingCapacitor3.Text);
+                    cmdinsertnewrecipe2.Parameters.AddWithValue("@NewplatenRFcontrolMode", cmbPlatenRFControlMode3.Text);
+                    cmdinsertnewrecipe2.Parameters.AddWithValue("@NewHeliumpressure", tbHeliumPressure3.Text);
+                    cmdinsertnewrecipe2.Parameters.AddWithValue("@NewHeliumpressurepercent", tbHeliumPressurePercent3.Text);
+                    cmdinsertnewrecipe2.Parameters.AddWithValue("@NewHeliumFlowWarninglevel", tbHeliumFlowWarningLevel3.Text);
+                    cmdinsertnewrecipe2.Parameters.AddWithValue("@NewHeliumFlowFaultlevel", tbHeliumFlowFaultLevel3.Text);
+                    cmdinsertnewrecipe2.Parameters.AddWithValue("@NewGasLineConfig", cmbGasLineConfig3.Text);
+                    cmdinsertnewrecipe2.Parameters.AddWithValue("@NewArgon", tbArgon3.Text);
+                    cmdinsertnewrecipe2.Parameters.AddWithValue("@NewArgonpercent", tbArgonPercent3.Text);
+                    cmdinsertnewrecipe2.Parameters.AddWithValue("@NewNitrogen", tbNitrogen3.Text);
+                    cmdinsertnewrecipe2.Parameters.AddWithValue("@NewNitrogenpercent", tbNitrogenPercent3.Text);
+                    cmdinsertnewrecipe2.Parameters.AddWithValue("@NewOxygen", tbOxygen3.Text);
+                    cmdinsertnewrecipe2.Parameters.AddWithValue("@NewOxygenpercent", tbOxygenPercent3.Text);
+                    cmdinsertnewrecipe2.Parameters.AddWithValue("@NewOxygen1", tbOxygen1_3.Text);
+                    cmdinsertnewrecipe2.Parameters.AddWithValue("@NewOxygen1percent", tbOxygen1Percent3.Text);
+                    cmdinsertnewrecipe2.Parameters.AddWithValue("@NewCHF3", tbCHF3_3.Text);
+                    cmdinsertnewrecipe2.Parameters.AddWithValue("@NewCHF3percent", tbCHF3Percent3.Text);
+                    cmdinsertnewrecipe2.Parameters.AddWithValue("@NewSF6", tbSF6_3.Text);
+                    cmdinsertnewrecipe2.Parameters.AddWithValue("@NewSF6percent", tbSF6Percent3.Text);
+                    cmdinsertnewrecipe2.Parameters.AddWithValue("@NewBCI3", tbBCI3_3.Text);
+                    cmdinsertnewrecipe2.Parameters.AddWithValue("@NewBCI3percent", tbBCI3Percent3.Text);
+                    cmdinsertnewrecipe2.Parameters.AddWithValue("@NewCI2", _tbCI2_3.Text);
+                    cmdinsertnewrecipe2.Parameters.AddWithValue("@NewCI2percent", _tbCI2Percent3.Text);
+
+                    cmdinsertnewrecipe2.ExecuteNonQuery();
+
+                    SqlCommand cmdinsertnewrecipe3 = new SqlCommand(strSQL1, con);
+
+                    cmdinsertnewrecipe3.Parameters.AddWithValue("@Newrecipename", RecipeType.strSearchName);
+                    cmdinsertnewrecipe3.Parameters.AddWithValue("@NewstepName", tbStepName4.Text);
+                    cmdinsertnewrecipe3.Parameters.AddWithValue("@NewTimeDependentStep", tbTimeDependentStep4.Text);
+                    cmdinsertnewrecipe3.Parameters.AddWithValue("@NewProcessTime", tbProcessTime4.Text);
+                    cmdinsertnewrecipe3.Parameters.AddWithValue("@NewProcessPressure", tbProcessPressure4.Text);
+                    cmdinsertnewrecipe3.Parameters.AddWithValue("@NewProcessPressurePercent", tbProcessPressurePercent4.Text);
+                    cmdinsertnewrecipe3.Parameters.AddWithValue("@NewAPCSetpointPosition", tbApcSetpointPosition4.Text);
+                    cmdinsertnewrecipe3.Parameters.AddWithValue("@NewAPCMode", cmbApcMode4.Text);
+                    cmdinsertnewrecipe3.Parameters.AddWithValue("@NewActivePressureSensor", cmbActivePressureSensor4.Text);
+                    cmdinsertnewrecipe3.Parameters.AddWithValue("@NewSoursePower", tbSourcePower4.Text);
+                    cmdinsertnewrecipe3.Parameters.AddWithValue("@NewSoursePowerPercent", tbSoursePowerPercent4.Text);
+                    cmdinsertnewrecipe3.Parameters.AddWithValue("@NewSourseMUtunecapacitor", cmbSourceMUTuneCapacitor4.Text);
+                    cmdinsertnewrecipe3.Parameters.AddWithValue("@NewSourseMUloadcapacitor", cmbSourceMULoadCapacitor4.Text);
+                    cmdinsertnewrecipe3.Parameters.AddWithValue("@NewSourseRFcontrolMode", cmbSourceRFControlMode4.Text);
+                    cmdinsertnewrecipe3.Parameters.AddWithValue("@NewPlatenPower", tbPlatenPower4.Text);
+                    cmdinsertnewrecipe3.Parameters.AddWithValue("@NewPlatenPowerpercent", tbPlatenPowerPercent4.Text);
+                    cmdinsertnewrecipe3.Parameters.AddWithValue("@NewplatenCapacitorAdjust", cmbPlatenCapacitorAdjust4.Text);
+                    cmdinsertnewrecipe3.Parameters.AddWithValue("@NewPlatenRFTuningCapacitor", tbPlatenRFTuningCapacitor4.Text);
+                    cmdinsertnewrecipe3.Parameters.AddWithValue("@NewPlatenRFTuningCapacitorpercent", tbPlatenRFTuningCapacitorPercent4.Text);
+                    cmdinsertnewrecipe3.Parameters.AddWithValue("@NewPlatenRFloadCapacitor", tbPlatenRFLoadCapacitor4.Text);
+                    cmdinsertnewrecipe3.Parameters.AddWithValue("@NewPlatenRFloadCapacitorpercent", tbPlatenRFLoadCapacitorPercent4.Text);
+                    cmdinsertnewrecipe3.Parameters.AddWithValue("@NewPlatenRFpaddingCapacitor", cmbPlatenRFPaddingCapacitor4.Text);
+                    cmdinsertnewrecipe3.Parameters.AddWithValue("@NewplatenRFcontrolMode", cmbPlatenRFControlMode4.Text);
+                    cmdinsertnewrecipe3.Parameters.AddWithValue("@NewHeliumpressure", tbHeliumPressure4.Text);
+                    cmdinsertnewrecipe3.Parameters.AddWithValue("@NewHeliumpressurepercent", tbHeliumPressurePercent4.Text);
+                    cmdinsertnewrecipe3.Parameters.AddWithValue("@NewHeliumFlowWarninglevel", tbHeliumFlowWarningLevel4.Text);
+                    cmdinsertnewrecipe3.Parameters.AddWithValue("@NewHeliumFlowFaultlevel", tbHeliumFlowFaultLevel4.Text);
+                    cmdinsertnewrecipe3.Parameters.AddWithValue("@NewGasLineConfig", cmbGasLineConfig4.Text);
+                    cmdinsertnewrecipe3.Parameters.AddWithValue("@NewArgon", tbArgon4.Text);
+                    cmdinsertnewrecipe3.Parameters.AddWithValue("@NewArgonpercent", tbArgonPercent4.Text);
+                    cmdinsertnewrecipe3.Parameters.AddWithValue("@NewNitrogen", tbNitrogen4.Text);
+                    cmdinsertnewrecipe3.Parameters.AddWithValue("@NewNitrogenpercent", tbNitrogenPercent4.Text);
+                    cmdinsertnewrecipe3.Parameters.AddWithValue("@NewOxygen", tbOxygen4.Text);
+                    cmdinsertnewrecipe3.Parameters.AddWithValue("@NewOxygenpercent", tbOxygenPercent4.Text);
+                    cmdinsertnewrecipe3.Parameters.AddWithValue("@NewOxygen1", tbOxygen1_4.Text);
+                    cmdinsertnewrecipe3.Parameters.AddWithValue("@NewOxygen1percent", tbOxygen1Percent4.Text);
+                    cmdinsertnewrecipe3.Parameters.AddWithValue("@NewCHF3", tbCHF3_4.Text);
+                    cmdinsertnewrecipe3.Parameters.AddWithValue("@NewCHF3percent", tbCHF3Percent4.Text);
+                    cmdinsertnewrecipe3.Parameters.AddWithValue("@NewSF6", tbSF6_4.Text);
+                    cmdinsertnewrecipe3.Parameters.AddWithValue("@NewSF6percent", tbSF6Percent4.Text);
+                    cmdinsertnewrecipe3.Parameters.AddWithValue("@NewBCI3", tbBCI3_4.Text);
+                    cmdinsertnewrecipe3.Parameters.AddWithValue("@NewBCI3percent", tbBCI3Percent4.Text);
+                    cmdinsertnewrecipe3.Parameters.AddWithValue("@NewCI2", _tbCI2_4.Text);
+                    cmdinsertnewrecipe3.Parameters.AddWithValue("@NewCI2percent", _tbCI2Percent4.Text);
+
+                    cmdinsertnewrecipe3.ExecuteNonQuery();
+                }
+                else if(strtag == "panel5")
+                {
+                    SqlCommand cmdinsertnewrecipe = new SqlCommand(strSQL1, con);
+
+
+                    cmdinsertnewrecipe.Parameters.AddWithValue("@Newrecipename", RecipeType.strSearchName);
+                    cmdinsertnewrecipe.Parameters.AddWithValue("@NewstepName", tbStepName.Text);
+                    cmdinsertnewrecipe.Parameters.AddWithValue("@NewTimeDependentStep", tbTimeDependentStep.Text);
+                    cmdinsertnewrecipe.Parameters.AddWithValue("@NewProcessTime", tbProcessTime.Text);
+                    cmdinsertnewrecipe.Parameters.AddWithValue("@NewProcessPressure", tbProcessPressure.Text);
+                    cmdinsertnewrecipe.Parameters.AddWithValue("@NewProcessPressurePercent", tbProcessPressurePercent.Text);
+                    cmdinsertnewrecipe.Parameters.AddWithValue("@NewAPCSetpointPosition", tbApcSetpointPosition.Text);
+                    cmdinsertnewrecipe.Parameters.AddWithValue("@NewAPCMode", cmbApcMode.Text);
+                    cmdinsertnewrecipe.Parameters.AddWithValue("@NewActivePressureSensor", cmbActivePressureSensor.Text);
+                    cmdinsertnewrecipe.Parameters.AddWithValue("@NewSoursePower", tbSourcePower.Text);
+                    cmdinsertnewrecipe.Parameters.AddWithValue("@NewSoursePowerPercent", tbSoursePowerPercent.Text);
+                    cmdinsertnewrecipe.Parameters.AddWithValue("@NewSourseMUtunecapacitor", cmbSourceMUTuneCapacitor.Text);
+                    cmdinsertnewrecipe.Parameters.AddWithValue("@NewSourseMUloadcapacitor", cmbSourceMULoadCapacitor.Text);
+                    cmdinsertnewrecipe.Parameters.AddWithValue("@NewSourseRFcontrolMode", cmbSourceRFControlMode.Text);
+                    cmdinsertnewrecipe.Parameters.AddWithValue("@NewPlatenPower", tbPlatenPower.Text);
+                    cmdinsertnewrecipe.Parameters.AddWithValue("@NewPlatenPowerpercent", tbPlatenPowerPercent.Text);
+                    cmdinsertnewrecipe.Parameters.AddWithValue("@NewplatenCapacitorAdjust", cmbPlatenCapacitorAdjust.Text);
+                    cmdinsertnewrecipe.Parameters.AddWithValue("@NewPlatenRFTuningCapacitor", tbPlatenRFTuningCapacitor.Text);
+                    cmdinsertnewrecipe.Parameters.AddWithValue("@NewPlatenRFTuningCapacitorpercent", tbPlatenRFTuningCapacitorPercent.Text);
+                    cmdinsertnewrecipe.Parameters.AddWithValue("@NewPlatenRFloadCapacitor", tbPlatenRFLoadCapacitor.Text);
+                    cmdinsertnewrecipe.Parameters.AddWithValue("@NewPlatenRFloadCapacitorpercent", tbPlatenRFLoadCapacitorPercent.Text);
+                    cmdinsertnewrecipe.Parameters.AddWithValue("@NewPlatenRFpaddingCapacitor", cmbPlatenRFPaddingCapacitor2.Text);
+                    cmdinsertnewrecipe.Parameters.AddWithValue("@NewplatenRFcontrolMode", cmbPlatenRFControlMode.Text);
+                    cmdinsertnewrecipe.Parameters.AddWithValue("@NewHeliumpressure", tbHeliumPressure.Text);
+                    cmdinsertnewrecipe.Parameters.AddWithValue("@NewHeliumpressurepercent", tbHeliumPressurePercent.Text);
+                    cmdinsertnewrecipe.Parameters.AddWithValue("@NewHeliumFlowWarninglevel", tbHeliumFlowWarningLevel.Text);
+                    cmdinsertnewrecipe.Parameters.AddWithValue("@NewHeliumFlowFaultlevel", tbHeliumFlowFaultLevel.Text);
+                    cmdinsertnewrecipe.Parameters.AddWithValue("@NewGasLineConfig", cmbGasLineConfig.Text);
+                    cmdinsertnewrecipe.Parameters.AddWithValue("@NewArgon", tbArgon.Text);
+                    cmdinsertnewrecipe.Parameters.AddWithValue("@NewArgonpercent", tbArgonPercent.Text);
+                    cmdinsertnewrecipe.Parameters.AddWithValue("@NewNitrogen", tbNitrogen.Text);
+                    cmdinsertnewrecipe.Parameters.AddWithValue("@NewNitrogenpercent", tbNitrogenPercent.Text);
+                    cmdinsertnewrecipe.Parameters.AddWithValue("@NewOxygen", tbOxygen.Text);
+                    cmdinsertnewrecipe.Parameters.AddWithValue("@NewOxygenpercent", tbOxygenPercent.Text);
+                    cmdinsertnewrecipe.Parameters.AddWithValue("@NewOxygen1", tbOxygen1.Text);
+                    cmdinsertnewrecipe.Parameters.AddWithValue("@NewOxygen1percent", tbOxygen1Percent.Text);
+                    cmdinsertnewrecipe.Parameters.AddWithValue("@NewCHF3", tbCHF3.Text);
+                    cmdinsertnewrecipe.Parameters.AddWithValue("@NewCHF3percent", tbCHF3Percent.Text);
+                    cmdinsertnewrecipe.Parameters.AddWithValue("@NewSF6", tbSF6.Text);
+                    cmdinsertnewrecipe.Parameters.AddWithValue("@NewSF6percent", tbSF6Percent.Text);
+                    cmdinsertnewrecipe.Parameters.AddWithValue("@NewBCI3", tbBCI3.Text);
+                    cmdinsertnewrecipe.Parameters.AddWithValue("@NewBCI3percent", tbBCI3Percent.Text);
+                    cmdinsertnewrecipe.Parameters.AddWithValue("@NewCI2", _tbCI2.Text);
+                    cmdinsertnewrecipe.Parameters.AddWithValue("@NewCI2percent", _tbCI2Percent.Text);
+
+                    cmdinsertnewrecipe.ExecuteNonQuery();
+
+                    SqlCommand cmdinsertnewrecipe1 = new SqlCommand(strSQL1, con);
+
+                    cmdinsertnewrecipe1.Parameters.AddWithValue("@Newrecipename", RecipeType.strSearchName);
+                    cmdinsertnewrecipe1.Parameters.AddWithValue("@NewstepName", tbStepName2.Text);
+                    cmdinsertnewrecipe1.Parameters.AddWithValue("@NewTimeDependentStep", tbTimeDependentStep2.Text);
+                    cmdinsertnewrecipe1.Parameters.AddWithValue("@NewProcessTime", tbProcessTime2.Text);
+                    cmdinsertnewrecipe1.Parameters.AddWithValue("@NewProcessPressure", tbProcessPressure2.Text);
+                    cmdinsertnewrecipe1.Parameters.AddWithValue("@NewProcessPressurePercent", tbProcessPressurePercent2.Text);
+                    cmdinsertnewrecipe1.Parameters.AddWithValue("@NewAPCSetpointPosition", tbApcSetpointPosition2.Text);
+                    cmdinsertnewrecipe1.Parameters.AddWithValue("@NewAPCMode", cmbApcMode2.Text);
+                    cmdinsertnewrecipe1.Parameters.AddWithValue("@NewActivePressureSensor", cmbActivePressureSensor2.Text);
+                    cmdinsertnewrecipe1.Parameters.AddWithValue("@NewSoursePower", tbSourcePower2.Text);
+                    cmdinsertnewrecipe1.Parameters.AddWithValue("@NewSoursePowerPercent", tbSoursePowerPercent2.Text);
+                    cmdinsertnewrecipe1.Parameters.AddWithValue("@NewSourseMUtunecapacitor", cmbSourceMUTuneCapacitor2.Text);
+                    cmdinsertnewrecipe1.Parameters.AddWithValue("@NewSourseMUloadcapacitor", cmbSourceMULoadCapacitor2.Text);
+                    cmdinsertnewrecipe1.Parameters.AddWithValue("@NewSourseRFcontrolMode", cmbSourceRFControlMode2.Text);
+                    cmdinsertnewrecipe1.Parameters.AddWithValue("@NewPlatenPower", tbPlatenPower2.Text);
+                    cmdinsertnewrecipe1.Parameters.AddWithValue("@NewPlatenPowerpercent", tbPlatenPowerPercent2.Text);
+                    cmdinsertnewrecipe1.Parameters.AddWithValue("@NewplatenCapacitorAdjust", cmbPlatenCapacitorAdjust2.Text);
+                    cmdinsertnewrecipe1.Parameters.AddWithValue("@NewPlatenRFTuningCapacitor", tbPlatenRFTuningCapacitor2.Text);
+                    cmdinsertnewrecipe1.Parameters.AddWithValue("@NewPlatenRFTuningCapacitorpercent", tbPlatenRFTuningCapacitorPercent2.Text);
+                    cmdinsertnewrecipe1.Parameters.AddWithValue("@NewPlatenRFloadCapacitor", tbPlatenRFLoadCapacitor2.Text);
+                    cmdinsertnewrecipe1.Parameters.AddWithValue("@NewPlatenRFloadCapacitorpercent", tbPlatenRFLoadCapacitorPercent2.Text);
+                    cmdinsertnewrecipe1.Parameters.AddWithValue("@NewPlatenRFpaddingCapacitor", cmbPlatenRFPaddingCapacitor2.Text);
+                    cmdinsertnewrecipe1.Parameters.AddWithValue("@NewplatenRFcontrolMode", cmbPlatenRFControlMode2.Text);
+                    cmdinsertnewrecipe1.Parameters.AddWithValue("@NewHeliumpressure", tbHeliumPressure2.Text);
+                    cmdinsertnewrecipe1.Parameters.AddWithValue("@NewHeliumpressurepercent", tbHeliumPressurePercent2.Text);
+                    cmdinsertnewrecipe1.Parameters.AddWithValue("@NewHeliumFlowWarninglevel", tbHeliumFlowWarningLevel2.Text);
+                    cmdinsertnewrecipe1.Parameters.AddWithValue("@NewHeliumFlowFaultlevel", tbHeliumFlowFaultLevel2.Text);
+                    cmdinsertnewrecipe1.Parameters.AddWithValue("@NewGasLineConfig", cmbGasLineConfig2.Text);
+                    cmdinsertnewrecipe1.Parameters.AddWithValue("@NewArgon", tbArgon2.Text);
+                    cmdinsertnewrecipe1.Parameters.AddWithValue("@NewArgonpercent", tbArgonPercent2.Text);
+                    cmdinsertnewrecipe1.Parameters.AddWithValue("@NewNitrogen", tbNitrogen2.Text);
+                    cmdinsertnewrecipe1.Parameters.AddWithValue("@NewNitrogenpercent", tbNitrogenPercent2.Text);
+                    cmdinsertnewrecipe1.Parameters.AddWithValue("@NewOxygen", tbOxygen2.Text);
+                    cmdinsertnewrecipe1.Parameters.AddWithValue("@NewOxygenpercent", tbOxygenPercent2.Text);
+                    cmdinsertnewrecipe1.Parameters.AddWithValue("@NewOxygen1", tbOxygen1_2.Text);
+                    cmdinsertnewrecipe1.Parameters.AddWithValue("@NewOxygen1percent", tbOxygen1Percent2.Text);
+                    cmdinsertnewrecipe1.Parameters.AddWithValue("@NewCHF3", tbCHF3_2.Text);
+                    cmdinsertnewrecipe1.Parameters.AddWithValue("@NewCHF3percent", tbCHF3Percent2.Text);
+                    cmdinsertnewrecipe1.Parameters.AddWithValue("@NewSF6", tbSF6_2.Text);
+                    cmdinsertnewrecipe1.Parameters.AddWithValue("@NewSF6percent", tbSF6Percent2.Text);
+                    cmdinsertnewrecipe1.Parameters.AddWithValue("@NewBCI3", tbBCI3_2.Text);
+                    cmdinsertnewrecipe1.Parameters.AddWithValue("@NewBCI3percent", tbBCI3Percent2.Text);
+                    cmdinsertnewrecipe1.Parameters.AddWithValue("@NewCI2", _tbCI2_2.Text);
+                    cmdinsertnewrecipe1.Parameters.AddWithValue("@NewCI2percent", _tbCI2Percent2.Text);
+
+                    cmdinsertnewrecipe1.ExecuteNonQuery();
+
+                    SqlCommand cmdinsertnewrecipe2 = new SqlCommand(strSQL1, con);
+
+                    cmdinsertnewrecipe2.Parameters.AddWithValue("@Newrecipename", RecipeType.strSearchName);
+                    cmdinsertnewrecipe2.Parameters.AddWithValue("@NewstepName", tbStepName3.Text);
+                    cmdinsertnewrecipe2.Parameters.AddWithValue("@NewTimeDependentStep", tbTimeDependentStep3.Text);
+                    cmdinsertnewrecipe2.Parameters.AddWithValue("@NewProcessTime", tbProcessTime3.Text);
+                    cmdinsertnewrecipe2.Parameters.AddWithValue("@NewProcessPressure", tbProcessPressure3.Text);
+                    cmdinsertnewrecipe2.Parameters.AddWithValue("@NewProcessPressurePercent", tbProcessPressurePercent3.Text);
+                    cmdinsertnewrecipe2.Parameters.AddWithValue("@NewAPCSetpointPosition", tbApcSetpointPosition3.Text);
+                    cmdinsertnewrecipe2.Parameters.AddWithValue("@NewAPCMode", cmbApcMode3.Text);
+                    cmdinsertnewrecipe2.Parameters.AddWithValue("@NewActivePressureSensor", cmbActivePressureSensor3.Text);
+                    cmdinsertnewrecipe2.Parameters.AddWithValue("@NewSoursePower", tbSourcePower3.Text);
+                    cmdinsertnewrecipe2.Parameters.AddWithValue("@NewSoursePowerPercent", tbSoursePowerPercent3.Text);
+                    cmdinsertnewrecipe2.Parameters.AddWithValue("@NewSourseMUtunecapacitor", cmbSourceMUTuneCapacitor3.Text);
+                    cmdinsertnewrecipe2.Parameters.AddWithValue("@NewSourseMUloadcapacitor", cmbSourceMULoadCapacitor3.Text);
+                    cmdinsertnewrecipe2.Parameters.AddWithValue("@NewSourseRFcontrolMode", cmbSourceRFControlMode3.Text);
+                    cmdinsertnewrecipe2.Parameters.AddWithValue("@NewPlatenPower", tbPlatenPower3.Text);
+                    cmdinsertnewrecipe2.Parameters.AddWithValue("@NewPlatenPowerpercent", tbPlatenPowerPercent3.Text);
+                    cmdinsertnewrecipe2.Parameters.AddWithValue("@NewplatenCapacitorAdjust", cmbPlatenCapacitorAdjust3.Text);
+                    cmdinsertnewrecipe2.Parameters.AddWithValue("@NewPlatenRFTuningCapacitor", tbPlatenRFTuningCapacitor3.Text);
+                    cmdinsertnewrecipe2.Parameters.AddWithValue("@NewPlatenRFTuningCapacitorpercent", tbPlatenRFTuningCapacitorPercent3.Text);
+                    cmdinsertnewrecipe2.Parameters.AddWithValue("@NewPlatenRFloadCapacitor", tbPlatenRFLoadCapacitor3.Text);
+                    cmdinsertnewrecipe2.Parameters.AddWithValue("@NewPlatenRFloadCapacitorpercent", tbPlatenRFLoadCapacitorPercent3.Text);
+                    cmdinsertnewrecipe2.Parameters.AddWithValue("@NewPlatenRFpaddingCapacitor", cmbPlatenRFPaddingCapacitor3.Text);
+                    cmdinsertnewrecipe2.Parameters.AddWithValue("@NewplatenRFcontrolMode", cmbPlatenRFControlMode3.Text);
+                    cmdinsertnewrecipe2.Parameters.AddWithValue("@NewHeliumpressure", tbHeliumPressure3.Text);
+                    cmdinsertnewrecipe2.Parameters.AddWithValue("@NewHeliumpressurepercent", tbHeliumPressurePercent3.Text);
+                    cmdinsertnewrecipe2.Parameters.AddWithValue("@NewHeliumFlowWarninglevel", tbHeliumFlowWarningLevel3.Text);
+                    cmdinsertnewrecipe2.Parameters.AddWithValue("@NewHeliumFlowFaultlevel", tbHeliumFlowFaultLevel3.Text);
+                    cmdinsertnewrecipe2.Parameters.AddWithValue("@NewGasLineConfig", cmbGasLineConfig3.Text);
+                    cmdinsertnewrecipe2.Parameters.AddWithValue("@NewArgon", tbArgon3.Text);
+                    cmdinsertnewrecipe2.Parameters.AddWithValue("@NewArgonpercent", tbArgonPercent3.Text);
+                    cmdinsertnewrecipe2.Parameters.AddWithValue("@NewNitrogen", tbNitrogen3.Text);
+                    cmdinsertnewrecipe2.Parameters.AddWithValue("@NewNitrogenpercent", tbNitrogenPercent3.Text);
+                    cmdinsertnewrecipe2.Parameters.AddWithValue("@NewOxygen", tbOxygen3.Text);
+                    cmdinsertnewrecipe2.Parameters.AddWithValue("@NewOxygenpercent", tbOxygenPercent3.Text);
+                    cmdinsertnewrecipe2.Parameters.AddWithValue("@NewOxygen1", tbOxygen1_3.Text);
+                    cmdinsertnewrecipe2.Parameters.AddWithValue("@NewOxygen1percent", tbOxygen1Percent3.Text);
+                    cmdinsertnewrecipe2.Parameters.AddWithValue("@NewCHF3", tbCHF3_3.Text);
+                    cmdinsertnewrecipe2.Parameters.AddWithValue("@NewCHF3percent", tbCHF3Percent3.Text);
+                    cmdinsertnewrecipe2.Parameters.AddWithValue("@NewSF6", tbSF6_3.Text);
+                    cmdinsertnewrecipe2.Parameters.AddWithValue("@NewSF6percent", tbSF6Percent3.Text);
+                    cmdinsertnewrecipe2.Parameters.AddWithValue("@NewBCI3", tbBCI3_3.Text);
+                    cmdinsertnewrecipe2.Parameters.AddWithValue("@NewBCI3percent", tbBCI3Percent3.Text);
+                    cmdinsertnewrecipe2.Parameters.AddWithValue("@NewCI2", _tbCI2_3.Text);
+                    cmdinsertnewrecipe2.Parameters.AddWithValue("@NewCI2percent", _tbCI2Percent3.Text);
+
+                    cmdinsertnewrecipe2.ExecuteNonQuery();
+
+                    SqlCommand cmdinsertnewrecipe3 = new SqlCommand(strSQL1, con);
+
+                    cmdinsertnewrecipe3.Parameters.AddWithValue("@Newrecipename", RecipeType.strSearchName);
+                    cmdinsertnewrecipe3.Parameters.AddWithValue("@NewstepName", tbStepName4.Text);
+                    cmdinsertnewrecipe3.Parameters.AddWithValue("@NewTimeDependentStep", tbTimeDependentStep4.Text);
+                    cmdinsertnewrecipe3.Parameters.AddWithValue("@NewProcessTime", tbProcessTime4.Text);
+                    cmdinsertnewrecipe3.Parameters.AddWithValue("@NewProcessPressure", tbProcessPressure4.Text);
+                    cmdinsertnewrecipe3.Parameters.AddWithValue("@NewProcessPressurePercent", tbProcessPressurePercent4.Text);
+                    cmdinsertnewrecipe3.Parameters.AddWithValue("@NewAPCSetpointPosition", tbApcSetpointPosition4.Text);
+                    cmdinsertnewrecipe3.Parameters.AddWithValue("@NewAPCMode", cmbApcMode4.Text);
+                    cmdinsertnewrecipe3.Parameters.AddWithValue("@NewActivePressureSensor", cmbActivePressureSensor4.Text);
+                    cmdinsertnewrecipe3.Parameters.AddWithValue("@NewSoursePower", tbSourcePower4.Text);
+                    cmdinsertnewrecipe3.Parameters.AddWithValue("@NewSoursePowerPercent", tbSoursePowerPercent4.Text);
+                    cmdinsertnewrecipe3.Parameters.AddWithValue("@NewSourseMUtunecapacitor", cmbSourceMUTuneCapacitor4.Text);
+                    cmdinsertnewrecipe3.Parameters.AddWithValue("@NewSourseMUloadcapacitor", cmbSourceMULoadCapacitor4.Text);
+                    cmdinsertnewrecipe3.Parameters.AddWithValue("@NewSourseRFcontrolMode", cmbSourceRFControlMode4.Text);
+                    cmdinsertnewrecipe3.Parameters.AddWithValue("@NewPlatenPower", tbPlatenPower4.Text);
+                    cmdinsertnewrecipe3.Parameters.AddWithValue("@NewPlatenPowerpercent", tbPlatenPowerPercent4.Text);
+                    cmdinsertnewrecipe3.Parameters.AddWithValue("@NewplatenCapacitorAdjust", cmbPlatenCapacitorAdjust4.Text);
+                    cmdinsertnewrecipe3.Parameters.AddWithValue("@NewPlatenRFTuningCapacitor", tbPlatenRFTuningCapacitor4.Text);
+                    cmdinsertnewrecipe3.Parameters.AddWithValue("@NewPlatenRFTuningCapacitorpercent", tbPlatenRFTuningCapacitorPercent4.Text);
+                    cmdinsertnewrecipe3.Parameters.AddWithValue("@NewPlatenRFloadCapacitor", tbPlatenRFLoadCapacitor4.Text);
+                    cmdinsertnewrecipe3.Parameters.AddWithValue("@NewPlatenRFloadCapacitorpercent", tbPlatenRFLoadCapacitorPercent4.Text);
+                    cmdinsertnewrecipe3.Parameters.AddWithValue("@NewPlatenRFpaddingCapacitor", cmbPlatenRFPaddingCapacitor4.Text);
+                    cmdinsertnewrecipe3.Parameters.AddWithValue("@NewplatenRFcontrolMode", cmbPlatenRFControlMode4.Text);
+                    cmdinsertnewrecipe3.Parameters.AddWithValue("@NewHeliumpressure", tbHeliumPressure4.Text);
+                    cmdinsertnewrecipe3.Parameters.AddWithValue("@NewHeliumpressurepercent", tbHeliumPressurePercent4.Text);
+                    cmdinsertnewrecipe3.Parameters.AddWithValue("@NewHeliumFlowWarninglevel", tbHeliumFlowWarningLevel4.Text);
+                    cmdinsertnewrecipe3.Parameters.AddWithValue("@NewHeliumFlowFaultlevel", tbHeliumFlowFaultLevel4.Text);
+                    cmdinsertnewrecipe3.Parameters.AddWithValue("@NewGasLineConfig", cmbGasLineConfig4.Text);
+                    cmdinsertnewrecipe3.Parameters.AddWithValue("@NewArgon", tbArgon4.Text);
+                    cmdinsertnewrecipe3.Parameters.AddWithValue("@NewArgonpercent", tbArgonPercent4.Text);
+                    cmdinsertnewrecipe3.Parameters.AddWithValue("@NewNitrogen", tbNitrogen4.Text);
+                    cmdinsertnewrecipe3.Parameters.AddWithValue("@NewNitrogenpercent", tbNitrogenPercent4.Text);
+                    cmdinsertnewrecipe3.Parameters.AddWithValue("@NewOxygen", tbOxygen4.Text);
+                    cmdinsertnewrecipe3.Parameters.AddWithValue("@NewOxygenpercent", tbOxygenPercent4.Text);
+                    cmdinsertnewrecipe3.Parameters.AddWithValue("@NewOxygen1", tbOxygen1_4.Text);
+                    cmdinsertnewrecipe3.Parameters.AddWithValue("@NewOxygen1percent", tbOxygen1Percent4.Text);
+                    cmdinsertnewrecipe3.Parameters.AddWithValue("@NewCHF3", tbCHF3_4.Text);
+                    cmdinsertnewrecipe3.Parameters.AddWithValue("@NewCHF3percent", tbCHF3Percent4.Text);
+                    cmdinsertnewrecipe3.Parameters.AddWithValue("@NewSF6", tbSF6_4.Text);
+                    cmdinsertnewrecipe3.Parameters.AddWithValue("@NewSF6percent", tbSF6Percent4.Text);
+                    cmdinsertnewrecipe3.Parameters.AddWithValue("@NewBCI3", tbBCI3_4.Text);
+                    cmdinsertnewrecipe3.Parameters.AddWithValue("@NewBCI3percent", tbBCI3Percent4.Text);
+                    cmdinsertnewrecipe3.Parameters.AddWithValue("@NewCI2", _tbCI2_4.Text);
+                    cmdinsertnewrecipe3.Parameters.AddWithValue("@NewCI2percent", _tbCI2Percent4.Text);
+
+                    cmdinsertnewrecipe3.ExecuteNonQuery();
+
+                    SqlCommand cmdinsertnewrecipe4 = new SqlCommand(strSQL1, con);
+
+                    cmdinsertnewrecipe4.Parameters.AddWithValue("@Newrecipename", RecipeType.strSearchName);
+                    cmdinsertnewrecipe4.Parameters.AddWithValue("@NewstepName", tbStepName5.Text);
+                    cmdinsertnewrecipe4.Parameters.AddWithValue("@NewTimeDependentStep", tbTimeDependentStep5.Text);
+                    cmdinsertnewrecipe4.Parameters.AddWithValue("@NewProcessTime", tbProcessTime5.Text);
+                    cmdinsertnewrecipe4.Parameters.AddWithValue("@NewProcessPressure", tbProcessPressure5.Text);
+                    cmdinsertnewrecipe4.Parameters.AddWithValue("@NewProcessPressurePercent", tbProcessPressurePercent5.Text);
+                    cmdinsertnewrecipe4.Parameters.AddWithValue("@NewAPCSetpointPosition", tbApcSetpointPosition5.Text);
+                    cmdinsertnewrecipe4.Parameters.AddWithValue("@NewAPCMode", cmbApcMode5.Text);
+                    cmdinsertnewrecipe4.Parameters.AddWithValue("@NewActivePressureSensor", cmbActivePressureSensor5.Text);
+                    cmdinsertnewrecipe4.Parameters.AddWithValue("@NewSoursePower", tbSourcePower5.Text);
+                    cmdinsertnewrecipe4.Parameters.AddWithValue("@NewSoursePowerPercent", tbSoursePowerPercent5.Text);
+                    cmdinsertnewrecipe4.Parameters.AddWithValue("@NewSourseMUtunecapacitor", cmbSourceMUTuneCapacitor5.Text);
+                    cmdinsertnewrecipe4.Parameters.AddWithValue("@NewSourseMUloadcapacitor", cmbSourceMULoadCapacitor5.Text);
+                    cmdinsertnewrecipe4.Parameters.AddWithValue("@NewSourseRFcontrolMode", cmbSourceRFControlMode5.Text);
+                    cmdinsertnewrecipe4.Parameters.AddWithValue("@NewPlatenPower", tbPlatenPower5.Text);
+                    cmdinsertnewrecipe4.Parameters.AddWithValue("@NewPlatenPowerpercent", tbPlatenPowerPercent5.Text);
+                    cmdinsertnewrecipe4.Parameters.AddWithValue("@NewplatenCapacitorAdjust", cmbPlatenCapacitorAdjust5.Text);
+                    cmdinsertnewrecipe4.Parameters.AddWithValue("@NewPlatenRFTuningCapacitor", tbPlatenRFTuningCapacitor5.Text);
+                    cmdinsertnewrecipe4.Parameters.AddWithValue("@NewPlatenRFTuningCapacitorpercent", tbPlatenRFTuningCapacitorPercent5.Text);
+                    cmdinsertnewrecipe4.Parameters.AddWithValue("@NewPlatenRFloadCapacitor", tbPlatenRFLoadCapacitor5.Text);
+                    cmdinsertnewrecipe4.Parameters.AddWithValue("@NewPlatenRFloadCapacitorpercent", tbPlatenRFLoadCapacitorPercent5.Text);
+                    cmdinsertnewrecipe4.Parameters.AddWithValue("@NewPlatenRFpaddingCapacitor", cmbPlatenRFPaddingCapacitor5.Text);
+                    cmdinsertnewrecipe4.Parameters.AddWithValue("@NewplatenRFcontrolMode", cmbPlatenRFControlMode5.Text);
+                    cmdinsertnewrecipe4.Parameters.AddWithValue("@NewHeliumpressure", tbHeliumPressure5.Text);
+                    cmdinsertnewrecipe4.Parameters.AddWithValue("@NewHeliumpressurepercent", tbHeliumPressurePercent5.Text);
+                    cmdinsertnewrecipe4.Parameters.AddWithValue("@NewHeliumFlowWarninglevel", tbHeliumFlowWarningLevel5.Text);
+                    cmdinsertnewrecipe4.Parameters.AddWithValue("@NewHeliumFlowFaultlevel", tbHeliumFlowFaultLevel5.Text);
+                    cmdinsertnewrecipe4.Parameters.AddWithValue("@NewGasLineConfig", cmbGasLineConfig5.Text);
+                    cmdinsertnewrecipe4.Parameters.AddWithValue("@NewArgon", tbArgon5.Text);
+                    cmdinsertnewrecipe4.Parameters.AddWithValue("@NewArgonpercent", tbArgonPercent5.Text);
+                    cmdinsertnewrecipe4.Parameters.AddWithValue("@NewNitrogen", tbNitrogen5.Text);
+                    cmdinsertnewrecipe4.Parameters.AddWithValue("@NewNitrogenpercent", tbNitrogenPercent5.Text);
+                    cmdinsertnewrecipe4.Parameters.AddWithValue("@NewOxygen", tbOxygen5.Text);
+                    cmdinsertnewrecipe4.Parameters.AddWithValue("@NewOxygenpercent", tbOxygenPercent5.Text);
+                    cmdinsertnewrecipe4.Parameters.AddWithValue("@NewOxygen1", tbOxygen1_5.Text);
+                    cmdinsertnewrecipe4.Parameters.AddWithValue("@NewOxygen1percent", tbOxygen1Percent5.Text);
+                    cmdinsertnewrecipe4.Parameters.AddWithValue("@NewCHF3", tbCHF3_5.Text);
+                    cmdinsertnewrecipe4.Parameters.AddWithValue("@NewCHF3percent", tbCHF3Percent5.Text);
+                    cmdinsertnewrecipe4.Parameters.AddWithValue("@NewSF6", tbSF6_5.Text);
+                    cmdinsertnewrecipe4.Parameters.AddWithValue("@NewSF6percent", tbSF6Percent5.Text);
+                    cmdinsertnewrecipe4.Parameters.AddWithValue("@NewBCI3", tbBCI3_5.Text);
+                    cmdinsertnewrecipe4.Parameters.AddWithValue("@NewBCI3percent", tbBCI3Percent5.Text);
+                    cmdinsertnewrecipe4.Parameters.AddWithValue("@NewCI2", _tbCI2_5.Text);
+                    cmdinsertnewrecipe4.Parameters.AddWithValue("@NewCI2percent", _tbCI2Percent5.Text);
+
+                    cmdinsertnewrecipe4.ExecuteNonQuery();
+
+                }
+
+
+            }
+
+
+
+
+
 
             if (strtag == "panel1" && lblid2.Text == "no")
             {
 
-                SqlCommand cmd = new SqlCommand(strSQL, con);
+                SqlCommand cmd = new SqlCommand(strSQL1, con);
 
                 cmd.Parameters.AddWithValue("@1", tbStepName.Text);
                 cmd.Parameters.AddWithValue("@2", tbTimeDependentStep.Text);
@@ -1828,16 +2624,16 @@ namespace SimulatorApplication
                 cmd.ExecuteNonQuery();
             }
 
-            else if (strtag == "panel1" && lblid2.Text != "no")
+          /*  else if (strtag == "panel1" && lblid2.Text != "no")
             {
                 SqlCommand cmd = new SqlCommand(strDelete, con);
                 cmd.Parameters.AddWithValue("@id", lblid2.Text);
 
-            }
+            }*/
 
             else if (strtag == "panel2" && lblid2.Text != "no")
             {
-                SqlCommand cmd = new SqlCommand(strSQL, con);
+                SqlCommand cmd = new SqlCommand(strSQL1, con);
 
                 cmd.Parameters.AddWithValue("@1", tbStepName.Text);
                 cmd.Parameters.AddWithValue("@2", tbTimeDependentStep.Text);
