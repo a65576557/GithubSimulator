@@ -1760,6 +1760,180 @@ namespace SimulatorApplication
 
         private void btnSaveAs_Click(object sender, EventArgs e)
         {
+            SqlConnection con = new SqlConnection(scsb.ToString());
+            con.Open();
+
+            string strSQL = "insert into recipe(recipename,recipedate)values(@1,@2)";
+
+            string strSQL1 = "insert into Newrecipe (recipename,StepName,TimeDependentstep,ProcessTime,ProcessPressure,ProcessPressurePercent,APCSetpointPosition,APCMode,ActivePressureSensor,SourcePower,SourcePowerPercent" +
+               ",SourceMUTuneCapacitor,SourceMULoadCapacitor,SourceRFControlMode,PlatenPower,PlatenPowerPercent,PlatenCapacitorAdjust,PlatenRFTuningCapacitor,PlatenRFTuningCapacitorPercent," +
+               "PlatenRFLoadCapacitor,PlatenRFLoadCapacitorPercent,PlatenRFPaddingCapacitor,PlatenRFControlMode,HeliumPressure,HeliumPressurePercent,HeliumFlowWarninglevel,HeliumFlowFaultlevel," +
+              "GasLineConfig,Argon,ArgonPercent,Nitrogen,NitrogenPercent,Oxygen,OxygenPercent,Oxygen1,Oxygen1Percent,CHF3,CHF3Percent,SF6,SF6Percent,BCI3,BCI3Percent,CI2,CI2Percent) values(@Newrecipename,@NewstepName,@NewTimeDependentStep,@NewProcessTime," +
+              "@NewProcessPressure,@NewProcessPressurePercent,@NewAPCSetpointPosition,@NewAPCMode,@NewActivePressureSensor,@NewSoursePower,@NewSoursePowerPercent,@NewSourseMUtunecapacitor,@NewSourseMUloadcapacitor,@NewSourseRFcontrolMode," +
+              "@NewPlatenPower,@NewPlatenPowerpercent,@NewplatenCapacitorAdjust,@NewPlatenRFTuningCapacitor,@NewPlatenRFTuningCapacitorpercent,@NewPlatenRFloadCapacitor,@NewPlatenRFloadCapacitorpercent,@NewPlatenRFpaddingCapacitor," +
+             "@NewplatenRFcontrolMode,@NewHeliumpressure,@NewHeliumpressurepercent,@NewHeliumFlowWarninglevel,@NewHeliumFlowFaultlevel,@NewGasLineConfig,@NewArgon,@NewArgonpercent,@NewNitrogen,@NewNitrogenpercent,@NewOxygen," +
+             "@NewOxygenpercent,@NewOxygen1,@NewOxygen1Percent,@NewCHF3,@NewCHF3percent,@NewSF6,@NewSF6percent,@NewBCI3,@NewBCI3percent,@NewCI2,@NewCI2percent)";
+
+            string strDelete = "delete from newrecipe where moduleicpid = @id";
+
+            if (strtag == "panel1" && lblid2.Text == "no")
+            {
+
+                SqlCommand cmd = new SqlCommand(strSQL, con);
+
+                cmd.Parameters.AddWithValue("@1", tbStepName.Text);
+                cmd.Parameters.AddWithValue("@2", tbTimeDependentStep.Text);
+                cmd.Parameters.AddWithValue("@3", tbProcessTime.Text);
+                cmd.Parameters.AddWithValue("@4", tbProcessPressure.Text);
+                cmd.Parameters.AddWithValue("@5", tbProcessPressurePercent.Text);
+                cmd.Parameters.AddWithValue("@6", tbApcSetpointPosition.Text);
+                cmd.Parameters.AddWithValue("@7", cmbApcMode.Text);
+                cmd.Parameters.AddWithValue("@8", cmbActivePressureSensor.Text);
+                cmd.Parameters.AddWithValue("@9", tbSourcePower.Text);
+                cmd.Parameters.AddWithValue("@10", tbSoursePowerPercent.Text);
+                cmd.Parameters.AddWithValue("@11", cmbSourceMUTuneCapacitor.Text);
+                cmd.Parameters.AddWithValue("@12", cmbSourceMULoadCapacitor.Text);
+                cmd.Parameters.AddWithValue("@13", cmbSourceRFControlMode.Text);
+                cmd.Parameters.AddWithValue("@14", tbPlatenPower.Text);
+                cmd.Parameters.AddWithValue("@15", tbPlatenPowerPercent.Text);
+                cmd.Parameters.AddWithValue("@16", cmbPlatenCapacitorAdjust.Text);
+                cmd.Parameters.AddWithValue("@17", tbPlatenRFTuningCapacitor.Text);
+                cmd.Parameters.AddWithValue("@18", tbPlatenRFTuningCapacitorPercent.Text);
+                cmd.Parameters.AddWithValue("@19", tbPlatenRFLoadCapacitor.Text);
+                cmd.Parameters.AddWithValue("@20", tbPlatenRFLoadCapacitorPercent.Text);
+                cmd.Parameters.AddWithValue("@21", cmbPlatenRFPaddingCapacitor.Text);
+                cmd.Parameters.AddWithValue("@22", cmbPlatenRFControlMode.Text);
+                cmd.Parameters.AddWithValue("@23", tbHeliumPressure.Text);
+                cmd.Parameters.AddWithValue("@24", tbHeliumPressurePercent.Text);
+                cmd.Parameters.AddWithValue("@25", tbHeliumFlowWarningLevel.Text);
+                cmd.Parameters.AddWithValue("@26", tbHeliumFlowFaultLevel.Text);
+                cmd.Parameters.AddWithValue("@27", cmbGasLineConfig.Text);
+                cmd.Parameters.AddWithValue("@28", tbArgon.Text);
+                cmd.Parameters.AddWithValue("@29", tbArgonPercent.Text);
+                cmd.Parameters.AddWithValue("@30", tbNitrogen.Text);
+                cmd.Parameters.AddWithValue("@31", tbNitrogenPercent.Text);
+                cmd.Parameters.AddWithValue("@32", tbOxygen.Text);
+                cmd.Parameters.AddWithValue("@33", tbOxygenPercent.Text);
+                cmd.Parameters.AddWithValue("@34", tbOxygen1.Text);
+                cmd.Parameters.AddWithValue("@35", tbOxygen1Percent.Text);
+                cmd.Parameters.AddWithValue("@36", tbCHF3.Text);
+                cmd.Parameters.AddWithValue("@37", tbCHF3Percent.Text);
+                cmd.Parameters.AddWithValue("@38", tbSF6.Text);
+                cmd.Parameters.AddWithValue("@39", tbSF6Percent.Text);
+                cmd.Parameters.AddWithValue("@40", tbBCI3.Text);
+                cmd.Parameters.AddWithValue("@41", tbBCI3Percent.Text);
+                cmd.Parameters.AddWithValue("@42", _tbCI2.Text);
+                cmd.Parameters.AddWithValue("@43", _tbCI2Percent.Text);
+                cmd.Parameters.AddWithValue("@id", lblid.Text);
+                cmd.ExecuteNonQuery();
+            }
+
+            else if (strtag == "panel1" && lblid2.Text != "no")
+            {
+                SqlCommand cmd = new SqlCommand(strDelete, con);
+                cmd.Parameters.AddWithValue("@id", lblid2.Text);
+
+            }
+
+            else if (strtag == "panel2" && lblid2.Text != "no")
+            {
+                SqlCommand cmd = new SqlCommand(strSQL, con);
+
+                cmd.Parameters.AddWithValue("@1", tbStepName.Text);
+                cmd.Parameters.AddWithValue("@2", tbTimeDependentStep.Text);
+                cmd.Parameters.AddWithValue("@3", tbProcessTime.Text);
+                cmd.Parameters.AddWithValue("@4", tbProcessPressure.Text);
+                cmd.Parameters.AddWithValue("@5", tbProcessPressurePercent.Text);
+                cmd.Parameters.AddWithValue("@6", tbApcSetpointPosition.Text);
+                cmd.Parameters.AddWithValue("@7", cmbApcMode.Text);
+                cmd.Parameters.AddWithValue("@8", cmbActivePressureSensor.Text);
+                cmd.Parameters.AddWithValue("@9", tbSourcePower.Text);
+                cmd.Parameters.AddWithValue("@10", tbSoursePowerPercent.Text);
+                cmd.Parameters.AddWithValue("@11", cmbSourceMUTuneCapacitor.Text);
+                cmd.Parameters.AddWithValue("@12", cmbSourceMULoadCapacitor.Text);
+                cmd.Parameters.AddWithValue("@13", cmbSourceRFControlMode.Text);
+                cmd.Parameters.AddWithValue("@14", tbPlatenPower.Text);
+                cmd.Parameters.AddWithValue("@15", tbPlatenPowerPercent.Text);
+                cmd.Parameters.AddWithValue("@16", cmbPlatenCapacitorAdjust.Text);
+                cmd.Parameters.AddWithValue("@17", tbPlatenRFTuningCapacitor.Text);
+                cmd.Parameters.AddWithValue("@18", tbPlatenRFTuningCapacitorPercent.Text);
+                cmd.Parameters.AddWithValue("@19", tbPlatenRFLoadCapacitor.Text);
+                cmd.Parameters.AddWithValue("@20", tbPlatenRFLoadCapacitorPercent.Text);
+                cmd.Parameters.AddWithValue("@21", cmbPlatenRFPaddingCapacitor.Text);
+                cmd.Parameters.AddWithValue("@22", cmbPlatenRFControlMode.Text);
+                cmd.Parameters.AddWithValue("@23", tbHeliumPressure.Text);
+                cmd.Parameters.AddWithValue("@24", tbHeliumPressurePercent.Text);
+                cmd.Parameters.AddWithValue("@25", tbHeliumFlowWarningLevel.Text);
+                cmd.Parameters.AddWithValue("@26", tbHeliumFlowFaultLevel.Text);
+                cmd.Parameters.AddWithValue("@27", cmbGasLineConfig.Text);
+                cmd.Parameters.AddWithValue("@28", tbArgon.Text);
+                cmd.Parameters.AddWithValue("@29", tbArgonPercent.Text);
+                cmd.Parameters.AddWithValue("@30", tbNitrogen.Text);
+                cmd.Parameters.AddWithValue("@31", tbNitrogenPercent.Text);
+                cmd.Parameters.AddWithValue("@32", tbOxygen.Text);
+                cmd.Parameters.AddWithValue("@33", tbOxygenPercent.Text);
+                cmd.Parameters.AddWithValue("@34", tbOxygen1.Text);
+                cmd.Parameters.AddWithValue("@35", tbOxygen1Percent.Text);
+                cmd.Parameters.AddWithValue("@36", tbCHF3.Text);
+                cmd.Parameters.AddWithValue("@37", tbCHF3Percent.Text);
+                cmd.Parameters.AddWithValue("@38", tbSF6.Text);
+                cmd.Parameters.AddWithValue("@39", tbSF6Percent.Text);
+                cmd.Parameters.AddWithValue("@40", tbBCI3.Text);
+                cmd.Parameters.AddWithValue("@41", tbBCI3Percent.Text);
+                cmd.Parameters.AddWithValue("@42", _tbCI2.Text);
+                cmd.Parameters.AddWithValue("@43", _tbCI2Percent.Text);
+                cmd.Parameters.AddWithValue("@id", lblid.Text);
+                cmd.ExecuteNonQuery();
+
+                SqlCommand cmd2 = new SqlCommand(strSQL, con);
+                cmd2.Parameters.AddWithValue("@1", tbStepName2.Text);
+                cmd2.Parameters.AddWithValue("@2", tbTimeDependentStep2.Text);
+                cmd2.Parameters.AddWithValue("@3", tbProcessTime2.Text);
+                cmd2.Parameters.AddWithValue("@4", tbProcessPressure2.Text);
+                cmd2.Parameters.AddWithValue("@5", tbProcessPressurePercent2.Text);
+                cmd2.Parameters.AddWithValue("@6", tbApcSetpointPosition2.Text);
+                cmd2.Parameters.AddWithValue("@7", cmbApcMode2.Text);
+                cmd2.Parameters.AddWithValue("@8", cmbActivePressureSensor2.Text);
+                cmd2.Parameters.AddWithValue("@9", tbSourcePower2.Text);
+                cmd2.Parameters.AddWithValue("@10", tbSoursePowerPercent2.Text);
+                cmd2.Parameters.AddWithValue("@11", cmbSourceMUTuneCapacitor2.Text);
+                cmd2.Parameters.AddWithValue("@12", cmbSourceMULoadCapacitor2.Text);
+                cmd2.Parameters.AddWithValue("@13", cmbSourceRFControlMode2.Text);
+                cmd2.Parameters.AddWithValue("@14", tbPlatenPower2.Text);
+                cmd2.Parameters.AddWithValue("@15", tbPlatenPowerPercent2.Text);
+                cmd2.Parameters.AddWithValue("@16", cmbPlatenCapacitorAdjust2.Text);
+                cmd2.Parameters.AddWithValue("@17", tbPlatenRFTuningCapacitor2.Text);
+                cmd2.Parameters.AddWithValue("@18", tbPlatenRFTuningCapacitorPercent2.Text);
+                cmd2.Parameters.AddWithValue("@19", tbPlatenRFLoadCapacitor2.Text);
+                cmd2.Parameters.AddWithValue("@20", tbPlatenRFLoadCapacitorPercent2.Text);
+                cmd2.Parameters.AddWithValue("@21", cmbPlatenRFPaddingCapacitor2.Text);
+                cmd2.Parameters.AddWithValue("@22", cmbPlatenRFControlMode2.Text);
+                cmd2.Parameters.AddWithValue("@23", tbHeliumPressure2.Text);
+                cmd2.Parameters.AddWithValue("@24", tbHeliumPressurePercent2.Text);
+                cmd2.Parameters.AddWithValue("@25", tbHeliumFlowWarningLevel2.Text);
+                cmd2.Parameters.AddWithValue("@26", tbHeliumFlowFaultLevel2.Text);
+                cmd2.Parameters.AddWithValue("@27", cmbGasLineConfig2.Text);
+                cmd2.Parameters.AddWithValue("@28", tbArgon2.Text);
+                cmd2.Parameters.AddWithValue("@29", tbArgonPercent2.Text);
+                cmd2.Parameters.AddWithValue("@30", tbNitrogen2.Text);
+                cmd2.Parameters.AddWithValue("@31", tbNitrogenPercent2.Text);
+                cmd2.Parameters.AddWithValue("@32", tbOxygen2.Text);
+                cmd2.Parameters.AddWithValue("@33", tbOxygenPercent2.Text);
+                cmd2.Parameters.AddWithValue("@34", tbOxygen1_2.Text);
+                cmd2.Parameters.AddWithValue("@35", tbOxygen1Percent2.Text);
+                cmd2.Parameters.AddWithValue("@36", tbCHF3_2.Text);
+                cmd2.Parameters.AddWithValue("@37", tbCHF3Percent2.Text);
+                cmd2.Parameters.AddWithValue("@38", tbSF6_2.Text);
+                cmd2.Parameters.AddWithValue("@39", tbSF6Percent2.Text);
+                cmd2.Parameters.AddWithValue("@40", tbBCI3_2.Text);
+                cmd2.Parameters.AddWithValue("@41", tbBCI3Percent2.Text);
+                cmd2.Parameters.AddWithValue("@42", _tbCI2_2.Text);
+                cmd2.Parameters.AddWithValue("@43", _tbCI2Percent2.Text);
+                cmd2.Parameters.AddWithValue("@id", lblid2.Text);
+                cmd2.ExecuteNonQuery();
+
+            }
+
 
         }
 

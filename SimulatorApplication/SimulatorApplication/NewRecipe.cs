@@ -1342,6 +1342,8 @@ namespace SimulatorApplication
                     strtag = "panel5";
                     break;
 
+                    
+
                 case "panel7":
                     panel7.Visible = false;
                     strtag = "panel6";
@@ -1600,7 +1602,7 @@ namespace SimulatorApplication
                     strtag = "pane10";
                     break;
 
-
+            
 
 
 

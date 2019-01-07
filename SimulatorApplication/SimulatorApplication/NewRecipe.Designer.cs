@@ -133,6 +133,12 @@
             this.label56 = new System.Windows.Forms.Label();
             this.label57 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label50 = new System.Windows.Forms.Label();
+            this.label294 = new System.Windows.Forms.Label();
+            this._tbCI2Percent = new System.Windows.Forms.NumericUpDown();
+            this.label293 = new System.Windows.Forms.Label();
+            this._tbCI2 = new System.Windows.Forms.NumericUpDown();
+            this.label292 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label111 = new System.Windows.Forms.Label();
             this.label110 = new System.Windows.Forms.Label();
@@ -202,8 +208,16 @@
             this.tbOxygen1Percent2 = new System.Windows.Forms.NumericUpDown();
             this.label59 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label296 = new System.Windows.Forms.Label();
+            this._tbCI2Percent2 = new System.Windows.Forms.NumericUpDown();
+            this.label295 = new System.Windows.Forms.Label();
+            this._tbCI2_2 = new System.Windows.Forms.NumericUpDown();
             this.panel = new System.Windows.Forms.Panel();
             this.panel10 = new System.Windows.Forms.Panel();
+            this.label306 = new System.Windows.Forms.Label();
+            this.numericUpDown7 = new System.Windows.Forms.NumericUpDown();
+            this.label302 = new System.Windows.Forms.Label();
+            this._tbCI2_10 = new System.Windows.Forms.NumericUpDown();
             this.label266 = new System.Windows.Forms.Label();
             this.tbOxygen1Percent10 = new System.Windows.Forms.NumericUpDown();
             this.label267 = new System.Windows.Forms.Label();
@@ -272,6 +286,10 @@
             this.label290 = new System.Windows.Forms.Label();
             this.label291 = new System.Windows.Forms.Label();
             this.panel9 = new System.Windows.Forms.Panel();
+            this.label307 = new System.Windows.Forms.Label();
+            this._tbCI2Percent10 = new System.Windows.Forms.NumericUpDown();
+            this._tbCI2_9 = new System.Windows.Forms.NumericUpDown();
+            this.label303 = new System.Windows.Forms.Label();
             this.label240 = new System.Windows.Forms.Label();
             this.tbOxygen1Percent9 = new System.Windows.Forms.NumericUpDown();
             this.label241 = new System.Windows.Forms.Label();
@@ -340,6 +358,10 @@
             this.label264 = new System.Windows.Forms.Label();
             this.label265 = new System.Windows.Forms.Label();
             this.panel8 = new System.Windows.Forms.Panel();
+            this.label308 = new System.Windows.Forms.Label();
+            this._tbCI2Percent9 = new System.Windows.Forms.NumericUpDown();
+            this._tbCI2_8 = new System.Windows.Forms.NumericUpDown();
+            this.label304 = new System.Windows.Forms.Label();
             this.label214 = new System.Windows.Forms.Label();
             this.tbOxygen1Percent8 = new System.Windows.Forms.NumericUpDown();
             this.label215 = new System.Windows.Forms.Label();
@@ -408,6 +430,10 @@
             this.label238 = new System.Windows.Forms.Label();
             this.label239 = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
+            this.label312 = new System.Windows.Forms.Label();
+            this._tbCI2Percent8 = new System.Windows.Forms.NumericUpDown();
+            this._tbCI2_7 = new System.Windows.Forms.NumericUpDown();
+            this.label305 = new System.Windows.Forms.Label();
             this.label188 = new System.Windows.Forms.Label();
             this.tbOxygen1Percent7 = new System.Windows.Forms.NumericUpDown();
             this.label189 = new System.Windows.Forms.Label();
@@ -476,6 +502,10 @@
             this.label212 = new System.Windows.Forms.Label();
             this.label213 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.label310 = new System.Windows.Forms.Label();
+            this._tbCI2Percent7 = new System.Windows.Forms.NumericUpDown();
+            this.label309 = new System.Windows.Forms.Label();
+            this._tbCI2_6 = new System.Windows.Forms.NumericUpDown();
             this.label162 = new System.Windows.Forms.Label();
             this.tbOxygen1Percent6 = new System.Windows.Forms.NumericUpDown();
             this.label163 = new System.Windows.Forms.Label();
@@ -544,6 +574,10 @@
             this.label186 = new System.Windows.Forms.Label();
             this.label187 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.label311 = new System.Windows.Forms.Label();
+            this._tbCI2Percen6 = new System.Windows.Forms.NumericUpDown();
+            this.label299 = new System.Windows.Forms.Label();
+            this._tbCI2_5 = new System.Windows.Forms.NumericUpDown();
             this.label136 = new System.Windows.Forms.Label();
             this.tbOxygen1Percent5 = new System.Windows.Forms.NumericUpDown();
             this.label137 = new System.Windows.Forms.Label();
@@ -612,6 +646,10 @@
             this.label160 = new System.Windows.Forms.Label();
             this.label161 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.label301 = new System.Windows.Forms.Label();
+            this._tbCI2Percent4 = new System.Windows.Forms.NumericUpDown();
+            this.label298 = new System.Windows.Forms.Label();
+            this._tbCI2_4 = new System.Windows.Forms.NumericUpDown();
             this.label87 = new System.Windows.Forms.Label();
             this.tbOxygen1Percent4 = new System.Windows.Forms.NumericUpDown();
             this.label88 = new System.Windows.Forms.Label();
@@ -680,6 +718,10 @@
             this.label134 = new System.Windows.Forms.Label();
             this.label135 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.label300 = new System.Windows.Forms.Label();
+            this._tbCI2Percent3 = new System.Windows.Forms.NumericUpDown();
+            this.label297 = new System.Windows.Forms.Label();
+            this._tbCI2_3 = new System.Windows.Forms.NumericUpDown();
             this.label58 = new System.Windows.Forms.Label();
             this.tbOxygen1Percent3 = new System.Windows.Forms.NumericUpDown();
             this.label60 = new System.Windows.Forms.Label();
@@ -747,48 +789,6 @@
             this.cmbGasLineConfig3 = new System.Windows.Forms.ComboBox();
             this.label85 = new System.Windows.Forms.Label();
             this.label86 = new System.Windows.Forms.Label();
-            this.label292 = new System.Windows.Forms.Label();
-            this._tbCI2 = new System.Windows.Forms.NumericUpDown();
-            this.label293 = new System.Windows.Forms.Label();
-            this._tbCI2Percent = new System.Windows.Forms.NumericUpDown();
-            this.label294 = new System.Windows.Forms.Label();
-            this._tbCI2_2 = new System.Windows.Forms.NumericUpDown();
-            this.label295 = new System.Windows.Forms.Label();
-            this._tbCI2Percent2 = new System.Windows.Forms.NumericUpDown();
-            this.label296 = new System.Windows.Forms.Label();
-            this._tbCI2_3 = new System.Windows.Forms.NumericUpDown();
-            this._tbCI2_4 = new System.Windows.Forms.NumericUpDown();
-            this._tbCI2_5 = new System.Windows.Forms.NumericUpDown();
-            this._tbCI2_6 = new System.Windows.Forms.NumericUpDown();
-            this.label297 = new System.Windows.Forms.Label();
-            this.label298 = new System.Windows.Forms.Label();
-            this.label299 = new System.Windows.Forms.Label();
-            this._tbCI2Percent3 = new System.Windows.Forms.NumericUpDown();
-            this._tbCI2Percent4 = new System.Windows.Forms.NumericUpDown();
-            this._tbCI2Percen6 = new System.Windows.Forms.NumericUpDown();
-            this.label300 = new System.Windows.Forms.Label();
-            this.label301 = new System.Windows.Forms.Label();
-            this._tbCI2_10 = new System.Windows.Forms.NumericUpDown();
-            this.label302 = new System.Windows.Forms.Label();
-            this.label303 = new System.Windows.Forms.Label();
-            this.label304 = new System.Windows.Forms.Label();
-            this.label305 = new System.Windows.Forms.Label();
-            this._tbCI2_9 = new System.Windows.Forms.NumericUpDown();
-            this._tbCI2_8 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown7 = new System.Windows.Forms.NumericUpDown();
-            this.label306 = new System.Windows.Forms.Label();
-            this._tbCI2Percent10 = new System.Windows.Forms.NumericUpDown();
-            this.label307 = new System.Windows.Forms.Label();
-            this._tbCI2Percent9 = new System.Windows.Forms.NumericUpDown();
-            this.label308 = new System.Windows.Forms.Label();
-            this.label309 = new System.Windows.Forms.Label();
-            this._tbCI2Percent7 = new System.Windows.Forms.NumericUpDown();
-            this.label310 = new System.Windows.Forms.Label();
-            this.label311 = new System.Windows.Forms.Label();
-            this._tbCI2_7 = new System.Windows.Forms.NumericUpDown();
-            this._tbCI2Percent8 = new System.Windows.Forms.NumericUpDown();
-            this.label312 = new System.Windows.Forms.Label();
-            this.label50 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.tbTimeDependentStep)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbProcessTime)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbProcessPressurePercent)).BeginInit();
@@ -823,6 +823,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.tbOxygen1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbOxygen1Percent)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this._tbCI2Percent)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this._tbCI2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbTimeDependentStep2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbProcessTime2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbProcessPressurePercent2)).BeginInit();
@@ -855,8 +857,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.tbOxygen1_2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbOxygen1Percent2)).BeginInit();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this._tbCI2Percent2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this._tbCI2_2)).BeginInit();
             this.panel.SuspendLayout();
             this.panel10.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this._tbCI2_10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbOxygen1Percent10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbOxygen1_10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbBCI3Percent10)).BeginInit();
@@ -889,6 +895,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.tbProcessTime10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbTimeDependentStep10)).BeginInit();
             this.panel9.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this._tbCI2Percent10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this._tbCI2_9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbOxygen1Percent9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbOxygen1_9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbBCI3Percent9)).BeginInit();
@@ -921,6 +929,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.tbProcessTime9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbTimeDependentStep9)).BeginInit();
             this.panel8.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this._tbCI2Percent9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this._tbCI2_8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbOxygen1Percent8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbOxygen1_8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbBCI3Percent8)).BeginInit();
@@ -953,6 +963,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.tbProcessTime8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbTimeDependentStep8)).BeginInit();
             this.panel7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this._tbCI2Percent8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this._tbCI2_7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbOxygen1Percent7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbOxygen1_7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbBCI3Percent7)).BeginInit();
@@ -985,6 +997,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.tbProcessTime7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbTimeDependentStep7)).BeginInit();
             this.panel6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this._tbCI2Percent7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this._tbCI2_6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbOxygen1Percent6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbOxygen1_6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbBCI3Percent6)).BeginInit();
@@ -1017,6 +1031,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.tbProcessTime6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbTimeDependentStep6)).BeginInit();
             this.panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this._tbCI2Percen6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this._tbCI2_5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbOxygen1Percent5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbOxygen1_5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbBCI3Percent5)).BeginInit();
@@ -1049,6 +1065,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.tbProcessTime5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbTimeDependentStep5)).BeginInit();
             this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this._tbCI2Percent4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this._tbCI2_4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbOxygen1Percent4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbOxygen1_4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbBCI3Percent4)).BeginInit();
@@ -1081,6 +1099,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.tbProcessTime4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbTimeDependentStep4)).BeginInit();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this._tbCI2Percent3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this._tbCI2_3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbOxygen1Percent3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbOxygen1_3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbBCI3Percent3)).BeginInit();
@@ -1112,26 +1132,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.tbProcessPressurePercent3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbProcessTime3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbTimeDependentStep3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this._tbCI2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this._tbCI2Percent)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this._tbCI2_2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this._tbCI2Percent2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this._tbCI2_3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this._tbCI2_4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this._tbCI2_5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this._tbCI2_6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this._tbCI2Percent3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this._tbCI2Percent4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this._tbCI2Percen6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this._tbCI2_10)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this._tbCI2_9)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this._tbCI2_8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this._tbCI2Percent10)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this._tbCI2Percent9)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this._tbCI2Percent7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this._tbCI2_7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this._tbCI2Percent8)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -1222,7 +1222,7 @@
             // btnDelete
             // 
             this.btnDelete.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.btnDelete.Location = new System.Drawing.Point(1207, 264);
+            this.btnDelete.Location = new System.Drawing.Point(1207, 267);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(127, 45);
             this.btnDelete.TabIndex = 14;
@@ -2509,6 +2509,74 @@
             this.panel1.Size = new System.Drawing.Size(424, 787);
             this.panel1.TabIndex = 148;
             // 
+            // label50
+            // 
+            this.label50.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label50.Font = new System.Drawing.Font("微軟正黑體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label50.Location = new System.Drawing.Point(388, 118);
+            this.label50.Name = "label50";
+            this.label50.Size = new System.Drawing.Size(29, 27);
+            this.label50.TabIndex = 157;
+            this.label50.Text = "%";
+            this.label50.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label294
+            // 
+            this.label294.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label294.Font = new System.Drawing.Font("微軟正黑體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label294.Location = new System.Drawing.Point(388, 741);
+            this.label294.Name = "label294";
+            this.label294.Size = new System.Drawing.Size(29, 27);
+            this.label294.TabIndex = 156;
+            this.label294.Text = "%";
+            this.label294.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // _tbCI2Percent
+            // 
+            this._tbCI2Percent.Font = new System.Drawing.Font("微軟正黑體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this._tbCI2Percent.Location = new System.Drawing.Point(332, 742);
+            this._tbCI2Percent.Name = "_tbCI2Percent";
+            this._tbCI2Percent.Size = new System.Drawing.Size(57, 27);
+            this._tbCI2Percent.TabIndex = 155;
+            this._tbCI2Percent.Value = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
+            // 
+            // label293
+            // 
+            this.label293.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label293.Font = new System.Drawing.Font("微軟正黑體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label293.Location = new System.Drawing.Point(304, 742);
+            this.label293.Name = "label293";
+            this.label293.Size = new System.Drawing.Size(29, 27);
+            this.label293.TabIndex = 154;
+            this.label293.Text = "+-";
+            this.label293.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // _tbCI2
+            // 
+            this._tbCI2.DecimalPlaces = 1;
+            this._tbCI2.Font = new System.Drawing.Font("微軟正黑體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this._tbCI2.Location = new System.Drawing.Point(239, 743);
+            this._tbCI2.Name = "_tbCI2";
+            this._tbCI2.Size = new System.Drawing.Size(66, 27);
+            this._tbCI2.TabIndex = 153;
+            // 
+            // label292
+            // 
+            this.label292.BackColor = System.Drawing.Color.Transparent;
+            this.label292.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label292.Font = new System.Drawing.Font("微軟正黑體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label292.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label292.Location = new System.Drawing.Point(14, 742);
+            this.label292.Name = "label292";
+            this.label292.Size = new System.Drawing.Size(214, 27);
+            this.label292.TabIndex = 152;
+            this.label292.Text = "CI2";
+            this.label292.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // label5
             // 
             this.label5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -3368,6 +3436,50 @@
             this.panel2.Size = new System.Drawing.Size(187, 775);
             this.panel2.TabIndex = 149;
             // 
+            // label296
+            // 
+            this.label296.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label296.Font = new System.Drawing.Font("微軟正黑體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label296.Location = new System.Drawing.Point(152, 728);
+            this.label296.Name = "label296";
+            this.label296.Size = new System.Drawing.Size(29, 27);
+            this.label296.TabIndex = 151;
+            this.label296.Text = "%";
+            this.label296.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // _tbCI2Percent2
+            // 
+            this._tbCI2Percent2.Font = new System.Drawing.Font("微軟正黑體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this._tbCI2Percent2.Location = new System.Drawing.Point(96, 728);
+            this._tbCI2Percent2.Name = "_tbCI2Percent2";
+            this._tbCI2Percent2.Size = new System.Drawing.Size(57, 27);
+            this._tbCI2Percent2.TabIndex = 150;
+            this._tbCI2Percent2.Value = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
+            // 
+            // label295
+            // 
+            this.label295.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label295.Font = new System.Drawing.Font("微軟正黑體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label295.Location = new System.Drawing.Point(68, 728);
+            this.label295.Name = "label295";
+            this.label295.Size = new System.Drawing.Size(29, 27);
+            this.label295.TabIndex = 149;
+            this.label295.Text = "+-";
+            this.label295.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // _tbCI2_2
+            // 
+            this._tbCI2_2.DecimalPlaces = 1;
+            this._tbCI2_2.Font = new System.Drawing.Font("微軟正黑體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this._tbCI2_2.Location = new System.Drawing.Point(3, 728);
+            this._tbCI2_2.Name = "_tbCI2_2";
+            this._tbCI2_2.Size = new System.Drawing.Size(66, 27);
+            this._tbCI2_2.TabIndex = 148;
+            // 
             // panel
             // 
             this.panel.AutoScroll = true;
@@ -3464,6 +3576,50 @@
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(187, 775);
             this.panel10.TabIndex = 155;
+            // 
+            // label306
+            // 
+            this.label306.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label306.Font = new System.Drawing.Font("微軟正黑體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label306.Location = new System.Drawing.Point(152, 730);
+            this.label306.Name = "label306";
+            this.label306.Size = new System.Drawing.Size(29, 27);
+            this.label306.TabIndex = 151;
+            this.label306.Text = "%";
+            this.label306.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // numericUpDown7
+            // 
+            this.numericUpDown7.Font = new System.Drawing.Font("微軟正黑體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.numericUpDown7.Location = new System.Drawing.Point(97, 730);
+            this.numericUpDown7.Name = "numericUpDown7";
+            this.numericUpDown7.Size = new System.Drawing.Size(57, 27);
+            this.numericUpDown7.TabIndex = 150;
+            this.numericUpDown7.Value = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
+            // 
+            // label302
+            // 
+            this.label302.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label302.Font = new System.Drawing.Font("微軟正黑體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label302.Location = new System.Drawing.Point(68, 730);
+            this.label302.Name = "label302";
+            this.label302.Size = new System.Drawing.Size(29, 27);
+            this.label302.TabIndex = 149;
+            this.label302.Text = "+-";
+            this.label302.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // _tbCI2_10
+            // 
+            this._tbCI2_10.DecimalPlaces = 1;
+            this._tbCI2_10.Font = new System.Drawing.Font("微軟正黑體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this._tbCI2_10.Location = new System.Drawing.Point(3, 731);
+            this._tbCI2_10.Name = "_tbCI2_10";
+            this._tbCI2_10.Size = new System.Drawing.Size(66, 27);
+            this._tbCI2_10.TabIndex = 148;
             // 
             // label266
             // 
@@ -4313,6 +4469,50 @@
             this.panel9.Size = new System.Drawing.Size(187, 775);
             this.panel9.TabIndex = 155;
             // 
+            // label307
+            // 
+            this.label307.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label307.Font = new System.Drawing.Font("微軟正黑體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label307.Location = new System.Drawing.Point(152, 730);
+            this.label307.Name = "label307";
+            this.label307.Size = new System.Drawing.Size(29, 27);
+            this.label307.TabIndex = 152;
+            this.label307.Text = "%";
+            this.label307.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // _tbCI2Percent10
+            // 
+            this._tbCI2Percent10.Font = new System.Drawing.Font("微軟正黑體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this._tbCI2Percent10.Location = new System.Drawing.Point(96, 730);
+            this._tbCI2Percent10.Name = "_tbCI2Percent10";
+            this._tbCI2Percent10.Size = new System.Drawing.Size(57, 27);
+            this._tbCI2Percent10.TabIndex = 151;
+            this._tbCI2Percent10.Value = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
+            // 
+            // _tbCI2_9
+            // 
+            this._tbCI2_9.DecimalPlaces = 1;
+            this._tbCI2_9.Font = new System.Drawing.Font("微軟正黑體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this._tbCI2_9.Location = new System.Drawing.Point(3, 730);
+            this._tbCI2_9.Name = "_tbCI2_9";
+            this._tbCI2_9.Size = new System.Drawing.Size(66, 27);
+            this._tbCI2_9.TabIndex = 150;
+            // 
+            // label303
+            // 
+            this.label303.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label303.Font = new System.Drawing.Font("微軟正黑體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label303.Location = new System.Drawing.Point(68, 730);
+            this.label303.Name = "label303";
+            this.label303.Size = new System.Drawing.Size(29, 27);
+            this.label303.TabIndex = 150;
+            this.label303.Text = "+-";
+            this.label303.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // label240
             // 
             this.label240.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -5160,6 +5360,50 @@
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(187, 775);
             this.panel8.TabIndex = 155;
+            // 
+            // label308
+            // 
+            this.label308.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label308.Font = new System.Drawing.Font("微軟正黑體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label308.Location = new System.Drawing.Point(152, 730);
+            this.label308.Name = "label308";
+            this.label308.Size = new System.Drawing.Size(29, 27);
+            this.label308.TabIndex = 153;
+            this.label308.Text = "%";
+            this.label308.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // _tbCI2Percent9
+            // 
+            this._tbCI2Percent9.Font = new System.Drawing.Font("微軟正黑體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this._tbCI2Percent9.Location = new System.Drawing.Point(96, 730);
+            this._tbCI2Percent9.Name = "_tbCI2Percent9";
+            this._tbCI2Percent9.Size = new System.Drawing.Size(57, 27);
+            this._tbCI2Percent9.TabIndex = 152;
+            this._tbCI2Percent9.Value = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
+            // 
+            // _tbCI2_8
+            // 
+            this._tbCI2_8.DecimalPlaces = 1;
+            this._tbCI2_8.Font = new System.Drawing.Font("微軟正黑體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this._tbCI2_8.Location = new System.Drawing.Point(3, 730);
+            this._tbCI2_8.Name = "_tbCI2_8";
+            this._tbCI2_8.Size = new System.Drawing.Size(66, 27);
+            this._tbCI2_8.TabIndex = 151;
+            // 
+            // label304
+            // 
+            this.label304.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label304.Font = new System.Drawing.Font("微軟正黑體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label304.Location = new System.Drawing.Point(68, 730);
+            this.label304.Name = "label304";
+            this.label304.Size = new System.Drawing.Size(29, 27);
+            this.label304.TabIndex = 150;
+            this.label304.Text = "+-";
+            this.label304.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label214
             // 
@@ -6009,6 +6253,50 @@
             this.panel7.Size = new System.Drawing.Size(187, 775);
             this.panel7.TabIndex = 154;
             // 
+            // label312
+            // 
+            this.label312.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label312.Font = new System.Drawing.Font("微軟正黑體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label312.Location = new System.Drawing.Point(152, 730);
+            this.label312.Name = "label312";
+            this.label312.Size = new System.Drawing.Size(29, 27);
+            this.label312.TabIndex = 154;
+            this.label312.Text = "%";
+            this.label312.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // _tbCI2Percent8
+            // 
+            this._tbCI2Percent8.Font = new System.Drawing.Font("微軟正黑體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this._tbCI2Percent8.Location = new System.Drawing.Point(96, 730);
+            this._tbCI2Percent8.Name = "_tbCI2Percent8";
+            this._tbCI2Percent8.Size = new System.Drawing.Size(57, 27);
+            this._tbCI2Percent8.TabIndex = 153;
+            this._tbCI2Percent8.Value = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
+            // 
+            // _tbCI2_7
+            // 
+            this._tbCI2_7.DecimalPlaces = 1;
+            this._tbCI2_7.Font = new System.Drawing.Font("微軟正黑體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this._tbCI2_7.Location = new System.Drawing.Point(3, 730);
+            this._tbCI2_7.Name = "_tbCI2_7";
+            this._tbCI2_7.Size = new System.Drawing.Size(66, 27);
+            this._tbCI2_7.TabIndex = 152;
+            // 
+            // label305
+            // 
+            this.label305.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label305.Font = new System.Drawing.Font("微軟正黑體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label305.Location = new System.Drawing.Point(68, 730);
+            this.label305.Name = "label305";
+            this.label305.Size = new System.Drawing.Size(29, 27);
+            this.label305.TabIndex = 151;
+            this.label305.Text = "+-";
+            this.label305.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // label188
             // 
             this.label188.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -6856,6 +7144,50 @@
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(187, 775);
             this.panel6.TabIndex = 153;
+            // 
+            // label310
+            // 
+            this.label310.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label310.Font = new System.Drawing.Font("微軟正黑體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label310.Location = new System.Drawing.Point(152, 730);
+            this.label310.Name = "label310";
+            this.label310.Size = new System.Drawing.Size(29, 27);
+            this.label310.TabIndex = 151;
+            this.label310.Text = "%";
+            this.label310.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // _tbCI2Percent7
+            // 
+            this._tbCI2Percent7.Font = new System.Drawing.Font("微軟正黑體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this._tbCI2Percent7.Location = new System.Drawing.Point(96, 730);
+            this._tbCI2Percent7.Name = "_tbCI2Percent7";
+            this._tbCI2Percent7.Size = new System.Drawing.Size(57, 27);
+            this._tbCI2Percent7.TabIndex = 150;
+            this._tbCI2Percent7.Value = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
+            // 
+            // label309
+            // 
+            this.label309.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label309.Font = new System.Drawing.Font("微軟正黑體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label309.Location = new System.Drawing.Point(68, 730);
+            this.label309.Name = "label309";
+            this.label309.Size = new System.Drawing.Size(29, 27);
+            this.label309.TabIndex = 149;
+            this.label309.Text = "+-";
+            this.label309.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // _tbCI2_6
+            // 
+            this._tbCI2_6.DecimalPlaces = 1;
+            this._tbCI2_6.Font = new System.Drawing.Font("微軟正黑體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this._tbCI2_6.Location = new System.Drawing.Point(3, 730);
+            this._tbCI2_6.Name = "_tbCI2_6";
+            this._tbCI2_6.Size = new System.Drawing.Size(66, 27);
+            this._tbCI2_6.TabIndex = 148;
             // 
             // label162
             // 
@@ -7705,6 +8037,50 @@
             this.panel5.Size = new System.Drawing.Size(187, 775);
             this.panel5.TabIndex = 152;
             // 
+            // label311
+            // 
+            this.label311.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label311.Font = new System.Drawing.Font("微軟正黑體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label311.Location = new System.Drawing.Point(152, 730);
+            this.label311.Name = "label311";
+            this.label311.Size = new System.Drawing.Size(29, 27);
+            this.label311.TabIndex = 153;
+            this.label311.Text = "%";
+            this.label311.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // _tbCI2Percen6
+            // 
+            this._tbCI2Percen6.Font = new System.Drawing.Font("微軟正黑體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this._tbCI2Percen6.Location = new System.Drawing.Point(96, 730);
+            this._tbCI2Percen6.Name = "_tbCI2Percen6";
+            this._tbCI2Percen6.Size = new System.Drawing.Size(57, 27);
+            this._tbCI2Percen6.TabIndex = 152;
+            this._tbCI2Percen6.Value = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
+            // 
+            // label299
+            // 
+            this.label299.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label299.Font = new System.Drawing.Font("微軟正黑體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label299.Location = new System.Drawing.Point(68, 730);
+            this.label299.Name = "label299";
+            this.label299.Size = new System.Drawing.Size(29, 27);
+            this.label299.TabIndex = 149;
+            this.label299.Text = "+-";
+            this.label299.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // _tbCI2_5
+            // 
+            this._tbCI2_5.DecimalPlaces = 1;
+            this._tbCI2_5.Font = new System.Drawing.Font("微軟正黑體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this._tbCI2_5.Location = new System.Drawing.Point(3, 730);
+            this._tbCI2_5.Name = "_tbCI2_5";
+            this._tbCI2_5.Size = new System.Drawing.Size(66, 27);
+            this._tbCI2_5.TabIndex = 148;
+            // 
             // label136
             // 
             this.label136.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -8552,6 +8928,50 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(187, 775);
             this.panel4.TabIndex = 151;
+            // 
+            // label301
+            // 
+            this.label301.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label301.Font = new System.Drawing.Font("微軟正黑體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label301.Location = new System.Drawing.Point(152, 730);
+            this.label301.Name = "label301";
+            this.label301.Size = new System.Drawing.Size(29, 27);
+            this.label301.TabIndex = 152;
+            this.label301.Text = "%";
+            this.label301.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // _tbCI2Percent4
+            // 
+            this._tbCI2Percent4.Font = new System.Drawing.Font("微軟正黑體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this._tbCI2Percent4.Location = new System.Drawing.Point(96, 730);
+            this._tbCI2Percent4.Name = "_tbCI2Percent4";
+            this._tbCI2Percent4.Size = new System.Drawing.Size(57, 27);
+            this._tbCI2Percent4.TabIndex = 151;
+            this._tbCI2Percent4.Value = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
+            // 
+            // label298
+            // 
+            this.label298.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label298.Font = new System.Drawing.Font("微軟正黑體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label298.Location = new System.Drawing.Point(68, 729);
+            this.label298.Name = "label298";
+            this.label298.Size = new System.Drawing.Size(29, 27);
+            this.label298.TabIndex = 150;
+            this.label298.Text = "+-";
+            this.label298.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // _tbCI2_4
+            // 
+            this._tbCI2_4.DecimalPlaces = 1;
+            this._tbCI2_4.Font = new System.Drawing.Font("微軟正黑體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this._tbCI2_4.Location = new System.Drawing.Point(3, 730);
+            this._tbCI2_4.Name = "_tbCI2_4";
+            this._tbCI2_4.Size = new System.Drawing.Size(66, 27);
+            this._tbCI2_4.TabIndex = 149;
             // 
             // label87
             // 
@@ -9401,6 +9821,50 @@
             this.panel3.Size = new System.Drawing.Size(187, 775);
             this.panel3.TabIndex = 150;
             // 
+            // label300
+            // 
+            this.label300.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label300.Font = new System.Drawing.Font("微軟正黑體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label300.Location = new System.Drawing.Point(152, 730);
+            this.label300.Name = "label300";
+            this.label300.Size = new System.Drawing.Size(29, 27);
+            this.label300.TabIndex = 151;
+            this.label300.Text = "%";
+            this.label300.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // _tbCI2Percent3
+            // 
+            this._tbCI2Percent3.Font = new System.Drawing.Font("微軟正黑體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this._tbCI2Percent3.Location = new System.Drawing.Point(96, 729);
+            this._tbCI2Percent3.Name = "_tbCI2Percent3";
+            this._tbCI2Percent3.Size = new System.Drawing.Size(57, 27);
+            this._tbCI2Percent3.TabIndex = 150;
+            this._tbCI2Percent3.Value = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
+            // 
+            // label297
+            // 
+            this.label297.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label297.Font = new System.Drawing.Font("微軟正黑體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label297.Location = new System.Drawing.Point(68, 729);
+            this.label297.Name = "label297";
+            this.label297.Size = new System.Drawing.Size(29, 27);
+            this.label297.TabIndex = 149;
+            this.label297.Text = "+-";
+            this.label297.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // _tbCI2_3
+            // 
+            this._tbCI2_3.DecimalPlaces = 1;
+            this._tbCI2_3.Font = new System.Drawing.Font("微軟正黑體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this._tbCI2_3.Location = new System.Drawing.Point(3, 730);
+            this._tbCI2_3.Name = "_tbCI2_3";
+            this._tbCI2_3.Size = new System.Drawing.Size(66, 27);
+            this._tbCI2_3.TabIndex = 148;
+            // 
             // label58
             // 
             this.label58.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -10171,476 +10635,12 @@
             this.label86.Text = "%";
             this.label86.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label292
-            // 
-            this.label292.BackColor = System.Drawing.Color.Transparent;
-            this.label292.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label292.Font = new System.Drawing.Font("微軟正黑體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label292.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label292.Location = new System.Drawing.Point(14, 742);
-            this.label292.Name = "label292";
-            this.label292.Size = new System.Drawing.Size(214, 27);
-            this.label292.TabIndex = 152;
-            this.label292.Text = "CI2";
-            this.label292.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // _tbCI2
-            // 
-            this._tbCI2.DecimalPlaces = 1;
-            this._tbCI2.Font = new System.Drawing.Font("微軟正黑體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this._tbCI2.Location = new System.Drawing.Point(239, 743);
-            this._tbCI2.Name = "_tbCI2";
-            this._tbCI2.Size = new System.Drawing.Size(66, 27);
-            this._tbCI2.TabIndex = 153;
-            // 
-            // label293
-            // 
-            this.label293.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label293.Font = new System.Drawing.Font("微軟正黑體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label293.Location = new System.Drawing.Point(304, 742);
-            this.label293.Name = "label293";
-            this.label293.Size = new System.Drawing.Size(29, 27);
-            this.label293.TabIndex = 154;
-            this.label293.Text = "+-";
-            this.label293.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // _tbCI2Percent
-            // 
-            this._tbCI2Percent.Font = new System.Drawing.Font("微軟正黑體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this._tbCI2Percent.Location = new System.Drawing.Point(332, 742);
-            this._tbCI2Percent.Name = "_tbCI2Percent";
-            this._tbCI2Percent.Size = new System.Drawing.Size(57, 27);
-            this._tbCI2Percent.TabIndex = 155;
-            this._tbCI2Percent.Value = new decimal(new int[] {
-            5,
-            0,
-            0,
-            0});
-            // 
-            // label294
-            // 
-            this.label294.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label294.Font = new System.Drawing.Font("微軟正黑體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label294.Location = new System.Drawing.Point(388, 741);
-            this.label294.Name = "label294";
-            this.label294.Size = new System.Drawing.Size(29, 27);
-            this.label294.TabIndex = 156;
-            this.label294.Text = "%";
-            this.label294.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // _tbCI2_2
-            // 
-            this._tbCI2_2.DecimalPlaces = 1;
-            this._tbCI2_2.Font = new System.Drawing.Font("微軟正黑體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this._tbCI2_2.Location = new System.Drawing.Point(3, 728);
-            this._tbCI2_2.Name = "_tbCI2_2";
-            this._tbCI2_2.Size = new System.Drawing.Size(66, 27);
-            this._tbCI2_2.TabIndex = 148;
-            // 
-            // label295
-            // 
-            this.label295.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label295.Font = new System.Drawing.Font("微軟正黑體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label295.Location = new System.Drawing.Point(68, 728);
-            this.label295.Name = "label295";
-            this.label295.Size = new System.Drawing.Size(29, 27);
-            this.label295.TabIndex = 149;
-            this.label295.Text = "+-";
-            this.label295.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // _tbCI2Percent2
-            // 
-            this._tbCI2Percent2.Font = new System.Drawing.Font("微軟正黑體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this._tbCI2Percent2.Location = new System.Drawing.Point(96, 728);
-            this._tbCI2Percent2.Name = "_tbCI2Percent2";
-            this._tbCI2Percent2.Size = new System.Drawing.Size(57, 27);
-            this._tbCI2Percent2.TabIndex = 150;
-            this._tbCI2Percent2.Value = new decimal(new int[] {
-            5,
-            0,
-            0,
-            0});
-            // 
-            // label296
-            // 
-            this.label296.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label296.Font = new System.Drawing.Font("微軟正黑體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label296.Location = new System.Drawing.Point(152, 728);
-            this.label296.Name = "label296";
-            this.label296.Size = new System.Drawing.Size(29, 27);
-            this.label296.TabIndex = 151;
-            this.label296.Text = "%";
-            this.label296.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // _tbCI2_3
-            // 
-            this._tbCI2_3.DecimalPlaces = 1;
-            this._tbCI2_3.Font = new System.Drawing.Font("微軟正黑體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this._tbCI2_3.Location = new System.Drawing.Point(3, 730);
-            this._tbCI2_3.Name = "_tbCI2_3";
-            this._tbCI2_3.Size = new System.Drawing.Size(66, 27);
-            this._tbCI2_3.TabIndex = 148;
-            // 
-            // _tbCI2_4
-            // 
-            this._tbCI2_4.DecimalPlaces = 1;
-            this._tbCI2_4.Font = new System.Drawing.Font("微軟正黑體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this._tbCI2_4.Location = new System.Drawing.Point(3, 730);
-            this._tbCI2_4.Name = "_tbCI2_4";
-            this._tbCI2_4.Size = new System.Drawing.Size(66, 27);
-            this._tbCI2_4.TabIndex = 149;
-            // 
-            // _tbCI2_5
-            // 
-            this._tbCI2_5.DecimalPlaces = 1;
-            this._tbCI2_5.Font = new System.Drawing.Font("微軟正黑體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this._tbCI2_5.Location = new System.Drawing.Point(3, 730);
-            this._tbCI2_5.Name = "_tbCI2_5";
-            this._tbCI2_5.Size = new System.Drawing.Size(66, 27);
-            this._tbCI2_5.TabIndex = 148;
-            // 
-            // _tbCI2_6
-            // 
-            this._tbCI2_6.DecimalPlaces = 1;
-            this._tbCI2_6.Font = new System.Drawing.Font("微軟正黑體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this._tbCI2_6.Location = new System.Drawing.Point(3, 730);
-            this._tbCI2_6.Name = "_tbCI2_6";
-            this._tbCI2_6.Size = new System.Drawing.Size(66, 27);
-            this._tbCI2_6.TabIndex = 148;
-            // 
-            // label297
-            // 
-            this.label297.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label297.Font = new System.Drawing.Font("微軟正黑體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label297.Location = new System.Drawing.Point(68, 729);
-            this.label297.Name = "label297";
-            this.label297.Size = new System.Drawing.Size(29, 27);
-            this.label297.TabIndex = 149;
-            this.label297.Text = "+-";
-            this.label297.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label298
-            // 
-            this.label298.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label298.Font = new System.Drawing.Font("微軟正黑體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label298.Location = new System.Drawing.Point(68, 729);
-            this.label298.Name = "label298";
-            this.label298.Size = new System.Drawing.Size(29, 27);
-            this.label298.TabIndex = 150;
-            this.label298.Text = "+-";
-            this.label298.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label299
-            // 
-            this.label299.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label299.Font = new System.Drawing.Font("微軟正黑體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label299.Location = new System.Drawing.Point(68, 730);
-            this.label299.Name = "label299";
-            this.label299.Size = new System.Drawing.Size(29, 27);
-            this.label299.TabIndex = 149;
-            this.label299.Text = "+-";
-            this.label299.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // _tbCI2Percent3
-            // 
-            this._tbCI2Percent3.Font = new System.Drawing.Font("微軟正黑體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this._tbCI2Percent3.Location = new System.Drawing.Point(96, 729);
-            this._tbCI2Percent3.Name = "_tbCI2Percent3";
-            this._tbCI2Percent3.Size = new System.Drawing.Size(57, 27);
-            this._tbCI2Percent3.TabIndex = 150;
-            this._tbCI2Percent3.Value = new decimal(new int[] {
-            5,
-            0,
-            0,
-            0});
-            // 
-            // _tbCI2Percent4
-            // 
-            this._tbCI2Percent4.Font = new System.Drawing.Font("微軟正黑體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this._tbCI2Percent4.Location = new System.Drawing.Point(96, 730);
-            this._tbCI2Percent4.Name = "_tbCI2Percent4";
-            this._tbCI2Percent4.Size = new System.Drawing.Size(57, 27);
-            this._tbCI2Percent4.TabIndex = 151;
-            this._tbCI2Percent4.Value = new decimal(new int[] {
-            5,
-            0,
-            0,
-            0});
-            // 
-            // _tbCI2Percen6
-            // 
-            this._tbCI2Percen6.Font = new System.Drawing.Font("微軟正黑體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this._tbCI2Percen6.Location = new System.Drawing.Point(96, 730);
-            this._tbCI2Percen6.Name = "_tbCI2Percen6";
-            this._tbCI2Percen6.Size = new System.Drawing.Size(57, 27);
-            this._tbCI2Percen6.TabIndex = 152;
-            this._tbCI2Percen6.Value = new decimal(new int[] {
-            5,
-            0,
-            0,
-            0});
-            // 
-            // label300
-            // 
-            this.label300.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label300.Font = new System.Drawing.Font("微軟正黑體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label300.Location = new System.Drawing.Point(152, 730);
-            this.label300.Name = "label300";
-            this.label300.Size = new System.Drawing.Size(29, 27);
-            this.label300.TabIndex = 151;
-            this.label300.Text = "%";
-            this.label300.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label301
-            // 
-            this.label301.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label301.Font = new System.Drawing.Font("微軟正黑體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label301.Location = new System.Drawing.Point(152, 730);
-            this.label301.Name = "label301";
-            this.label301.Size = new System.Drawing.Size(29, 27);
-            this.label301.TabIndex = 152;
-            this.label301.Text = "%";
-            this.label301.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // _tbCI2_10
-            // 
-            this._tbCI2_10.DecimalPlaces = 1;
-            this._tbCI2_10.Font = new System.Drawing.Font("微軟正黑體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this._tbCI2_10.Location = new System.Drawing.Point(3, 731);
-            this._tbCI2_10.Name = "_tbCI2_10";
-            this._tbCI2_10.Size = new System.Drawing.Size(66, 27);
-            this._tbCI2_10.TabIndex = 148;
-            // 
-            // label302
-            // 
-            this.label302.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label302.Font = new System.Drawing.Font("微軟正黑體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label302.Location = new System.Drawing.Point(68, 730);
-            this.label302.Name = "label302";
-            this.label302.Size = new System.Drawing.Size(29, 27);
-            this.label302.TabIndex = 149;
-            this.label302.Text = "+-";
-            this.label302.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label303
-            // 
-            this.label303.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label303.Font = new System.Drawing.Font("微軟正黑體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label303.Location = new System.Drawing.Point(68, 730);
-            this.label303.Name = "label303";
-            this.label303.Size = new System.Drawing.Size(29, 27);
-            this.label303.TabIndex = 150;
-            this.label303.Text = "+-";
-            this.label303.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label304
-            // 
-            this.label304.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label304.Font = new System.Drawing.Font("微軟正黑體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label304.Location = new System.Drawing.Point(68, 730);
-            this.label304.Name = "label304";
-            this.label304.Size = new System.Drawing.Size(29, 27);
-            this.label304.TabIndex = 150;
-            this.label304.Text = "+-";
-            this.label304.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label305
-            // 
-            this.label305.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label305.Font = new System.Drawing.Font("微軟正黑體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label305.Location = new System.Drawing.Point(68, 730);
-            this.label305.Name = "label305";
-            this.label305.Size = new System.Drawing.Size(29, 27);
-            this.label305.TabIndex = 151;
-            this.label305.Text = "+-";
-            this.label305.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // _tbCI2_9
-            // 
-            this._tbCI2_9.DecimalPlaces = 1;
-            this._tbCI2_9.Font = new System.Drawing.Font("微軟正黑體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this._tbCI2_9.Location = new System.Drawing.Point(3, 730);
-            this._tbCI2_9.Name = "_tbCI2_9";
-            this._tbCI2_9.Size = new System.Drawing.Size(66, 27);
-            this._tbCI2_9.TabIndex = 150;
-            // 
-            // _tbCI2_8
-            // 
-            this._tbCI2_8.DecimalPlaces = 1;
-            this._tbCI2_8.Font = new System.Drawing.Font("微軟正黑體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this._tbCI2_8.Location = new System.Drawing.Point(3, 730);
-            this._tbCI2_8.Name = "_tbCI2_8";
-            this._tbCI2_8.Size = new System.Drawing.Size(66, 27);
-            this._tbCI2_8.TabIndex = 151;
-            // 
-            // numericUpDown7
-            // 
-            this.numericUpDown7.Font = new System.Drawing.Font("微軟正黑體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.numericUpDown7.Location = new System.Drawing.Point(97, 730);
-            this.numericUpDown7.Name = "numericUpDown7";
-            this.numericUpDown7.Size = new System.Drawing.Size(57, 27);
-            this.numericUpDown7.TabIndex = 150;
-            this.numericUpDown7.Value = new decimal(new int[] {
-            5,
-            0,
-            0,
-            0});
-            // 
-            // label306
-            // 
-            this.label306.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label306.Font = new System.Drawing.Font("微軟正黑體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label306.Location = new System.Drawing.Point(152, 730);
-            this.label306.Name = "label306";
-            this.label306.Size = new System.Drawing.Size(29, 27);
-            this.label306.TabIndex = 151;
-            this.label306.Text = "%";
-            this.label306.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // _tbCI2Percent10
-            // 
-            this._tbCI2Percent10.Font = new System.Drawing.Font("微軟正黑體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this._tbCI2Percent10.Location = new System.Drawing.Point(96, 730);
-            this._tbCI2Percent10.Name = "_tbCI2Percent10";
-            this._tbCI2Percent10.Size = new System.Drawing.Size(57, 27);
-            this._tbCI2Percent10.TabIndex = 151;
-            this._tbCI2Percent10.Value = new decimal(new int[] {
-            5,
-            0,
-            0,
-            0});
-            // 
-            // label307
-            // 
-            this.label307.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label307.Font = new System.Drawing.Font("微軟正黑體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label307.Location = new System.Drawing.Point(152, 730);
-            this.label307.Name = "label307";
-            this.label307.Size = new System.Drawing.Size(29, 27);
-            this.label307.TabIndex = 152;
-            this.label307.Text = "%";
-            this.label307.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // _tbCI2Percent9
-            // 
-            this._tbCI2Percent9.Font = new System.Drawing.Font("微軟正黑體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this._tbCI2Percent9.Location = new System.Drawing.Point(96, 730);
-            this._tbCI2Percent9.Name = "_tbCI2Percent9";
-            this._tbCI2Percent9.Size = new System.Drawing.Size(57, 27);
-            this._tbCI2Percent9.TabIndex = 152;
-            this._tbCI2Percent9.Value = new decimal(new int[] {
-            5,
-            0,
-            0,
-            0});
-            // 
-            // label308
-            // 
-            this.label308.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label308.Font = new System.Drawing.Font("微軟正黑體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label308.Location = new System.Drawing.Point(152, 730);
-            this.label308.Name = "label308";
-            this.label308.Size = new System.Drawing.Size(29, 27);
-            this.label308.TabIndex = 153;
-            this.label308.Text = "%";
-            this.label308.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label309
-            // 
-            this.label309.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label309.Font = new System.Drawing.Font("微軟正黑體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label309.Location = new System.Drawing.Point(68, 730);
-            this.label309.Name = "label309";
-            this.label309.Size = new System.Drawing.Size(29, 27);
-            this.label309.TabIndex = 149;
-            this.label309.Text = "+-";
-            this.label309.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // _tbCI2Percent7
-            // 
-            this._tbCI2Percent7.Font = new System.Drawing.Font("微軟正黑體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this._tbCI2Percent7.Location = new System.Drawing.Point(96, 730);
-            this._tbCI2Percent7.Name = "_tbCI2Percent7";
-            this._tbCI2Percent7.Size = new System.Drawing.Size(57, 27);
-            this._tbCI2Percent7.TabIndex = 150;
-            this._tbCI2Percent7.Value = new decimal(new int[] {
-            5,
-            0,
-            0,
-            0});
-            // 
-            // label310
-            // 
-            this.label310.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label310.Font = new System.Drawing.Font("微軟正黑體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label310.Location = new System.Drawing.Point(152, 730);
-            this.label310.Name = "label310";
-            this.label310.Size = new System.Drawing.Size(29, 27);
-            this.label310.TabIndex = 151;
-            this.label310.Text = "%";
-            this.label310.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label311
-            // 
-            this.label311.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label311.Font = new System.Drawing.Font("微軟正黑體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label311.Location = new System.Drawing.Point(152, 730);
-            this.label311.Name = "label311";
-            this.label311.Size = new System.Drawing.Size(29, 27);
-            this.label311.TabIndex = 153;
-            this.label311.Text = "%";
-            this.label311.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // _tbCI2_7
-            // 
-            this._tbCI2_7.DecimalPlaces = 1;
-            this._tbCI2_7.Font = new System.Drawing.Font("微軟正黑體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this._tbCI2_7.Location = new System.Drawing.Point(3, 730);
-            this._tbCI2_7.Name = "_tbCI2_7";
-            this._tbCI2_7.Size = new System.Drawing.Size(66, 27);
-            this._tbCI2_7.TabIndex = 152;
-            // 
-            // _tbCI2Percent8
-            // 
-            this._tbCI2Percent8.Font = new System.Drawing.Font("微軟正黑體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this._tbCI2Percent8.Location = new System.Drawing.Point(96, 730);
-            this._tbCI2Percent8.Name = "_tbCI2Percent8";
-            this._tbCI2Percent8.Size = new System.Drawing.Size(57, 27);
-            this._tbCI2Percent8.TabIndex = 153;
-            this._tbCI2Percent8.Value = new decimal(new int[] {
-            5,
-            0,
-            0,
-            0});
-            // 
-            // label312
-            // 
-            this.label312.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label312.Font = new System.Drawing.Font("微軟正黑體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label312.Location = new System.Drawing.Point(152, 730);
-            this.label312.Name = "label312";
-            this.label312.Size = new System.Drawing.Size(29, 27);
-            this.label312.TabIndex = 154;
-            this.label312.Text = "%";
-            this.label312.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label50
-            // 
-            this.label50.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label50.Font = new System.Drawing.Font("微軟正黑體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label50.Location = new System.Drawing.Point(388, 118);
-            this.label50.Name = "label50";
-            this.label50.Size = new System.Drawing.Size(29, 27);
-            this.label50.TabIndex = 157;
-            this.label50.Text = "%";
-            this.label50.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // NewRecipe
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(1532, 949);
+            this.ClientSize = new System.Drawing.Size(1549, 949);
             this.Controls.Add(this.panel);
             this.Controls.Add(this.lblReminder);
             this.Controls.Add(this.tbCI2Percent);
@@ -10692,6 +10692,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.tbOxygen1Percent)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this._tbCI2Percent)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this._tbCI2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbTimeDependentStep2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbProcessTime2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbProcessPressurePercent2)).EndInit();
@@ -10725,9 +10727,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.tbOxygen1Percent2)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this._tbCI2Percent2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this._tbCI2_2)).EndInit();
             this.panel.ResumeLayout(false);
             this.panel10.ResumeLayout(false);
             this.panel10.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this._tbCI2_10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbOxygen1Percent10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbOxygen1_10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbBCI3Percent10)).EndInit();
@@ -10761,6 +10767,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.tbTimeDependentStep10)).EndInit();
             this.panel9.ResumeLayout(false);
             this.panel9.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this._tbCI2Percent10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this._tbCI2_9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbOxygen1Percent9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbOxygen1_9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbBCI3Percent9)).EndInit();
@@ -10794,6 +10802,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.tbTimeDependentStep9)).EndInit();
             this.panel8.ResumeLayout(false);
             this.panel8.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this._tbCI2Percent9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this._tbCI2_8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbOxygen1Percent8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbOxygen1_8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbBCI3Percent8)).EndInit();
@@ -10827,6 +10837,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.tbTimeDependentStep8)).EndInit();
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this._tbCI2Percent8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this._tbCI2_7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbOxygen1Percent7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbOxygen1_7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbBCI3Percent7)).EndInit();
@@ -10860,6 +10872,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.tbTimeDependentStep7)).EndInit();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this._tbCI2Percent7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this._tbCI2_6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbOxygen1Percent6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbOxygen1_6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbBCI3Percent6)).EndInit();
@@ -10893,6 +10907,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.tbTimeDependentStep6)).EndInit();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this._tbCI2Percen6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this._tbCI2_5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbOxygen1Percent5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbOxygen1_5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbBCI3Percent5)).EndInit();
@@ -10926,6 +10942,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.tbTimeDependentStep5)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this._tbCI2Percent4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this._tbCI2_4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbOxygen1Percent4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbOxygen1_4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbBCI3Percent4)).EndInit();
@@ -10959,6 +10977,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.tbTimeDependentStep4)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this._tbCI2Percent3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this._tbCI2_3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbOxygen1Percent3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbOxygen1_3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbBCI3Percent3)).EndInit();
@@ -10990,26 +11010,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.tbProcessPressurePercent3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbProcessTime3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbTimeDependentStep3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this._tbCI2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this._tbCI2Percent)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this._tbCI2_2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this._tbCI2Percent2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this._tbCI2_3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this._tbCI2_4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this._tbCI2_5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this._tbCI2_6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this._tbCI2Percent3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this._tbCI2Percent4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this._tbCI2Percen6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this._tbCI2_10)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this._tbCI2_9)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this._tbCI2_8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this._tbCI2Percent10)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this._tbCI2Percent9)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this._tbCI2Percent7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this._tbCI2_7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this._tbCI2Percent8)).EndInit();
             this.ResumeLayout(false);
 
         }
